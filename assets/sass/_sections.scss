@@ -13,11 +13,30 @@
   @media (min-width: $large-screen) {
     margin-left: 12em;
   }
+
+  a {
+    text-decoration: underline;
+    font-weight: 600;
+
+    &:hover,
+    &:focus {
+      text-decoration: none;
+    }
+  }
 }
 
 @each $slug, $colour in $sections {
   body.#{$slug} {
     background-color: $colour;
     color: #fff;
+
+    .section a {
+      color: mix($colour, #fff, 20%);
+
+      &:hover,
+      &:focus {
+        color: mix($colour, #fff, 30%);
+      }
+    }
   }
 }
