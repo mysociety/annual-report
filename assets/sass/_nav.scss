@@ -1,0 +1,154 @@
+// This file is a little complex, as the nav is a major part of the site,
+// and dramatically changes its appearance as the screen size changes.
+
+// On narrow screens without javascript, it sits full-width, above the
+// page content.
+// On narrow screens *with* javascript, it remains full-width, but appears
+// overlaid on top of the page content and is summoned and dismissed by
+// clicking a toggle button on the page.
+// On all other screens, it sits as a sidebar to the left of the page
+// content. By default it occupies as little space as possible, but as
+// the window gets wider and taller, the links become wider and taller.
+
+@each $slug, $colour in $sections {
+  body.#{$slug} nav .#{$slug} a {
+    color: $colour;
+    background-color: #fff;
+    border-right-width: 0;
+  }
+
+  nav .#{$slug} a {
+    border-right-color: $colour;
+
+    &:hover,
+    &:focus {
+      color: $colour;
+    }
+  }
+}
+
+nav {
+  z-index: 100;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  overflow-y: auto;
+  background-color: $colour_off_white;
+
+  // If screen is very narrow, and javascript is available,
+  // make the nav full-screen and toggleable with javascript.
+  @media (max-width: $tiny-screen-max) {
+    body.has-js & {
+      position: fixed;
+      display: none;
+    }
+  }
+
+  // If the screen is wide enough, make the nav into a sidebar.
+  @media (min-width: $small-screen) {
+    position: fixed;
+    right: auto;
+    width: 8em;
+  }
+
+  @media (min-width: $medium-screen) {
+    width: 10em;
+  }
+
+  @media (min-width: $large-screen) {
+    width: 12em;
+  }
+
+  ul {
+    @extend .unstyled-list;
+    margin: 0;
+  }
+
+  li {
+    // we put the border on the li, to avoid mitering
+    // when we apply a border-left to the link inside
+    border-bottom: 1px solid darken($colour_off_white, 5%);
+  }
+
+  a {
+    display: block;
+    padding: 1em;
+    line-height: 1.2em;
+    color: $colour_dark_grey;
+    border-right: 0 solid transparent;
+    @include prefix('transition', 'border-right-width 0.2s');
+
+    @media (min-width: $small-screen) {
+      // very short screens (but not very narrow, ie: not phones)
+      padding: 0.5em;
+    }
+
+    @media (min-width: $small-screen) and (min-height: 540px) {
+      // not quite so short short screens
+      padding: 0.7em;
+    }
+
+    @media (min-width: $small-screen) and (min-height: 640px) {
+      // normal height screens
+      padding: 1em;
+    }
+
+    &:hover,
+    &:focus {
+      background-color: lighten($colour_off_white, 10%);
+      text-decoration: none;
+      border-right-width: 0.5em;
+      @include prefix('transition', 'border-right-width 0.2s');
+    }
+  }
+
+  small {
+    display: block;
+  }
+}
+
+.nav-toggle {
+  display: none;
+
+  background-color: $colour_off_white;
+  padding: 0.8em 1em;
+  color: $colour_dark_grey;
+  line-height: 1.2em;
+
+  @media (max-width: $tiny-screen-max) {
+    body.has-js & {
+      display: block;
+      cursor: pointer;
+    }
+  }
+
+  &.nav-opened {
+    position: fixed;
+    top: 0;
+    right: 0;
+    z-index: 101;
+    padding: 0.5em;
+    font-size: 2em;
+    line-height: 0.5em;
+    background: transparent;
+
+    * {
+      display: none;
+    }
+
+    &:before {
+      display: block;
+      content: '\00D7'; // × symbol
+    }
+  }
+}
+
+.nav-toggle__site {
+  font-size: 0.9em;
+  color: mix($colour_dark_grey, $colour_off_white, 60%);
+}
+
+.nav-toggle__section {
+  display: block;
+}

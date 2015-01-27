@@ -1,0 +1,23 @@
+.section {
+  padding: 1em;
+
+  @media (min-width: $small-screen) {
+    margin-left: 8em;
+  }
+
+  @media (min-width: $medium-screen) {
+    margin-left: 10em;
+    padding: 2em;
+  }
+
+  @media (min-width: $large-screen) {
+    margin-left: 12em;
+  }
+}
+
+@each $slug, $colour in $sections {
+  body.#{$slug} {
+    background-color: $colour;
+    color: #fff;
+  }
+}
