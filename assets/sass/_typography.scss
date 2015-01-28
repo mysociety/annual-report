@@ -1,0 +1,36 @@
+.stat {
+  @include clearfix();
+}
+
+.stat__number {
+  font-size: 2em;
+  line-height: 1em;
+  font-weight: bold;
+  font-family: $condensed_typeface;
+  float: left;
+  margin-right: 0.2em;
+}
+
+.stat__context {
+  float: left;
+  margin-right: 0.3em;
+  line-height: 1em;
+}
+
+@media (min-width: $medium-screen) {
+  .stat-columns {
+    @include clearfix();
+    width: auto !important;
+    margin-bottom: 1em;
+    border-bottom: 1px solid rgba(255,255,255,0.5);
+
+    .stat {
+      float: left;
+      margin-right: 2em;
+
+      &:last-child {
+        margin-right: 0
+      }
+    }
+  }
+}

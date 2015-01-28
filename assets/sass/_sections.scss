@@ -7,7 +7,7 @@
 
   @media (min-width: $medium-screen) {
     margin-left: 10em;
-    padding: 2em;
+    padding: 1.5em;
   }
 
   @media (min-width: $large-screen) {
@@ -21,6 +21,23 @@
     &:hover,
     &:focus {
       text-decoration: none;
+    }
+  }
+
+  p {
+    font-size: 1.2em;
+    line-height: 1.4em;
+  }
+
+  @media (min-width: $large-screen) {
+    & > * {
+      width: 66%;
+    }
+  }
+
+  @media (min-width: $huge-screen) {
+    & > * {
+      width: 50%;
     }
   }
 }
@@ -39,4 +56,160 @@
       }
     }
   }
+}
+
+.section--one-half {
+  min-height: 300px;
+}
+
+.section--one-quarter {
+  min-height: 150px;
+}
+
+.section--three-quarters {
+  min-height: 450px;
+}
+
+@media (min-width: $medium-screen) and (min-height: 740px) {
+  .section--one-half {
+    min-height: 350px;
+  }
+
+  .section--one-quarter {
+    min-height: 175px;
+  }
+
+  .section--three-quarters {
+    min-height: 525px;
+  }
+}
+
+@media (min-width: $medium-screen) and (min-height: 840px) {
+  .section {
+    padding: 2em;
+  }
+
+  .section--one-half {
+    min-height: 400px;
+  }
+
+  .section--one-quarter {
+    min-height: 200px;
+  }
+
+  .section--three-quarters {
+    min-height: 600px;
+  }
+}
+
+@media (min-width: $medium-screen) and (min-height: 940px) {
+  .section--one-half {
+    min-height: 450px;
+  }
+
+  .section--one-quarter {
+    min-height: 225px;
+  }
+
+  .section--three-quarters {
+    min-height: 675px;
+  }
+}
+
+@media (min-width: $medium-screen) and (min-height: 1040px) {
+  .section--one-half {
+    min-height: 500px;
+  }
+
+  .section--one-quarter {
+    min-height: 250px;
+  }
+
+  .section--three-quarters {
+    min-height: 750px;
+  }
+}
+
+@media (min-width: $medium-screen) and (min-height: 1140px) {
+  .section--one-half {
+    min-height: 550px;
+  }
+
+  .section--one-quarter {
+    min-height: 275px;
+  }
+
+  .section--three-quarters {
+    min-height: 825px;
+  }
+}
+
+.section--punchline {
+  @include clearfix();
+
+  & > * {
+    clear: right;
+    float: right;
+  }
+}
+
+%background-cover {
+  background-position: 50% 50%;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.section--we-are-mysociety {
+  @extend %background-cover;
+  background-position: 50% 30%;
+  background-image: url(../img/team-purple.jpg);
+}
+
+.section--welcome-international {
+  @extend %background-cover;
+  background-image: url(../img/map-purple.gif);
+}
+
+.section--welcome-commercial {
+  @extend %background-cover;
+  background-position: 50% 60%;
+  background-image: url(../img/runnymede-purple.jpg);
+}
+
+.section--basics-uk {
+  @extend %background-cover;
+  background-image: url(../img/pairing-red.jpg);
+}
+
+.section--basics-employees {
+  @extend %background-cover;
+  background-position: 50% 30%;
+  background-image: url(../img/team-red.jpg);
+}
+
+.section--basics-busy {
+  @extend %background-cover;
+  background-image: url(../img/coding-red.jpg);
+}
+
+.section--basics-partisan {
+  text-align: center;
+
+  & > * {
+    width: auto;
+  }
+}
+
+.section--international-1d-tour {
+  @extend %background-cover;
+  background-position: 50% 70%;
+  background-image: url(../img/1d-concert-blue.jpg);
+  text-shadow: 0 1px 5px transparentize(darken($colour_blue, 25%), 0.5);
+}
+
+.section--international-silly {
+  background-size: contain;
+  background-position: 0 0;
+  background-repeat: no-repeat;
+  background-image: url(../img/1d-closeup-blue.jpg);
 }
