@@ -35,6 +35,30 @@
   }
 }
 
+.slideshow {
+  overflow: hidden;
+  position: relative;
+}
+
+.slideshow__inner {
+  height: 100%;
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 9999px;
+}
+
+.slideshow__slide {
+  height: 100%;
+  float: left;
+  padding-right: 1em;
+
+  img {
+    height: 100%;
+    width: auto;
+  }
+}
+
 // The fallback table that’s shown when javascript is disabled
 table.js-make-pie-chart,
 table.js-make-sparkline {
@@ -49,4 +73,13 @@ table.js-make-sparkline {
   th {
     background-color: rgba(255, 255, 255, 0.1);
   }
+}
+
+.nowrap {
+  white-space: nowrap;
+}
+
+aside {
+  font-size: 0.8em;
+  opacity: 0.9;
 }

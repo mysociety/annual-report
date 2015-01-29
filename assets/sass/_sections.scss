@@ -279,11 +279,67 @@
   background-color: mix(#000, $colour_red, 15%);
 }
 
+.section--international-meetings {
+  @extend %background-cover;
+  background-image: url(../img/map-blue.gif);
+  position: relative;
+
+  .stat {
+    position: absolute;
+    bottom: 1em;
+    margin-bottom: 0;
+
+    @media (min-width: $medium-screen) {
+      bottom: 1.5em;
+    }
+
+    @media (min-width: $large-screen) {
+      bottom: 2em;
+    }
+
+    @media (min-width: $huge-screen) {
+      bottom: 2.5em;
+    }
+  }
+}
+
 .section--international-1d-tour {
   @extend %background-cover;
   background-position: 50% 70%;
   background-image: url(../img/1d-concert-blue.jpg);
-  text-shadow: 0 1px 5px transparentize(darken($colour_blue, 25%), 0.5);
+  text-shadow: 0 1px 5px mix($colour_blue, #000, 50%);
+  border-top: 1px solid darken($colour_blue, 10%);
+}
+
+.section--international-friends {
+  background-color: mix($colour_blue, #000, 50%);
+  border-bottom: 1px solid $colour_blue;
+  text-align: center;
+
+  & > * {
+    width: auto;
+  }
+
+  .slideshow {
+    height: 16em;
+    margin: 0 -1em;
+
+    @media (min-width: $medium-screen) {
+      margin: 0 -1.5em;
+    }
+
+    @media (min-width: $large-screen) {
+      margin: 0 -2em;
+    }
+
+    @media (min-width: $huge-screen) {
+      margin: 0 -2.5em;
+    }
+  }
+
+  .slideshow__inner {
+    left: -3em;
+  }
 }
 
 .section--international-silly {
