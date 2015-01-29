@@ -1,3 +1,21 @@
+$.fn.isVisible = function(options){
+  // Returns true if element is even partially visible in the viewport
+  // (or only if fully visible, if the option is supplied)
+  var settings = $.extend({
+    fullyVisible: false
+  }, options);
+  var wTop = $(window).scrollTop();
+  var wBottom = wTop + $(window).height();
+  var eTop = this.offset().top;
+  var eBottom = eTop + this.height();
+
+  if(settings.fullyVisible === true){
+    return (eTop >= wTop) && (eBottom <= wBottom);
+  } else {
+    return ((eTop < wBottom) && (eBottom > wTop)) || ((eBottom > wTop) && (eTop < wBottom));
+  }
+}
+
 $(function(){
   $('body').addClass('has-js');
   $('.nav-toggle').on('click', function(){
@@ -60,9 +78,15 @@ $(function(){
     var $table = $(this);
     var $rows = $('tr', $table);
     var $canvas = $('<canvas>').attr({
-      width: 200,
-      height: 200
+      width: 100,
+      height: 100
     }).insertBefore($table);
+
+    var animationDelay = -1;
+    if((typeof $table.attr('data-delay') != 'undefined') && parseInt($table.attr('data-delay')) > -1){
+      animationDelay = parseInt($table.attr('data-delay'));
+    }
+
     var data = [];
     var opacities = ['0.4', '0.6', '0.8', '0.4', '0.6', '0.8'];
     var settings = {
@@ -80,9 +104,24 @@ $(function(){
       })
     });
 
-    new Chart($canvas.get(0).getContext('2d')).Pie(data, settings);
-
+    var chart = new Chart($canvas.get(0).getContext('2d')).Pie(data, settings);
     $table.hide();
+
+    if(animationDelay > -1) {
+      var chartHasRendered = false;
+      $canvas.css('visibility', 'hidden');
+
+      $(window).scroll(function(){
+        if($canvas.isVisible() && chartHasRendered == false){
+          chartHasRendered = true;
+          setTimeout(function(){
+            $canvas.css('visibility', '');
+            chart.render()
+          }, animationDelay);
+        }
+      });
+    }
+
   });
 
 });
