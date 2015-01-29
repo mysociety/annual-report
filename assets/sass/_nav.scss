@@ -11,13 +11,13 @@
 // the window gets wider and taller, the links become wider and taller.
 
 @each $slug, $colour in $sections {
-  body.#{$slug} nav .#{$slug} a {
+  .page--#{$slug} nav .#{$slug} a {
     color: $colour;
     background-color: #fff;
     border-right-width: 0;
   }
 
-  nav .#{$slug} a {
+  .nav .#{$slug} a {
     border-right-color: $colour;
 
     &:hover,
@@ -27,7 +27,7 @@
   }
 }
 
-nav {
+.nav {
   z-index: 100;
   top: 0;
   left: 0;

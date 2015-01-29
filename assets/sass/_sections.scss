@@ -48,18 +48,10 @@
 }
 
 @each $slug, $colour in $sections {
-  body.#{$slug} {
+  .page--#{$slug} {
     background-color: $colour;
     color: #fff;
-
-    .section a {
-      color: mix($colour, #fff, 20%);
-
-      &:hover,
-      &:focus {
-        color: mix($colour, #fff, 30%);
-      }
-    }
+    @include coloured-links($colour);
   }
 }
 
@@ -135,21 +127,78 @@
   background-repeat: no-repeat;
 }
 
+.page--welcome .section {
+  text-align: center;
+
+  & > * {
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 24em;
+  }
+
+  & > :last-child {
+    margin-bottom: 0;
+  }
+
+  padding-top: 2em;
+  padding-bottom: 2em;
+
+  @media (min-width: $medium-screen) and (min-height: 740px) {
+    padding-top: 3em;
+    padding-bottom: 3em;
+  }
+
+  &.section--we-are-mysociety {
+    padding-top: 5em;
+    padding-bottom: 5em;
+
+    @media (min-width: $medium-screen) and (min-height: 740px) {
+      padding-top: 6em;
+      padding-bottom: 6em;
+    }
+  }
+}
+
 .section--we-are-mysociety {
   @extend %background-cover;
   background-position: 50% 30%;
   background-image: url(../img/team-purple.jpg);
+
+  h2 {
+    margin-bottom: 0.2em;
+    font-size: 3em;
+    line-height: 0.9em;
+    width: auto;
+  }
+
+  p {
+    color: mix(map-get($sections, 'welcome'), #fff, 20%);
+  }
+}
+
+.section--welcome-uk {
+  background-color: map-get($sections, 'uk');
+  @include coloured-links(map-get($sections, 'uk'));
 }
 
 .section--welcome-international {
   @extend %background-cover;
-  background-image: url(../img/map-purple.gif);
+  background-image: url(../img/map-blue.gif);
+  @include coloured-links(map-get($sections, 'international'));
+}
+
+.section--welcome-software {
+  @extend %background-cover;
+  background-image: url(../img/code-orange.gif);
+  @include coloured-links(map-get($sections, 'pombola'));
+  text-shadow: 0 1px 3px darken(map-get($sections, 'pombola'), 15%);
 }
 
 .section--welcome-commercial {
   @extend %background-cover;
-  background-position: 50% 60%;
-  background-image: url(../img/runnymede-purple.jpg);
+  background-position: 0% 70%;
+  background-image: url(../img/mapumental-blue.jpg);
+  @include coloured-links(map-get($sections, 'commercial'));
 }
 
 .section--basics-uk {

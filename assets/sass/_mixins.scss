@@ -23,31 +23,13 @@ $prefixes: ("-webkit-","-moz-", "-o-", "-ms-", "");
   }
 }
 
-%social-icon {
-  display: inline-block;
-  background-image: url('../img/social-sprite.png');
-  @media ($high-dpi-screen)  {
-    background-image: url('../img/social-sprite@2.png');
+@mixin coloured-links($colour) {
+  a {
+    color: mix($colour, #fff, 20%);
+
+    &:hover,
+    &:focus {
+      color: mix($colour, #fff, 30%);
+    }
   }
-  background-repeat: no-repeat;
-  background-position: 0 0;
-  background-size: 50px 125px; //change me when you add more sprites to the file
-  height: 25px;
-  width: 25px;
-  margin-right: 0.75em;
-}
-
-%social-icon--dark {
-  background-image: url('../img/social-sprite-dark.png');
-  @media ($high-dpi-screen)  {
-    background-image: url('../img/social-dark@2.png');
-  }
-}
-
-%social-icon--github {
-  background-position: -25px -50px;
-}
-
-%social-icon--email {
-  background-position: 0 -100px;
 }
