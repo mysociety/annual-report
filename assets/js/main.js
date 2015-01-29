@@ -88,19 +88,23 @@ $(function(){
     }
 
     var data = [];
-    var opacities = ['0.4', '0.6', '0.8', '0.4', '0.6', '0.8'];
+    var opacities = [0.4, 0.6, 0.8, 0.4, 0.6, 0.8];
     var settings = {
       responsive: true,
       segmentStrokeColor: $('body').css('background-color'),
       animationEasing: 'easeOutQuart',
-      showTooltips: false
+      tooltipFontSize: 18,
+      tooltipXPadding: 9,
+      tooltipYPadding: 9,
+      tooltipTemplate: '<%=label%>'
     };
 
     $rows.each(function(i){
       data.push({
         value: parseFloat($('td', this).text()),
         label: $('th', this).text(),
-        color: 'rgba(255, 255, 255, ' + opacities[i] + ')'
+        color: 'rgba(255, 255, 255, ' + opacities[i] + ')',
+        highlight: 'rgba(255, 255, 255, 0.9)',
       })
     });
 

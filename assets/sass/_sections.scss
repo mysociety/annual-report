@@ -12,6 +12,11 @@
 
   @media (min-width: $large-screen) {
     margin-left: 12em;
+    padding: 2em;
+  }
+
+  @media (min-width: $huge-screen) {
+    padding: 2.5em;
   }
 
   a {
@@ -102,54 +107,25 @@
   }
 }
 
-@media (min-width: $medium-screen) and (min-height: 940px) {
-  .section--one-half {
-    min-height: 450px;
-  }
+@media (min-width: $medium-screen){
+  .section--punchline {
+    @include clearfix();
 
-  .section--one-quarter {
-    min-height: 225px;
-  }
-
-  .section--three-quarters {
-    min-height: 675px;
+    & > * {
+      clear: right;
+      float: right;
+    }
   }
 }
 
-@media (min-width: $medium-screen) and (min-height: 1040px) {
-  .section--one-half {
-    min-height: 500px;
-  }
+.section--basics-uk,
+.section--basics-international {
+  h2 {
+    text-align: center;
 
-  .section--one-quarter {
-    min-height: 250px;
-  }
-
-  .section--three-quarters {
-    min-height: 750px;
-  }
-}
-
-@media (min-width: $medium-screen) and (min-height: 1140px) {
-  .section--one-half {
-    min-height: 550px;
-  }
-
-  .section--one-quarter {
-    min-height: 275px;
-  }
-
-  .section--three-quarters {
-    min-height: 825px;
-  }
-}
-
-.section--punchline {
-  @include clearfix();
-
-  & > * {
-    clear: right;
-    float: right;
+    @media (min-width: $medium-screen){
+      margin-top: 2em;
+    }
   }
 }
 
@@ -181,6 +157,13 @@
   background-image: url(../img/pairing-red.jpg);
 }
 
+.section--basics-international {
+  @extend %background-cover;
+  background-position: 0% 50%;
+  background-image: url(../img/temple-red.jpg);
+  border-top: 1px solid darken($colour_red, 10%);
+}
+
 .section--basics-employees {
   @extend %background-cover;
   background-position: 50% 30%;
@@ -209,6 +192,10 @@
 .section--basics-busy {
   @extend %background-cover;
   background-image: url(../img/coding-red.jpg);
+
+  h2 {
+    margin-bottom: 1em;
+  }
 }
 
 .section--basics-partisan {
@@ -221,7 +208,7 @@
   .chart__partisan {
     span {
       display: block;
-      margin-top: 1em;
+      margin: 1em -2em 0 -2em;
     }
   }
 
