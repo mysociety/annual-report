@@ -20,6 +20,9 @@ permalink: /basics/
     <span class="inline-stat__number">27 people</span>
     on the payroll.
   </p>
+  <div class="chart__basics-employees">
+    <canvas width="600" height="400"></canvas>
+  </div>
 </div>
 
 <div class="section section--three-quarters section--basics-busy">
@@ -64,12 +67,25 @@ permalink: /basics/
   </p>
 </div>
 
-<div class="section section--one-half section--setup section--basics-partisan">
+<div class="section section--setup section--basics-partisan">
   <h2>We are divided down highly partisan lines</h2>
-  <p>(pie charts of kittens-vs-puppies, coffee-vs-tea, climing-vs-karaoke)</p>
+  <div class="chart__partisan">
+    <div class="chart__partisan__wrapper">
+      <canvas id="chart__partisan__pets" width="200" height="200"></canvas>
+      <span>Kittens vs Puppies</span>
+    </div>
+    <div class="chart__partisan__wrapper">
+      <canvas id="chart__partisan__drinks" width="200" height="200"></canvas>
+      <span>Tea vs Coffee</span>
+    </div>
+    <div class="chart__partisan__wrapper">
+      <canvas id="chart__partisan__activities" width="200" height="200"></canvas>
+      <span>Karaoke vs Climbing</span>
+    </div>
+  </div>
 </div>
 
-<div class="section section--one-quarter section--punchline">
+<div class="section section--one-quarter section--punchline section--basics-agreement">
   <p>But at least we agree when it comes to</p>
   <h2>Digital Democracy, Transparency, Citizen Empowerment, and the potential of Civic Tech</h2>
   <aside>

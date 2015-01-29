@@ -185,6 +185,25 @@
   @extend %background-cover;
   background-position: 50% 30%;
   background-image: url(../img/team-red.jpg);
+
+  position: relative;
+  overflow: hidden;
+  border-bottom: 1px solid darken($colour_red, 15%);
+
+  h2, p {
+    position: relative;
+    z-index: 1;
+  }
+
+  .chart__basics-employees {
+    position: absolute;
+    z-index: 0;
+    top: 0;
+    left: -5px;
+    right: -5px;
+    bottom: -5px;
+    width: auto;
+  }
 }
 
 .section--basics-busy {
@@ -198,6 +217,31 @@
   & > * {
     width: auto;
   }
+
+  .chart__partisan {
+    span {
+      display: block;
+      margin-top: 1em;
+    }
+  }
+
+
+  .chart__partisan__wrapper {
+    display: inline-block;
+    width: 50%;
+    height: 50%;
+    margin: 1em 0;
+
+    @media (min-width: $large-screen) {
+      width: 15%;
+      height: 15%;
+      margin: 1em 5%;
+    }
+  }
+}
+
+.section--basics-agreement {
+  background-color: mix(#000, $colour_red, 15%);
 }
 
 .section--international-1d-tour {
