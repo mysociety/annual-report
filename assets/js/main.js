@@ -5,72 +5,84 @@ $(function(){
     $(this).toggleClass('nav-opened');
   });
 
-  var canvasBasicsEmployees = $('.chart__basics-employees canvas').get(0).getContext('2d');
-  var chartBasicsEmployees = new Chart(canvasBasicsEmployees).Line({
-    labels: ['', '', '', '', ''],
-    datasets: [{
-      fillColor: 'rgba(182, 42, 41, 0.5)', // dark red
-      strokeColor: 'rgba(255, 255, 255, 0.5)',
-      pointColor: '#fff',
-      pointStrokeColor: $('body').css('background-color'), // red
-      data: [8-6, 12-6, 16-6, 21-6, 27-6]
-    }]
-  }, {
-    animation: false,
-    bezierCurve: false,
-    scaleShowGridLines: false,
-    showScale: false,
-    responsive: true,
-    maintainAspectRatio: false,
-    showTooltips: false
+  $('.js-make-sparkline').each(function(){
+    // expects $(this) to be a table with a single row of cells
+    var $table = $(this);
+    var $canvas = $('<canvas>').insertBefore($table);
+    var data = [];
+    var labels = [];
+    var strokeColour = $(this).attr('data-stroke') || 'rgba(255, 255, 255, 0.5)';
+    var fillColour = $(this).attr('data-fill') || 'rgba(255, 255, 255, 0.1)';
+    var pointColour = $(this).attr('data-points') || '#fff';
+    var pointStrokeColour = $('body').css('background-color');
+    var settings = {
+      animation: false,
+      bezierCurve: false,
+      scaleShowGridLines: false,
+      showScale: false,
+      responsive: true,
+      maintainAspectRatio: false,
+      showTooltips: false
+    };
+
+    $('td', $table).each(function(i){
+      data.push(parseFloat($(this).text()));
+      labels.push('');
+    });
+
+    if($(this).attr('data-start')){
+      settings.scaleOverride = true;
+      settings.scaleStartValue = parseFloat($(this).attr('data-start'));
+      if($(this).attr('data-end')){
+        settings.scaleSteps = parseFloat($(this).attr('data-end')) - settings.scaleStartValue;
+      } else {
+        settings.scaleSteps = data[data.length - 1] - settings.scaleStartValue;
+      }
+      settings.scaleStepWidth = 1;
+    }
+
+    new Chart($canvas.get(0).getContext('2d')).Line({
+      labels: labels,
+      datasets: [{
+        fillColor: fillColour,
+        strokeColor: strokeColour,
+        pointColor: pointColour,
+        pointStrokeColor: pointStrokeColour,
+        data: data
+      }]
+    }, settings);
+
+    $table.hide();
   });
 
-  new Chart( $('#chart__partisan__pets').get(0).getContext('2d') ).Pie([
-    {
-      value: 13,
-      label: 'Kittens',
-      color: 'rgba(255, 255, 255, 0.4)'
-    }, {
-      value: 6,
-      label: 'Puppies',
-      color: 'rgba(255, 255, 255, 0.6)'
-    }
-  ], {
-    responsive: true,
-    segmentStrokeColor: $('body').css('background-color'),
-    animationEasing: "easeOutQuart"
-  });
+  $('.js-make-pie-chart').each(function(){
+    // expects $(this) to be a table with one row of two cells (label, value) per pie segment
+    var $table = $(this);
+    var $rows = $('tr', $table);
+    var $canvas = $('<canvas>').attr({
+      width: 200,
+      height: 200
+    }).insertBefore($table);
+    var data = [];
+    var opacities = ['0.4', '0.6', '0.8', '0.4', '0.6', '0.8'];
+    var settings = {
+      responsive: true,
+      segmentStrokeColor: $('body').css('background-color'),
+      animationEasing: 'easeOutQuart',
+      showTooltips: false
+    };
 
-  new Chart( $('#chart__partisan__drinks').get(0).getContext('2d') ).Pie([
-    {
-      value: 10,
-      label: 'Tea',
-      color: 'rgba(255, 255, 255, 0.4)'
-    }, {
-      value: 9,
-      label: 'Coffee',
-      color: 'rgba(255, 255, 255, 0.6)'
-    }
-  ], {
-    responsive: true,
-    segmentStrokeColor: $('body').css('background-color'),
-    animationEasing: "easeOutQuart"
-  });
+    $rows.each(function(i){
+      data.push({
+        value: parseFloat($('td', this).text()),
+        label: $('th', this).text(),
+        color: 'rgba(255, 255, 255, ' + opacities[i] + ')'
+      })
+    });
 
-  new Chart( $('#chart__partisan__activities').get(0).getContext('2d') ).Pie([
-    {
-      value: 11,
-      label: 'Karaoke',
-      color: 'rgba(255, 255, 255, 0.4)'
-    }, {
-      value: 8,
-      label: 'Climbing',
-      color: 'rgba(255, 255, 255, 0.6)'
-    }
-  ], {
-    responsive: true,
-    segmentStrokeColor: $('body').css('background-color'),
-    animationEasing: "easeOutQuart"
+    new Chart($canvas.get(0).getContext('2d')).Pie(data, settings);
+
+    $table.hide();
   });
 
 });
