@@ -136,16 +136,16 @@
     max-width: 24em;
   }
 
-  & > :last-child {
-    margin-bottom: 0;
-  }
-
   padding-top: 2em;
   padding-bottom: 2em;
 
   @media (min-width: $medium-screen) and (min-height: 740px) {
     padding-top: 3em;
     padding-bottom: 3em;
+
+    p {
+      margin-bottom: 1.5em;
+    }
   }
 
   &.section--we-are-mysociety {
@@ -156,6 +156,10 @@
       padding-top: 6em;
       padding-bottom: 6em;
     }
+  }
+
+  & > :last-child {
+    margin-bottom: 0;
   }
 }
 
@@ -179,12 +183,24 @@
 .section--welcome-uk {
   background-color: map-get($sections, 'uk');
   @include coloured-links(map-get($sections, 'uk'));
+
+  .button--welcome,
+  .button--welcome:hover,
+  .button--welcome:focus {
+    color: map-get($sections, 'uk');
+  }
 }
 
 .section--welcome-international {
   @extend %background-cover;
   background-image: url(../img/map-blue.gif);
   @include coloured-links(map-get($sections, 'international'));
+
+  .button--welcome,
+  .button--welcome:hover,
+  .button--welcome:focus {
+    color: map-get($sections, 'international');
+  }
 }
 
 .section--welcome-software {
@@ -192,6 +208,13 @@
   background-image: url(../img/code-orange.gif);
   @include coloured-links(map-get($sections, 'pombola'));
   text-shadow: 0 1px 3px darken(map-get($sections, 'pombola'), 15%);
+
+  .button--welcome,
+  .button--welcome:hover,
+  .button--welcome:focus {
+    color: map-get($sections, 'pombola');
+    text-shadow: none;
+  }
 }
 
 .section--welcome-commercial {
@@ -199,6 +222,12 @@
   background-position: 0% 70%;
   background-image: url(../img/mapumental-blue.jpg);
   @include coloured-links(map-get($sections, 'commercial'));
+
+  .button--welcome,
+  .button--welcome:hover,
+  .button--welcome:focus {
+    color: map-get($sections, 'commercial');
+  }
 }
 
 .section--basics-uk {

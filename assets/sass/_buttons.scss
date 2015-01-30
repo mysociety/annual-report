@@ -56,3 +56,18 @@
     text-decoration: underline;
   }
 }
+
+.button--welcome {
+  @extend .button;
+  text-decoration: none !important;
+  font-weight: normal !important;
+  color: $colour_black;
+  background-color: #fff;
+  font-size: 0.75em;
+
+  &:hover,
+  &:active,
+  &:focus {
+    background-color: rgba(255, 255, 255, 0.9);
+  }
+}
