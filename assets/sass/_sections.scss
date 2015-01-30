@@ -165,7 +165,7 @@
 
 .section--we-are-mysociety {
   @extend %background-cover;
-  background-position: 50% 30%;
+  background-position: 50% 40%;
   background-image: url(../img/team-purple.jpg);
 
   h2 {
@@ -237,6 +237,7 @@
 
 .section--basics-uk {
   @extend %background-cover;
+  background-position: 50% 60%;
   background-image: url(../img/pairing-red.jpg);
 }
 
