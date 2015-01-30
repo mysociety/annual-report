@@ -181,6 +181,8 @@
 }
 
 .section--welcome-uk {
+  @extend %background-cover;
+  background-image: url(../img/pedestrians-green.jpg);
   background-color: map-get($sections, 'uk');
   @include coloured-links(map-get($sections, 'uk'));
 
@@ -194,6 +196,7 @@
 .section--welcome-international {
   @extend %background-cover;
   background-image: url(../img/map-blue.gif);
+  background-color: map-get($sections, 'international');
   @include coloured-links(map-get($sections, 'international'));
 
   .button--welcome,
@@ -206,6 +209,7 @@
 .section--welcome-software {
   @extend %background-cover;
   background-image: url(../img/code-orange.gif);
+  background-color: map-get($sections, 'pombola');
   @include coloured-links(map-get($sections, 'pombola'));
   text-shadow: 0 1px 3px darken(map-get($sections, 'pombola'), 15%);
 
@@ -221,6 +225,7 @@
   @extend %background-cover;
   background-position: 0% 70%;
   background-image: url(../img/mapumental-blue.jpg);
+  background-color: map-get($sections, 'commercial');
   @include coloured-links(map-get($sections, 'commercial'));
 
   .button--welcome,
