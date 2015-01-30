@@ -38,12 +38,29 @@
 .slideshow {
   overflow: hidden;
   position: relative;
+  height: 12em;
+
+  .section & {
+    margin: 0 -1em;
+
+    @media (min-width: $medium-screen) {
+      margin: 0 -1.5em;
+    }
+
+    @media (min-width: $large-screen) {
+      margin: 0 -2em;
+    }
+
+    @media (min-width: $huge-screen) {
+      margin: 0 -2.5em;
+    }
+  }
 }
 
 .slideshow__inner {
   height: 100%;
   position: absolute;
-  left: 0;
+  left: -3em;
   top: 0;
   width: 9999px;
 }
