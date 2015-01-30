@@ -247,15 +247,11 @@
   @extend %background-cover;
   background-position: 50% 60%;
   background-image: url(../img/pairing-red.jpg);
-}
+  text-align: center;
 
-.section--basics-uk,
-.section--basics-international {
-  h2 {
-    text-align: center;
-
-    @media (min-width: $medium-screen){
-      margin-top: 2em;
+  @media (min-width: $medium-screen){
+    h2 {
+      margin-top: 1.5em;
     }
   }
 }
@@ -265,6 +261,13 @@
   background-position: 0% 50%;
   background-image: url(../img/temple-red.jpg);
   border-top: 1px solid darken($colour_red, 10%);
+  text-align: center;
+
+  @media (min-width: $medium-screen){
+    h2 {
+      margin-top: 1em;
+    }
+  }
 }
 
 .section--basics-employees {
