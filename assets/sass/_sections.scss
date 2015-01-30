@@ -385,3 +385,22 @@
   background-repeat: no-repeat;
   background-image: url(../img/1d-closeup-blue.jpg);
 }
+
+.section--poplus-con {
+  @extend %background-cover;
+  background-image: url(../img/popluscon-green.jpg);
+}
+
+.section--poplus-mailing {
+  background-color: darken(map-get($sections, 'poplus'), 10%);
+}
+
+.section--poplus-components {
+  background-image: url(../img/components.png);
+  background-position: 10% 10%;
+  background-size: 250px 250px;
+}
+
+.section--poplus-grants {
+  background-color: darken(map-get($sections, 'poplus'), 5%);
+}
