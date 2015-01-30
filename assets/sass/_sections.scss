@@ -107,7 +107,7 @@
   }
 }
 
-@media (min-width: $medium-screen){
+@media (min-width: $large-screen){
   .section--punchline {
     @include clearfix();
 
