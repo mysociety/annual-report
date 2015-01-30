@@ -364,6 +364,7 @@
   @extend %background-cover;
   background-position: 50% 70%;
   background-image: url(../img/1d-concert-blue.jpg);
+  background-color: mix($colour_blue, #000, 50%);
   text-shadow: 0 1px 5px mix($colour_blue, #000, 50%);
   border-top: 1px solid darken($colour_blue, 10%);
 }
