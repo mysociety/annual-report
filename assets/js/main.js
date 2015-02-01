@@ -154,6 +154,36 @@ var setUpParallaxBackground = function setUpParallaxBackground(){
   repositionBackground();
 }
 
+var setUpSlideshow = function setUpSlideShow(){
+  // expects $(this) to be a .slideshow div
+  var $outer = $(this);
+  var $inner = $('.slideshow__inner', $outer);
+  var $slides = $('.slideshow__slide', $outer);
+
+  var startOffset = $inner.position().left;
+  var totalSlidesWidth = 0;
+  $slides.each(function(){
+    totalSlidesWidth += $(this).outerWidth(true);
+  });
+
+  // duplicate all the slides, so we can loop the slideshow infinitely
+  $slides.clone().addClass('slideshow__slide--clone').appendTo($inner);
+
+  var oneFullRotation = function oneFullRotation(){
+    $inner.css({
+      left: startOffset
+    }).animate({
+      left: startOffset + (totalSlidesWidth * -1)
+    }, {
+      duration: totalSlidesWidth * 50,
+      easing: 'linear',
+      complete: oneFullRotation
+    });
+  }
+
+  oneFullRotation();
+}
+
 $(function(){
   $('body').addClass('has-js');
   $('.nav-toggle').on('click', function(){
@@ -166,4 +196,8 @@ $(function(){
 
   $('.js-parallax-background').each(setUpParallaxBackground);
 
+  // Wait until we’re sure images have finished loading
+  $(window).load(function(){
+    $('.js-slideshow').each(setUpSlideshow);
+  })
 });
