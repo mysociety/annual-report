@@ -122,7 +122,8 @@ var makePieChart = function makePieChart(){
 
 var setUpParallaxBackground = function setUpParallaxBackground(){
   var $el = $(this);
-  var backgroundY = parseFloat($el.css('background-position-y')) / 100;
+  var backgroundXY = $el.css('background-position').split(' '); // eg: ['50%', '40%']
+  var backgroundY = parseFloat(backgroundXY[1]) / 100; // convert % into decimal fraction
   var elHeight = $el.height();
   var elTop = $el.offset().top;
   var elMiddle = elTop + (elHeight / 2);
@@ -146,7 +147,7 @@ var setUpParallaxBackground = function setUpParallaxBackground(){
     // Make sure background position is between 0 and 100
     var newBackgroundYBounded = Math.max(Math.min(newBackgroundY * 100, 100), 0);
 
-    $el.css('background-position-y', newBackgroundYBounded + '%');
+    $el.css('background-position', backgroundXY[0] + ' ' + newBackgroundYBounded + '%');
   }
 
   $(window).scroll(repositionBackground);
