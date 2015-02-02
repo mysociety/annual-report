@@ -178,7 +178,7 @@ var setUpSlideshow = function setUpSlideShow(){
 
   $inner.playKeyframe({
     name: keyframeName,
-    duration: '' + (totalSlidesWidth / 20) + 's',
+    duration: '' + (totalSlidesWidth / 30) + 's',
     timingFunction: 'linear',
     iterationCount: 'infinite'
   });
