@@ -184,6 +184,11 @@ var setUpSlideshow = function setUpSlideShow(){
   });
 }
 
+var keenClient = new Keen({
+  projectId: "54d0ed6446f9a766f4d11a2e",
+  writeKey: "f2b17227b09a4b72d0edd97a9d7c9ea7c8b281bf99bcc444b3d6d1384e52224e8ff88ccc03e684ff1d17009cceb1a1ed5104d3441cdde1a1fca060bad0f1476fc885e5230d45a80d0c3aa4bd8600f6abeff1a30571ad18ee52b0fa77760e172ceffbbd941a603b299f5c8a7c112a49da"
+});
+
 $(function(){
   $('body').addClass('has-js');
   $('.nav-toggle').on('click', function(){
@@ -200,4 +205,20 @@ $(function(){
   $(window).load(function(){
     $('.js-slideshow').each(setUpSlideshow);
   })
+
+  var screenTimeFields = [];
+
+  $('[data-st-id]').each(function(i){
+    screenTimeFields.push({
+      'selector': '[data-st-id="' + $(this).data('st-id') + '"]',
+      'name': $(this).data('st-title')
+    });
+  });
+
+  $.screentime({
+    fields: screenTimeFields,
+    callback: function(data) {
+      keenClient.addEvent("Screentime", data);
+    }
+  });
 });
