@@ -11,7 +11,7 @@
 // the window gets wider and taller, the links become wider and taller.
 
 @each $slug, $colour in $sections {
-  .page--#{$slug} nav .#{$slug} a {
+  .page--#{$slug} .nav .#{$slug} a {
     color: $colour;
     background-color: #fff;
     border-right-width: 0;
@@ -63,6 +63,13 @@
   ul {
     @extend .unstyled-list;
     margin: 0;
+
+    @media (min-width: $small-screen) {
+      // Make room for sticky .credits footer link
+      position: relative;
+      min-height: 100%;
+      padding-bottom: 2em;
+    }
   }
 
   li {
@@ -105,6 +112,41 @@
 
   small {
     display: block;
+  }
+
+  .credits {
+    border-bottom: none;
+
+    a {
+      color: mix($colour_off_white, $colour_dark_grey, 50%);
+      font-size: 0.75em;
+      padding: 1em * (4/3);
+
+      @media (min-width: $small-screen) {
+        padding: 0.5em * (4/3);
+
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        right: 0;
+      }
+
+      @media (min-width: $small-screen) and (min-height: 540px) {
+        padding: 0.7em * (4/3);
+      }
+
+      @media (min-width: $small-screen) and (min-height: 640px) {
+        padding: 1em * (4/3);
+      }
+
+      &:hover,
+      &:focus,
+      .page--credits & {
+        background-color: transparent;
+        color: $colour_dark_grey;
+        border-right: none;
+      }
+    }
   }
 }
 

@@ -55,6 +55,18 @@
   }
 }
 
+.page--credits {
+  color: $colour_dark_grey;
+  a {
+    color: $colour_blue;
+
+    &:hover,
+    &:focus {
+      color: darken($colour_blue, 5%);
+    }
+  }
+}
+
 .section--one-half {
   min-height: 300px;
 }
