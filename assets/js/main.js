@@ -200,4 +200,6 @@ $(function(){
   $(window).load(function(){
     $('.js-slideshow').each(setUpSlideshow);
   })
+
+  riveted.init();
 });
