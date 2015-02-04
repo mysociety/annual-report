@@ -32,4 +32,21 @@ $prefixes: ("-webkit-","-moz-", "-o-", "-ms-", "");
       color: mix($colour, #fff, 30%);
     }
   }
+
+  .button {
+    @extend .button;
+    color: darken($colour, 10%);
+    background-color: #fff;
+    text-decoration: none;
+    font-weight: normal;
+    box-shadow: 0 1px 2px rgba(0,0,0,0.1);
+    font-size: 0.8em;
+
+    &:hover,
+    &:active,
+    &:focus {
+      color: darken($colour, 20%);
+      background-color: rgba(255, 255, 255, 0.9);
+    }
+  }
 }

@@ -34,6 +34,10 @@
     line-height: 1.4em;
   }
 
+  & > :last-child {
+    margin-bottom: 0;
+  }
+
   @media (min-width: $large-screen) {
     & > * {
       width: 66%;
@@ -493,17 +497,20 @@
   @extend %background-cover;
   background-image: url(../img/jacob-zuma-orange.jpg);
   background-color: mix(map-get($sections, 'pombola'), #000, 90%);
+}
 
-  padding-top: 2em;
-  padding-bottom: 2em;
+.section--pombola-mzalendo-stats {
+  position: relative;
+  overflow: hidden;
+  padding-bottom: 10em;
 
-  @media (min-width: $large-screen) {
-    padding-top: 3em;
-    padding-bottom: 3em;
-  }
-
-  @media (min-width: $huge-screen) {
-    padding-top: 7%;
-    padding-bottom: 7%;
+  .chart__mzalendo-sessions {
+    position: absolute;
+    z-index: 0;
+    left: -5px;
+    right: -5px;
+    bottom: -5px;
+    width: auto;
+    height: 12em;
   }
 }
