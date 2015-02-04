@@ -178,10 +178,25 @@
 .nav-toggle {
   display: none;
 
+  position: relative;
   background-color: $colour_off_white;
   padding: 0.8em 1em;
   color: $colour_dark_grey;
   line-height: 1.2em;
+
+  &:after {
+    @extend .#{$fa-css-prefix};
+    @extend .#{$fa-css-prefix}-bars:before;
+    position: absolute;
+    top: 50%;
+    right: 0.75em;
+    font-size: 1.5em;
+    margin-top: -0.5em;
+  }
+
+  &:hover:after {
+    color: lighten($colour_dark_grey, 10%);
+  }
 
   @media (max-width: $tiny-screen-max) {
     body.has-js & {
@@ -191,22 +206,18 @@
   }
 
   &.nav-opened {
-    position: fixed;
-    top: 0;
-    right: 0;
-    z-index: 101;
-    padding: 0.5em;
-    font-size: 2em;
-    line-height: 0.5em;
-    background: transparent;
-
     * {
       display: none;
     }
 
-    &:before {
-      display: block;
-      content: '\00D7'; // × symbol
+    &:after {
+      @extend .#{$fa-css-prefix}-close:before;
+      position: fixed;
+      top: 0;
+      right: 0;
+      z-index: 101;
+      padding: 1em;
+      margin-top: 0;
     }
   }
 }
