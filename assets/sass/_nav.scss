@@ -129,6 +129,16 @@
     }
   }
 
+  .welcome a {
+    &:hover,
+    &:focus {
+      .logo {
+        background-image: url(../img/mysociety-logo-purple.png);
+        background-image: url(../img/mysociety-logo-purple.svg), none;
+      }
+    }
+  }
+
   .credits {
     border-bottom: none;
 
