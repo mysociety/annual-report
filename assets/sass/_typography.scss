@@ -107,10 +107,11 @@ aside {
 }
 
 .screenshot {
-  background-color: #e6e6e6;
+  @include clearfix();
   padding-top: 1em;
   border-radius: 0.2em 0.2em 0 0;
-  @include clearfix();
+  background: #e6e6e6 url(../img/screenshot-buttons.png) 0 0 no-repeat;
+  background-size: auto 1em;
 
   img {
     float: left;
