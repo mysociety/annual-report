@@ -514,3 +514,33 @@
     height: 12em;
   }
 }
+
+.section--future {
+  @extend %background-cover;
+  background-image: url(../img/future-purple.jpg);
+  background-color: #000;
+  background-size: 100%;
+  background-position: center top;
+  height: 100%;
+
+  h2 {
+    margin-bottom: 1em;
+  }
+
+  p {
+    margin-bottom: 0.5em;
+    color: mix(map-get($sections, 'future'), #fff, 15%);
+  }
+}
+
+.page--future .page {
+  height: 100%;
+}
+
+.section--future__share {
+  margin-top: 2em;
+
+  * + * {
+    margin-left: 1em;
+  }
+}
