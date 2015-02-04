@@ -110,8 +110,23 @@
     }
   }
 
-  small {
+  .logo {
     display: block;
+    text-indent: -9000px;
+    width: 6em;
+    height: 1.3em;
+    background: transparent url(../img/mysociety-logo.png) 0 0 no-repeat;
+    background-image: url(../img/mysociety-logo.svg), none;
+    background-size: 100%;
+
+    .page--welcome & {
+      background-image: url(../img/mysociety-logo-purple.png);
+      background-image: url(../img/mysociety-logo-purple.svg), none;
+    }
+
+    & + small {
+      display: block;
+    }
   }
 
   .credits {
