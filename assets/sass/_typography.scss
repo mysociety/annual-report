@@ -105,3 +105,14 @@ aside {
   font-size: 0.8em;
   opacity: 0.9;
 }
+
+.screenshot {
+  background-color: #e6e6e6;
+  padding-top: 1em;
+  border-radius: 0.2em 0.2em 0 0;
+  @include clearfix();
+
+  img {
+    float: left;
+  }
+}

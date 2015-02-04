@@ -396,6 +396,31 @@
   border-top: 1px solid darken($colour_blue, 10%);
 }
 
+.section--international-anywhere {
+  position: relative;
+
+  .screenshot {
+    margin-bottom: -1em;
+
+    @media (min-width: $medium-screen) {
+      margin-bottom: -1.5em;
+    }
+
+    @media (min-width: $large-screen) {
+      margin-bottom: -2em;
+    }
+
+    @media (min-width: $huge-screen) {
+      position: absolute;
+      right: 2.5em;
+      width: 40%;
+      max-width: 500px;
+      bottom: 0;
+      margin-bottom: 0;
+    }
+  }
+}
+
 .section--international-friends {
   background-color: mix($colour_blue, #000, 50%);
   border-bottom: 1px solid $colour_blue;
