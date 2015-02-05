@@ -616,6 +616,22 @@
 
 .section--commercial-fms {
   background-color: #3080B6; // dark, rich shade of commercial blue
+  background-image: url(../img/commercial-fms-logos-vertical.gif);
+  background-size: auto 100%;
+  background-position: right center;
+  background-repeat: no-repeat;
+
+  @media (max-width: $medium-screen-max) {
+    background-image: url(../img/commercial-fms-logos-horizontal.gif);
+    background-position: center bottom;
+    background-size: 100%;
+    padding-bottom: 16%; // this is based on aspect ratio of image
+  }
+
+  @media (min-width: $huge-screen + 8em) { // 8am based on copy length
+    background-image: url(../img/commercial-fms-logos.gif);
+    background-position: 90% 50%;
+  }
 }
 
 .section--commercial-tools {
