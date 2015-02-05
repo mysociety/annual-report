@@ -634,8 +634,51 @@
   }
 }
 
+.section--commercial-parliament {
+  @extend .section--punchline;
+  @extend %background-cover;
+  background-image: url(../img/parliament-blue.jpg);
+}
+
 .section--commercial-tools {
   background-color: #4192C8; // slightly darker shade of commercial blue
+  position: relative;
+  overflow: hidden;
+
+  .screenshot {
+    display: none;
+
+    @media (min-width: $large-screen) {
+      display: block;
+      position: absolute;
+      top: 3em;
+      right: -8em;
+      width: 18em;
+      height: auto;
+    }
+
+    @media (min-width: $huge-screen) {
+      right: 8%;
+    }
+  }
+
+  &:after {
+    @extend %inner-shadow;
+    display: none;
+
+    @media (min-width: $large-screen) {
+      position: absolute;
+      display: block;
+      right: -8em;
+      bottom: 0;
+      left: auto;
+      width: 18em;
+    }
+
+    @media (min-width: $huge-screen) {
+      right: 8%;
+    }
+  }
 }
 
 .section--commercial-vikings {

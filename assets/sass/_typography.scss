@@ -116,4 +116,13 @@ aside {
   img {
     float: left;
   }
+
+  &.screenshot--mobile {
+    position: relative;
+    background: #55595c url(../img/screenshot-buttons-mobile.png) center top no-repeat;
+    background-size: auto 4em;
+    padding: 4em 0.5em;
+    border-radius: 2em;
+    border: 0.2em solid #999;
+  }
 }
