@@ -213,12 +213,6 @@
   background-image: url(../img/pedestrians-green.jpg);
   background-color: map-get($sections, 'uk');
   @include coloured-links(map-get($sections, 'uk'));
-
-  .button--welcome,
-  .button--welcome:hover,
-  .button--welcome:focus {
-    color: map-get($sections, 'uk');
-  }
 }
 
 .section--welcome-international {
@@ -226,12 +220,6 @@
   background-image: url(../img/map-blue.gif);
   background-color: map-get($sections, 'international');
   @include coloured-links(map-get($sections, 'international'));
-
-  .button--welcome,
-  .button--welcome:hover,
-  .button--welcome:focus {
-    color: map-get($sections, 'international');
-  }
 }
 
 .section--welcome-software {
@@ -241,10 +229,7 @@
   @include coloured-links(map-get($sections, 'pombola'));
   text-shadow: 0 1px 3px darken(map-get($sections, 'pombola'), 15%);
 
-  .button--welcome,
-  .button--welcome:hover,
-  .button--welcome:focus {
-    color: map-get($sections, 'pombola');
+  .button {
     text-shadow: none;
   }
 }
@@ -255,12 +240,6 @@
   background-image: url(../img/mapumental-blue.jpg);
   background-color: map-get($sections, 'commercial');
   @include coloured-links(map-get($sections, 'commercial'));
-
-  .button--welcome,
-  .button--welcome:hover,
-  .button--welcome:focus {
-    color: map-get($sections, 'commercial');
-  }
 }
 
 .section--welcome-many-sides {
