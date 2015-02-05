@@ -19,6 +19,10 @@
     padding: 2.5em;
   }
 
+  &:last-child {
+    padding-bottom: 5em;
+  }
+
   a {
     text-decoration: underline;
     font-weight: 600;
@@ -34,7 +38,8 @@
     line-height: 1.4em;
   }
 
-  & > :last-child {
+  & > :last-child,
+  & > :last-child > :last-child {
     margin-bottom: 0;
   }
 
@@ -578,7 +583,7 @@
 .section--pombola-mzalendo-stats {
   position: relative;
   overflow: hidden;
-  padding-bottom: 10em;
+  padding-bottom: 10em !important; // ignore other rules, this is the height of the graph
 
   .chart__mzalendo-sessions {
     position: absolute;
