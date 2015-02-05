@@ -575,6 +575,108 @@
   }
 }
 
+.section--uk-users {
+  @extend %background-cover;
+  background-color: #447C3B; // a dark, slightly desaturated shade of the uk green
+  background-image: url(../img/uk-green.jpg);
+  text-shadow: 0 0px 20px darken(#447C3B, 5%);
+
+  .stat-columns {
+    margin-top: 9em;
+
+    p {
+      margin-bottom: 0;
+      margin-top: 1em;
+    }
+  }
+}
+
+.section--uk-one {
+  @extend .section--impactful;
+  @extend .section--centred;
+
+  h2 {
+    max-width: 25em;
+    margin: 0 auto;
+  }
+}
+
+.section--uk-writetothem {
+  @extend %background-cover;
+  background-color: darken($colour_green, 5%);
+  background-image: url(../img/leeds-town-hall.jpg);
+  background-position: 50% 40%;
+
+  .mps {
+    @include clearfix();
+    margin-top: 5em;
+    width: auto;
+  }
+
+  .survey {
+    font-size: 1em;
+    color: mix(darken($colour_green, 5%), #fff, 30%);
+    width: auto;
+  }
+
+  .mp {
+    margin-bottom: 2em;
+
+    @media (min-width: $large-screen) {
+      @include clearfix();
+      float: left;
+      width: 45%;
+
+      & + .mp {
+        margin-left: 2em;
+      }
+    }
+
+    @media (min-width: $huge-screen) {
+      width: 40%;
+      max-width: 20em;
+    }
+
+    img {
+      border-radius: 50%;
+      float: left;
+      margin-right: 0.7em;
+      width: 3em;
+      height: auto;
+    }
+
+    p {
+      line-height: 1.2em;
+    }
+  }
+
+  .mp__responsiveness {
+    border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+    padding-bottom: 0.5em;
+    margin-bottom: 0.5em;
+  }
+
+  .mp__name {
+    margin-bottom: 0;
+    font-weight: bold;
+    margin-top: 0.3em;
+    font-size: 1.4em;
+  }
+
+  .mp__constituency {
+    margin-bottom: 0;
+    color: mix(darken($colour_green, 5%), #fff, 20%);
+    font-size: 0.9em;
+  }
+}
+
+.section--uk-whatdotheyknow {
+  @extend %background-cover;
+  background-color: darken($colour_green, 10%);
+  background-image: url(../img/philip-schofield.jpg);
+  background-position: 50% 30%;
+}
+
 .section--commercial-too {
   @extend %background-cover;
   @extend .section--impactful;

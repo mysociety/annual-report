@@ -24,6 +24,10 @@
     margin-bottom: 1em;
     border-bottom: 1px solid rgba(255,255,255,0.5);
 
+    &:last-child {
+      border-bottom: none;
+    }
+
     .stat {
       float: left;
       margin-right: 2em;
