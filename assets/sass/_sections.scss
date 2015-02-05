@@ -511,6 +511,54 @@
   text-shadow: 0 2px 20px rgba(0,0,0,0.2);
 }
 
+.section--alaveteli-total {
+  padding-bottom: 0;
+
+  .slideshow {
+    width: auto;
+    margin-top: 2em;
+  }
+
+  .slideshow__inner {
+    &:after {
+      @extend %inner-shadow;
+    }
+  }
+
+  .slideshow__slide {
+    padding: 0;
+    position: relative;
+
+    &:nth-child(4n + 1) {
+      top: 1em;
+      margin-left: -4em;
+    }
+
+    &:nth-child(4n + 2) {
+      top: 2.5em;
+      margin-left: -3.5em;
+    }
+
+    &:nth-child(4n + 3) {
+      top: 1.5em;
+      margin-left: -6em;
+    }
+
+    &:nth-child(4n + 4) {
+      top: 3.5em;
+      margin-left: -4.5em;
+    }
+  }
+
+  .screenshot {
+    box-shadow: 0 3px 10px rgba(0,0,0,0.3);
+
+    img {
+      border-top: 1px solid #ddd;
+    }
+  }
+}
+
 .section--alaveteli-silence {
   background-color: darken(map-get($sections, 'alaveteli'), 5%);
 }

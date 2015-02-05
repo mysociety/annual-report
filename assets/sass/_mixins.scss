@@ -4,6 +4,19 @@
   overflow: hidden;
 }
 
+// Apply to a :before/:after pseudo-element to give the
+// impression of an inner shadow at the bottom of the parent.
+%inner-shadow {
+  content: "";
+  display: block;
+  position: absolute; // NOTE: this requires parent element to be positioned
+  height: 2em; // override this to make the shadow taller or shorter
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background: linear-gradient(to bottom, rgba(0,0,0,0) 0%, rgba(0,0,0,0.2) 100%);
+}
+
 @mixin clearfix {
   &:before,
   &:after {
