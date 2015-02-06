@@ -885,6 +885,14 @@
     margin-bottom: 0.5em;
     color: mix(map-get($sections, 'future'), #fff, 15%);
   }
+
+  .caption {
+    position: absolute;
+    bottom: 3em;
+    max-width: 24em;
+    font-size: 0.8em;
+    opacity: 0.6;
+  }
 }
 
 .page--future .page {
