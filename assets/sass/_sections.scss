@@ -598,6 +598,13 @@
   h2 {
     max-width: 25em;
     margin: 0 auto;
+
+    @media (min-width: $large-screen) {
+      background: transparent url(../img/uk-site-logos.gif) center bottom no-repeat;
+      background-size: 95%;
+      padding-bottom: 8%;
+      margin-bottom: -2% !important;
+    }
   }
 }
 
@@ -675,6 +682,13 @@
   background-color: darken($colour_green, 10%);
   background-image: url(../img/philip-schofield.jpg);
   background-position: 50% 30%;
+}
+
+.section--uk-klingons {
+  @extend %background-cover;
+  background-color: #34652d;
+  background-image: url(../img/klingons-green.jpg);
+  background-position: 50% 0%;
 }
 
 .section--commercial-too {
