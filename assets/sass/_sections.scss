@@ -810,6 +810,40 @@
   background-position: 50% 20%;
 }
 
+.section--research-opinions {
+  @extend .section--punchline;
+  background-color: mix(#000, $colour_red, 5%);
+}
+
+.section--research-partners {
+  @extend .section--centred;
+  background-color: mix(#000, $colour_red, 15%);
+
+  p {
+    max-width: 30em;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  img {
+    margin: 1.2em 0 1.5em 0;
+  }
+
+  .research-logos-horizontal {
+    display: none;
+  }
+
+  @media (min-width: $huge-screen) {
+    .research-logos-horizontal {
+      display: inline-block;
+    }
+
+    .research-logos-vertical {
+      display: none;
+    }
+  }
+}
+
 .section--future {
   @extend %background-cover;
   background-image: url(../img/future-purple.jpg);
