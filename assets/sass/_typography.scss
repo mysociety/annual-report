@@ -17,6 +17,10 @@
   line-height: 1em;
 }
 
+.inline-stat__number {
+  font-weight: bold;
+}
+
 @media (min-width: $medium-screen) {
   .stat-columns {
     @include clearfix();
@@ -108,6 +112,23 @@ table.js-make-sparkline {
 aside {
   font-size: 0.8em;
   opacity: 0.9;
+
+  &.interjection {
+    font-size: 0.9em;
+    margin-top: -1.5em;
+    padding-right: 2em;
+
+    p {
+      text-align: right;
+      font-style: italic;
+
+      &:before {
+        content: "—";
+        opacity: 0.8;
+        margin-right: 0.3em;
+      }
+    }
+  }
 }
 
 .screenshot {
