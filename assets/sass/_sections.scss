@@ -444,17 +444,30 @@
 }
 
 .section--poplus-mailing {
+  @extend .section--centred;
+  @extend .section--impactful;
   background-color: darken(map-get($sections, 'poplus'), 10%);
+
+  h2 {
+    max-width: 26em;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
 }
 
 .section--poplus-components {
+  @extend .section--impactful;
   background-image: url(../img/components.png);
   background-position: 10% 10%;
   background-size: 250px 250px;
 }
 
 .section--poplus-grants {
-  background-color: darken(map-get($sections, 'poplus'), 5%);
+  @extend %background-cover;
+  background-color: #4f9444;
+  background-image: url(../img/poplus-lunch-green.jpg);
+  background-position: 50% 70%;
 }
 
 .section--alaveteli-countries {
