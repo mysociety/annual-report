@@ -1,3 +1,6 @@
 /_site
 /.sass-cache
 /assets/css
+/down.html
+/.bundle
+/vendor
