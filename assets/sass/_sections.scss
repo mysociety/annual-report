@@ -691,6 +691,34 @@
   background-position: 50% 0%;
 }
 
+.section--uk-twfy10 {
+  @extend .section--centred;
+
+  h2 {
+    margin-bottom: 0.2em;
+  }
+}
+
+.section--uk-twfy10__wrapper {
+  text-align: left;
+  display: inline-block;
+  padding: 0.5em 0 0 5em;
+  background: transparent url(../img/twfy-logo-green.gif) left top no-repeat;
+  background-size: auto 4.5em;
+}
+
+.section--uk-votes {
+  @extend %background-cover;
+  background-color: darken($colour_green, 10%);
+  background-image: url(../img/uk-votes-green.jpg);
+}
+
+.section--uk-scottish {
+  @extend %background-cover;
+  background-color: darken($colour_green, 5%);
+  background-image: url(../img/uk-scottish-green.jpg);
+}
+
 .section--commercial-too {
   @extend %background-cover;
   @extend .section--impactful;
