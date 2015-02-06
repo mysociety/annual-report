@@ -344,7 +344,19 @@
 }
 
 .section--basics-agreement {
+  @extend %background-cover;
+  @extend .section--centred;
+  @extend .section--impactful;
   background-color: mix(#000, $colour_red, 15%);
+  background-image: url(../img/popluscon-red.jpg);
+  background-position: 50% 30%;
+
+  h2 {
+    max-width: 20em;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 1.2em;
+  }
 }
 
 .section--international-meetings {
