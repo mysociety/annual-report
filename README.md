@@ -14,12 +14,12 @@ The height of these “sections”, and the width and height of the nav bar elem
 
 ### To run locally
 
-You will need at least Sass v3.3 (to work with the `map` data type). Any recent version of Jekyll will do.
+You will need at least Sass v3.3 (to work with the `map` data type). Any recent
+version of Jekyll will do, along with the Jekyll minibundle plugin. Use bundle,
+or install them manually if you prefer.
 
 ```
-sass --watch assets/sass:assets/css
-```
-
-```
-jekyll serve --watch --baseurl ''
+bundle install --path vendor/bundle --binstubs vendor/bin
+vendor/bin/sass --watch assets/sass:assets/css
+vendor/bin/jekyll serve --watch --baseurl ''
 ```
