@@ -201,3 +201,26 @@ aside {
     margin-bottom: -1em !important; // must override :last-child selectors
   }
 }
+
+.share-bar {
+  text-align: center;
+
+  .button {
+    display: block;
+    font-size: 1em !important; // must override .section .button styling
+    width: auto;
+
+    & + .button {
+      margin-top: 1em;
+    }
+
+    @media (min-width: $medium-screen + 6em) { // rough width of the three buttons
+      display: inline-block;
+
+      & + .button {
+        margin-top: 0;
+        margin-left: 1em;
+      }
+    }
+  }
+}

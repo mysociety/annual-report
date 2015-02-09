@@ -309,6 +309,7 @@
 .section--basics-busy {
   @extend %background-cover;
   background-image: url(../img/coding-red.jpg);
+  border-top: 1px solid darken($colour_red, 15%);
 
   h2 {
     margin-bottom: 1em;
@@ -438,6 +439,10 @@
   background-image: url(../img/1d-closeup-blue.jpg);
 }
 
+.section--international-share {
+  background-color: mix($colour_blue, #000, 65%);
+}
+
 .section--poplus-con {
   @extend %background-cover;
   background-image: url(../img/popluscon-green.jpg);
@@ -509,6 +514,10 @@
   }
 }
 
+.section--poplus-share {
+  background-color: darken(map-get($sections, 'poplus'), 5%);
+}
+
 .section--alaveteli-ukraine {
   @extend .section--centred;
   @extend .section--impactful;
@@ -568,6 +577,10 @@
   }
 }
 
+.section--alaveteli-share {
+  background-color: darken(map-get($sections, 'alaveteli'), 5%);
+}
+
 .section--alaveteli-silence {
   background-color: darken(map-get($sections, 'alaveteli'), 5%);
 }
@@ -598,6 +611,10 @@
     width: auto;
     height: 12em;
   }
+}
+
+.section--pombola-share {
+  background-color: mix(map-get($sections, 'pombola'), #000, 90%);
 }
 
 .section--uk-users {
@@ -714,6 +731,10 @@
   background-position: 50% 0%;
 }
 
+.section--uk-share {
+  background-color: darken($colour_green, 5%);
+}
+
 .section--uk-twfy10 {
   @extend .section--centred;
 
@@ -816,6 +837,11 @@
   }
 }
 
+.section--commercial-share {
+  background-color: #5EBEF1; // light tint of commercial blue
+  border-bottom: 1px solid #49A6D8;
+}
+
 .section--commercial-vikings {
   @extend %background-cover;
   background-image: url(../img/commercial-vikings.jpg);
@@ -832,7 +858,6 @@
   @extend %background-cover;
   background-color: mix(#000, $colour_red, 5%);
   background-image: url(../img/research-red.jpg);
-
 }
 
 .section--research-partners {
@@ -867,6 +892,10 @@
 .section--research-sharing {
   @extend %background-cover;
   background-image: url(../img/research-telescope.jpg);
+}
+
+.section--research-share {
+  background-color: mix(#000, $colour_red, 5%);
 }
 
 .section--future {

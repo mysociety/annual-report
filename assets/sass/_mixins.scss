@@ -47,7 +47,6 @@ $prefixes: ("-webkit-","-moz-", "-o-", "-ms-", "");
   }
 
   .button {
-    @extend .button;
     color: darken($colour, 10%);
     background-color: #fff;
     text-decoration: none;

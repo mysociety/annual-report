@@ -90,3 +90,19 @@
     margin-right: 0.5em;
   }
 }
+
+.button--donate {
+  &:before {
+    @extend .#{$fa-css-prefix};
+    @extend .#{$fa-css-prefix}-gratipay:before;
+    margin-right: 0.5em;
+  }
+}
+
+.button--contact {
+  &:before {
+    @extend .#{$fa-css-prefix};
+    @extend .#{$fa-css-prefix}-comments:before;
+    margin-right: 0.5em;
+  }
+}
