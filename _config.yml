@@ -1,3 +1,4 @@
 name: retirement
 baseurl:
 exclude: ['vendor']
+gems: ['jekyll/minibundle']
