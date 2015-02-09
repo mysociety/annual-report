@@ -1,3 +1,18 @@
+.unstyled-list {
+  margin-left: 0;
+  padding-left: 0;
+  list-style: none outside none;
+}
+
+.inline-list {
+  margin-left: -0.5em;
+  margin-bottom: 0;
+  li {
+    display: inline-block;
+    margin-left: 0.5em;
+  }
+}
+
 .stat {
   @include clearfix();
 }
@@ -149,5 +164,27 @@ aside {
     padding: 4em 0.5em;
     border-radius: 2em;
     border: 0.2em solid #999;
+  }
+}
+
+.logo-lineup {
+  @extend .unstyled-list;
+  text-align: center;
+
+  li {
+    display: block;
+
+    @media (min-width: $large-screen) {
+      display: inline-block;
+      margin: 0 0.75em;
+
+      &:first-child {
+        margin-left: 0;
+      }
+
+      &:last-child {
+        margin-right: 0;
+      }
+    }
   }
 }

@@ -752,7 +752,7 @@
   text-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
 
   p {
-    max-width: 24em;
+    max-width: 29em;
     margin-left: auto;
     margin-right: auto;
   }
@@ -760,26 +760,24 @@
   h1, strong {
     font-weight: 600;
   }
+
+  .logo-lineup {
+    @media (min-width: $large-screen) {
+      margin: 2em 0 -1em;
+    }
+
+    img {
+      opacity: 0.8;
+    }
+
+    a:hover img {
+      opacity: 1;
+    }
+  }
 }
 
 .section--commercial-fms {
   background-color: #3080B6; // dark, rich shade of commercial blue
-  background-image: url(../img/commercial-fms-logos-vertical.gif);
-  background-size: auto 100%;
-  background-position: right center;
-  background-repeat: no-repeat;
-
-  @media (max-width: $medium-screen-max) {
-    background-image: url(../img/commercial-fms-logos-horizontal.gif);
-    background-position: center bottom;
-    background-size: 100%;
-    padding-bottom: 16%; // this is based on aspect ratio of image
-  }
-
-  @media (min-width: $huge-screen + 8em) { // 8am based on copy length
-    background-image: url(../img/commercial-fms-logos.gif);
-    background-position: 90% 50%;
-  }
 }
 
 .section--commercial-parliament {

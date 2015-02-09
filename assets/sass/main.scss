@@ -144,21 +144,6 @@ textarea,
   max-width: 100%;
 }
 
-.unstyled-list {
-  margin-left: 0;
-  padding-left: 0;
-  list-style: none outside none;
-}
-
-.inline-list {
-  margin-left: -0.5em;
-  margin-bottom: 0;
-  li {
-    display: inline-block;
-    margin-left: 0.5em;
-  }
-}
-
 @import 'grid';
 @import 'buttons';
 @import 'typography';
