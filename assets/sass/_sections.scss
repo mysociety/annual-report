@@ -822,9 +822,17 @@
   background-position: 50% 20%;
 }
 
+.section--research-funding {
+  @extend %background-cover;
+  background-image: url(../img/research-network-diagram.jpg);
+}
+
 .section--research-opinions {
   @extend .section--punchline;
+  @extend %background-cover;
   background-color: mix(#000, $colour_red, 5%);
+  background-image: url(../img/research-red.jpg);
+
 }
 
 .section--research-partners {
@@ -854,6 +862,11 @@
       display: none;
     }
   }
+}
+
+.section--research-sharing {
+  @extend %background-cover;
+  background-image: url(../img/research-telescope.jpg);
 }
 
 .section--future {
