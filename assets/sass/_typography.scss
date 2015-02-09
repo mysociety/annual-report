@@ -169,18 +169,13 @@ aside {
 
 .logo-lineup {
   @extend .unstyled-list;
-  text-align: center;
 
   li {
     display: block;
 
     @media (min-width: $large-screen) {
       display: inline-block;
-      margin: 0 0.75em;
-
-      &:first-child {
-        margin-left: 0;
-      }
+      margin-right: 1.5em;
 
       &:last-child {
         margin-right: 0;

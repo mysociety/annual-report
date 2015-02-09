@@ -864,13 +864,26 @@
   background-position: center top;
   height: 100%;
 
+  & > * {
+    width: auto;
+  }
+
   h2 {
-    margin-bottom: 1em;
+//    margin-bottom: 1em;
   }
 
   p {
     margin-bottom: 0.5em;
     color: mix(map-get($sections, 'future'), #fff, 15%);
+  }
+
+  .special-thanks {
+    font-size: 1em;
+    margin-top: 2em;
+  }
+
+  .logo-lineup {
+    max-width: 30em;
   }
 
   .caption {
