@@ -188,3 +188,21 @@ aside {
     }
   }
 }
+
+%logo-lineup-hover-effect {
+  img {
+    opacity: 0.8;
+  }
+
+  a:hover img {
+    opacity: 1;
+  }
+}
+
+%logo-lineup-padding-compensation {
+  margin-top: 2em;
+
+  @media (min-width: $large-screen) {
+    margin-bottom: -1em !important; // must override :last-child selectors
+  }
+}

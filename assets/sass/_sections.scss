@@ -623,13 +623,11 @@
   h2 {
     max-width: 25em;
     margin: 0 auto;
+  }
 
-    @media (min-width: $large-screen) {
-      background: transparent url(../img/uk-site-logos.gif) center bottom no-repeat;
-      background-size: 95%;
-      padding-bottom: 8%;
-      margin-bottom: -2% !important;
-    }
+  .logo-lineup {
+    @extend %logo-lineup-hover-effect;
+    @extend %logo-lineup-padding-compensation;
   }
 }
 
@@ -762,17 +760,8 @@
   }
 
   .logo-lineup {
-    @media (min-width: $large-screen) {
-      margin: 2em 0 -1em;
-    }
-
-    img {
-      opacity: 0.8;
-    }
-
-    a:hover img {
-      opacity: 1;
-    }
+    @extend %logo-lineup-hover-effect;
+    @extend %logo-lineup-padding-compensation;
   }
 }
 
