@@ -224,7 +224,7 @@ $(function(){
 
   riveted.init();
 
-  $("[data-share]").on(click, function(e){
+  $("[data-share]").on('click', function(e){
     var url = $(this).attr('href')
     var name = $(this).attr('data-share')
     var callback = function(){
