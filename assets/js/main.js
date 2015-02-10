@@ -223,4 +223,22 @@ $(function(){
   });
 
   riveted.init();
+
+  $("[data-share]").on(click, function(e){
+    var url = $(this).attr('href')
+    var name = $(this).attr('data-share')
+    var callback = function(){
+        window.location.href = url
+    }
+    if(e.metaKey || e.ctrlKey){
+        callback = function(){}
+    } else {
+        e.preventDefault()
+    }
+    ga('send', 'event', 'share', 'click', name, {
+        'hitCallback': callback
+    })
+   setTimeout(callback, 2000);
+  });
+
 });
