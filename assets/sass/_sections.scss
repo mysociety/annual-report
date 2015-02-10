@@ -898,13 +898,20 @@
   background-color: mix(#000, $colour_red, 5%);
 }
 
+.page--future {
+  background-color: #000;
+}
+
 .section--future {
   @extend %background-cover;
   background-image: url(../img/future-purple.jpg);
   background-color: #000;
   background-size: 100%;
   background-position: center top;
-  height: 100%;
+
+  @media (min-width: $medium-screen) {
+    height: 100%;
+  }
 
   & > * {
     width: auto;
@@ -925,11 +932,16 @@
   }
 
   .caption {
-    position: absolute;
-    bottom: 3em;
-    max-width: 24em;
+    margin-top: 5em;
     font-size: 0.8em;
+    max-width: 24em;
     opacity: 0.6;
+
+    @media (min-width: $large-screen) and (min-height: 36em) {
+      position: absolute;
+      bottom: 3em;
+      margin-top: 0;
+    }
   }
 }
 
