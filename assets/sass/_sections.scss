@@ -598,19 +598,11 @@
 }
 
 .section--pombola-mzalendo-stats {
-  position: relative;
-  overflow: hidden;
-  padding-bottom: 10em !important; // ignore other rules, this is the height of the graph
-
-  .chart__mzalendo-sessions {
-    position: absolute;
-    z-index: 0;
-    left: -5px;
-    right: -5px;
-    bottom: -5px;
-    width: auto;
-    height: 12em;
-  }
+  background-image: url(../img/pombola-mzalendo-graph.gif);
+  background-position: center bottom;
+  background-size: 100% auto;
+  background-repeat: no-repeat;
+  padding-bottom: 12%; // based on aspect ratio of the background image
 }
 
 .section--pombola-share {
