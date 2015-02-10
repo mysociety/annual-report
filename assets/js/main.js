@@ -221,4 +221,6 @@ $(function(){
       keenClient.addEvent("Screentime", data);
     }
   });
+
+  riveted.init();
 });
