@@ -211,7 +211,7 @@ $(function(){
   $('[data-st-id]').each(function(i){
     screenTimeFields.push({
       'selector': '[data-st-id="' + $(this).data('st-id') + '"]',
-      'name': $(this).data('st-title')
+      'name': $(this).data('st-id')
     });
   });
 
