@@ -49,10 +49,6 @@ $prefixes: ("-webkit-","-moz-", "-o-", "-ms-", "");
   .button {
     color: darken($colour, 10%);
     background-color: #fff;
-    text-decoration: none;
-    font-weight: normal;
-    box-shadow: 0 1px 2px rgba(0,0,0,0.1);
-    font-size: 0.8em;
 
     &:hover,
     &:active,
@@ -61,4 +57,27 @@ $prefixes: ("-webkit-","-moz-", "-o-", "-ms-", "");
       background-color: rgba(255, 255, 255, 0.9);
     }
   }
+}
+
+@mixin flexbox() {
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+}
+
+@mixin flex-wrap($wrap) {
+  -moz-box-wrap: $wrap;
+  -webkit-box-wrap: $wrap;
+  -webkit-flex-wrap: $wrap;
+  -ms-flexbox-wrap: $wrap;
+  flex-wrap: $wrap;
+}
+
+@mixin flex-align-items($alignment) {
+  -webkit-box-align: $alignment;
+  -webkit-align-items: $alignment;
+  -ms-flex-align: $alignment;
+  align-items: $alignment;
 }

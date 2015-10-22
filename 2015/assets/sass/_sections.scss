@@ -1,4 +1,5 @@
 .section {
+  display: block; // sections can be <a> elements sometimes!
   padding: 1em;
 
   @media (min-width: $small-screen) {
@@ -54,6 +55,10 @@
       width: 50%;
     }
   }
+
+  & > .row {
+    width: auto;
+  }
 }
 
 @each $slug, $colour in $sections {
@@ -76,46 +81,6 @@
   }
 }
 
-.section--one-half {
-  min-height: 300px;
-}
-
-.section--one-quarter {
-  min-height: 150px;
-}
-
-.section--three-quarters {
-  min-height: 450px;
-}
-
-@media (min-width: $medium-screen) and (min-height: 740px) {
-  .section--one-half {
-    min-height: 350px;
-  }
-
-  .section--one-quarter {
-    min-height: 175px;
-  }
-
-  .section--three-quarters {
-    min-height: 525px;
-  }
-}
-
-@media (min-width: $medium-screen) and (min-height: 840px) {
-  .section--one-half {
-    min-height: 400px;
-  }
-
-  .section--one-quarter {
-    min-height: 200px;
-  }
-
-  .section--three-quarters {
-    min-height: 600px;
-  }
-}
-
 .section--centred {
   text-align: center;
 
@@ -125,7 +90,7 @@
 }
 
 @media (min-width: $large-screen){
-  .section--punchline {
+  .section--flipped {
     @include clearfix();
 
     & > * {
@@ -150,8 +115,576 @@
   }
 }
 
-%background-cover {
-  background-position: 50% 50%;
+.section--welcome--websites {
+  @extend .section--centred;
+  @extend .section--impactful;
+  padding-bottom: 0;
+  background: transparent url(../img/welcome-team.jpg) 50% 30% no-repeat;
   background-size: cover;
+  text-shadow: 0 0 0.5em transparentize(darken(map-get($sections, 'welcome'), 50%), 0.6);
+
+  .slideshow {
+    margin-top: 2em;
+
+    @media (min-width: $large-screen) {
+      margin-top: 3em;
+    }
+
+    @media (min-width: $huge-screen) {
+      margin-top: 7%;
+    }
+  }
+
+  .slideshow__inner {
+    &:after {
+      @extend %inner-shadow;
+    }
+  }
+
+  .slideshow__slide {
+    padding: 0;
+    position: relative;
+
+    &:nth-child(5n + 1) {
+      top: 0em;
+      margin-left: -4em;
+    }
+
+    &:nth-child(5n + 2) {
+      top: 1.5em;
+      margin-left: -3.5em;
+    }
+
+    &:nth-child(5n + 3) {
+      top: 0.5em;
+      margin-left: -6em;
+    }
+
+    &:nth-child(5n + 4) {
+      top: 2.5em;
+      margin-left: -4.5em;
+    }
+
+    &:nth-child(5n + 5) {
+      top: 1em;
+      margin-left: -3.5em;
+    }
+  }
+
+  .screenshot {
+    box-shadow: 0 3px 10px rgba(0,0,0,0.3);
+
+    img {
+      border-top: 1px solid #ddd;
+    }
+  }
+}
+
+.section--welcome--reality {
+  @extend .section--centred;
+  @extend .section--impactful;
+}
+
+.section--welcome--reality__hold-tight {
+  margin-top: 2em;
+  color: mix(map-get($sections, 'welcome'), #fff, 30%);
+}
+
+.section--welcome--toc {
+  @extend .section--centred;
+  @extend .section--impactful;
+
+  .button {
+    font-weight: bold;
+    margin-top: 1em;
+    font-size: 1em;
+  }
+}
+
+.section--welcome--toc--figures {
+  background: map-get($sections, 'figures') url(../img/welcome-figures.jpg) 50% 50% no-repeat;
+  background-size: cover;
+  @include coloured-links(map-get($sections, 'figures'));
+}
+
+.section--welcome--toc--uk {
+  background: map-get($sections, 'uk') url(../img/welcome-uk.jpg) 50% 50% no-repeat;
+  background-size: cover;
+  @include coloured-links(map-get($sections, 'uk'));
+}
+
+.section--welcome--toc--international {
+  background: map-get($sections, 'international') url(../img/welcome-international.png) 50% 50% no-repeat;
+  background-size: cover;
+  @include coloured-links(map-get($sections, 'international'));
+}
+
+.section--welcome--toc--commercial {
+  background: map-get($sections, 'commercial') url(../img/welcome-commercial.jpg) 50% 50% no-repeat;
+  background-size: cover;
+  @include coloured-links(map-get($sections, 'commercial'));
+}
+
+.section--welcome--toc--research {
+  background: map-get($sections, 'research') url(../img/welcome-research.jpg) 50% 0% no-repeat;
+  background-size: cover;
+  @include coloured-links(map-get($sections, 'research'));
+}
+
+.section--welcome--lets-go {
+  @extend .section--centred;
+  @extend .section--impactful;
+
+  a {
+    @extend .secondary-heading;
+    color: #fff;
+    text-decoration: none;
+
+    background-image: linear-gradient(to bottom, rgba(255,255,255,0) 50%, rgba(255,255,255,0.5) 50%);
+    background-repeat: repeat-x;
+    background-size: 3px 3px;
+    background-position: 0 1.1em;
+  }
+}
+
+.section--figures--leaders {
+  background: darken(map-get($sections, 'figures'), 10%) url(../img/figures-mark.jpg) 50% 80% no-repeat;
+  background-size: cover;
+
+  h2 {
+    margin-bottom: 0.2em;
+  }
+}
+
+.section--figures--leaders__tapir {
+  color: mix(map-get($sections, 'figures'), #fff, 30%);
+  font-size: 1em !important;
+  margin-bottom: 3em;
+}
+
+.section--figures--code {
+  background-color: darken(map-get($sections, 'figures'), 5%);
+}
+
+.section--figures--projects {
+  background: transparent url(../img/figures-projects.jpg) 50% 50% no-repeat;
+  background-size: cover;
+}
+
+.section--figures--events {
+  background-color: darken(map-get($sections, 'figures'), 5%);
+}
+
+.section--figures--team {
+  background: transparent url(../img/figures-team.jpg) 20% 50% no-repeat;
+  background-size: cover;
+
+  .stat-container {
+    @extend .stat-container--alt;
+  }
+}
+
+.section--uk--sites {
+  @extend .section--centred;
+  background: transparent url(../img/uk-phonebox.jpg) 100% 100% no-repeat;
+  background-size: cover;
+  text-shadow: 0 0 0.5em transparentize(darken(map-get($sections, 'uk'), 25%), 0.6);
+}
+
+.section--uk--sites__inner {
+  margin: 0 auto;
+  max-width: 32em;
+}
+
+.section--uk--sites__grid {
+  @include clearfix();
+}
+
+a.section--uk--sites__grid__item {
+  display: block;
+  margin-top: 1em;
+  color: #fff;
+  text-decoration: none;
+  font-weight: normal;
+  font-size: 1.2em;
+  line-height: 1.4em;
+
+  @media (min-width: $medium-screen) {
+    float: left;
+    width: 50%;
+    padding: 0 1em;
+
+    &:nth-child(odd) {
+      clear: left;
+    }
+  }
+
+  &:hover,
+  &:focus {
+    color: #fff;
+  }
+
+  span {
+    display: block;
+    color: mix(#fff, map-get($sections, 'uk'), 70%);
+  }
+}
+
+.section--uk--difference {
+  @extend .section--centred;
+  border-top: 1px solid darken(map-get($sections, 'uk'), 5%);
+}
+
+.section--uk--difference__tweets {
+  margin: 0 -1em;
+
+  @media (min-width: $large-screen) {
+    @include clearfix();
+  }
+
+  @media (min-width: $huge-screen) {
+    max-width: 56em; // keep the twitter widgets sensibly proportioned
+    margin: 0 auto;
+  }
+
+  blockquote {
+    margin: 0;
+  }
+}
+
+.section--uk--difference__tweets__tweet {
+  padding: 1em;
+  width: 100%;
+
+  @media (min-width: $large-screen) {
+    width: 50%;
+    float: left;
+  }
+}
+
+.section--uk--stats {
+  background-color: darken(map-get($sections, 'uk'), 10%);
+}
+
+.section--uk--equivalent {
+  background-color: darken(map-get($sections, 'uk'), 15%);
+  position: relative;
+
+  &:after {
+    content: "";
+    width: 0;
+    height: 0;
+    border-style: solid;
+    border-width: 0 1.5em 1.5em 1.5em;
+    border-color: transparent transparent darken(map-get($sections, 'uk'), 15%) transparent;
+    position: absolute;
+    top: -1.5em;
+    left: 50%;
+    margin-left: -1.5em;
+  }
+
+  h1 {
+    width: auto;
+    max-width: 30em;
+    margin: 0 auto;
+    text-align: center;
+    font-size: 1.5em;
+    line-height: 1.4em;
+  }
+}
+
+.section--uk--wtt {
+  // background-color: map-get($sections, 'uk');
+}
+
+.wtt-mp {
+  margin-top: 1.5em;
+
+  p {
+    margin-bottom: 0;
+  }
+
+  img {
+    float: left;
+    margin-right: 1em;
+    height: 3em;
+    width: auto;
+    border-radius: 50%;
+    margin-top: 0.1em;
+  }
+}
+
+.wtt-mp__change {
+  color: mix(map-get($sections, 'uk'), #fff, 40%);
+
+  &:before {
+    content: "";
+    display: inline-block;
+    width: 0;
+    height: 0;
+    border-style: solid;
+    margin-right: 0.5em;
+    font-size: 0.7em;
+  }
+}
+
+.wtt-mp__change--up:before {
+  border-width: 0 0.66em 1em 0.66em;
+  border-color: transparent transparent #0f3 transparent;
+}
+
+.wtt-mp__change--down:before {
+  border-width: 1em 0.66em 0 0.66em;
+  border-color: #c33 transparent transparent transparent;
+}
+
+.section--uk--wtt-testimonial {
+  @extend .section--flipped;
+  @extend .section--impactful;
+  background-color: darken(map-get($sections, 'uk'), 15%);
+}
+
+.section--uk--twfy,
+.section--uk--twfy-votes {
+  // background-color: map-get($sections, 'uk');
+}
+
+.section--uk--twfy-stats {
+  background-color: darken(map-get($sections, 'uk'), 5%);
+}
+
+.section--uk--twfy-testimonial {
+  @extend .section--impactful;
+  background-color: darken(map-get($sections, 'uk'), 15%);
+}
+
+.section--uk--fms {
+  // background-color: map-get($sections, 'uk');
+
+  .stat-container {
+    width: auto !important;
+  }
+}
+
+.section--uk--fms-testimonial {
+  @extend .section--impactful;
+  background-color: darken(map-get($sections, 'uk'), 15%);
+}
+
+.section--uk--wdtk {
+  // background-color: map-get($sections, 'uk');
+}
+
+.section--uk--wdtk-testimonial {
+  @extend .section--impactful;
+  background-color: darken(map-get($sections, 'uk'), 15%);
+}
+
+.section--uk--election {
+  @extend .section--centred;
+  background-color: darken(map-get($sections, 'uk'), 5%);
+  position: relative;
+
+  &:after {
+    content: "";
+    width: 0;
+    height: 0;
+    border-style: solid;
+    border-width: 1.5em 1.5em 0 1.5em;
+    border-color: darken(map-get($sections, 'uk'), 5%) transparent transparent transparent;
+    position: absolute;
+    bottom: -1.5em;
+    left: 50%;
+    margin-left: -1.5em;
+  }
+}
+
+.section--uk--up-all-night {
+  @extend .section--flipped;
+  background-color: darken(map-get($sections, 'uk'), 5%);
+}
+
+.section--uk--positiondial {
+  @extend .section--impactful;
+  background-color: darken(map-get($sections, 'uk'), 15%);
+}
+
+.section--uk--stats,
+.section--uk--twfy-stats {
+  @media (min-width: $huge-screen) {
+    .stat-container {
+      width: auto !important;
+    }
+
+    .stat {
+      width: 33.3%;
+    }
+  }
+}
+
+.section--international--videos {
+  padding: 0;
+
+  .sixteen-nine-video-ratio {
+    width: auto;
+  }
+}
+
+.section--international--figures {
+  background-color: darken(map-get($sections, 'international'), 10%);
+
+  @media (min-width: $huge-screen) {
+    .stat-container {
+      margin: 0 auto;
+    }
+  }
+}
+
+.section--international--alaveteli {
+  background: transparent url(../img/alaveteli-map.png) 50% 50% no-repeat;
+  background-image: url(../img/alaveteli-map.svg), none;
+  background-size: cover;
+  border-top: 1px solid map-get($sections, 'international');
+  text-shadow: 0 0 0.5em transparentize(darken(map-get($sections, 'international'), 25%), 0.6);
+
+  @media (min-width: $large-screen){
+    padding-top: 4em;
+    padding-bottom: 4em;
+  }
+}
+
+.section--international--poplus {
+  @extend .section--centred;
+  @extend .section--impactful;
+  background-color: darken(map-get($sections, 'international'), 15%);
+  background-image: url(../img/poplus-con.jpg);
   background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+}
+
+.section--international--poplus__inner {
+  margin: 0 auto;
+  max-width: 24em;
+  text-shadow: 0 0 0.5em transparentize(darken(map-get($sections, 'international'), 25%), 0.6);
+}
+
+.section--international--ynr {
+  background-color: darken(map-get($sections, 'international'), 10%);
+}
+
+.section--international--cdt,
+.section--international--genderbalance {
+  @extend .section--flipped;
+  background-color: darken(map-get($sections, 'international'), 5%);
+}
+
+.section--commercial--intro {
+  @extend .section--centred;
+  background-color: mix(#000, map-get($sections, 'commercial'), 30%);
+  position: relative;
+
+  &:after {
+    content: "";
+    width: 0;
+    height: 0;
+    border-style: solid;
+    border-width: 1.5em 1.5em 0 1.5em;
+    border-color: mix(#000, map-get($sections, 'commercial'), 30%) transparent transparent transparent;
+    position: absolute;
+    bottom: -1.5em;
+    left: 50%;
+    margin-left: -1.5em;
+  }
+}
+
+.section--commercial--fullfact {
+  @extend .section--flipped;
+  background-color: mix(#000, map-get($sections, 'commercial'), 20%);
+}
+
+.section--commercial--collideoscope {
+  background-color: mix(#000, map-get($sections, 'commercial'), 10%);
+}
+
+.section--commercial--msf {
+  @extend .section--flipped;
+}
+
+.section--commercial--pride {
+  @extend .section--centred;
+  background-color: mix(#000, map-get($sections, 'commercial'), 30%);
+}
+
+.section--research--conference__inner {
+  text-align: center;
+  margin: 0 auto;
+  width: auto;
+  max-width: 30em;
+}
+
+.section--research--conference-pics {
+  @include clearfix();
+  padding: 0;
+
+  img {
+    float: left;
+    width: 50%;
+
+    &:nth-child(3) {
+      float: right;
+    }
+
+    @media (min-width: $huge-screen) {
+      width: 33.33%;
+
+      &:nth-child(3) {
+        float: left;
+      }
+    }
+  }
+}
+
+.section--research--findings {
+  @extend .section--centred;
+  background-color: mix($colour_red_black, map-get($sections, 'research'), 30%);
+  position: relative;
+
+  p {
+    font-size: 1.1em; // bit smaller than normal
+    margin-bottom: 0.5em;
+    color: mix(#fff, map-get($sections, 'research'), 60%);
+  }
+
+  &:after {
+    content: "";
+    width: 0;
+    height: 0;
+    border-style: solid;
+    border-width: 1.5em 1.5em 0 1.5em;
+    border-color: mix($colour_red_black, map-get($sections, 'research'), 30%) transparent transparent transparent;
+    position: absolute;
+    bottom: -1.5em;
+    left: 50%;
+    margin-left: -1.5em;
+  }
+}
+
+.section--research--conjunction {
+  font-weight: normal;
+  opacity: 0.7;
+  display: block;
+  font-size: 0.7em;
+}
+
+.section--research--responsiveness {
+  background-color: mix($colour_red_black, map-get($sections, 'research'), 15%);
+}
+
+.section--research--benefits {
+  @extend .section--flipped;
+}
+
+.section--research--twfy {
+  background-color: mix($colour_red_black, map-get($sections, 'research'), 15%);
 }

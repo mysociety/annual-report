@@ -9,6 +9,7 @@ $colour_off_white: #f3f1eb;
 $colour_light_grey: #e2dfd9;
 $colour_dark_grey: #6c6b68;
 $colour_black: #333333;
+$colour_red_black: #650B0B; // A very very dark red, for mixing into red to make it darker
 
 $colour_twitter: #55acee;
 $colour_facebook: #3b5998;
@@ -35,9 +36,9 @@ $high-dpi-screen: '-webkit-min-device-pixel-ratio: 1.5), (min-resolution: 144dpi
 
 $sections: (
   welcome: $colour_purple,
-  figures: $colour_red,
-  international: $colour_blue,
+  figures: $colour_violet,
   uk: $colour_green,
+  international: $colour_orange,
   commercial: $colour_blue,
   research: $colour_red,
   future: $colour_purple,
