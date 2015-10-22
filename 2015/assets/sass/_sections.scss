@@ -1,4 +1,5 @@
 .section {
+  display: block; // sections can be <a> elements sometimes!
   padding: 1em;
 
   @media (min-width: $small-screen) {
@@ -154,4 +155,188 @@
   background-position: 50% 50%;
   background-size: cover;
   background-repeat: no-repeat;
+}
+
+.section--intro--websites {
+  @extend .section--centred;
+  @extend .section--impactful;
+  padding-bottom: 0;
+
+  .slideshow {
+    margin-top: 2em;
+
+    @media (min-width: $large-screen) {
+      margin-top: 3em;
+    }
+
+    @media (min-width: $huge-screen) {
+      margin-top: 7%;
+    }
+  }
+
+  .slideshow__inner {
+    &:after {
+      @extend %inner-shadow;
+    }
+  }
+
+  .slideshow__slide {
+    padding: 0;
+    position: relative;
+
+    &:nth-child(5n + 1) {
+      top: 0em;
+      margin-left: -4em;
+    }
+
+    &:nth-child(5n + 2) {
+      top: 1.5em;
+      margin-left: -3.5em;
+    }
+
+    &:nth-child(5n + 3) {
+      top: 0.5em;
+      margin-left: -6em;
+    }
+
+    &:nth-child(5n + 4) {
+      top: 2.5em;
+      margin-left: -4.5em;
+    }
+
+    &:nth-child(5n + 5) {
+      top: 1em;
+      margin-left: -3.5em;
+    }
+  }
+
+  .screenshot {
+    box-shadow: 0 3px 10px rgba(0,0,0,0.3);
+
+    img {
+      border-top: 1px solid #ddd;
+    }
+  }
+}
+
+.section--intro--reality {
+  @extend .section--centred;
+  @extend .section--impactful;
+}
+
+.section--intro--reality__hold-tight {
+  margin-top: 2em;
+  color: mix(map-get($sections, 'welcome'), #fff, 30%);
+}
+
+.section--intro--toc {
+  @extend .section--centred;
+  @extend .section--impactful;
+
+  .button {
+    font-weight: bold;
+    margin-top: 1em;
+    font-size: 1em;
+  }
+}
+
+.section--intro--toc--figures {
+  background-color: map-get($sections, 'figures');
+  @include coloured-links(map-get($sections, 'figures'));
+}
+
+.section--intro--toc--uk {
+  background-color: map-get($sections, 'uk');
+  @include coloured-links(map-get($sections, 'uk'));
+}
+
+.section--intro--toc--international {
+  background-color: map-get($sections, 'international');
+  @include coloured-links(map-get($sections, 'international'));
+}
+
+.section--intro--toc--commercial {
+  background-color: map-get($sections, 'commercial');
+  @include coloured-links(map-get($sections, 'commercial'));
+}
+
+.section--intro--toc--research {
+  background-color: map-get($sections, 'research');
+  @include coloured-links(map-get($sections, 'research'));
+}
+
+.section--intro--lets-go {
+  @extend .section--centred;
+  @extend .section--impactful;
+
+  a {
+    @extend .secondary-heading;
+    color: #fff;
+    text-decoration: none;
+
+    background-image: linear-gradient(to bottom, rgba(255,255,255,0) 50%, rgba(255,255,255,0.5) 50%);
+    background-repeat: repeat-x;
+    background-size: 3px 3px;
+    background-position: 0 1.1em;
+  }
+}
+
+.section--figures--top {
+  h2 {
+    margin-bottom: 0.2em;
+  }
+}
+
+.section--figures--top__tapir {
+  color: mix(map-get($sections, 'figures'), #fff, 30%);
+  font-size: 1em !important;
+}
+
+.section--figures--leaders,
+.section--figures--code,
+.section--figures--projects,
+.section--figures--events,
+.section--figures--team,
+.section--figures--pets {
+  @include flexbox();
+  @include flex-wrap(wrap);
+
+  .stat {
+    width: 100%;
+
+    & + .stat {
+      margin-top: 1em;
+    }
+  }
+
+  @media (min-width: $large-screen) {
+    padding: 0.5em;
+
+    .stat {
+      width: 50%;
+      padding: 1.5em;
+
+      & + .stat {
+        margin-top: 0;
+      }
+    }
+  }
+
+  @media (min-width: $huge-screen) {
+    padding: 1em;
+
+    .stat {
+      width: 33%;
+    }
+  }
+}
+
+.section--figures--leaders,
+.section--figures--pets {
+  background-color: darken(map-get($sections, 'figures'), 10%);
+}
+
+.section--figures--code,
+.section--figures--events {
+  background-color: darken(map-get($sections, 'figures'), 5%);
 }
