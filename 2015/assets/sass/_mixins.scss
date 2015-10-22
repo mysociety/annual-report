@@ -1,0 +1,64 @@
+%image-replacement {
+  text-indent: -1000%;
+  white-space: nowrap;
+  overflow: hidden;
+}
+
+// Apply to a :before/:after pseudo-element to give the
+// impression of an inner shadow at the bottom of the parent.
+%inner-shadow {
+  content: "";
+  display: block;
+  position: absolute; // NOTE: this requires parent element to be positioned
+  height: 2em; // override this to make the shadow taller or shorter
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background: linear-gradient(to bottom, rgba(0,0,0,0) 0%, rgba(0,0,0,0.2) 100%);
+}
+
+@mixin clearfix {
+  &:before,
+  &:after {
+    content: " ";
+    display: table;
+  }
+
+  &:after {
+    clear: both;
+  }
+}
+
+$prefixes: ("-webkit-","-moz-", "-o-", "-ms-", "");
+@mixin prefix($property, $value) {
+  @each $prefix in $prefixes {
+    #{$prefix}#{$property}: #{$value};
+  }
+}
+
+@mixin coloured-links($colour) {
+  a {
+    color: mix($colour, #fff, 20%);
+
+    &:hover,
+    &:focus {
+      color: mix($colour, #fff, 30%);
+    }
+  }
+
+  .button {
+    color: darken($colour, 10%);
+    background-color: #fff;
+    text-decoration: none;
+    font-weight: normal;
+    box-shadow: 0 1px 2px rgba(0,0,0,0.1);
+    font-size: 0.8em;
+
+    &:hover,
+    &:active,
+    &:focus {
+      color: darken($colour, 20%);
+      background-color: rgba(255, 255, 255, 0.9);
+    }
+  }
+}

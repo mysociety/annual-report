@@ -1,0 +1,202 @@
+.unstyled-list {
+  margin-left: 0;
+  padding-left: 0;
+  list-style: none outside none;
+}
+
+.inline-list {
+  margin-left: -0.5em;
+  margin-bottom: 0;
+  li {
+    display: inline-block;
+    margin-left: 0.5em;
+  }
+}
+
+.stat {
+  @include clearfix();
+}
+
+.stat__number {
+  font-size: 2em;
+  line-height: 1em;
+  font-weight: bold;
+  font-family: $condensed_typeface;
+  float: left;
+  margin-right: 0.2em;
+}
+
+.stat__context {
+  float: left;
+  margin-right: 0.3em;
+  line-height: 1em;
+}
+
+.inline-stat__number {
+  font-weight: bold;
+}
+
+@media (min-width: $medium-screen) {
+  .stat-columns {
+    @include clearfix();
+    width: auto !important;
+    margin-bottom: 1em;
+    border-bottom: 1px solid rgba(255,255,255,0.5);
+
+    &:last-child {
+      border-bottom: none;
+    }
+
+    .stat {
+      float: left;
+      margin-right: 2em;
+
+      &:last-child {
+        margin-right: 0
+      }
+    }
+  }
+}
+
+.slideshow {
+  overflow: hidden;
+  position: relative;
+  height: 12em;
+
+  .section & {
+    margin: 0 -1em;
+
+    @media (min-width: $medium-screen) {
+      margin: 0 -1.5em;
+    }
+
+    @media (min-width: $large-screen) {
+      margin: 0 -2em;
+    }
+
+    @media (min-width: $huge-screen) {
+      margin: 0 -2.5em;
+    }
+  }
+}
+
+.slideshow__inner {
+  height: 100%;
+  position: absolute;
+  left: -3em;
+  top: 0;
+  width: 9999px;
+
+  -webkit-transform: translate3d(0, 0, 0);
+  -moz-transform: translate3d(0, 0, 0);
+  -ms-transform: translate3d(0, 0, 0);
+  transform: translate3d(0, 0, 0);
+}
+
+.slideshow__slide {
+  height: 100%;
+  float: left;
+  padding-right: 1em;
+
+  img {
+    height: 100%;
+    width: auto;
+  }
+}
+
+// The fallback table that’s shown when javascript is disabled
+table.js-make-pie-chart {
+  width: 100%;
+  text-align: left;
+
+  td, th {
+    padding: 0.5em;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+  }
+
+  th {
+    background-color: rgba(255, 255, 255, 0.1);
+  }
+}
+
+.nowrap {
+  white-space: nowrap;
+}
+
+aside {
+  font-size: 0.8em;
+  opacity: 0.9;
+
+  &.interjection {
+    font-size: 0.9em;
+    margin-top: -1.5em;
+    padding-right: 2em;
+
+    p {
+      text-align: right;
+      font-style: italic;
+
+      &:before {
+        content: "—";
+        opacity: 0.8;
+        margin-right: 0.3em;
+      }
+    }
+  }
+}
+
+.screenshot {
+  @include clearfix();
+  padding-top: 1em;
+  border-radius: 0.2em 0.2em 0 0;
+  background: #e6e6e6 url(../img/screenshot-buttons.png) 0 0 no-repeat;
+  background-size: auto 1em;
+
+  img {
+    float: left;
+  }
+
+  &.screenshot--mobile {
+    position: relative;
+    background: #55595c url(../img/screenshot-buttons-mobile.png) center top no-repeat;
+    background-size: auto 4em;
+    padding: 4em 0.5em;
+    border-radius: 2em;
+    border: 0.2em solid #999;
+  }
+}
+
+.logo-lineup {
+  @extend .unstyled-list;
+
+  li {
+    display: block;
+
+    @media (min-width: $large-screen) {
+      display: inline-block;
+      margin-right: 1.5em;
+
+      &:last-child {
+        margin-right: 0;
+      }
+    }
+  }
+}
+
+%logo-lineup-hover-effect {
+  img {
+    opacity: 0.8;
+  }
+
+  a:hover img {
+    opacity: 1;
+  }
+}
+
+%logo-lineup-padding-compensation {
+  margin-top: 2em;
+
+  @media (min-width: $large-screen) {
+    margin-bottom: -1em !important; // must override :last-child selectors
+  }
+}
