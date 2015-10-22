@@ -1,4 +1,4 @@
-name: retirement
+name: annualreport
 baseurl:
-exclude: ['vendor']
+host: 0.0.0.0
 gems: ['jekyll/minibundle']
