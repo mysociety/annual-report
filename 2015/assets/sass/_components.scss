@@ -13,6 +13,26 @@
   }
 }
 
+.stat-container {
+  @include flexbox();
+  @include flex-wrap(wrap);
+  margin: -1em;
+  width: auto !important; // override default 50% width for section elements
+
+  .stat {
+    width: 100%;
+    padding: 1em;
+
+    @media (min-width: $large-screen) {
+      width: 50%;
+    }
+
+    @media (min-width: $huge-screen) {
+      width: 33%;
+    }
+  }
+}
+
 .stat__main {
   @include flexbox();
   @include flex-align-items(flex-end);
@@ -184,5 +204,42 @@ aside {
 
   @media (min-width: $large-screen) {
     margin-bottom: -1em !important; // must override :last-child selectors
+  }
+}
+
+// https://dev.twitter.com/web/embedded-tweets/css
+blockquote.twitter-tweet {
+  display: inline-block;
+  font-family: "Helvetica Neue", Roboto, "Segoe UI", Calibri, sans-serif;
+  font-size: 12px;
+  font-weight: bold;
+  line-height: 16px;
+  background-color: #fff;
+  color: #1C2022;
+  border-color: #eee #ddd #bbb;
+  border-radius: 5px;
+  border-style: solid;
+  border-width: 1px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.15);
+  margin: 10px 5px;
+  padding: 16px;
+  max-width: 468px;
+
+  p {
+    font-size: 16px;
+    font-weight: normal;
+    line-height: 20px;
+  }
+
+  a {
+    color: inherit;
+    font-weight: normal;
+    text-decoration: none;
+    outline: 0 none;
+
+    &:hover,
+    &:focus {
+      text-decoration: underline;
+    }
   }
 }

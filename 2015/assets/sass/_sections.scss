@@ -293,45 +293,6 @@
 }
 
 .section--figures--leaders,
-.section--figures--code,
-.section--figures--projects,
-.section--figures--events,
-.section--figures--team,
-.section--figures--pets {
-  @include flexbox();
-  @include flex-wrap(wrap);
-
-  .stat {
-    width: 100%;
-
-    & + .stat {
-      margin-top: 1em;
-    }
-  }
-
-  @media (min-width: $large-screen) {
-    padding: 0.5em;
-
-    .stat {
-      width: 50%;
-      padding: 1.5em;
-
-      & + .stat {
-        margin-top: 0;
-      }
-    }
-  }
-
-  @media (min-width: $huge-screen) {
-    padding: 1em;
-
-    .stat {
-      width: 33%;
-    }
-  }
-}
-
-.section--figures--leaders,
 .section--figures--pets {
   background-color: darken(map-get($sections, 'figures'), 10%);
 }
@@ -339,4 +300,17 @@
 .section--figures--code,
 .section--figures--events {
   background-color: darken(map-get($sections, 'figures'), 5%);
+}
+
+.section--uk--stats,
+.section--uk--twfy-debates,
+.section--uk--election {
+  background-color: darken(map-get($sections, 'uk'), 10%);
+}
+
+.section--uk--wtt,
+.section--uk--twfy-redesign,
+.section--uk--wdtk,
+.section--uk--up-all-night {
+  background-color: darken(map-get($sections, 'uk'), 5%);
 }
