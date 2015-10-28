@@ -314,3 +314,33 @@
 .section--uk--up-all-night {
   background-color: darken(map-get($sections, 'uk'), 5%);
 }
+
+.section--international--top {
+  @extend .section--centred;
+}
+
+.section--international--genderbalance,
+.section--international--cdt {
+  background-color: darken(map-get($sections, 'international'), 5%);
+}
+
+.section--international--figures,
+.section--international--ynr {
+  background-color: darken(map-get($sections, 'international'), 10%);
+}
+
+.section--international--poplus {
+  @extend .section--centred;
+  @extend .section--impactful;
+  background-color: darken(map-get($sections, 'international'), 15%);
+  background-image: url(../img/poplus-con.jpg);
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+}
+
+.section--international--poplus__inner {
+  margin: 0 auto;
+  max-width: 24em;
+  text-shadow: 0 0 0.5em transparentize(darken(map-get($sections, 'international'), 50%), 0.6);
+}
