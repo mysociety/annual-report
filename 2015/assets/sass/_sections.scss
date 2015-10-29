@@ -339,18 +339,74 @@
   background-color: darken(map-get($sections, 'uk'), 5%);
 }
 
-.section--international--top {
-  @extend .section--centred;
+.section--uk--stats {
+  @media (min-width: $huge-screen) {
+    .stat-container {
+      width: auto !important;
+    }
+
+    .stat {
+      width: 33.3%;
+    }
+  }
 }
 
-.section--international--genderbalance,
-.section--international--cdt {
-  background-color: darken(map-get($sections, 'international'), 5%);
+.section--uk--equivalent {
+  background-color: darken(map-get($sections, 'uk'), 15%);
+  position: relative;
+
+  &:after {
+    content: "";
+    width: 0;
+    height: 0;
+    border-style: solid;
+    border-width: 0 1.5em 1.5em 1.5em;
+    border-color: transparent transparent darken(map-get($sections, 'uk'), 15%) transparent;
+    position: absolute;
+    top: -1.5em;
+    left: 50%;
+    margin-left: -1.5em;
+  }
+
+  h1 {
+    width: auto;
+    max-width: 30em;
+    margin: 0 auto;
+    text-align: center;
+    font-size: 1.5em;
+    line-height: 1.4em;
+  }
 }
 
-.section--international--figures,
-.section--international--ynr {
+.section--international--videos {
+  padding: 0;
+
+  .sixteen-nine-video-ratio {
+    width: auto;
+  }
+}
+
+.section--international--figures {
   background-color: darken(map-get($sections, 'international'), 10%);
+
+  @media (min-width: $huge-screen) {
+    .stat-container {
+      margin: 0 auto;
+    }
+  }
+}
+
+.section--international--alaveteli {
+  background: transparent url(../img/alaveteli-map.png) 50% 50% no-repeat;
+  background-image: url(../img/alaveteli-map.svg), none;
+  background-size: cover;
+  border-top: 1px solid map-get($sections, 'international');
+  text-shadow: 0 0 0.5em transparentize(darken(map-get($sections, 'international'), 25%), 0.6);
+
+  @media (min-width: $large-screen){
+    padding-top: 4em;
+    padding-bottom: 4em;
+  }
 }
 
 .section--international--poplus {
@@ -367,4 +423,58 @@
   margin: 0 auto;
   max-width: 24em;
   text-shadow: 0 0 0.5em transparentize(darken(map-get($sections, 'international'), 50%), 0.6);
+}
+
+.section--international--ynr {
+  background-color: darken(map-get($sections, 'international'), 10%);
+}
+
+.section--international--cdt,
+.section--international--genderbalance {
+  background-color: darken(map-get($sections, 'international'), 5%);
+
+  @media (min-width: $large-screen) {
+    & > * {
+      margin-left: 34%;
+    }
+  }
+
+  @media (min-width: $huge-screen) {
+    & > * {
+      margin-left: 50%;
+    }
+  }
+}
+
+.section--research--conference {
+  text-align: center;
+
+  & > * {
+    width: auto;
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 700px;
+  }
+}
+
+.section--research--conference-pics {
+  @include clearfix();
+  padding: 0;
+
+  img {
+    float: left;
+    width: 50%;
+
+    &:nth-child(3) {
+      float: right;
+    }
+
+    @media (min-width: $huge-screen) {
+      width: 33.33%;
+
+      &:nth-child(3) {
+        float: left;
+      }
+    }
+  }
 }
