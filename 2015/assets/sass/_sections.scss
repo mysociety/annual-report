@@ -157,10 +157,13 @@
   background-repeat: no-repeat;
 }
 
-.section--intro--websites {
+.section--welcome--websites {
   @extend .section--centred;
   @extend .section--impactful;
   padding-bottom: 0;
+  background: transparent url(../img/welcome-team.jpg) 50% 30% no-repeat;
+  background-size: cover;
+  text-shadow: 0 0 0.5em transparentize(darken(map-get($sections, 'welcome'), 50%), 0.6);
 
   .slideshow {
     margin-top: 2em;
@@ -219,17 +222,17 @@
   }
 }
 
-.section--intro--reality {
+.section--welcome--reality {
   @extend .section--centred;
   @extend .section--impactful;
 }
 
-.section--intro--reality__hold-tight {
+.section--welcome--reality__hold-tight {
   margin-top: 2em;
   color: mix(map-get($sections, 'welcome'), #fff, 30%);
 }
 
-.section--intro--toc {
+.section--welcome--toc {
   @extend .section--centred;
   @extend .section--impactful;
 
@@ -240,32 +243,37 @@
   }
 }
 
-.section--intro--toc--figures {
-  background-color: map-get($sections, 'figures');
+.section--welcome--toc--figures {
+  background: map-get($sections, 'figures') url(../img/welcome-figures.jpg) 50% 50% no-repeat;
+  background-size: cover;
   @include coloured-links(map-get($sections, 'figures'));
 }
 
-.section--intro--toc--uk {
-  background-color: map-get($sections, 'uk');
+.section--welcome--toc--uk {
+  background: map-get($sections, 'uk') url(../img/welcome-uk.jpg) 50% 50% no-repeat;
+  background-size: cover;
   @include coloured-links(map-get($sections, 'uk'));
 }
 
-.section--intro--toc--international {
-  background-color: map-get($sections, 'international');
+.section--welcome--toc--international {
+  background: map-get($sections, 'international') url(../img/welcome-international.png) 50% 50% no-repeat;
+  background-size: cover;
   @include coloured-links(map-get($sections, 'international'));
 }
 
-.section--intro--toc--commercial {
-  background-color: map-get($sections, 'commercial');
+.section--welcome--toc--commercial {
+  background: map-get($sections, 'commercial') url(../img/welcome-commercial.jpg) 50% 50% no-repeat;
+  background-size: cover;
   @include coloured-links(map-get($sections, 'commercial'));
 }
 
-.section--intro--toc--research {
-  background-color: map-get($sections, 'research');
+.section--welcome--toc--research {
+  background: map-get($sections, 'research') url(../img/welcome-research.jpg) 50% 0% no-repeat;
+  background-size: cover;
   @include coloured-links(map-get($sections, 'research'));
 }
 
-.section--intro--lets-go {
+.section--welcome--lets-go {
   @extend .section--centred;
   @extend .section--impactful;
 
