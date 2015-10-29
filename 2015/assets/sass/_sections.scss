@@ -289,25 +289,41 @@
   }
 }
 
-.section--figures--top {
+.section--figures--leaders {
+  background: darken(map-get($sections, 'figures'), 10%) url(../img/figures-mark.jpg) 50% 80% no-repeat;
+  background-size: cover;
+
   h2 {
     margin-bottom: 0.2em;
   }
 }
 
-.section--figures--top__tapir {
+.section--figures--leaders__tapir {
   color: mix(map-get($sections, 'figures'), #fff, 30%);
   font-size: 1em !important;
+  margin-bottom: 3em;
 }
 
-.section--figures--leaders,
-.section--figures--pets {
-  background-color: darken(map-get($sections, 'figures'), 10%);
+.section--figures--code {
+  background-color: darken(map-get($sections, 'figures'), 5%);
 }
 
-.section--figures--code,
+.section--figures--projects {
+  background: transparent url(../img/figures-projects.jpg) 50% 50% no-repeat;
+  background-size: cover;
+}
+
 .section--figures--events {
   background-color: darken(map-get($sections, 'figures'), 5%);
+}
+
+.section--figures--team {
+  background: transparent url(../img/figures-team.jpg) 0% 50% no-repeat;
+  background-size: cover;
+
+  .stat-container {
+    @extend .stat-container--alt;
+  }
 }
 
 .section--uk--stats,
