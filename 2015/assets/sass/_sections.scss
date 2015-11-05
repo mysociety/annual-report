@@ -77,46 +77,6 @@
   }
 }
 
-.section--one-half {
-  min-height: 300px;
-}
-
-.section--one-quarter {
-  min-height: 150px;
-}
-
-.section--three-quarters {
-  min-height: 450px;
-}
-
-@media (min-width: $medium-screen) and (min-height: 740px) {
-  .section--one-half {
-    min-height: 350px;
-  }
-
-  .section--one-quarter {
-    min-height: 175px;
-  }
-
-  .section--three-quarters {
-    min-height: 525px;
-  }
-}
-
-@media (min-width: $medium-screen) and (min-height: 840px) {
-  .section--one-half {
-    min-height: 400px;
-  }
-
-  .section--one-quarter {
-    min-height: 200px;
-  }
-
-  .section--three-quarters {
-    min-height: 600px;
-  }
-}
-
 .section--centred {
   text-align: center;
 
@@ -126,7 +86,7 @@
 }
 
 @media (min-width: $large-screen){
-  .section--punchline {
+  .section--flipped {
     @include clearfix();
 
     & > * {
@@ -149,12 +109,6 @@
     padding-top: 7%;
     padding-bottom: 7%;
   }
-}
-
-%background-cover {
-  background-position: 50% 50%;
-  background-size: cover;
-  background-repeat: no-repeat;
 }
 
 .section--welcome--websites {
@@ -318,12 +272,63 @@
 }
 
 .section--figures--team {
-  background: transparent url(../img/figures-team.jpg) 0% 50% no-repeat;
+  background: transparent url(../img/figures-team.jpg) 50% 50% no-repeat;
   background-size: cover;
 
   .stat-container {
     @extend .stat-container--alt;
   }
+}
+
+.section--uk--sites {
+  @extend .section--centred;
+  background: transparent url(../img/uk-phonebox.jpg) 100% 100% no-repeat;
+  background-size: cover;
+  text-shadow: 0 0 0.5em transparentize(darken(map-get($sections, 'uk'), 25%), 0.6);
+}
+
+.section--uk--sites__inner {
+  margin: 0 auto;
+  max-width: 32em;
+}
+
+.section--uk--sites__grid {
+  @include clearfix();
+}
+
+a.section--uk--sites__grid__item {
+  display: block;
+  margin-top: 1em;
+  color: #fff;
+  text-decoration: none;
+  font-weight: normal;
+  font-size: 1.2em;
+  line-height: 1.4em;
+
+  @media (min-width: $medium-screen) {
+    float: left;
+    width: 50%;
+    padding: 0 1em;
+
+    &:nth-child(odd) {
+      clear: left;
+    }
+  }
+
+  &:hover,
+  &:focus {
+    color: #fff;
+  }
+
+  span {
+    display: block;
+    color: mix(#fff, map-get($sections, 'uk'), 70%);
+  }
+}
+
+.section--uk--difference {
+  @extend .section--centred;
+  border-top: 1px solid darken(map-get($sections, 'uk'), 5%);
 }
 
 .section--uk--stats,
@@ -431,19 +436,8 @@
 
 .section--international--cdt,
 .section--international--genderbalance {
+  @extend .section--flipped;
   background-color: darken(map-get($sections, 'international'), 5%);
-
-  @media (min-width: $large-screen) {
-    & > * {
-      margin-left: 34%;
-    }
-  }
-
-  @media (min-width: $huge-screen) {
-    & > * {
-      margin-left: 50%;
-    }
-  }
 }
 
 .section--research--conference__inner {
@@ -473,4 +467,48 @@
       }
     }
   }
+}
+
+.section--research--findings {
+  @extend .section--centred;
+  background-color: mix($colour_red_black, map-get($sections, 'research'), 30%);
+  position: relative;
+
+  p {
+    font-size: 1.1em; // bit smaller than normal
+    margin-bottom: 0.5em;
+    color: mix(#fff, map-get($sections, 'research'), 60%);
+  }
+
+  &:after {
+    content: "";
+    width: 0;
+    height: 0;
+    border-style: solid;
+    border-width: 1.5em 1.5em 0 1.5em;
+    border-color: mix($colour_red_black, map-get($sections, 'research'), 30%) transparent transparent transparent;
+    position: absolute;
+    bottom: -1.5em;
+    left: 50%;
+    margin-left: -1.5em;
+  }
+}
+
+.section--research--conjunction {
+  font-weight: normal;
+  opacity: 0.7;
+  display: block;
+  font-size: 0.7em;
+}
+
+.section--research--responsiveness {
+  background-color: mix($colour_red_black, map-get($sections, 'research'), 15%);
+}
+
+.section--research--benefits {
+  @extend .section--flipped;
+}
+
+.section--research--twfy {
+  background-color: mix($colour_red_black, map-get($sections, 'research'), 15%);
 }
