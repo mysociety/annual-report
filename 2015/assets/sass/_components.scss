@@ -63,8 +63,24 @@
 }
 
 .stat__comment {
-  font-size: 1em !important;
+  font-size: 1em !important; // override `.section p`
   margin-bottom: 0;
+
+  // Can nest p's inside .stat__comment
+  p {
+    font-size: 1em !important; // override `.section p`
+    margin-bottom: 0.5em;
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+
+  h4 {
+    font-size: 0.9em;
+    margin-bottom: 0.5em;
+    opacity: 0.8; // Emulate the `a` shade, without all the colour scheme logic
+  }
 }
 
 .inline-stat__number {
