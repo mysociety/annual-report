@@ -55,6 +55,10 @@
       width: 50%;
     }
   }
+
+  & > .row {
+    width: auto;
+  }
 }
 
 @each $slug, $colour in $sections {
@@ -358,29 +362,8 @@ a.section--uk--sites__grid__item {
   }
 }
 
-.section--uk--stats,
-.section--uk--twfy-debates,
-.section--uk--election {
-  background-color: darken(map-get($sections, 'uk'), 10%);
-}
-
-.section--uk--wtt,
-.section--uk--twfy-redesign,
-.section--uk--wdtk,
-.section--uk--up-all-night {
-  background-color: darken(map-get($sections, 'uk'), 5%);
-}
-
 .section--uk--stats {
-  @media (min-width: $huge-screen) {
-    .stat-container {
-      width: auto !important;
-    }
-
-    .stat {
-      width: 33.3%;
-    }
-  }
+  background-color: darken(map-get($sections, 'uk'), 10%);
 }
 
 .section--uk--equivalent {
@@ -407,6 +390,94 @@ a.section--uk--sites__grid__item {
     text-align: center;
     font-size: 1.5em;
     line-height: 1.4em;
+  }
+}
+
+.section--uk--wtt {
+  // background-color: map-get($sections, 'uk');
+}
+
+.section--uk--wtt-testimonial {
+  @extend .section--flipped;
+  @extend .section--impactful;
+  background-color: darken(map-get($sections, 'uk'), 15%);
+}
+
+.section--uk--twfy,
+.section--uk--twfy-votes {
+  // background-color: map-get($sections, 'uk');
+}
+
+.section--uk--twfy-stats {
+  background-color: darken(map-get($sections, 'uk'), 5%);
+}
+
+.section--uk--twfy-testimonial {
+  @extend .section--impactful;
+  background-color: darken(map-get($sections, 'uk'), 15%);
+}
+
+.section--uk--fms {
+  // background-color: map-get($sections, 'uk');
+
+  .stat-container {
+    width: auto !important;
+  }
+}
+
+.section--uk--fms-testimonial {
+  @extend .section--impactful;
+  background-color: darken(map-get($sections, 'uk'), 15%);
+}
+
+.section--uk--wdtk {
+  // background-color: map-get($sections, 'uk');
+}
+
+.section--uk--wdtk-testimonial {
+  @extend .section--impactful;
+  background-color: darken(map-get($sections, 'uk'), 15%);
+}
+
+.section--uk--election {
+  @extend .section--centred;
+  background-color: darken(map-get($sections, 'uk'), 5%);
+  position: relative;
+
+  &:after {
+    content: "";
+    width: 0;
+    height: 0;
+    border-style: solid;
+    border-width: 1.5em 1.5em 0 1.5em;
+    border-color: darken(map-get($sections, 'uk'), 5%) transparent transparent transparent;
+    position: absolute;
+    bottom: -1.5em;
+    left: 50%;
+    margin-left: -1.5em;
+  }
+}
+
+.section--uk--up-all-night {
+  @extend .section--flipped;
+  background-color: darken(map-get($sections, 'uk'), 5%);
+}
+
+.section--uk--positiondial {
+  @extend .section--impactful;
+  background-color: darken(map-get($sections, 'uk'), 15%);
+}
+
+.section--uk--stats,
+.section--uk--twfy-stats {
+  @media (min-width: $huge-screen) {
+    .stat-container {
+      width: auto !important;
+    }
+
+    .stat {
+      width: 33.3%;
+    }
   }
 }
 
