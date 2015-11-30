@@ -231,19 +231,18 @@ aside {
 }
 
 // https://dev.twitter.com/web/embedded-tweets/css
+// overloaded selector to trump default link and paragraph styles
 blockquote.twitter-tweet {
   display: inline-block;
+  text-align: left;
   font-family: "Helvetica Neue", Roboto, "Segoe UI", Calibri, sans-serif;
   font-size: 12px;
   font-weight: bold;
   line-height: 16px;
   background-color: #fff;
   color: #1C2022;
-  border-color: #eee #ddd #bbb;
   border-radius: 5px;
-  border-style: solid;
-  border-width: 1px;
-  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.15);
+  box-shadow: 0 1px 1px rgba(0, 0, 0, 0.2);
   margin: 10px 5px;
   padding: 16px;
   max-width: 468px;
@@ -251,20 +250,77 @@ blockquote.twitter-tweet {
   p {
     font-size: 16px;
     font-weight: normal;
-    line-height: 20px;
+    line-height: 1.4em;
+    margin: 0;
   }
 
   a {
-    color: inherit;
+    color: #2B7BB9;
     font-weight: normal;
     text-decoration: none;
     outline: 0 none;
 
     &:hover,
     &:focus {
+      color: #3b94d9;
       text-decoration: underline;
     }
   }
+}
+
+.twitter-tweet__author {
+  display: block;
+  padding-left: 45px;
+  position: relative;
+  margin-bottom: 0.85em;
+
+  &,
+  &:hover,
+  &:focus {
+    text-decoration: none !important;
+  }
+}
+
+.twitter-tweet__profile-image {
+  position: absolute;
+  top: 0;
+  left: 0;
+  border-radius: 4px;
+  width: 36px;
+  height: 36px;
+}
+
+.twitter-tweet__name {
+  color: #1C2022;
+  font-weight: bold !important;
+  line-height: 1.2em !important;
+
+  a:hover &,
+  a:focus & {
+    color: #3b94d9;
+  }
+}
+
+.twitter-tweet__screen-name {
+  color: #697882;
+  font-size: 14px !important;
+}
+
+.twitter-tweet__created-at {
+  color: #697882 !important;
+  font-size: 14px !important;
+  line-height: 1.4em;
+  margin-top: 4px;
+  display: inline-block;
+}
+
+.twitter-tweet__verified {
+  display: inline-block;
+  vertical-align: -0.25em;
+  height: 1.25em;
+  width: 1.11111em;
+  background: transparent url(../img/twitter-verified.svg) no-repeat 0 0;
+  background-size: contain;
 }
 
 .sixteen-nine-video-ratio {

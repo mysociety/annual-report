@@ -331,6 +331,33 @@ a.section--uk--sites__grid__item {
   border-top: 1px solid darken(map-get($sections, 'uk'), 5%);
 }
 
+.section--uk--difference__tweets {
+  margin: 0 -1em;
+
+  @media (min-width: $large-screen) {
+    @include clearfix();
+  }
+
+  @media (min-width: $huge-screen) {
+    max-width: 56em; // keep the twitter widgets sensibly proportioned
+    margin: 0 auto;
+  }
+
+  blockquote {
+    margin: 0;
+  }
+}
+
+.section--uk--difference__tweets__tweet {
+  padding: 1em;
+  width: 100%;
+
+  @media (min-width: $large-screen) {
+    width: 50%;
+    float: left;
+  }
+}
+
 .section--uk--stats,
 .section--uk--twfy-debates,
 .section--uk--election {
