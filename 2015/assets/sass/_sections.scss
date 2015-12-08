@@ -397,6 +397,47 @@ a.section--uk--sites__grid__item {
   // background-color: map-get($sections, 'uk');
 }
 
+.wtt-mp {
+  margin-top: 1.5em;
+
+  p {
+    margin-bottom: 0;
+  }
+
+  img {
+    float: left;
+    margin-right: 1em;
+    height: 3em;
+    width: auto;
+    border-radius: 50%;
+    margin-top: 0.1em;
+  }
+}
+
+.wtt-mp__change {
+  color: mix(map-get($sections, 'uk'), #fff, 40%);
+
+  &:before {
+    content: "";
+    display: inline-block;
+    width: 0;
+    height: 0;
+    border-style: solid;
+    margin-right: 0.5em;
+    font-size: 0.7em;
+  }
+}
+
+.wtt-mp__change--up:before {
+  border-width: 0 0.66em 1em 0.66em;
+  border-color: transparent transparent #0f3 transparent;
+}
+
+.wtt-mp__change--down:before {
+  border-width: 1em 0.66em 0 0.66em;
+  border-color: #c33 transparent transparent transparent;
+}
+
 .section--uk--wtt-testimonial {
   @extend .section--flipped;
   @extend .section--impactful;
