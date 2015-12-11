@@ -402,7 +402,8 @@ a.section--uk--sites__grid__item {
 }
 
 .section--uk--wtt {
-  // background-color: map-get($sections, 'uk');
+  background: map-get($sections, 'uk') url(../img/uk-leeds-town-hall.jpg) 100% 0 no-repeat;
+  background-size: auto 100%; // fill height of element, keep intrinsic width
 }
 
 .wtt-mp {
@@ -449,7 +450,8 @@ a.section--uk--sites__grid__item {
 .section--uk--wtt-testimonial {
   @extend .section--flipped;
   @extend .section--impactful;
-  background-color: darken(map-get($sections, 'uk'), 15%);
+  background: darken(map-get($sections, 'uk'), 15%) url(../img/uk-pothole.jpg) 0 100% no-repeat;
+  background-size: auto 100%; // fill height of element, keep intrinsic width
 }
 
 .section--uk--twfy,
@@ -463,7 +465,8 @@ a.section--uk--sites__grid__item {
 
 .section--uk--twfy-testimonial {
   @extend .section--impactful;
-  background-color: darken(map-get($sections, 'uk'), 15%);
+  background: darken(map-get($sections, 'uk'), 15%) url(../img/uk-churchill-ceremony.jpg) 100% 0% no-repeat;
+  background-size: auto 100%;
 }
 
 .section--uk--fms {
