@@ -117,11 +117,19 @@
 
 .section--welcome--websites {
   @extend .section--centred;
-  @extend .section--impactful;
+  padding-top: 4em;
   padding-bottom: 0;
-  background: transparent url(../img/welcome-team.jpg) 50% 30% no-repeat;
+  background: transparent url(../img/welcome-team.jpg) 50% 10% no-repeat;
   background-size: cover;
   text-shadow: 0 0 0.5em transparentize(darken(map-get($sections, 'welcome'), 50%), 0.6);
+
+  @media (min-width: $large-screen) {
+    padding-top: 5em;
+  }
+
+  @media (min-width: $huge-screen) {
+    padding-top: 8%;
+  }
 
   .slideshow {
     margin-top: 2em;
