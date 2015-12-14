@@ -695,3 +695,27 @@ a.section--uk--sites__grid__item {
   background: mix($colour_red_black, map-get($sections, 'research'), 15%) url(../img/research-corbyn.jpg) 100% 100% no-repeat;
   background-size: auto 100%;
 }
+
+.section--future {
+  .honeypot,
+  label {
+    position: absolute;
+    top: 0;
+    left: -50em;
+  }
+
+  .email {
+    display: inline-block;
+    padding: 0.8em 1em;
+    height: 2.5em;
+    background: rgba(255,255,255,0.3);
+    border: none;
+    vertical-align: top;
+    color: #fff;
+  }
+
+  .button {
+    height: 2.5em;
+    vertical-align: top;
+  }
+}
