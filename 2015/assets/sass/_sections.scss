@@ -191,6 +191,7 @@
 .section--welcome--reality {
   @extend .section--centred;
   @extend .section--impactful;
+  background: map-get($sections, 'welcome') url(../img/welcome-components.png) 50% 50% repeat;
 }
 
 .section--welcome--reality__hold-tight {
@@ -454,11 +455,6 @@ a.section--uk--sites__grid__item {
   background-size: auto 100%; // fill height of element, keep intrinsic width
 }
 
-.section--uk--twfy,
-.section--uk--twfy-votes {
-  // background-color: map-get($sections, 'uk');
-}
-
 .section--uk--twfy-stats {
   background-color: darken(map-get($sections, 'uk'), 5%);
 }
@@ -512,7 +508,12 @@ a.section--uk--sites__grid__item {
 
 .section--uk--up-all-night {
   @extend .section--flipped;
-  background-color: darken(map-get($sections, 'uk'), 5%);
+  background: darken(map-get($sections, 'uk'), 5%) url(../img/uk-count.jpg) 0 30% no-repeat;
+  background-size: auto 100%;
+
+  @media (min-width: 72em){
+    background-size: 60%;
+  }
 }
 
 .section--uk--positiondial {
@@ -530,14 +531,6 @@ a.section--uk--sites__grid__item {
     .stat {
       width: 33.3%;
     }
-  }
-}
-
-.section--international--videos {
-  padding: 0;
-
-  .sixteen-nine-video-ratio {
-    width: auto;
   }
 }
 
@@ -586,7 +579,6 @@ a.section--uk--sites__grid__item {
 
 .section--international--cdt,
 .section--international--genderbalance {
-  @extend .section--flipped;
   background-color: darken(map-get($sections, 'international'), 5%);
 }
 

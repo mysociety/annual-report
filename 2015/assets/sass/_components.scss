@@ -195,6 +195,56 @@ aside {
   }
 }
 
+@media (max-width: $large-screen-max) {
+  .section--screenshot-bottom,
+  .section--screenshot-top {
+    padding-bottom: 0 !important;
+  }
+}
+
+@media (min-width: $huge-screen) {
+  .section--screenshot-bottom,
+  .section--screenshot-top,
+  .section--screenshot-left,
+  .section--screenshot-right {
+    position: relative;
+    overflow: hidden; // to crop the bottom off the screenshots
+  }
+
+  .section--screenshot-bottom {
+    .screenshot {
+      bottom: 0;
+    }
+  }
+
+  .section--screenshot-top {
+    .screenshot {
+      top: 2.5em;
+    }
+  }
+
+  .section--screenshot-right,
+  .section--screenshot-left {
+    .screenshot {
+      position: absolute;
+      width: 43%;
+      width: calc(50% - 2.5em - 2em);
+    }
+  }
+
+  .section--screenshot-right {
+    .screenshot {
+      right: 2.5em;
+    }
+  }
+
+  .section--screenshot-left {
+    .screenshot {
+      left: 2.5em;
+    }
+  }
+}
+
 .logo-lineup {
   @extend .unstyled-list;
 

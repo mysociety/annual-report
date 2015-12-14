@@ -56,3 +56,9 @@
 .column-one-half {
   @include grid-column-one-half();
 }
+
+@media (min-width: $huge-screen) {
+  .column-last {
+    float: right;
+  }
+}
