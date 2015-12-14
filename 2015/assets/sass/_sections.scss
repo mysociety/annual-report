@@ -681,13 +681,17 @@ a.section--uk--sites__grid__item {
 }
 
 .section--research--responsiveness {
-  background-color: mix($colour_red_black, map-get($sections, 'research'), 15%);
+  background: mix($colour_red_black, map-get($sections, 'research'), 15%) url(../img/research-respond.jpg) 100% 100% no-repeat;
+  background-size: auto 100%;
 }
 
 .section--research--benefits {
   @extend .section--flipped;
+  background: map-get($sections, 'research') url(../img/research-benefits.jpg) 0 100% no-repeat;
+  background-size: auto 100%;
 }
 
 .section--research--twfy {
-  background-color: mix($colour_red_black, map-get($sections, 'research'), 15%);
+  background: mix($colour_red_black, map-get($sections, 'research'), 15%) url(../img/research-corbyn.jpg) 100% 100% no-repeat;
+  background-size: auto 100%;
 }
