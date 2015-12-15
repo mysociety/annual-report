@@ -754,7 +754,57 @@ a.section--uk--sites__grid__item {
   background-size: auto 100%;
 }
 
-.section--future {
+.section--future--intro {
+  @extend .section--centred;
+}
+
+.section--future--ambition {
+  @extend .section--centred;
+  background-color: darken(map-get($sections, 'future'), 8%);
+
+  h2 {
+    max-width: 26em;
+    margin: 0 auto;
+  }
+}
+
+.section--future--network {
+  background: transparent url(../img/future-work.jpg) 100% 100% no-repeat;
+  background-size: auto 100%;
+
+  p:last-child {
+    margin-bottom: 0;
+  }
+}
+
+.section--future--donate,
+.section--future--dedication,
+.section--future--follow {
+  @extend .section--centred;
+
+  p {
+    max-width: 30em;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+
+.section--future--dedication {
+  background-color: mix(#fff, map-get($sections, 'future'), 10%);
+}
+
+.section--future--donate {
+  .fa-heart {
+    font-size: 0.9em;
+    vertical-align: 0.05em;
+    margin-right: 0.4em;
+  }
+}
+
+
+.section--future--follow {
+  background-color: darken(map-get($sections, 'future'), 5%);
+
   .honeypot,
   label {
     position: absolute;
@@ -775,16 +825,5 @@ a.section--uk--sites__grid__item {
   .button {
     height: 2.5em;
     vertical-align: top;
-  }
-
-  hr {
-    margin: 2em 0;
-    border-color: mix(#fff, map-get($sections, 'future'), 15%);
-  }
-
-  .fa-heart {
-    font-size: 0.9em;
-    vertical-align: 0.05em;
-    margin-right: 0.4em;
   }
 }
