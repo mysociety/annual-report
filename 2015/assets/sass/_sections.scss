@@ -115,6 +115,15 @@
   }
 }
 
+.section--next {
+  @extend .section--centred;
+
+  .button .fa {
+    margin-left: 0.6em;
+    vertical-align: -0.05em;
+  }
+}
+
 .section--welcome--websites {
   @extend .section--centred;
   padding-top: 4em;
@@ -544,6 +553,24 @@ a.section--uk--sites__grid__item {
   }
 }
 
+.section--international--intro {
+  @extend .section--centred;
+  position: relative;
+
+  &:after {
+    content: "";
+    width: 0;
+    height: 0;
+    border-style: solid;
+    border-width: 1.5em 1.5em 0 1.5em;
+    border-color: map-get($sections, 'international') transparent transparent transparent;
+    position: absolute;
+    bottom: -1.5em;
+    left: 50%;
+    margin-left: -1.5em;
+  }
+}
+
 .section--international--figures {
   background-color: darken(map-get($sections, 'international'), 10%);
 
@@ -583,12 +610,12 @@ a.section--uk--sites__grid__item {
   text-shadow: 0 0 0.5em transparentize(darken(map-get($sections, 'international'), 25%), 0.6);
 }
 
-.section--international--ynr {
+.section--international--ynr,
+.section--international--genderbalance {
   background-color: darken(map-get($sections, 'international'), 10%);
 }
 
-.section--international--cdt,
-.section--international--genderbalance {
+.section--international--cdt {
   background-color: darken(map-get($sections, 'international'), 5%);
 }
 
@@ -737,7 +764,7 @@ a.section--uk--sites__grid__item {
 
   .email {
     display: inline-block;
-    padding: 0.8em 1em;
+    padding: 0.5em 1em;
     height: 2.5em;
     background: rgba(255,255,255,0.3);
     border: none;
