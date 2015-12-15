@@ -282,6 +282,16 @@
 
 .section--figures--events {
   background-color: darken(map-get($sections, 'figures'), 5%);
+
+  .stat-container {
+    width: auto !important;
+  }
+
+  @media (min-width: $large-screen) {
+    .stat {
+      width: 33%;
+    }
+  }
 }
 
 .section--figures--team {
@@ -587,6 +597,17 @@ a.section--uk--sites__grid__item {
   background-color: mix(#000, map-get($sections, 'commercial'), 30%);
   position: relative;
 
+  h2 {
+    display: block;
+    width: 250px;
+    padding-top: 80px;
+    height: 0;
+    overflow: hidden;
+    margin: 0 auto 1em auto;
+    background: transparent url(../img/mysociety-services-logo.png) 0 0 no-repeat;
+    background-image: url(../img/mysociety-services-logo.svg), none;
+  }
+
   &:after {
     content: "";
     width: 0;
@@ -727,5 +748,16 @@ a.section--uk--sites__grid__item {
   .button {
     height: 2.5em;
     vertical-align: top;
+  }
+
+  hr {
+    margin: 2em 0;
+    border-color: mix(#fff, map-get($sections, 'future'), 15%);
+  }
+
+  .fa-heart {
+    font-size: 0.9em;
+    vertical-align: 0.05em;
+    margin-right: 0.4em;
   }
 }
