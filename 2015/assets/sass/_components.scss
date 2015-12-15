@@ -54,6 +54,11 @@
   font-weight: bold;
   font-family: $condensed_typeface;
   vertical-align: bottom;
+
+  // Stop .stat__name from crashing into .stat__number
+  // as container shrinks on Safari
+  -webkit-flex-shrink: 0;
+  flex-shrink: 0;
 }
 
 .stat__name {
