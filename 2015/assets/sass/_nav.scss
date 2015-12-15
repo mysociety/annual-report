@@ -91,12 +91,12 @@
       padding: 0.5em;
     }
 
-    @media (min-width: $small-screen) and (min-height: 540px) {
+    @media (min-width: $small-screen) and (min-height: 440px) {
       // not quite so short short screens
       padding: 0.7em;
     }
 
-    @media (min-width: $small-screen) and (min-height: 640px) {
+    @media (min-width: $small-screen) and (min-height: 540px) {
       // normal height screens
       padding: 1em;
     }
@@ -156,11 +156,11 @@
         right: 0;
       }
 
-      @media (min-width: $small-screen) and (min-height: 540px) {
+      @media (min-width: $small-screen) and (min-height: 440px) {
         padding: 0.7em * (4/3);
       }
 
-      @media (min-width: $small-screen) and (min-height: 640px) {
+      @media (min-width: $small-screen) and (min-height: 540px) {
         padding: 1em * (4/3);
       }
 
