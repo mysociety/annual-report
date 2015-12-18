@@ -441,3 +441,22 @@ blockquote.twitter-tweet {
   opacity: 0.6;
 }
 
+.supporter-logos {
+  @extend .unstyled-list;
+  margin: 0 auto;
+  max-width: 45em;
+
+  li {
+    display: inline-block;
+  }
+
+  a {
+    display: inline-block;
+    padding: 0.5em 0.5em 0 0.5em;
+  }
+
+  img {
+    width: auto;
+    height: 50px;
+  }
+}
