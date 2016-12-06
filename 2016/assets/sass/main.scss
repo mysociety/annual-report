@@ -3,7 +3,7 @@
 @import 'mixins';
 @import 'font-awesome';
 
-* {
+*, *:before, *:after {
   -moz-box-sizing: border-box;
   -webkit-box-sizing: border-box;
   box-sizing: border-box;
@@ -149,4 +149,6 @@ textarea,
 @import 'components';
 @import 'sections';
 @import 'nav';
+
+@import 'toc';
 

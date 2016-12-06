@@ -111,3 +111,54 @@
     vertical-align: -0.05em;
   }
 }
+
+.section--welcome-hero {
+  background: $colour_blue;
+
+  // TODO: Photo of team!
+
+  h1 {
+    text-align: center;
+    font-weight: bold;
+    color: #fff;
+    text-shadow: 0 0.1em 0.3em rgba(0, 0, 0, 0.2);
+    width: auto;
+
+    @media (min-width: $large-screen) {
+      font-size: 3em;
+    }
+
+    @media (min-width: $huge-screen) {
+      font-size: 4em;
+    }
+  }
+}
+
+.welcome-main-container {
+  @media (min-width: $large-screen) {
+    width: auto;
+    max-width: 36em;
+    margin: -6em 2em 0 2em; // TODO: replace -6em with correct overlap
+    padding: 2em;
+    background-color: #fff;
+  }
+
+  @media (min-width: $huge-screen) {
+    margin: -8em auto 0 auto; // TODO: replace -8em with correct overlap
+    padding: 3em;
+  }
+}
+
+.welcome-main-mission {
+  color: $colour_blue;
+
+  @media (min-width: $large-screen) {
+    margin: 1em -2em;
+    text-align: center;
+  }
+
+  @media (min-width: $huge-screen) {
+    margin: 0.75em -2em;
+    font-size: 2.5em;
+  }
+}
