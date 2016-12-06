@@ -1,0 +1,64 @@
+@mixin grid-row {
+  @include clearfix();
+  margin-left: -1em;
+  margin-right: -1em;
+
+  @media (min-width: $huge-screen) {
+    margin-left: -2em;
+    margin-right: -2em;
+  }
+}
+
+@mixin grid-column {
+  float: left;
+  padding: 0 1em;
+  width: 100%;
+  margin-top: 2em;
+
+  &:first-child {
+    margin-top: 0;
+  }
+
+  @media (min-width: $huge-screen) {
+    padding: 0 2em;
+    margin-top: 0;
+  }
+}
+
+@mixin grid-column-two-thirds {
+  @include grid-column;
+
+  @media (min-width: $huge-screen) {
+    width: 60%;
+  }
+}
+
+@mixin grid-column-one-third {
+  @include grid-column;
+
+  @media (min-width: $huge-screen) {
+    width: 40%;
+  }
+}
+
+@mixin grid-column-one-half {
+  @include grid-column;
+
+  @media (min-width: $huge-screen) {
+    width: 50%;
+  }
+}
+
+.row {
+  @include grid-row();
+}
+
+.column-one-half {
+  @include grid-column-one-half();
+}
+
+@media (min-width: $huge-screen) {
+  .column-last {
+    float: right;
+  }
+}
