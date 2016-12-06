@@ -1,0 +1,462 @@
+.unstyled-list {
+  margin-left: 0;
+  padding-left: 0;
+  list-style: none outside none;
+}
+
+.inline-list {
+  margin-left: -0.5em;
+  margin-bottom: 0;
+  li {
+    display: inline-block;
+    margin-left: 0.5em;
+  }
+}
+
+.stat-container {
+  @include flexbox();
+  @include flex-wrap(wrap);
+  margin: -1em;
+  width: auto !important; // override default 50% width for section elements
+
+  @media (min-width: $huge-screen) {
+    width: 66.6% !important;
+  }
+
+  .stat {
+    width: 100%;
+    padding: 1em;
+
+    @media (min-width: $large-screen) {
+      width: 50%;
+    }
+  }
+}
+
+.stat-container--alt {
+  @media (min-width: $huge-screen) {
+    margin-left: 33.3%;
+    margin-left: calc(33.3% - 1em);
+  }
+}
+
+.stat__main {
+  @include flexbox();
+  @include flex-align-items(flex-end);
+  padding-bottom: 0.5em;
+  border-bottom: 1px solid rgba(255,255,255,0.3);
+  margin-bottom: 0.5em;
+}
+
+.stat__number {
+  font-size: 2em;
+  line-height: 1.07em;
+  font-weight: bold;
+  font-family: $condensed_typeface;
+  vertical-align: bottom;
+
+  // Stop .stat__name from crashing into .stat__number
+  // as container shrinks on Safari
+  -webkit-flex-shrink: 0;
+  flex-shrink: 0;
+}
+
+.stat__name {
+  margin-left: 0.4em;
+  line-height: 1.1em;
+  vertical-align: bottom;
+}
+
+.stat__comment {
+  font-size: 1em !important; // override `.section p`
+  margin-bottom: 0;
+
+  // Can nest p's inside .stat__comment
+  p {
+    font-size: 1em !important; // override `.section p`
+    margin-bottom: 0.5em;
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+
+  h4 {
+    font-size: 0.9em;
+    margin-bottom: 0.5em;
+    opacity: 0.8; // Emulate the `a` shade, without all the colour scheme logic
+  }
+}
+
+.inline-stat__number {
+  font-weight: bold;
+}
+
+.slideshow {
+  overflow: hidden;
+  position: relative;
+  height: 12em;
+
+  .section & {
+    margin: 0 -1em;
+
+    @media (min-width: $medium-screen) {
+      margin: 0 -1.5em;
+    }
+
+    @media (min-width: $large-screen) {
+      margin: 0 -2em;
+    }
+
+    @media (min-width: $huge-screen) {
+      margin: 0 -2.5em;
+    }
+  }
+}
+
+.slideshow__inner {
+  height: 100%;
+  position: absolute;
+  left: -3em;
+  top: 0;
+  width: 9999px;
+
+  -webkit-transform: translate3d(0, 0, 0);
+  -moz-transform: translate3d(0, 0, 0);
+  -ms-transform: translate3d(0, 0, 0);
+  transform: translate3d(0, 0, 0);
+}
+
+.slideshow__slide {
+  height: 100%;
+  float: left;
+  padding-right: 1em;
+
+  img {
+    height: 100%;
+    width: auto;
+  }
+}
+
+// The fallback table that’s shown when javascript is disabled
+table.js-make-pie-chart {
+  width: 100%;
+  text-align: left;
+
+  td, th {
+    padding: 0.5em;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+  }
+
+  th {
+    background-color: rgba(255, 255, 255, 0.1);
+  }
+}
+
+.nowrap {
+  white-space: nowrap;
+}
+
+aside {
+  font-size: 0.8em;
+  opacity: 0.9;
+
+  &.interjection {
+    font-size: 0.9em;
+    margin-top: -1em;
+    padding-right: 2em;
+
+    p {
+      text-align: right;
+      font-style: italic;
+
+      &:before {
+        content: "—";
+        opacity: 0.8;
+        margin-right: 0.3em;
+      }
+    }
+  }
+}
+
+.screenshot {
+  @include clearfix();
+  padding-top: 1em;
+  border-radius: 0.2em 0.2em 0 0;
+  background: #e6e6e6 url(../img/screenshot-buttons.png) 0 0 no-repeat;
+  background-size: auto 1em;
+
+  img {
+    float: left;
+  }
+
+  &.screenshot--mobile {
+    position: relative;
+    background: #55595c url(../img/screenshot-buttons-mobile.png) center top no-repeat;
+    background-size: auto 4em;
+    padding: 4em 0.5em;
+    border-radius: 2em;
+    border: 0.2em solid #999;
+  }
+}
+
+@media (max-width: $large-screen-max) {
+  .section--screenshot-bottom,
+  .section--screenshot-top {
+    padding-bottom: 0 !important;
+  }
+}
+
+@media (min-width: $huge-screen) {
+  .section--screenshot-bottom,
+  .section--screenshot-top,
+  .section--screenshot-left,
+  .section--screenshot-right {
+    position: relative;
+    overflow: hidden; // to crop the bottom off the screenshots
+  }
+
+  .section--screenshot-bottom {
+    .screenshot {
+      bottom: 0;
+    }
+  }
+
+  .section--screenshot-top {
+    .screenshot {
+      top: 2.5em;
+    }
+  }
+
+  .section--screenshot-right,
+  .section--screenshot-left {
+    .screenshot {
+      position: absolute;
+      width: 43%;
+      width: calc(50% - 2.5em - 2em);
+    }
+  }
+
+  .section--screenshot-right {
+    .screenshot {
+      right: 2.5em;
+    }
+  }
+
+  .section--screenshot-left {
+    .screenshot {
+      left: 2.5em;
+    }
+  }
+}
+
+.logo-lineup {
+  @extend .unstyled-list;
+
+  li {
+    display: block;
+
+    @media (min-width: $large-screen) {
+      display: inline-block;
+      margin-right: 1.5em;
+
+      &:last-child {
+        margin-right: 0;
+      }
+    }
+  }
+}
+
+%logo-lineup-hover-effect {
+  img {
+    opacity: 0.8;
+  }
+
+  a:hover img {
+    opacity: 1;
+  }
+}
+
+%logo-lineup-padding-compensation {
+  margin-top: 2em;
+
+  @media (min-width: $large-screen) {
+    margin-bottom: -1em !important; // must override :last-child selectors
+  }
+}
+
+// https://dev.twitter.com/web/embedded-tweets/css
+// overloaded selector to trump default link and paragraph styles
+blockquote.twitter-tweet {
+  display: inline-block;
+  text-align: left;
+  font-family: "Helvetica Neue", Roboto, "Segoe UI", Calibri, sans-serif;
+  font-size: 12px;
+  font-weight: bold;
+  line-height: 16px;
+  background-color: #fff;
+  color: #1C2022;
+  border-radius: 5px;
+  box-shadow: 0 1px 1px rgba(0, 0, 0, 0.2);
+  margin: 10px 5px;
+  padding: 16px;
+  max-width: 468px;
+
+  p {
+    font-size: 16px;
+    font-weight: normal;
+    line-height: 1.4em;
+    margin: 0;
+  }
+
+  a {
+    color: #2B7BB9;
+    font-weight: normal;
+    text-decoration: none;
+    outline: 0 none;
+
+    &:hover,
+    &:focus {
+      color: #3b94d9;
+      text-decoration: underline;
+    }
+  }
+}
+
+.twitter-tweet__author {
+  display: block;
+  padding-left: 45px;
+  position: relative;
+  margin-bottom: 0.85em;
+
+  &,
+  &:hover,
+  &:focus {
+    text-decoration: none !important;
+  }
+}
+
+.twitter-tweet__profile-image {
+  position: absolute;
+  top: 0;
+  left: 0;
+  border-radius: 4px;
+  width: 36px;
+  height: 36px;
+}
+
+.twitter-tweet__name {
+  color: #1C2022;
+  font-weight: bold !important;
+  line-height: 1.2em !important;
+
+  a:hover &,
+  a:focus & {
+    color: #3b94d9;
+  }
+}
+
+.twitter-tweet__screen-name {
+  color: #697882;
+  font-size: 14px !important;
+}
+
+.twitter-tweet__created-at {
+  color: #697882 !important;
+  font-size: 14px !important;
+  line-height: 1.4em;
+  margin-top: 4px;
+  display: inline-block;
+}
+
+.twitter-tweet__verified {
+  display: inline-block;
+  vertical-align: -0.25em;
+  height: 1.25em;
+  width: 1.11111em;
+  background: transparent url(../img/twitter-verified.svg) no-repeat 0 0;
+  background-size: contain;
+}
+
+.sixteen-nine-video-ratio {
+  position: relative;
+  height: 0;
+  padding-bottom: (100% * ( 9 / 16 ));
+
+  iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+  }
+}
+
+.testimonial {
+  margin: 0 0 2em 0;
+  font-size: 1.2em;
+
+  &:last-child {
+    margin-bottom: 0;
+  }
+
+  footer {
+    padding: 0 3em;
+    margin-top: 0.5em;
+  }
+}
+
+.testimonial__quote {
+  position: relative;
+  padding: 0 2em 0 3em;
+  margin-bottom: 0;
+  font-size: inherit !important;
+
+  &:before,
+  &:after {
+    position: absolute;
+    font-size: 4em;
+    line-height: 1em;
+    font-family: Georgia, Times, serif;
+    font-weight: bold;
+    opacity: 0.2;
+  }
+
+  &:before {
+    content: '\201C';
+    top: -0.1em;
+    left: 0;
+  }
+
+  &:after {
+    content: '\201D';
+    bottom: -0.5em;
+    right: 0;
+  }
+}
+
+.testimonial__citation__context {
+  display: block;
+  font-size: 0.8em;
+  opacity: 0.6;
+}
+
+.supporter-logos {
+  @extend .unstyled-list;
+  margin: 0 auto;
+  max-width: 45em;
+
+  li {
+    display: inline-block;
+  }
+
+  a {
+    display: inline-block;
+    padding: 0.5em 0.5em 0 0.5em;
+  }
+
+  img {
+    width: auto;
+    height: 50px;
+  }
+}

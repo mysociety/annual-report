@@ -1,6 +1,6 @@
 # mySociety Annual Report
 
-mySociety in numbers, for 2014 and 2015.
+mySociety in numbers, for 2014–2016.
 
 ### How it works
 
