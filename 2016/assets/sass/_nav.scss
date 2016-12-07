@@ -39,7 +39,6 @@
   left: 0;
   bottom: 0;
   right: 0;
-  overflow-y: auto;
   background-color: $colour_off_white;
 
   // If screen is very narrow, and javascript is available,
@@ -80,6 +79,9 @@
       position: relative;
       min-height: 100%;
       padding-bottom: 2em;
+
+      // Links should cover the border-right on .nav
+      margin-right: -1px;
     }
   }
 
