@@ -23,7 +23,7 @@
       <span class="nav-toggle__site">mySociety Year in Review 2016</span>
       <strong class="nav-toggle__section">{{ page.title }}</strong>
     </header>
-    <nav class="nav">
+    <nav class="nav" role="navigation">
       <ul>
         <li class="welcome"><a href="{{ site.baseurl }}/"><span class="logo">mySociety </span><small>Year in Review 2016</small></a></li>
         <li class="figures"><a href="{{ site.baseurl }}/figures/">2016 in figures</a></li>
@@ -34,7 +34,7 @@
         <li class="credits"><a href="{{ site.baseurl }}/credits/">Image credits</a></li>
       </ul>
     </nav>
-    <div class="page">
+    <div class="page" role="main">
       {{ content }}
     </div>
     <script src="{% ministamp /assets/js/jquery-1.11.2.min.js /assets/js/jquery-1.11.2.min.js %}"></script>
