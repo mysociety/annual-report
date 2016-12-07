@@ -108,6 +108,9 @@ a.toc__link {
     position: absolute;
     display: block;
     background-color: $colour_blue;
+    background-size: 100% 100%;
+    background-position: 50% 50%;
+    background-repeat: no-repeat;
     border: 0.4em solid #fff;
     border-radius: 100%;
     top: 50%;
@@ -122,27 +125,48 @@ a.toc__link {
   @media (min-width: $medium-screen) {
     margin-top: 0;
   }
+
+  &:before {
+    @include high-dpi-image("../img/porthole-figures");
+  }
 }
 
 .toc__link[href^="/foi"] {
+  &:before {
+    background-color: $colour_green;
+    @include high-dpi-image("../img/porthole-foi");
+  }
+
   p {
     max-width: 23em;
   }
 }
 
 .toc__link[href^="/cities"] {
+  &:before {
+    @include high-dpi-image("../img/porthole-cities");
+  }
+
   p {
     max-width: 25em;
   }
 }
 
 .toc__link[href^="/democracy"] {
+  &:before {
+    @include high-dpi-image("../img/porthole-democracy");
+  }
+
   p {
     max-width: 28em;
   }
 }
 
 .toc__link[href^="/help"] {
+  &:before {
+    @include high-dpi-image("../img/porthole-help");
+  }
+
   p {
     max-width: 21em;
   }

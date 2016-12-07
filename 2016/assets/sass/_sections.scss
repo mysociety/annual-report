@@ -113,16 +113,26 @@
 }
 
 .section--welcome-hero {
-  background: $colour_blue;
+  background: $colour_blue url(../img/team-small.jpg) 50% 30% no-repeat;
+  background-size: cover;
 
-  // TODO: Photo of team!
+  @media (min-width: $large-screen) {
+    background-image: url(../img/team-large.jpg);
+    padding-bottom: 4em;
+  }
+
+  @media (min-width: $huge-screen) {
+    background-image: url(../img/team-huge.jpg);
+    padding-bottom: 5em;
+  }
 
   h1 {
     text-align: center;
     font-weight: bold;
     color: #fff;
-    text-shadow: 0 0.1em 0.3em rgba(0, 0, 0, 0.2);
+    text-shadow: 0 0.1em 0.4em rgba(0, 0, 0, 0.5);
     width: auto;
+    margin-top: 30%; // 30% of parent width
 
     @media (min-width: $large-screen) {
       font-size: 3em;
@@ -130,6 +140,7 @@
 
     @media (min-width: $huge-screen) {
       font-size: 4em;
+      margin-top: 20%; // 30% of parent width
     }
   }
 }
@@ -138,13 +149,13 @@
   @media (min-width: $large-screen) {
     width: auto;
     max-width: 36em;
-    margin: -6em 2em 0 2em; // TODO: replace -6em with correct overlap
+    margin: -4.5em 2em 0 2em;
     padding: 2em;
     background-color: #fff;
   }
 
   @media (min-width: $huge-screen) {
-    margin: -8em auto 0 auto; // TODO: replace -8em with correct overlap
+    margin: -5.5em auto 0 auto;
     padding: 3em;
   }
 }
