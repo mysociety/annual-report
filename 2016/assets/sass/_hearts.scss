@@ -1,0 +1,52 @@
+.hearts {
+  white-space: nowrap;
+  position: relative;
+  display: inline-block;
+
+  .fa {
+    position: absolute;
+    left: 5%;
+    bottom: 50%;
+    color: $colour_red;
+    opacity: 0;
+    @include prefix('animation', 'heart-float 3s infinite');
+    @include prefix('transform-origin', '50% 100%');
+  }
+
+  .fa:nth-child(2){
+    left: 10%;
+    @include prefix('animation-delay', '0.25s');
+  }
+
+  .fa:nth-child(3){
+    left: 80%;
+    @include prefix('animation-delay', '1s');
+  }
+
+  .fa:nth-child(5){
+    left: 60%;
+    bottom: 80%;
+    @include prefix('animation-delay', '1.75s');
+  }
+
+  .fa:nth-child(4){
+    left: 35%;
+    @include prefix('animation-delay', '1.5s');
+  }
+}
+
+@include keyframes(heart-float) {
+  0% {
+    opacity: 1;
+    transform: translate(0, 0) scale(0);
+  }
+
+  3% {
+    transform: translate(0, 0) scale(1);
+  }
+
+  100% {
+    opacity: 0;
+    transform: translate(0, -3em) scale(1);
+  }
+}
