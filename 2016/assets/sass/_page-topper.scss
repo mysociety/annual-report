@@ -1,0 +1,94 @@
+@mixin topper-icon-dimensions($icon-size){
+
+}
+
+.page-topper {
+  position: relative;
+  background-color: $colour_blue;
+  color: #fff;
+
+  @media (max-width: $medium-screen-max) {
+    padding-bottom: ((7em / 2) + (7em / 5)) + 2em;
+    margin-bottom: ((7em / 2) + (7em / 5)) - 2em;
+  }
+
+  &:after {
+    content: "";
+    position: absolute;
+    display: block;
+    background-color: $colour_blue;
+    background-size: 100% 100%;
+    background-position: 50% 50%;
+    background-repeat: no-repeat;
+    border: 0.4em solid #fff;
+    border-radius: 100%;
+
+    width: 7em;
+    height: 7em;
+    bottom: (-1 * 7em / 2) + 1em; // 1em higher than vertical center
+    left: 1em; // to match .section padding
+
+    @media (min-width: $medium-screen) {
+      left: 1.5em; // to match .section padding
+    }
+
+    @media (min-width: $large-screen) {
+      left: auto;
+      right: 10%;
+      bottom: (-1 * 7em / 2); // vertical center
+    }
+
+    @media (min-width: $huge-screen) {
+      width: 9em;
+      height: 9em;
+      bottom: (-1 * 9em / 2);
+      right: 10%;
+    }
+  }
+
+  .page--figures & {
+    &:after {
+      @include high-dpi-image("../img/porthole-figures");
+    }
+  }
+
+  .page--foi & {
+    background-color: $colour_green;
+
+    &:after {
+      @include high-dpi-image("../img/porthole-foi");
+    }
+  }
+
+  .page--cities & {
+    &:after {
+      @include high-dpi-image("../img/porthole-cities");
+    }
+  }
+
+  .page--democracy & {
+    &:after {
+      @include high-dpi-image("../img/porthole-democracy");
+    }
+  }
+
+  .page--help & {
+    &:after {
+      @include high-dpi-image("../img/porthole-help");
+    }
+  }
+
+  // Page toppers look good when the content is 66% width,
+  // rather than the default 50%.
+  @media (min-width: $huge-screen) {
+    & > * {
+      width: 66%;
+    }
+  }
+
+  h1 {
+    font-size: 3em;
+    font-weight: 600;
+    margin-bottom: 0.4em;
+  }
+}
