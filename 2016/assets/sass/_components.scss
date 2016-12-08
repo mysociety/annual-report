@@ -96,22 +96,6 @@
   overflow: hidden;
   position: relative;
   height: 12em;
-
-  .section & {
-    margin: 0 -1em;
-
-    @media (min-width: $medium-screen) {
-      margin: 0 -1.5em;
-    }
-
-    @media (min-width: $large-screen) {
-      margin: 0 -2em;
-    }
-
-    @media (min-width: $huge-screen) {
-      margin: 0 -2.5em;
-    }
-  }
 }
 
 .slideshow__inner {
@@ -247,41 +231,6 @@ aside {
     .screenshot {
       left: 2.5em;
     }
-  }
-}
-
-.logo-lineup {
-  @extend .unstyled-list;
-
-  li {
-    display: block;
-
-    @media (min-width: $large-screen) {
-      display: inline-block;
-      margin-right: 1.5em;
-
-      &:last-child {
-        margin-right: 0;
-      }
-    }
-  }
-}
-
-%logo-lineup-hover-effect {
-  img {
-    opacity: 0.8;
-  }
-
-  a:hover img {
-    opacity: 1;
-  }
-}
-
-%logo-lineup-padding-compensation {
-  margin-top: 2em;
-
-  @media (min-width: $large-screen) {
-    margin-bottom: -1em !important; // must override :last-child selectors
   }
 }
 
@@ -441,22 +390,38 @@ blockquote.twitter-tweet {
   opacity: 0.6;
 }
 
-.supporter-logos {
-  @extend .unstyled-list;
-  margin: 0 auto;
-  max-width: 45em;
+
+.funders {
+  margin-top: -1em;
+  width: auto !important; // override 66% from .section>*
 
   li {
-    display: inline-block;
+    margin-top: 1em;
   }
 
-  a {
-    display: inline-block;
-    padding: 0.5em 0.5em 0 0.5em;
-  }
+  @media (min-width: $large-screen) {
+    @include clearfix();
+    padding-left: 0;
 
-  img {
-    width: auto;
-    height: 50px;
+    li {
+      width: 46%;
+      float: left;
+      margin-left: 4%;
+      padding-right: 5%;
+
+      &:nth-child(odd) {
+        clear: left;
+      }
+    }
+  }
+}
+
+.help-list {
+  margin-top: -0.5em;
+  width: auto !important; // override 66% from .section>*
+  max-width: 26em;
+
+  li {
+    margin-top: 0.5em;
   }
 }
