@@ -266,9 +266,13 @@
   background-repeat: no-repeat;
   background-size: 100%;
   color: #fff;
-  padding-bottom: 40% !important;
+  padding-bottom: 55% !important;
 
   @include high-dpi-image('../img/rocket');
+
+  @media (min-width: $small-screen) {
+    padding-bottom: 40% !important;
+  }
 
   @media (min-width: $large-screen) {
     padding-bottom: 35% !important;
