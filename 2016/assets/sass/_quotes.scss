@@ -1,0 +1,40 @@
+.quote--positive-difference {
+  display: block;
+  width: 300px !important;
+  margin: 1em auto 2em auto;
+
+  @media (min-width: $large-screen) {
+    margin: 1em 0 3em 0;
+  }
+
+  @media (min-width: $huge-screen) {
+    margin: 0;
+    float: right;
+    width: 30% !important;
+    max-width: 300px;
+  }
+}
+
+.quote--tictec {
+  display: block;
+  width: 300px !important;
+  margin: -3em auto 2em auto;
+
+  @media (min-width: $medium-screen) {
+    margin: -3em 0 2em 0;
+  }
+
+  @media (min-width: $large-screen) {
+    float: right;
+    width: 40% !important;
+    max-width: 300px;
+    margin: -5em 0 0 0;
+    position: relative;
+    z-index: 10;
+  }
+
+  @media (min-width: $huge-screen) {
+    margin: -5.5em 4% 0 0;
+  }
+}
+

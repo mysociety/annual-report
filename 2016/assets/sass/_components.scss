@@ -20,7 +20,9 @@
   width: auto !important; // override default 50% width for section elements
 
   @media (min-width: $huge-screen) {
-    width: 66.6% !important;
+    .section > & {
+      width: 66% !important;
+    }
   }
 
   .stat {
@@ -44,8 +46,9 @@
   @include flexbox();
   @include flex-align-items(flex-end);
   padding-bottom: 0.5em;
-  border-bottom: 1px solid rgba(255,255,255,0.3);
+  border-bottom: 4px solid $colour_light_grey;
   margin-bottom: 0.5em;
+  color: $colour_dark_grey;
 }
 
 .stat__number {
@@ -54,6 +57,7 @@
   font-weight: bold;
   font-family: $condensed_typeface;
   vertical-align: bottom;
+  color: $colour_blue;
 
   // Stop .stat__name from crashing into .stat__number
   // as container shrinks on Safari
