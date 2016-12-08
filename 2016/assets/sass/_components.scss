@@ -408,6 +408,10 @@ blockquote.twitter-tweet {
       float: left;
       margin-left: 4%;
       padding-right: 5%;
+
+      &:nth-child(odd) {
+        clear: left;
+      }
     }
   }
 }
