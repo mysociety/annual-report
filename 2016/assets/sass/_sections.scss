@@ -262,5 +262,19 @@
 
 .section--help-forward {
   background-color: mix($colour_blue, #000, 50%);
+  background-position: 50% 100%;
+  background-repeat: no-repeat;
+  background-size: 100%;
   color: #fff;
+  padding-bottom: 40% !important;
+
+  @include high-dpi-image('../img/rocket');
+
+  @media (min-width: $large-screen) {
+    padding-bottom: 35% !important;
+  }
+
+  @media (min-width: $huge-screen) {
+    padding-bottom: 25% !important;
+  }
 }
