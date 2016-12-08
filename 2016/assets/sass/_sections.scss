@@ -182,6 +182,68 @@
   }
 }
 
+.page--figures {
+  .stat,
+  .stat-container {
+    & + p,
+    & + p + p {
+      margin-top: 1em;
+      font-size: 1em;
+    }
+  }
+}
+
+.section--figures-partners {
+  border-top: 1px solid mix($colour_blue, #fff, 10%);
+  border-bottom: 1px solid mix($colour_blue, #fff, 10%);
+  background-color: mix($colour_blue, #fff, 10%);
+  background-position: 50% 2%;
+  background-repeat: no-repeat;
+  background-size: 96%;
+
+  padding-top: 25%; // map rests at top on narrow screens
+
+  @include high-dpi-image('../img/map');
+
+  @media (min-width: $large-screen) {
+    padding-top: 2em;
+    background-position: 50% 70%;
+    background-size: contain;
+  }
+
+  @media (min-width: $huge-screen) {
+    padding-top: 2.5em;
+    background-position: 100% 70%;
+    background-size: 70%;
+  }
+
+  .stat__main {
+    border-bottom-color: transparentize($colour_blue, 0.7);
+  }
+}
+
+.section--figures-tictec {
+  position: relative; // so we can position the quote
+
+  .stat + .stat {
+    margin-top: 2em;
+  }
+
+  @media (min-width: $large-screen) {
+    .stat {
+      width: 50%;
+    }
+  }
+}
+
+.section--figures-team {
+  background-color: mix($colour_blue, #fff, 10%);
+
+  .stat__main {
+    border-bottom-color: transparentize($colour_blue, 0.7);
+  }
+}
+
 .page--help .section h1 {
   line-height: 1em;
   font-weight: 600;
