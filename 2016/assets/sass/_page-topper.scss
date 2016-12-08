@@ -78,14 +78,6 @@
     }
   }
 
-  // Page toppers look good when the content is 66% width,
-  // rather than the default 50%.
-  @media (min-width: $huge-screen) {
-    & > * {
-      width: 66%;
-    }
-  }
-
   h1 {
     font-size: 3em;
     font-weight: 600;
