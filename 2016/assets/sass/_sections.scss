@@ -453,6 +453,12 @@
   border-bottom: 1px solid mix($colour_green, #ddd, 10%);
 }
 
+.section--cities-stats {
+  .stat + .stat {
+    margin-top: 1.5em;
+  }
+}
+
 .page--help .section h1 {
   line-height: 1em;
   font-weight: 600;
