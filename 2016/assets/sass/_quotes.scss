@@ -17,24 +17,25 @@
 
 .quote--tictec {
   display: block;
-  width: 300px !important;
-  margin: -3em auto 2em auto;
-
-  @media (min-width: $medium-screen) {
-    margin: -3em 0 2em 0;
-  }
+  width: 400px !important;
+  max-width: 100%;
+  margin: 0 auto 2em auto;
 
   @media (min-width: $large-screen) {
-    float: right;
+    position: absolute;
+    right: 3%;
+    top: 50%;
+    margin: (350px / 2 * -1) 0 0 0;
     width: 40% !important;
-    max-width: 300px;
-    margin: -5em 0 0 0;
-    position: relative;
+    max-width: 400px;
     z-index: 10;
-  }
-
-  @media (min-width: $huge-screen) {
-    margin: -5.5em 4% 0 0;
   }
 }
 
+.quote--snacks {
+  display: block;
+  width: 400px;
+  height: auto;
+  max-width: 100%;
+  margin: 0 auto;
+}

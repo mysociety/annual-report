@@ -223,6 +223,8 @@
 }
 
 .section--figures-tictec {
+  position: relative; // so we can position the quote
+
   .stat + .stat {
     margin-top: 2em;
   }
@@ -231,6 +233,14 @@
     .stat {
       width: 50%;
     }
+  }
+}
+
+.section--figures-team {
+  background-color: mix($colour_blue, #fff, 10%);
+
+  .stat__main {
+    border-bottom-color: transparentize($colour_blue, 0.7);
   }
 }
 
