@@ -97,6 +97,13 @@ $prefixes: ("-webkit-","-moz-", "-o-", "-ms-", "");
   align-items: $alignment;
 }
 
+@mixin flex-justify-content($justify) {
+  -webkit-justify-content: $justify;
+  -moz-justify-content: $justify;
+  -ms-justify-content: $justify;
+  justify-content: $justify;
+}
+
 @mixin high-dpi-image($path) {
   background-image: url("#{$path}.png");
 

@@ -244,6 +244,215 @@
   }
 }
 
+.page--foi {
+  .testimonial {
+    margin: 1.5em 0;
+  }
+
+  .testimonial__quote {
+    display: inline-block;
+    font-style: italic;
+  }
+}
+
+.section--foi-slideshow {
+  & > * {
+    width: auto;
+  }
+
+  .slideshow__inner {
+    &:after {
+      @extend %inner-shadow;
+    }
+  }
+
+  .slideshow__slide {
+    padding: 0;
+    position: relative;
+
+    &:nth-child(6n + 1) {
+      top: 0.5em;
+      margin-left: -3em;
+    }
+
+    &:nth-child(6n + 2) {
+      top: 2em;
+      margin-left: -1.5em;
+    }
+
+    &:nth-child(6n + 3) {
+      top: 0.5em;
+      margin-left: -4em;
+    }
+
+    &:nth-child(6n + 4) {
+      top: 2.5em;
+      margin-left: -3.5em;
+    }
+
+    &:nth-child(6n + 5) {
+      top: 0;
+      margin-left: -2.5em;
+    }
+
+    &:nth-child(6n + 6) {
+      top: 1.5em;
+      margin-left: -3.5em;
+    }
+  }
+
+  .screenshot {
+    box-shadow: 0 5px 10px rgba(0,0,0,0.2);
+
+    img {
+      border-top: 1px solid #ddd;
+      width: 300px;
+    }
+  }
+}
+
+.section--foi-new {
+  background-color: mix($colour_green, #fff, 10%);
+  border-top: 1px solid mix($colour_green, #ddd, 20%);
+
+  .row {
+    margin-top: 2em;
+  }
+
+  .screenshot {
+    box-shadow: 0 5px 10px rgba(0,0,0,0.1);
+    margin-bottom: 1em;
+  }
+}
+
+.section--foi-stats {
+  background-color: $colour_green;
+  color: #fff;
+  @include coloured-links($colour_green);
+
+  .stat__main {
+    border-bottom-color: mix($colour_green, #fff, 70%);
+    color: #fff;
+  }
+
+  .stat__number {
+    color: inherit;
+  }
+}
+
+.section--foi-tweets {
+  background-color: mix($colour_green, #fff, 80%);
+  color: #fff;
+
+  blockquote.twitter-tweet {
+    max-width: none;
+  }
+
+  @media (min-width: $large-screen) {
+    .column-one-half {
+      &:first-child {
+        padding-right: 1em;
+      }
+
+      &:last-child {
+        padding-left: 1em;
+      }
+    }
+  }
+}
+
+.section--foi-commission {
+  background: #fff url(../img/files-green.jpg) 0% 50% no-repeat;
+  background-size: cover;
+}
+
+.section--foi-difference {
+  background-color: $colour_green;
+  color: #fff;
+  @include coloured-links($colour_green);
+}
+
+.section--foi-scoops {
+  padding-top: 0;
+  padding-bottom: 0;
+  background-color: darken($colour_green, 6%);
+  color: #fff;
+
+  .row > a {
+    display: block;
+    text-align: center;
+    text-decoration: none;
+    font-weight: inherit;
+    padding: 1em;
+    color: #fff;
+
+    @media (min-width: $medium-screen) {
+      padding: 1.5em;
+    }
+
+    @media (min-width: $large-screen) {
+      padding: 2em;
+    }
+
+    @media (min-width: $huge-screen) {
+      padding: 2.5em;
+    }
+
+    &:nth-child(1) {
+      background-color: darken($colour_green, 5%);
+
+      &:hover {
+        background-color: darken($colour_green, 15%);
+      }
+    }
+
+    &:nth-child(2) {
+      background-color: darken($colour_green, 10%);
+
+      &:hover {
+        background-color: darken($colour_green, 20%);
+      }
+    }
+
+    &:nth-child(3) {
+      background-color: darken($colour_green, 15%);
+
+      &:hover {
+        background-color: darken($colour_green, 25%);
+      }
+    }
+
+    & > :last-child {
+      margin-bottom: 0;
+    }
+  }
+
+  @media (min-width: $huge-screen) {
+    .row {
+      @include flexbox();
+
+      & > a {
+        width: 33.3%;
+      }
+    }
+  }
+
+  h2 {
+    font-size: 1.2em;
+  }
+
+  p {
+    font-size: 1em;
+  }
+}
+
+.section--foi-250-years {
+  background: #fff url(../img/last-words-green.jpg) 50% 50% no-repeat;
+  background-size: cover;
+  border-top: 1px solid mix($colour_green, #ddd, 10%);
+  border-bottom: 1px solid mix($colour_green, #ddd, 10%);
+}
+
 .page--help .section h1 {
   line-height: 1em;
   font-weight: 600;

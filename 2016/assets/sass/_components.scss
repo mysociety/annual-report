@@ -258,6 +258,7 @@ blockquote.twitter-tweet {
   margin: 10px 5px;
   padding: 16px;
   max-width: 468px;
+  width: 100%;
 
   p {
     font-size: 16px;
@@ -365,7 +366,7 @@ blockquote.twitter-tweet {
 
 .testimonial__quote {
   position: relative;
-  padding: 0 2em 0 3em;
+  padding: 0 3em 0 3em;
   margin-bottom: 0;
   font-size: inherit !important;
 
@@ -398,6 +399,29 @@ blockquote.twitter-tweet {
   opacity: 0.6;
 }
 
+.foi-research {
+  max-width: 40em;
+  margin: -1em auto 0 auto;
+  list-style: none;
+  padding: 0;
+
+  li {
+    padding: 1em;
+    border: 1px solid mix($colour_green, #ddd, 10%);
+    border-radius: 0.4em;
+    margin-top: 2em;
+  }
+
+  @media (min-width: $large-screen) {
+    @include flexbox();
+    @include flex-wrap(wrap);
+    @include flex-justify-content(space-between);
+
+    li {
+      width: 47.5%;
+    }
+  }
+}
 
 .funders {
   margin-top: -1em;

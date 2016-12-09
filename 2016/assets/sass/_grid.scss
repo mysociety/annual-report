@@ -3,9 +3,19 @@
   margin-left: -1em;
   margin-right: -1em;
 
-  @media (min-width: $huge-screen) {
+  @media (min-width: $medium-screen) {
+    margin-left: -1.5em;
+    margin-right: -1.5em;
+  }
+
+  @media (min-width: $large-screen) {
     margin-left: -2em;
     margin-right: -2em;
+  }
+
+  @media (min-width: $huge-screen) {
+    margin-left: -2.5em;
+    margin-right: -2.5em;
   }
 }
 
@@ -22,6 +32,18 @@
   @media (min-width: $huge-screen) {
     padding: 0 2em;
     margin-top: 0;
+  }
+
+  @media (min-width: $medium-screen) {
+    padding: 0 1.5em;
+  }
+
+  @media (min-width: $large-screen) {
+    padding: 0 2em;
+  }
+
+  @media (min-width: $huge-screen) {
+    padding: 0 2.5em;
   }
 }
 
