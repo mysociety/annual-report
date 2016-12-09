@@ -331,7 +331,7 @@
   @include coloured-links($colour_green);
 
   .stat__main {
-    border-bottom-color: transparentize(#fff, 0.7);
+    border-bottom-color: mix($colour_green, #fff, 70%);
     color: #fff;
   }
 
@@ -340,16 +340,30 @@
   }
 }
 
+.section--foi-tweets {
+  background-color: mix($colour_green, #fff, 80%);
+  color: #fff;
+
+  blockquote.twitter-tweet {
+    max-width: none;
+  }
+
+  @media (min-width: $large-screen) {
+    .column-one-half {
+      &:first-child {
+        padding-right: 1em;
+      }
+
+      &:last-child {
+        padding-left: 1em;
+      }
+    }
+  }
+}
+
 .section--foi-commission {
   background: #fff url(../img/files-green.jpg) 0% 50% no-repeat;
   background-size: cover;
-}
-
-.section--foi-250-years {
-  background: #fff url(../img/last-words-green.jpg) 50% 50% no-repeat;
-  background-size: cover;
-  border-top: 1px solid mix($colour_green, #ddd, 10%);
-  border-bottom: 1px solid mix($colour_green, #ddd, 10%);
 }
 
 .section--foi-difference {
@@ -430,6 +444,13 @@
   p {
     font-size: 1em;
   }
+}
+
+.section--foi-250-years {
+  background: #fff url(../img/last-words-green.jpg) 50% 50% no-repeat;
+  background-size: cover;
+  border-top: 1px solid mix($colour_green, #ddd, 10%);
+  border-bottom: 1px solid mix($colour_green, #ddd, 10%);
 }
 
 .page--help .section h1 {
