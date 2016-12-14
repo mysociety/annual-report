@@ -478,6 +478,36 @@
   }
 }
 
+.section--democracy-wazzock {
+  background: $colour_blue;
+  color: #fff;
+
+  h1 {
+    font-weight: bold;
+    font-size: 3em;
+
+    @media (min-width: $large-screen) {
+      font-size: 4em;
+    }
+
+    @media (min-width: $huge-screen) {
+      font-size: 5em;
+    }
+
+    &:before, &:after {
+      color: mix($colour_blue, #fff, 50%);
+    }
+
+    &:before {
+      content: '\201C';
+    }
+
+    &:after {
+      content: '\201D';
+    }
+  }
+}
+
 .section--democracy-responsiveness {
   background: #f2f9fe url(../img/writing-blue.jpg) 50% 100% no-repeat;
   background-size: cover;
