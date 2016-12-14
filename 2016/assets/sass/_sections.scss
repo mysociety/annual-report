@@ -347,18 +347,6 @@
   blockquote.twitter-tweet {
     max-width: none;
   }
-
-  @media (min-width: $large-screen) {
-    .column-one-half {
-      &:first-child {
-        padding-right: 1em;
-      }
-
-      &:last-child {
-        padding-left: 1em;
-      }
-    }
-  }
 }
 
 .section--foi-commission {
@@ -373,10 +361,14 @@
 }
 
 .section--foi-scoops {
-  padding-top: 0;
-  padding-bottom: 0;
+  @extend .section--no-padding;
+
   background-color: darken($colour_green, 6%);
   color: #fff;
+
+  .row {
+    margin: 0;
+  }
 
   .row > a {
     display: block;
@@ -457,6 +449,44 @@
   .stat + .stat {
     margin-top: 1.5em;
   }
+}
+
+.section--democracy-brexit {
+  background-color: #f9fcfe;
+  @media (min-width: $large_screen){
+    background: #f9fcfe url(../img/cameron-blue.jpg) 0% 20% no-repeat;
+    background-size: cover;
+  }
+}
+
+.section--democracy-stats {
+  .stat + .stat {
+    margin-top: 1.5em;
+  }
+}
+
+.section--democracy-international {
+  background-color: mix($colour_blue, #fff, 10%);
+
+  .row {
+    margin-top: 2em;
+  }
+
+  .screenshot {
+    box-shadow: 0 5px 10px rgba(0,0,0,0.1);
+    margin-bottom: 1em;
+  }
+}
+
+.section--democracy-responsiveness {
+  background: #f2f9fe url(../img/writing-blue.jpg) 50% 100% no-repeat;
+  background-size: cover;
+  border-top: 1px solid mix($colour_blue, #ddd, 10%);
+}
+
+.section--democracy-tweets {
+  background-color: $colour_blue;
+  color: #fff;
 }
 
 .page--help .section h1 {
