@@ -445,10 +445,29 @@
   border-bottom: 1px solid mix($colour_green, #ddd, 10%);
 }
 
+.section--cities-fms2 {
+  h1 {
+    font-size: 3em;
+    color: $colour_blue;
+    font-weight: bold;
+  }
+}
+
 .section--cities-stats {
-  .stat + .stat {
+  .stat + .stat,
+  .row + .row {
     margin-top: 1.5em;
   }
+}
+
+.section--cities-tweets {
+  background-color: $colour_blue;
+  color: #fff;
+}
+
+.section--cities-councils {
+  background: #f5fbfe url(../img/fms-map-blue.jpg) 100% 50% no-repeat;
+  background-size: cover;
 }
 
 .section--democracy-brexit {
