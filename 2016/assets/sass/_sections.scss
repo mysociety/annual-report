@@ -486,6 +486,7 @@
 .section--cities-fms {
   @media (min-width: $large-screen) {
     background-position: -2em 50%;
+    background-size: 160px 160px;
     background-repeat: no-repeat;
     @include high-dpi-image('../img/fms-spanner');
   }
@@ -527,6 +528,27 @@
     box-shadow: 0 5px 10px rgba(0,0,0,0.1);
     margin-bottom: 1em;
   }
+}
+
+.section--cities-mapit {
+  @media (min-width: $huge-screen) {
+    background-position: 95% 50%;
+    background-repeat: no-repeat;
+    background-size: 200px 200px;
+    @include high-dpi-image('../img/icon-maps');
+  }
+
+  @media (min-width: 75em) {
+    background-position: 90% 50%;
+  }
+
+  li + li {
+    margin-top: 0.75em;
+  }
+}
+
+.section--cities-mapit2 {
+  background-color: mix($colour_blue, #fff, 10%);
 }
 
 .section--democracy-brexit {
@@ -602,6 +624,19 @@
   font-weight: 600;
 }
 
+.section--help-donors {
+  @media (min-width: $huge-screen) {
+    background-position: 95% 50%;
+    background-repeat: no-repeat;
+    background-size: 200px 200px;
+    @include high-dpi-image('../img/icon-money');
+  }
+
+  @media (min-width: 75em) {
+    background-position: 90% 50%;
+  }
+}
+
 .section--help-volunteers {
   border-top: 1px solid $colour_light_grey;
   background-color: mix($colour_blue, #fff, 10%);
@@ -660,6 +695,32 @@
     img {
       border-top: 1px solid #ddd;
     }
+  }
+}
+
+.section--help-partners {
+  @media (min-width: $huge-screen) {
+    background-position: 95% 50%;
+    background-repeat: no-repeat;
+    background-size: 200px 200px;
+    @include high-dpi-image('../img/icon-tactics');
+  }
+
+  @media (min-width: 75em) {
+    background-position: 90% 50%;
+  }
+}
+
+.section--help-visitors {
+  @media (min-width: $huge-screen) {
+    background-position: 5% 50%;
+    background-repeat: no-repeat;
+    background-size: 200px 200px;
+    @include high-dpi-image('../img/icon-people');
+  }
+
+  @media (min-width: 75em) {
+    background-position: 10% 50%;
   }
 }
 
