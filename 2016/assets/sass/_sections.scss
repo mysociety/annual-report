@@ -483,6 +483,22 @@
   }
 }
 
+.section--cities-fms {
+  @media (min-width: $large-screen) {
+    background-position: -2em 50%;
+    background-repeat: no-repeat;
+    @include high-dpi-image('../img/fms-spanner');
+  }
+
+  @media (min-width: $huge-screen) {
+    background-position: 10% 50%;
+  }
+
+  @media (min-width: 75em) {
+    background-position: 15% 50%;
+  }
+}
+
 .section--cities-tweets {
   background-color: $colour_blue;
   color: #fff;
