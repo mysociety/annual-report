@@ -173,6 +173,7 @@ aside {
 
 .screenshot {
   @include clearfix();
+  display: block;
   padding-top: 1em;
   border-radius: 0.2em 0.2em 0 0;
   background: #e6e6e6 url(../img/screenshot-buttons.png) 0 0 no-repeat;
