@@ -360,6 +360,29 @@
   @include coloured-links($colour_green);
 }
 
+.section--foi-journalists {
+  background-position: 50% 100%;
+  background-repeat: no-repeat;
+  @include high-dpi-image('../img/journalist-tools');
+
+  padding-bottom: 230px;
+  background-size: 300px 200px;
+
+  @media (min-width: $large-screen) {
+    background-position: -100px 100%;
+    padding-bottom: 2em;
+  }
+
+  @media (min-width: $huge-screen) {
+    background-position: 0 100%;
+    padding-bottom: 2.5em;
+  }
+
+  @media (min-width: 75em) {
+    background-position: 5% 100%;
+  }
+}
+
 .section--foi-scoops {
   @extend .section--no-padding;
 
