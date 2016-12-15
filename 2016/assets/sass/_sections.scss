@@ -485,7 +485,7 @@
 
 .section--cities-fms {
   @media (min-width: $large-screen) {
-    background-position: -2em 100%;
+    background-position: -2em 50%;
     background-repeat: no-repeat;
     @include high-dpi-image('../img/fms-spanner');
   }
