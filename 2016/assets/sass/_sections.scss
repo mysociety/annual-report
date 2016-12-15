@@ -509,6 +509,26 @@
   background-size: cover;
 }
 
+.section--cities-health {
+  background-color: mix($colour_blue, #fff, 10%);
+  border-top: 1px solid mix($colour_blue, #ddd, 20%);
+
+  & > h1,
+  & > p {
+    text-align: center;
+    width: auto;
+  }
+
+  .row {
+    margin-top: 2em;
+  }
+
+  .screenshot {
+    box-shadow: 0 5px 10px rgba(0,0,0,0.1);
+    margin-bottom: 1em;
+  }
+}
+
 .section--democracy-brexit {
   background-color: #f9fcfe;
   @media (min-width: $large_screen){
