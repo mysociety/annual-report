@@ -2,5 +2,7 @@ name: annualreport2016
 baseurl:
 host: 0.0.0.0
 gems: ['jekyll/minibundle']
+title: >
+  mySociety Year in Review 2016
 description: >
   mySociety is a not-for-profit social enterprise that exists to invent and popularise websites and apps that enable citizens around the world to exert power over institutions and decision makers.
