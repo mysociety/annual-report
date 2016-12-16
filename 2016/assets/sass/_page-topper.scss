@@ -1,5 +1,12 @@
-@mixin topper-icon-dimensions($icon-size){
+@mixin page-topper-images($path){
+  @include high-dpi-image($path);
 
+  // On really wide screens, we increase "porthole" dimensions 1.5x,
+  // so swap in the @2x graphic (or the SVG) even on @1x displays.
+  @media (min-width: 75em) {
+    background-image: url("#{$path}@2x.png");
+    background-image: url("#{$path}.svg"), none;
+  }
 }
 
 .page-topper {
@@ -25,7 +32,7 @@
 
     width: 7em;
     height: 7em;
-    bottom: (-1 * 7em / 2) + 1em; // 1em higher than vertical center
+    bottom: (-0.5 * 7em) + 1em; // 1em higher than vertical center
     left: 1em; // to match .section padding
 
     @media (min-width: $medium-screen) {
@@ -35,20 +42,27 @@
     @media (min-width: $large-screen) {
       left: auto;
       right: 10%;
-      bottom: (-1 * 7em / 2); // vertical center
+      bottom: (-0.5 * 7em); // vertical center
     }
 
     @media (min-width: $huge-screen) {
       width: 9em;
       height: 9em;
-      bottom: (-1 * 9em / 2);
+      bottom: (-0.5 * 9em);
       right: 10%;
+    }
+
+    @media (min-width: 75em) {
+      width: 9em * 1.5;
+      height: 9em * 1.5;
+      bottom: (-0.5 * 9em * 1.5);
+      right: 5%;
     }
   }
 
   .page--figures & {
     &:after {
-      @include high-dpi-image("../img/porthole-figures");
+      @include page-topper-images("../img/porthole-figures");
     }
   }
 
@@ -56,25 +70,25 @@
     background-color: $colour_green;
 
     &:after {
-      @include high-dpi-image("../img/porthole-foi");
+      @include page-topper-images("../img/porthole-foi");
     }
   }
 
   .page--cities & {
     &:after {
-      @include high-dpi-image("../img/porthole-cities");
+      @include page-topper-images("../img/porthole-cities");
     }
   }
 
   .page--democracy & {
     &:after {
-      @include high-dpi-image("../img/porthole-democracy");
+      @include page-topper-images("../img/porthole-democracy");
     }
   }
 
   .page--help & {
     &:after {
-      @include high-dpi-image("../img/porthole-help");
+      @include page-topper-images("../img/porthole-help");
     }
   }
 

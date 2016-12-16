@@ -481,6 +481,7 @@ blockquote.twitter-tweet {
 .funders {
   margin-top: -1em;
   width: auto !important; // override 66% from .section>*
+  max-width: 52em; // avoid ridiculous line lengths on super wide screens
 
   li {
     margin-top: 1em;
