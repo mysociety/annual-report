@@ -185,8 +185,7 @@
 .page--figures {
   .stat,
   .stat-container {
-    & + p,
-    & + p + p {
+    & ~ p {
       margin-top: 1em;
       font-size: 1em;
     }
