@@ -629,7 +629,7 @@
     background-position: 95% 50%;
     background-repeat: no-repeat;
     background-size: 200px 200px;
-    @include high-dpi-image('../img/icon-money');
+    @include high-dpi-image('../img/icon-star');
   }
 
   @media (min-width: 75em) {
