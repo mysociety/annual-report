@@ -1,0 +1,100 @@
+@mixin page-topper-images($path){
+  @include high-dpi-image($path);
+
+  // On really wide screens, we increase "porthole" dimensions 1.5x,
+  // so swap in the @2x graphic (or the SVG) even on @1x displays.
+  @media (min-width: 75em) {
+    background-image: url("#{$path}@2x.png");
+    background-image: url("#{$path}.svg"), none;
+  }
+}
+
+.page-topper {
+  position: relative;
+  background-color: $colour_blue;
+  color: #fff;
+
+  @media (max-width: $medium-screen-max) {
+    padding-bottom: ((7em / 2) + (7em / 5)) + 2em;
+    margin-bottom: ((7em / 2) + (7em / 5)) - 2em;
+  }
+
+  &:after {
+    content: "";
+    position: absolute;
+    display: block;
+    background-color: $colour_blue;
+    background-size: 100% 100%;
+    background-position: 50% 50%;
+    background-repeat: no-repeat;
+    border: 0.4em solid #fff;
+    border-radius: 100%;
+
+    width: 7em;
+    height: 7em;
+    bottom: (-0.5 * 7em) + 1em; // 1em higher than vertical center
+    left: 1em; // to match .section padding
+
+    @media (min-width: $medium-screen) {
+      left: 1.5em; // to match .section padding
+    }
+
+    @media (min-width: $large-screen) {
+      left: auto;
+      right: 10%;
+      bottom: (-0.5 * 7em); // vertical center
+    }
+
+    @media (min-width: $huge-screen) {
+      width: 9em;
+      height: 9em;
+      bottom: (-0.5 * 9em);
+      right: 10%;
+    }
+
+    @media (min-width: 75em) {
+      width: 9em * 1.5;
+      height: 9em * 1.5;
+      bottom: (-0.5 * 9em * 1.5);
+      right: 5%;
+    }
+  }
+
+  .page--figures & {
+    &:after {
+      @include page-topper-images("../img/porthole-figures");
+    }
+  }
+
+  .page--foi & {
+    background-color: $colour_green;
+
+    &:after {
+      @include page-topper-images("../img/porthole-foi");
+    }
+  }
+
+  .page--cities & {
+    &:after {
+      @include page-topper-images("../img/porthole-cities");
+    }
+  }
+
+  .page--democracy & {
+    &:after {
+      @include page-topper-images("../img/porthole-democracy");
+    }
+  }
+
+  .page--help & {
+    &:after {
+      @include page-topper-images("../img/porthole-help");
+    }
+  }
+
+  h1 {
+    font-size: 3em;
+    font-weight: 600;
+    margin-bottom: 0.4em;
+  }
+}

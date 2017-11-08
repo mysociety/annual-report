@@ -1,0 +1,16 @@
+<blockquote class="twitter-tweet" lang="en">
+  <footer>
+    <a class="twitter-tweet__author" href="https://twitter.com/{{ include.user_handle }}">
+      <img class="twitter-tweet__profile-image" src="{{ site.baseurl }}/assets/img/twitter-{{ include.user_handle }}.jpeg">
+      <p class="twitter-tweet__name">
+        {{ include.user_display_name }}
+        {% if include.user_verified %}<span class="twitter-tweet__verified"></span>{% endif %}
+      </p>
+      <p class="twitter-tweet__screen-name">@{{ include.user_handle }}</p>
+    </a>
+  </footer>
+  <p>{{ include.tweet_html }}</p>
+  <footer>
+    <a class="twitter-tweet__created-at" href="{{ include.tweet_url }}">{{ include.date }}</a>
+  </footer>
+</blockquote>
