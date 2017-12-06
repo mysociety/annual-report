@@ -55,7 +55,7 @@
   @include grid-column;
 
   @media (min-width: $huge-screen) {
-    width: 40%;
+    width: 33.333%;
   }
 }
 
@@ -75,8 +75,48 @@
   @include grid-column-one-half();
 }
 
+.column-one-third {
+  @include grid-column-one-third();
+}
+
+.column-two-thirds {
+  @include grid-column-two-thirds();
+}
+
 @media (min-width: $huge-screen) {
   .column-last {
     float: right;
   }
+}
+
+%n-up-grid {
+  @include flexbox();
+  @include flex-align-items(center);
+  @include flex-justify-content(space-between);
+  flex-flow: row wrap;
+}
+
+.six-up-grid {
+  @extend %n-up-grid;
+}
+
+.six-up-grid-item {
+ width: 100%;
+ @media (min-width: $medium-screen) {
+   width: 50%;
+ }
+  @media (min-width: $large-screen) {
+    width: 30%;
+  }
+}
+
+.four-up-grid {
+  @extend %n-up-grid;
+}
+
+.four-up-grid-item {
+ width: 100%;
+ @media (min-width: $medium-screen) {
+   width: 50%;
+ }  
 }

@@ -16,21 +16,18 @@
 .stat-container {
   @include flexbox();
   @include flex-wrap(wrap);
-  margin: -1em;
   width: auto !important; // override default 50% width for section elements
-
-  @media (min-width: $huge-screen) {
-    .section > & {
-      width: 66% !important;
-    }
-  }
+  margin: -1em;
+  
 
   .stat {
     width: 100%;
     padding: 1em;
-
-    @media (min-width: $large-screen) {
+    @media (min-width: $medium-screen) {
       width: 50%;
+    }
+    &:last-of-type {
+      margin-right: 0;
     }
   }
 
@@ -46,37 +43,69 @@
   }
 }
 
+.stat-container--single {
+  .stat {
+    width: 100%;
+  }
+}
+
+.stat-container--triple {
+  .stat {
+    @media (min-width: $huge-screen) {
+      width: 33.333%;
+    }
+    &:first-child {
+      @media (min-width: $medium-screen) and (max-width: $huge-screen) {
+        width: 100%;
+      }
+    }
+  }
+}
+
 .stat__main {
-  @include flexbox();
-  @include flex-align-items(flex-end);
-  padding-bottom: 0.5em;
-  border-bottom: 4px solid $colour_light_grey;
+  padding: 0.75em 0 0.2em;
+  border-top: 6px solid $colour_black;
+  border-bottom: 6px solid $colour_black;
   margin-bottom: 0.5em;
-  color: $colour_dark_grey;
 }
 
 .stat__number {
-  font-size: 2em;
-  line-height: 1.07em;
+  font-size: 4.8em;
+  line-height: 0.85em;
   font-weight: bold;
   font-family: $condensed_typeface;
-  vertical-align: bottom;
-  color: $colour_blue;
+  small {
+    font-size: 0.25em;
+    position: relative;
+    left: -0.35em;
+    line-height: 1.5em;
+  }
+}
 
-  // Stop .stat__name from crashing into .stat__number
-  // as container shrinks on Safari
-  -webkit-flex-shrink: 0;
-  flex-shrink: 0;
+.stat__number--large {
+  font-size: 9.6em;
+  position: relative;
+  small {
+    font-size: 0.15em;
+    display: block;
+    left: 0;
+  }
+}
+
+.stat__number--small {
+  font-size: 3.2em;
 }
 
 .stat__name {
-  margin-left: 0.4em;
+  font-size: 1.05em;
   line-height: 1.1em;
-  vertical-align: bottom;
+  display: block;
+  text-transform: uppercase;
+  font-weight: $body_typeface_bold;
 }
 
 .stat__comment {
-  font-size: 1em !important; // override `.section p`
+  font-size: .8em !important; // override `.section p`
   margin-bottom: 0;
 
   // Can nest p's inside .stat__comment
@@ -93,6 +122,15 @@
     font-size: 0.9em;
     margin-bottom: 0.5em;
     opacity: 0.8; // Emulate the `a` shade, without all the colour scheme logic
+  }
+}
+
+.stat--huge {
+  .stat__name {
+    font-size: 1.4em;
+  }
+  .stat__comment {
+    font-size: 1.05em !important;
   }
 }
 
@@ -245,7 +283,7 @@ aside {
 
 // https://dev.twitter.com/web/embedded-tweets/css
 // overloaded selector to trump default link and paragraph styles
-blockquote.twitter-tweet {
+iframe.twitter-tweet {
   display: inline-block;
   text-align: left;
   font-family: "Helvetica Neue", Roboto, "Segoe UI", Calibri, sans-serif;
@@ -256,11 +294,10 @@ blockquote.twitter-tweet {
   color: #1C2022;
   border-radius: 5px;
   box-shadow: 0 1px 1px rgba(0, 0, 0, 0.2);
-  margin: 10px 5px;
+  margin: 1em auto;
   padding: 16px;
   max-width: 468px;
   width: 100%;
-
   p {
     font-size: 16px;
     font-weight: normal;
@@ -512,4 +549,145 @@ blockquote.twitter-tweet {
   li {
     margin-top: 0.5em;
   }
+}
+
+
+.screenshot--framed {
+  //wrap a sreenshot in an avg web browser frame
+
+  $container-height: 469px;
+  $container-width: 686px;
+
+  max-width: $container-width;
+  position: relative;
+  height: auto;
+  width: 100%;
+}
+
+.screenshot-wrapper {
+  position: relative;
+  height: auto;
+  width: 100%;
+  g {
+    fill: #333;
+  }
+}
+
+.screenshot-test-image {
+  position: absolute;
+  height: auto;
+  width: 96.2099125%;
+  z-index: 0;
+  top: 8.1023454%;
+  left: 1.8950437%;
+}
+
+.section--inverted {
+  .screenshot-wrapper {
+    g {
+      fill: #fff;
+    }
+  }
+}
+
+.external-story {
+  text-align: center;
+  max-width: 23em;
+  margin-left: auto;
+  margin-right: auto;
+  position: relative;
+  padding-bottom: 0.66em;
+  margin-bottom: 3em;
+  &:after {
+    content: " ";
+    display: block;
+    width: 50px;
+    height: 4px;
+    background-color: #333;
+    position: absolute;
+    bottom: -1em;
+    left: 50%;
+    margin-left: -25px;
+  }
+  a {
+    &:link,
+    &:visited {
+      display: block;
+      text-decoration: none;
+      color: $colour_black;
+      &:hover,
+      &:active,
+      &:focus {
+        .external-story__credit {
+          text-decoration: underline;
+        }
+      }
+    }
+  }
+}
+
+.external-story__title {
+  font-weight: $body_typeface_thin;
+  font-size: 1.15em;
+  margin-bottom: 0;
+}
+
+.external-story__icon {
+  max-width: 50px;
+  max-height: 55px;
+  margin-bottom: 10px;
+}
+
+.external-story__credit {
+  font-size: 0.875em;
+  margin-top: 0.75em;
+  margin-bottom: 0;
+}
+
+
+.contents {
+  @media (min-width: $small-screen) {
+    display: grid;
+    grid-gap: 1px;
+    grid-template-rows: repeat(2, 1fr);
+    grid-template-columns: repeat(2, 1fr);
+  }
+  @media (min-width: $large-screen) {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+.contents__figures {
+  @media (min-width: $small-screen) {
+    grid-area: 1 / 1 / 2 / 3;
+  }
+}
+
+.contents__item {
+  height: 12em;
+
+  position: relative;
+  a {
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    color: #fff;
+    text-decoration: none;
+    background-color: $colour_black;
+    &:hover,
+    &:active,
+    &:focus {
+      color: #fff !important;
+    }
+  }
+}
+
+.contents__title {
+  font-weight: $body_typeface_thin;
+  position: absolute;
+  bottom: 0;
+  left: 1em;
 }

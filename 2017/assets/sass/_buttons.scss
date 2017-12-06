@@ -67,12 +67,6 @@
   &:focus {
     background-color: darken($colour_twitter, 10%) !important;
   }
-
-  &:before {
-    @extend .#{$fa-css-prefix};
-    @extend .#{$fa-css-prefix}-twitter:before;
-    margin-right: 0.5em;
-  }
 }
 
 .button--facebook {
@@ -83,27 +77,5 @@
   &:active,
   &:focus {
     background-color: darken($colour_facebook, 10%) !important;
-  }
-
-  &:before {
-    @extend .#{$fa-css-prefix};
-    @extend .#{$fa-css-prefix}-facebook:before;
-    margin-right: 0.5em;
-  }
-}
-
-.button--donate {
-  &:before {
-    @extend .#{$fa-css-prefix};
-    @extend .#{$fa-css-prefix}-gratipay:before;
-    margin-right: 0.5em;
-  }
-}
-
-.button--contact {
-  &:before {
-    @extend .#{$fa-css-prefix};
-    @extend .#{$fa-css-prefix}-comments:before;
-    margin-right: 0.5em;
   }
 }

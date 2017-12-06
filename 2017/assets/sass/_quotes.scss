@@ -1,41 +1,67 @@
-.quote--positive-difference {
-  display: block;
-  width: 300px !important;
-  margin: 1em auto 2em auto;
-
+.blockquote {
+  padding-top: 2.7em;
+  font-size: 1.3em;
+  font-weight: $body_typeface_black;
+  font-style: italic;
+  position: relative;
+  margin: 1.5em 0;
   @media (min-width: $large-screen) {
-    margin: 1em 0 3em 0;
+    padding-left: 2.7em;
+    padding-top: 0;
+    font-size: 1.9em;
   }
-
-  @media (min-width: $huge-screen) {
-    margin: 0;
-    float: right;
-    width: 30% !important;
-    max-width: 300px;
-  }
-}
-
-.quote--tictec {
-  display: block;
-  width: 400px !important;
-  max-width: 100%;
-  margin: 0 auto 2em auto;
-
-  @media (min-width: $large-screen) {
+  &:before {
+    content:"\201C";
+    font-size: 3.4em;
     position: absolute;
-    right: 3%;
-    top: 50%;
-    margin: (350px / 2 * -1) 0 0 0;
-    width: 40% !important;
-    max-width: 400px;
-    z-index: 10;
+    left: 0;
+    top: 0.5em;
+    font-style: normal;
+    @media (min-width: $large-screen) {
+      left: 0;
+      top: 0.3em;
+    }
+  }
+  p:last-of-type {
+    margin-bottom: 10px;
+  }
+  cite {
+    font-weight: $body_typeface_thin;
+    font-size: 0.526315789em; //20px
+    font-style: normal;
   }
 }
 
-.quote--snacks {
-  display: block;
-  width: 400px;
-  height: auto;
-  max-width: 100%;
-  margin: 0 auto;
+.blockquote--reversed {
+  background-color: $colour_black;
+  color: #fff;
+  margin: 1em 0 1.5em;
+  padding: 1.2em 0.8em;
+}
+
+.mission-blockquote {
+  font-size: 2.5em;
+  line-height: 1.22em;
+  font-weight: $body_typeface_thin;
+  max-width: 18em;
+  font-style: normal;
+  margin-left: auto;
+  margin-right: auto;
+  &:before {
+    content:"";
+  }
+}
+
+.blockquote--smaller {
+  font-size: 1em;
+  @media (min-width: $large-screen) {
+    padding-left: 1.5em;
+  }
+  &:before {
+    font-size: 2em;
+    top: 0;
+  }
+  cite {
+    font-size: 0.9em;
+  }
 }
