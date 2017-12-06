@@ -14,16 +14,21 @@ $colour_red_black: #650B0B; // A very very dark red, for mixing into red to make
 $colour_twitter: #55acee;
 $colour_facebook: #3b5998;
 
-$colour_background: #fff;
+$colour_background: $colour_off_white;
 $colour_links: $colour_blue;
 $colour_borders: $colour_light_grey;
 
 $body_typeface: 'Source Sans Pro', Helvetica, Arial, sans-serif;
-$condensed_typeface: Oswald, Impact, sans-serif;
+$condensed_typeface: 'Pragati Narrow', Impact, sans-serif;
 
-$huge-screen: 65em; // 1040px
-$large-screen: 50em; // 800px
-$medium-screen: 40em; // 640px
+$body_typeface_thin: 300;
+$body_typeface_bold: 700;
+$body_typeface_black: 900;
+
+$full-width: 85.25em; // 1380px -1em
+$huge-screen: 60em; // 960px
+$large-screen: 52.5em; // 900px
+$medium-screen: 45em; // 720px
 $small-screen: 30em; // 480px
 $tiny-screen: 20em; // 320px
 

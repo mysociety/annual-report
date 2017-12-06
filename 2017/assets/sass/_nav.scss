@@ -1,246 +1,58 @@
-// This file is a little complex, as the nav is a major part of the site,
-// and dramatically changes its appearance as the screen size changes.
-
-// On narrow screens without javascript, it sits full-width, above the
-// page content.
-// On narrow screens *with* javascript, it remains full-width, but appears
-// overlaid on top of the page content and is summoned and dismissed by
-// clicking a toggle button on the page.
-// On all other screens, it sits as a sidebar to the left of the page
-// content. By default it occupies as little space as possible, but as
-// the window gets wider and taller, the links become wider and taller.
-
-@each $slug, $colour in $sections {
-  .page--#{$slug} .nav .#{$slug} a {
-    color: $colour;
-    background-color: #fff;
-    border-right-width: 0;
-  }
-
-  .nav .#{$slug} a {
-    border-right-color: $colour;
-
-    &:hover,
-    &:focus {
-      color: $colour;
-    }
-  }
-}
-
-// Homepage link is always black when you're on the homepage,
-// because the logo looks weird in blue.
-.page--welcome .nav .welcome a {
-  color: inherit;
-}
-
-.nav {
-  z-index: 100;
-  top: 0;
-  left: 0;
-  bottom: 0;
-  right: 0;
-  background-color: $colour_off_white;
-
-  // If screen is very narrow, and javascript is available,
-  // make the nav full-screen and toggleable with javascript.
-  @media (max-width: $tiny-screen-max) {
-    body.has-js & {
-      position: fixed;
-      display: none;
-    }
-
-    body.has-js &.nav-opened {
-      display: block;
-    }
-  }
-
-  // If the screen is wide enough, make the nav into a sidebar.
-  @media (min-width: $small-screen) {
-    position: fixed;
-    right: auto;
-    border-right: 1px solid darken($colour_off_white, 5%);
-    width: $nav-width-small-screen;
-  }
-
-  @media (min-width: $medium-screen) {
-    width: $nav-width-medium-screen;
-  }
-
-  @media (min-width: $large-screen) {
-    width: $nav-width-large-screen;
-  }
-
-  ul {
-    @extend .unstyled-list;
-    margin: 0;
-
-    @media (min-width: $small-screen) {
-      // Make room for sticky .credits footer link
-      position: relative;
-      min-height: 100%;
-      padding-bottom: 2em;
-
-      // Links should cover the border-right on .nav
-      margin-right: -1px;
-    }
-  }
-
-  li {
-    // we put the border on the li, to avoid mitering
-    // when we apply a border-left to the link inside
-    border-bottom: 1px solid darken($colour_off_white, 5%);
-  }
-
+.header-panel {
   a {
-    display: block;
-    padding: 1em;
-    line-height: 1.2em;
     color: $colour_dark_grey;
-    border-right: 0 solid transparent;
-    @include prefix('transition', 'border-right-width 0.2s');
-
-    @media (min-width: $small-screen) {
-      // very short screens (but not very narrow, ie: not phones)
-      padding: 0.5em;
-    }
-
-    @media (min-width: $small-screen) and (min-height: 440px) {
-      // not quite so short short screens
-      padding: 0.7em;
-    }
-
-    @media (min-width: $small-screen) and (min-height: 540px) {
-      // normal height screens
-      padding: 1em;
-    }
-
-    &:hover,
-    &:focus {
-      background-color: lighten($colour_off_white, 10%);
-      text-decoration: none;
-      border-right-width: 0.5em;
-      @include prefix('transition', 'border-right-width 0.2s');
-    }
   }
+}
+.logo {
+  display: block;
+  text-indent: -9000px;
+  width: 6em;
+  height: 1.3em;
+  background-color: transparent;
+  background-size: 6em auto;
+  background-position: 0 0;
+  background-repeat: no-repeat;
 
-  .logo {
+  @include high-dpi-image("../img/mysociety-logo");
+
+  & + small {
     display: block;
-    text-indent: -9000px;
-    width: 6em;
-    height: 1.3em;
-    background-color: transparent;
-    background-size: 6em auto;
-    background-position: 0 0;
-    background-repeat: no-repeat;
+  }
+}
 
-    @include high-dpi-image("../img/mysociety-logo");
 
-    & + small {
-      display: block;
-    }
+.nav ul {
+  margin: 0;
+  padding: 0;
+  list-style: none outside none;
+  @media (min-width: $large_screen) {
+    text-align: right;
   }
 
-  li.welcome :hover,
-  li.welcome :focus {
-    .logo {
-      @include high-dpi-image("../img/mysociety-logo-blue");
+}
 
-      .page--welcome & {
-        // Homepage link is always black when you're on the homepage,
-        // because the logo looks weird in blue.
-        @include high-dpi-image("../img/mysociety-logo");
-      }
-    }
-  }
-
-  .credits {
-    border-bottom: none;
-
-    a {
-      color: mix($colour_off_white, $colour_dark_grey, 50%);
-      font-size: 0.75em;
-      padding: 1em * (4/3);
-
-      @media (min-width: $small-screen) {
-        padding: 0.5em * (4/3);
-
-        position: absolute;
-        bottom: 0;
-        left: 0;
-        right: 0;
-      }
-
-      @media (min-width: $small-screen) and (min-height: 440px) {
-        padding: 0.7em * (4/3);
-      }
-
-      @media (min-width: $small-screen) and (min-height: 540px) {
-        padding: 1em * (4/3);
-      }
-
-      &:hover,
-      &:focus,
-      .page--credits & {
-        background-color: transparent;
-        color: $colour_dark_grey;
-        border-right: none;
-      }
+.nav li {
+  display: inline-block;
+  line-height: 0.6em;
+  &:last-child a {
+    &:after {
+      content: " ";
     }
   }
 }
 
-.nav-toggle {
-  display: none;
-
-  position: relative;
-  background-color: $colour_off_white;
-  padding: 0.8em 1em;
-  color: $colour_dark_grey;
-  line-height: 1.2em;
+.nav a {
+  font-size: .7em;
+  text-transform: uppercase;
+  color: $colour_black;
+  display: inline-block;
+  padding: 0.6em 0.85em 0.6em 0;
 
   &:after {
-    @extend .#{$fa-css-prefix};
-    @extend .#{$fa-css-prefix}-bars:before;
-    position: absolute;
-    top: 50%;
-    right: 0.75em;
-    font-size: 1.5em;
-    margin-top: -0.5em;
+    content: "/";
+    display: inline-block;
+    margin-left: 1em;
+    color: $colour_dark_grey;
   }
 
-  &:hover:after {
-    color: lighten($colour_dark_grey, 10%);
-  }
-
-  @media (max-width: $tiny-screen-max) {
-    body.has-js & {
-      display: block;
-      cursor: pointer;
-    }
-  }
-
-  &.nav-opened {
-    * {
-      display: none;
-    }
-
-    &:after {
-      @extend .#{$fa-css-prefix}-close:before;
-      position: fixed;
-      top: 0;
-      right: 0;
-      z-index: 101;
-      padding: 1em;
-      margin-top: 0;
-    }
-  }
-}
-
-.nav-toggle__site {
-  font-size: 0.9em;
-  color: mix($colour_dark_grey, $colour_off_white, 60%);
-}
-
-.nav-toggle__section {
-  display: block;
 }

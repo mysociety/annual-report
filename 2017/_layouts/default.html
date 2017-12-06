@@ -6,7 +6,7 @@
     <title>{% if page.title %}{{ page.title | escape }}{% else %}{{ site.title | escape }}{% endif %}</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="icon" href="https://www.mysociety.org/favicon.ico">
-    <link rel="stylesheet" href="//fonts.googleapis.com/css?family=Source+Sans+Pro:400,600,700,400italic|Oswald:700" data-noprefix>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Pragati+Narrow:700|Source+Sans+Pro:300,400,700,900" data-noprefix>
     <link rel="stylesheet" href="{% ministamp /assets/css/main.css /assets/css/main.css %}" data-noprefix>
 
     <meta name="description" content="{% if page.description %}{{ page.description | escape }}{% else %}{{ site.description | escape }}{% endif %}">
@@ -22,7 +22,7 @@
     <meta name="twitter:card" content="summary">
     <meta name="twitter:site" content="@mysociety">
     <meta name="twitter:creator" content="@mysociety">
-    <meta name="twitter:image" content="https://2016.mysociety.org/assets/img/social-image-twitter.jpg">
+    <meta name="twitter:image" content="https://2017.mysociety.org/assets/img/social-image-twitter.jpg">
     <meta name="twitter:image:width" content="500">
     <meta name="twitter:image:height" content="500">
 
@@ -36,27 +36,63 @@
       ga('send', 'pageview');
     </script>
   </head>
-  <body class="page--{{ page.slug }}">
-    <header class="nav-toggle">
-      <span class="nav-toggle__site">mySociety Year in Review 2016</span>
-      <strong class="nav-toggle__section">{{ page.title }}</strong>
-    </header>
-    <nav class="nav" role="navigation">
-      <ul>
-        <li class="welcome"><a href="{{ site.baseurl }}/"><span class="logo">mySociety </span><small>Year in Review 2016</small></a></li>
-        <li class="figures"><a href="{{ site.baseurl }}/figures/">2016 in figures</a></li>
-        <li class="foi"><a href="{{ site.baseurl }}/foi/">Freedom of Information</a></li>
-        <li class="cities"><a href="{{ site.baseurl }}/cities/">Better Cities</a></li>
-        <li class="democracy"><a href="{{ site.baseurl }}/democracy/">Democracy</a></li>
-        <li class="help"><a href="{{ site.baseurl }}/help/">How you help</a></li>
-        <li class="credits"><a href="{{ site.baseurl }}/credits/">Image credits</a></li>
-      </ul>
-    </nav>
-    <div class="page" role="main">
-      {{ content }}
+  <body class="page--{{ page.slug }} green-page">
+    <div class="site-parent">
+      <div class="header">
+        <div class="header-panel">
+          <a href="{{ site.baseurl }}/"><span class="logo">mySociety </span><small>Year in Review 2017</small></a>
+        </div>
+        <div class="navigation-panel">
+          <nav class="nav">
+            <ul>
+              <li class="figures"><a href="{{ site.baseurl }}/">Introduction</a></li>
+              <li class="figures"><a href="{{ site.baseurl }}/figures/">In figures</a></li>
+              <li class="foi"><a href="{{ site.baseurl }}/foi/">Freedom of Information</a></li>
+              <li class="cities"><a href="{{ site.baseurl }}/cities/">Better Cities</a></li>
+              <li class="democracy"><a href="{{ site.baseurl }}/democracy/">Democracy</a></li>
+              <li class="help"><a href="{{ site.baseurl }}/help/">How you help</a></li>
+            </ul>
+          </nav>
+        </div>
+      </div>
+      <div class="title-panel {% if page.has-background %}title-panel--has-background{% endif %} title-panel--{{ page.slug }}">
+        <div class="page-topper">
+          <h1 class="page-topper__title">{% if page.display-title %}{{ page.display-title }}{% else %}{{ page.title }}{% endif %}</h1>
+          <p class="page-topper__subtitle">{{ page.description }}</p>
+          <div class="page-topper__background">
+
+          </div>
+        </div>
+      </div>
+      <div class="content-panel">
+        <div class="page" role="main">
+          {{ content }}
+        </div>
+      </div>
     </div>
+    <div class="footer">
+      <div class="container">
+        <ul class="unstyled-list inline-list">
+          <li><a href="{{ site.baseurl }}/credits/" class="footer-link">Image credits</a></li>
+        </ul>
+      </div>
+    </div>
+    <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
     <script src="{% ministamp /assets/js/jquery-1.11.2.min.js /assets/js/jquery-1.11.2.min.js %}"></script>
     <script src="{% ministamp /assets/js/jquery.keyframes.min.js /assets/js/jquery.keyframes.min.js %}"></script>
     <script src="{% ministamp /assets/js/main.js /assets/js/main.js %}"></script>
+    <script>
+        var  mn = $(".header");
+        mns = "header--sticky";
+        hdr = $('.header').height() + 0;
+
+    $(window).scroll(function() {
+      if( $(this).scrollTop() > hdr ) {
+        mn.addClass(mns);
+      } else {
+        mn.removeClass(mns);
+      }
+    });
+    </script>
   </body>
 </html>

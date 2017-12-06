@@ -1,7 +1,6 @@
 @import 'normalize';
 @import 'variables';
 @import 'mixins';
-@import 'font-awesome';
 
 *, *:before, *:after {
   -moz-box-sizing: border-box;
@@ -23,7 +22,7 @@ body {
   min-height: 100%;
 
   @media (min-width: $medium-screen) {
-    font-size: 18px; // up from default 1em (16px);
+    font-size: 20px; // up from default 1em (16px);
   }
 }
 
@@ -47,21 +46,30 @@ h1, h2, h3, h4, h5, h6 {
 
 h1,
 .primary-heading {
-  font-size: 2em;
+  font-size: 2.8em;
+  @media (min-width: $large-screen) {
+    font-size: 3.6em;
+  }
   line-height: 1.1em;
-  font-weight: 400;
+  font-weight: $body_typeface_black;
 }
 
 h2,
 .secondary-heading {
-  font-size: 1.75em;
-  font-weight: 600;
+  font-size: 1.8em;
+  @media (min-width: $large-screen) {
+    font-size: 2.4em;
+  }
+  font-weight: $body_typeface_black;
 }
 
 h3,
 .tertiary-heading {
-  font-size: 1.5em;
-  font-weight: 700;
+  font-size: 1.4em;
+  @media (min-width: $large-screen) {
+    sfont-size: 1.6em;
+  }
+  font-weight: $body_typeface_black;
 }
 
 h4,
@@ -71,7 +79,7 @@ h4,
 }
 
 p {
-  line-height: 1.66em;
+  line-height: 1.5em;
   margin-bottom: 1em;
   margin-bottom: 1em;
   margin-top: 0;
@@ -79,6 +87,10 @@ p {
 
 pre, code, kbd, samp {
   font-family: Consolas, 'Liberation Mono', Courier, monospace;
+}
+
+strong, b {
+  font-weight: $body_typeface_black;
 }
 
 code {
@@ -129,6 +141,19 @@ dl {
   }
 }
 
+p {
+
+}
+
+.lead {
+  font-size: 1.2em;
+  line-height: 1.4em;
+  @media (min-width: $medium-screen) {
+    font-size: 1.4em;
+    line-height: 1.4em;
+  }
+}
+
 input[type=text],
 input[type=password],
 input[type=url],
@@ -144,14 +169,81 @@ textarea,
   max-width: 100%;
 }
 
+@mixin container {
+  margin: 0 auto;
+  max-width: 1380px;
+}
+
+.container {
+  @include container;
+}
+
+.site-parent {
+  @include container;
+  background-color: #fff;
+  box-shadow: 0 0 30px rgba(0,0,0,0.1);
+}
+
+.header {
+  @include clearfix();
+  background-color: #fff;
+  width: 100%;
+  max-width: 1380px;
+  padding: 27px;
+  position: relative;
+  z-index: 2;
+  @media (min-width: $large-screen) {
+    padding: 1em 80px;
+    position: fixed;
+    top: 0;
+    box-shadow: rgba(0,0,0, 0.1) 0 3px 20px;
+  }
+}
+
+.header-panel {
+  width: 100%;
+
+  @media (min-width: $large-screen) {
+    width: 25%;
+    float: left;
+  }
+}
+
+.navigation-panel {
+  width: 100%;
+  @media (min-width: $large-screen) {
+   width: 75%;
+   float: left;
+  }
+}
+
+
+.content-panel  {
+  
+}
+
+
+.header--sticky {
+  @media (min-width: $large-screen) {
+    //position: fixed;
+    //top: 0;
+  }
+}
+
+.page {
+  padding-top: 3em;
+}
+
+.limit-text {
+  max-width: 34em;
+  margin: 0 auto;
+}
+
 @import 'grid';
 @import 'buttons';
 @import 'components';
 @import 'sections';
 @import 'nav';
-
-@import 'toc';
+@import 'footer';
 @import 'page-topper';
 @import 'quotes';
-@import 'hearts';
-

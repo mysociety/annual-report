@@ -1,0 +1,9 @@
+.footer {
+  margin: 1em 0;
+  @extend %content-panel;
+}
+
+.footer-link {
+  color: $colour_dark_grey;
+  font-size: 0.75em;
+}
