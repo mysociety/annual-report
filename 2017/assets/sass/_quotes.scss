@@ -40,6 +40,8 @@
 }
 
 .mission-blockquote {
+  background-color: transparent;
+  color: $colour_purple;
   font-size: 2.5em;
   line-height: 1.22em;
   font-weight: $body_typeface_thin;
@@ -47,8 +49,31 @@
   font-style: normal;
   margin-left: auto;
   margin-right: auto;
-  &:before {
+  position: relative;
+  margin-left: 2em;
+  margin-right: 2em;
+  padding: 0;
+  @media (min-width: $large-screen) {
+    margin-left: 4em;
+  }
+  &:before,
+  &:after {
     content:"";
+    height: 36px;
+    width: 54px;
+    background-image: url('../img/sparkle.svg');
+    background-size: 100%;
+    background-repeat: no-repeat;
+    position: absolute;
+    top: 5px;
+    left: -60px;
+    }
+  &:after {
+    top: 20px;
+    right: -25px;
+    left: auto;
+    height: 24px;
+    width: 36px;
   }
 }
 
