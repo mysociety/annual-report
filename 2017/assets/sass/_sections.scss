@@ -7,6 +7,8 @@
    }
 }
 
+
+
 .section {
   display: block; // sections can be <a> elements sometimes!
   @extend %content-panel;
@@ -203,5 +205,117 @@
 
 .section--opra {
   background-image: url('../img/opra-background.jpg');
-  background-size: cover;
+  @include background-section();
+}
+
+.section--fms-birthday {
+  background-color: $colour_off_white;
+  border-top: 1px solid $colour_light_grey;
+  border-bottom: 1px solid $colour_light_grey;
+  @media (min-width: $huge-screen) {
+    margin: 3em 0;
+  }
+}
+
+.fms-birthday-cake {
+  max-width: 250px;
+  margin: 0 auto;
+  display: block;
+  width: 100%;
+  @media (min-width: $huge-screen) {
+    position: relative;
+    bottom: 110px;
+    margin-bottom: -300px;
+    max-width: none;
+    display: inline-block;
+  }
+  @media (min-width: $full-width) {
+    bottom: 170px;
+    margin-bottom: -300px;
+  }
+
+}
+
+.section--apis {
+  border-top: 1px solid $colour_light_grey;
+  h2 {
+    font-size: 1.8em;
+    @media (min-width: $huge-screen) {
+      text-align: right;
+      position: relative;
+      top: -12px; //put the baseline on the same level as the content text
+    }
+  }
+  p {
+    max-width: 24em;
+  }
+}
+
+.section--tictec-header {
+  background-image: url('../img/tictec-header.jpg');
+  @include background-section();
+  background-position: top right;
+  .stat {
+    color: #fff;
+    padding-top: 0;
+    padding-bottom: 0;
+    text-shadow: 0 0 5px rgba(0,0,0,0.7);
+    .stat__main {
+      border: 0;
+    }
+  }
+
+  .stat__name {
+    @media (min-width: $large-screen) {
+      font-size: 2em;
+    }
+  }
+
+  .stat__number {
+    font-size: 7em;
+  }
+}
+
+.section--tictec-quote {
+  .blockquote {
+    color: $colour_green;
+  }
+}
+
+.section--tictec-tweets {
+  background-image: url('../img/tictec-background.jpg');
+  @include background-section();
+}
+
+.section--parliament {
+  background-image: url('../img/parliament-background.jpg');
+  @include background-section();
+  background-position: center right;
+  .blockquote {
+    font-size: 1.7em;
+  }
+}
+
+.section--iran {
+  background-color: #574db0;
+}
+
+.section--youth-outreach {
+
+}
+
+.section--twfy-video {
+  background-color: #87b9d2;
+  text-align: center;
+  .flex-video iframe {
+    box-shadow: 0 0 30px rgba(0,0,0,0.2);
+  }
+}
+
+.section--snap-election {
+  background-image: url('../img/bigben-background.jpg');
+  @include background-section();
+  .limit-text {
+    margin-left: 0;
+  }
 }
