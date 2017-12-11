@@ -265,6 +265,7 @@
 }
 
 .section--tictec-quote {
+  background-color: #f5fbee;
   .blockquote {
     color: $colour_green;
   }
@@ -328,9 +329,11 @@
   background-color: $colour_green;
   background-image: url('../img/where-photo.jpg');
   @include background-section();
+  min-height: 30em;
   grid-area: 1 / 1 / 1 / 4;
   @media (min-width: $large-screen) {
     grid-area: 1 / 1 / 1 / 2;
+    min-height: none;
   }
 }
 
