@@ -47,18 +47,6 @@
 
 .section--no-padding {
   padding: 0;
-
-  @media (min-width: $small-screen) {
-    margin-left: $nav-width-small-screen;
-  }
-
-  @media (min-width: $medium-screen) {
-    margin-left: $nav-width-medium-screen;
-  }
-
-  @media (min-width: $large-screen) {
-    margin-left: $nav-width-large-screen;
-  }
 }
 
 .section--centred {
@@ -317,5 +305,38 @@
   @include background-section();
   .limit-text {
     margin-left: 0;
+  }
+}
+
+.section--where-have-you-worked {
+  background-color: $colour_off_white;
+  display: grid;
+  grid-template-rows: 1;
+  grid-template-columns: repeat(3, 1fr);
+  @media (min-width: $large-screen) {
+    grid-template-rows: 2;
+  }
+  .chat-like {
+    padding: 1.5em;
+    @media (min-width: $large-screen) {
+      padding: 3em;
+    }
+  }
+}
+
+.where-have-you-worked__photo {
+  background-color: $colour_green;
+  background-image: url('../img/where-photo.jpg');
+  @include background-section();
+  grid-area: 1 / 1 / 1 / 4;
+  @media (min-width: $large-screen) {
+    grid-area: 1 / 1 / 1 / 2;
+  }
+}
+
+.where-have-you-worked__content {
+  grid-area: 2 / 1 / 3 / 4;
+  @media (min-width: $large-screen) {
+    grid-area: 1 / 2 / 1 / 4;
   }
 }

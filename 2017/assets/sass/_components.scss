@@ -691,3 +691,77 @@ iframe.twitter-tweet {
   bottom: 0;
   left: 1em;
 }
+
+.chat-like {
+
+}
+
+.chat-like__item {
+  width: 100%;
+  @include clearfix();
+  &:nth-child(1) {
+    .chat-like__name {
+      color: $colour_orange;
+    }
+  }
+  &:nth-child(2) {
+    .chat-like__name {
+      color: $colour_orange;
+    }
+  }
+  &:nth-child(3) {
+    .chat-like__name {
+      color: $colour_red;
+    }
+  }
+  &:nth-child(4) {
+    .chat-like__name {
+      color: $colour_violet;
+    }
+  }
+  &:nth-child(5) {
+    .chat-like__name {
+      color: $colour_green;
+    }
+  }
+  &:nth-child(6) {
+    .chat-like__name {
+      color: $colour_blue;
+    }
+  }
+  &:nth-child(7) {
+    .chat-like__name {
+      color: $colour_purple;
+    }
+  }
+}
+
+%chat-like__text {
+  background-color: #fff;
+  box-shadow: 0 1px 1px rgba(0,0,0,0.2);
+  padding: 0.3em 0.6em;
+  border-radius: 5px;
+  max-width: 90%;
+  display: inline-block;
+  font-size: 0.75em;
+}
+
+.chat-like__question {
+  @extend %chat-like__text;
+  background-color: #aeeca6;
+  text-align: right;
+  float: right;
+  box-shadow: 0 1px 1px rgba(0,0,0,0.4);
+}
+
+.chat-like__answer {
+  @extend %chat-like__text;  
+}
+
+.chat-like__name {
+  font-weight: $body_typeface_bold;
+  font-size: .75em;
+  display: block;
+  line-height: 1.5em;
+  
+}
