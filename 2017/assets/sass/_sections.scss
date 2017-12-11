@@ -289,6 +289,16 @@
   }
 }
 
+.section--wikidate {
+  border-top: 1px solid $colour_light_grey;
+}
+
+.wikidata-logo {
+  display: block;
+  max-width: 250px;
+  margin: 0 auto;
+}
+
 .section--iran {
   background-color: #574db0;
 }
