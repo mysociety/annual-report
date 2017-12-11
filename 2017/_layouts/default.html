@@ -45,12 +45,7 @@
         <div class="navigation-panel">
           <nav class="nav">
             <ul>
-              <li class="figures"><a href="{{ site.baseurl }}/">Introduction</a></li>
-              <li class="figures"><a href="{{ site.baseurl }}/figures/">In figures</a></li>
-              <li class="foi"><a href="{{ site.baseurl }}/foi/">Freedom of Information</a></li>
-              <li class="cities"><a href="{{ site.baseurl }}/cities/">Better Cities</a></li>
-              <li class="democracy"><a href="{{ site.baseurl }}/democracy/">Democracy</a></li>
-              <li class="help"><a href="{{ site.baseurl }}/help/">How you help</a></li>
+              {% include nav.html %}
             </ul>
           </nav>
         </div>
@@ -72,8 +67,9 @@
     </div>
     <div class="footer">
       <div class="container">
-        <ul class="unstyled-list inline-list">
-          <li><a href="{{ site.baseurl }}/credits/" class="footer-link">Image credits</a></li>
+        <ul class="unstyled-list inline-list footer-nav">
+          {% include nav.html %}
+          <li><a href="{{ site.baseurl }}/credits/">Image credits</a></li>
         </ul>
       </div>
     </div>

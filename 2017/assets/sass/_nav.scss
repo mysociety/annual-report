@@ -44,7 +44,7 @@
 .nav a {
   font-size: .7em;
   text-transform: uppercase;
-  color: $colour_black;
+  color: $colour_dark_grey;
   display: inline-block;
   padding: 0.6em 0.85em 0.6em 0;
 
@@ -55,4 +55,9 @@
     color: $colour_dark_grey;
   }
 
+}
+
+.active a {
+  color: $colour_black !important;
+  text-decoration: underline;
 }

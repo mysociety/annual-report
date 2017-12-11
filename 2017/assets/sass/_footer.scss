@@ -3,7 +3,10 @@
   @extend %content-panel;
 }
 
-.footer-link {
-  color: $colour_dark_grey;
-  font-size: 0.75em;
+.footer-nav {
+  a {
+    color: $colour_dark_grey;
+    font-size: 0.75em;
+  }
+
 }
