@@ -196,12 +196,26 @@
   @include background-section();
 }
 
+.section--many-requests {
+  background-image: url('../img/books-background.jpg');
+  @include background-section();
+  @include featured-stat();
+  a {
+    color: #fff;
+    &:hover,
+    &:active,
+    &:focus {
+      color: #fff;
+    }
+  }
+}
+
 .section--fms-birthday {
   background-color: $colour_off_white;
   border-top: 1px solid $colour_light_grey;
   border-bottom: 1px solid $colour_light_grey;
   @media (min-width: $huge-screen) {
-    margin: 3em 0;
+    margin: 3em 0 0;
   }
 }
 
@@ -224,6 +238,14 @@
 
 }
 
+.section--better-cities-tweets {
+  @include background-section();
+  background-image: url('../img/fms-map-blue.jpg');
+  @media (min-width: $huge-screen) {
+    padding-top: 5em;
+  }
+}
+
 .section--apis {
   border-top: 1px solid $colour_light_grey;
   h2 {
@@ -243,25 +265,7 @@
   background-image: url('../img/tictec-header.jpg');
   @include background-section();
   background-position: top right;
-  .stat {
-    color: #fff;
-    padding-top: 0;
-    padding-bottom: 0;
-    text-shadow: 0 0 5px rgba(0,0,0,0.7);
-    .stat__main {
-      border: 0;
-    }
-  }
-
-  .stat__name {
-    @media (min-width: $large-screen) {
-      font-size: 2em;
-    }
-  }
-
-  .stat__number {
-    font-size: 7em;
-  }
+  @include featured-stat();
 }
 
 .section--tictec-quote {

@@ -127,3 +127,30 @@ $prefixes: ("-webkit-","-moz-", "-o-", "-ms-", "");
     text-shadow: 0 0 5px rgba(0,0,0,0.7);
   }
 }
+
+
+@mixin featured-stat() {
+  .stat {
+    color: #fff;
+    padding-top: 0;
+    padding-bottom: 0;
+    text-shadow: 0 0 5px rgba(0,0,0,0.7);
+    .stat__main {
+      border: 0;
+    }
+  }
+
+  .stat__name {
+    @media (min-width: $large-screen) {
+      font-size: 2em;
+    }
+  }
+
+  .stat__number {
+    font-size: 7em;
+  }
+
+  .stat__comment {
+    max-width: 40em;
+  }
+}
