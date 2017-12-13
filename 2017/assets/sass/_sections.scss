@@ -357,3 +357,36 @@
     grid-area: 1 / 2 / 1 / 4;
   }
 }
+
+.section--funders {
+  
+}
+
+.funders-list {
+  margin-bottom: 2em;
+}
+
+.section--share {
+  .button + .button {
+    margin-left: 1em;
+  }
+}
+
+.section--big-love {
+  background-color: $colour_red;
+  background-image: url('../img/heart-stack.png');
+  background-size: 461px 431px;
+  background-position: center;
+  background-repeat: no-repeat;
+  color: #fff;
+}
+
+.big-message-of-love {
+  text-align: center;
+  margin: 0.5em 0 1em;
+  font-size: 2em;
+}
+
+.donation-amounts {
+  margin: 3em 0 ;
+}
