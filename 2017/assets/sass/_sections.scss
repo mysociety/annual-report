@@ -172,40 +172,6 @@
   }
 }
 
-.section--wdtk-birthday {
-  @include flexbox();
-  @include flex-align-items(center);
-  @include flex-justify-content(space-between);
-  flex-flow: row wrap; 
-  border-top: 1px solid $colour_light_grey;
-  h2 {
-    color: $colour_orange;
-  }
-}
-
-.wdtk-birthday-balloons-one,
-.wdtk-birthday-balloons-two {
-  margin: 0 auto;
-  @media (min-width: $medium-screen) {
-    width: 20%;
-  }
-
-}
-
-.wdtk-birthday-balloons-two {
-  display: none;
-  @media (min-width: $medium-screen) {
-    display: block;
-  }
-}
-
-.wdtk-birthday-message {
-  text-align: center;
-  @media (min-width: $medium-screen) {
-    width: 60%;
-  }
-}
-
 .section--opra {
   background-image: url('../img/opra-background.jpg');
   @include background-section();
@@ -444,5 +410,39 @@
   &:focus {
     color: #fff !important;
     background-color: $colour_black;
+  }
+}
+
+.section--donors {
+  position: relative;
+  text-align: center;
+}
+
+.donors-message {
+  text-align: left;
+  max-width: 30em;
+}
+
+.donors-balloons-two {
+  @media (min-width: $huge-screen) {
+    width: 15%;
+    position: absolute;
+    left: 60px;
+    top: 20px;
+  }
+  @media (min-width: $full-width) {
+    width: 250px;
+  }
+}
+
+.donors-balloons-one {
+  @media (min-width: $huge-screen) {
+    width: 15%;
+    position: absolute;
+    right: 60px;
+    top: 13px;
+  }
+  @media (min-width: $full-width) {
+    width: 250px;
   }
 }
