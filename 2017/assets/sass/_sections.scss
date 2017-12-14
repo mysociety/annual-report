@@ -326,7 +326,9 @@
 
 .section--where-have-you-worked {
   background-color: $colour_off_white;
+  background-image: url('../img/chatlike-bg.svg');
   @include section--flush-edged-two-thirds();
+  background-size: 225px;
   .chat-like {
     padding: 1.5em;
     @media (min-width: $large-screen) {
