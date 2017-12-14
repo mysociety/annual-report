@@ -293,7 +293,13 @@
 .section--twfy-video {
   background-color: #87b9d2;
   text-align: center;
-  .flex-video iframe {
+
+  & > div {
+    max-width: 600px;
+    margin: 0 auto;
+  }
+
+  iframe {
     box-shadow: 0 0 30px rgba(0,0,0,0.2);
   }
 }
