@@ -306,6 +306,13 @@
   }
 }
 
+.section--research-travel {
+  background: mix($colour_blue, #fff, 15%) url(../img/map.png) 50% 55% no-repeat;
+  background-size: auto 150%;
+  background-image: url(../img/map.svg), none;
+  border-top: 1px solid mix($colour_blue, #fff, 15%);
+}
+
 .section--where-have-you-worked {
   background-color: $colour_off_white;
   @include section--flush-edged-two-thirds();
