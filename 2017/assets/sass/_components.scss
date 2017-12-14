@@ -811,5 +811,21 @@ iframe.twitter-tweet {
       break-inside: avoid;
     }
   }
+}
+
+.page-nav-next {
+  position: relative;
+  border-top: 6px solid $colour_black;
+  padding: 1.5em 2em 1.5em 1em;
+}
+
+.page-nav-next--message {
+  padding: 0;
+  text-align: right;
+  margin-bottom: 0;
+  font-weight: bold;
+}
+
+.link--nav-next {
 
 }
