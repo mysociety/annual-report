@@ -141,6 +141,21 @@
   }
 }
 
+.section--borsetshire {
+  h2 {
+    @media (min-width: $huge-screen) {
+      margin-top: 0.5em;
+    }
+    @media (min-width: 70em) {
+      margin-top: 1.4em;
+    }
+  }
+}
+
+.section--robots {
+  border-top: 1px solid $colour_light_grey;
+}
+
 .section--wdtkpro {
   background-image: linear-gradient(-46deg, #4C888F 0%, #4C888F 9%, #365B74 63%);
 }
@@ -389,4 +404,14 @@
 
 .donation-amounts {
   margin: 3em 0 ;
+}
+
+.section--pombolas {
+  h2 {
+    text-align: center;
+  }
+}
+
+.pombolas-screenshot {
+  margin-bottom: 2em;
 }
