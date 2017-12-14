@@ -283,7 +283,7 @@ aside {
 
 // https://dev.twitter.com/web/embedded-tweets/css
 // overloaded selector to trump default link and paragraph styles
-iframe.twitter-tweet {
+.twitter-tweet {
   display: inline-block;
   text-align: left;
   font-family: "Helvetica Neue", Roboto, "Segoe UI", Calibri, sans-serif;
