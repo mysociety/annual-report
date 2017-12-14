@@ -375,7 +375,12 @@
 }
 
 .donation-amounts {
-  margin: 3em 0 1.5em;
+  margin: 1.5em 0;
+}
+
+.donation-amounts-heading {
+  margin-top: 3em;
+  text-align: center;
 }
 
 .section--pombolas {
@@ -467,4 +472,31 @@
 
 .loyal-visitors--content {
   padding: 3em 2em;
+}
+
+.section--sponsor-tictec {
+  background-color: #f5fbee;
+  margin-bottom: 3em;
+  text-align: center;
+  @media (min-width: $huge-screen) {
+    text-align: left;
+  }
+  p {
+    margin-bottom: 0;
+  }
+  .column-one-third {
+    position: relative;
+    text-align: center;
+  }
+}
+
+.sponsor-tictec--image {
+  clip-path: polygon(50% 0,100% 25%,100% 75%,47% 100%,0 75%,0 25%);
+  width: 250px;
+  @media (min-width: $huge-screen) {
+    position: absolute;
+    top: -120px;
+    left: 0;
+    margin: 0;
+  }
 }
