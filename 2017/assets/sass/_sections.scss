@@ -306,12 +306,7 @@
 
 .section--where-have-you-worked {
   background-color: $colour_off_white;
-  display: grid;
-  grid-template-rows: 1;
-  grid-template-columns: repeat(3, 1fr);
-  @media (min-width: $large-screen) {
-    grid-template-rows: 2;
-  }
+  @include section--flush-edged-two-thirds();
   .chat-like {
     padding: 1.5em;
     @media (min-width: $large-screen) {
@@ -325,18 +320,7 @@
   background-image: url('../img/where-photo.jpg');
   @include background-section();
   min-height: 30em;
-  grid-area: 1 / 1 / 1 / 4;
-  @media (min-width: $large-screen) {
-    grid-area: 1 / 1 / 1 / 2;
-    min-height: none;
-  }
-}
 
-.where-have-you-worked__content {
-  grid-area: 2 / 1 / 3 / 4;
-  @media (min-width: $large-screen) {
-    grid-area: 1 / 2 / 1 / 4;
-  }
 }
 
 .section--funders {
@@ -431,7 +415,7 @@
     top: 20px;
   }
   @media (min-width: $full-width) {
-    width: 250px;
+    width: 300px;
   }
 }
 
@@ -443,6 +427,22 @@
     top: 13px;
   }
   @media (min-width: $full-width) {
-    width: 250px;
+    width: 300px;
   }
+}
+
+.section--loyal-visitors {
+  background-color: $colour_off_white;
+  @include section--flush-edged-two-thirds();
+}
+
+.loyal-visitors--background {
+  background-color: $colour_red;
+  min-height: 20em;
+  @include background-section();
+  background-image: url('../img/loyal-background.jpg');
+}
+
+.loyal-visitors--content {
+  padding: 3em 2em;
 }
