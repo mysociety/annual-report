@@ -229,12 +229,13 @@
 
 .section--apis {
   border-top: 1px solid $colour_light_grey;
+  padding-bottom: 1em;
   h2 {
-    font-size: 1.8em;
     @media (min-width: $huge-screen) {
-      text-align: right;
-      position: relative;
-      top: -12px; //put the baseline on the same level as the content text
+      margin-top: 0.5em;
+    }
+    @media (min-width: 70em) {
+      margin-top: 1em;
     }
   }
   p {
