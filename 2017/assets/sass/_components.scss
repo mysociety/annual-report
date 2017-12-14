@@ -806,6 +806,10 @@ iframe.twitter-tweet {
   @media (min-width: $large-screen) {
     column-count: 2;
     column-gap: 3em;
+    p {
+      page-break-inside: avoid;
+      break-inside: avoid;
+    }
   }
 
 }

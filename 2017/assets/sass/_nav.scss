@@ -62,3 +62,10 @@
   color: $colour_black !important;
   text-decoration: underline;
 }
+
+.navigation-panel {
+  .donate a {
+    font-weight: $body_typeface_bold;
+    color: $colour_red;
+  }
+}
