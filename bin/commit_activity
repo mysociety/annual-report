@@ -1,0 +1,38 @@
+# This script totals up the number of main branch commits in the past 52 weeks
+# on GitHub. Note GitHub can take some time to generate data for each repo the
+# first time you ask for it, so you will have to run this script, wait a while
+# and then run it again to get the now-cached results.
+
+import os
+from os.path import join, dirname
+from github import Github
+from dotenv import find_dotenv, load_dotenv
+
+load_dotenv(find_dotenv())
+
+ORGS = ("mysociety", "everypolitician")
+
+try:
+    key = os.environ['GITHUB_API_KEY']
+except KeyError:
+    raise Exception("Please set the GITHUB_API_KEY in your environment.")
+
+g = Github(key)
+
+for org in ORGS:
+    print org
+    grand_total = 0
+    for repo in g.get_organization(org).get_repos():
+        if repo.fork: continue
+        print ' ', repo.name,
+        stats = repo.get_stats_commit_activity()
+        if stats is None:
+            print 'NOT YET'
+        else:
+            total = 0
+            for s in stats:
+                total += s.total
+            print total
+            grand_total += total
+
+    print ' ', 'GRAND TOTAL', grand_total
