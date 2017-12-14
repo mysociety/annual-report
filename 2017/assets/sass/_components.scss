@@ -18,7 +18,6 @@
   @include flex-wrap(wrap);
   width: auto !important; // override default 50% width for section elements
   margin: -1em;
-  
 
   .stat {
     width: 100%;
@@ -58,6 +57,17 @@
       @media (min-width: $medium-screen) and (max-width: $huge-screen) {
         width: 100%;
       }
+    }
+  }
+}
+
+.stat-container--quadruple {
+  .stat {
+    @media (min-width: $medium-screen) {
+      width: 50%;
+    }
+    @media (min-width: $huge-screen) {
+      width: 25%;
     }
   }
 }
