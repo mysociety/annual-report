@@ -527,3 +527,17 @@
     margin: 0;
   }
 }
+
+.section--2018 {
+  background-color: $colour_blue;
+  background-image: url('../img/rocket.png');
+  background-image: url('../img/rocket.svg'), linear-gradient(-180deg, #4FADED 22%, #3083BA 100%);
+
+  background-position: right bottom;
+  background-repeat: no-repeat;
+  color: #fff;
+  .limit-text {
+    margin-left: 0;
+    padding-bottom: 2em;
+  }
+}
