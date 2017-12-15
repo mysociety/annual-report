@@ -90,6 +90,12 @@
     left: -0.35em;
     line-height: 1.5em;
   }
+  &.stat__number--noflow {
+    //add to a large number and be a little bit smaller to prevent overflow at smaller sizes
+    @media (max-width: $large-screen) {
+      font-size: 4em;
+    }
+  }
 }
 
 .stat__number--large {
@@ -100,10 +106,29 @@
     display: block;
     left: 0;
   }
+  &.stat__number--noflow {
+    //add to a large number and be a little bit smaller to prevent overflow at smaller sizes
+    @media (max-width: $large-screen) {
+      font-size: 6em;
+    }
+  }
+  &.stat__number--noflow--aggressive {
+    //add to a large number and be a little bit smaller to prevent overflow at smaller sizes
+    @media (max-width: $large-screen) {
+      font-size: 4em;
+    }
+  }
 }
 
 .stat__number--small {
   font-size: 3.2em;
+}
+
+.stat__number--noflow {
+  //add to a large number and be a little bit smaller to prevent overflow at smaller sizes
+  @media (max-width: $medium-screen) {
+    font-size: 6em;
+  }
 }
 
 .stat__name {
@@ -834,6 +859,12 @@ aside {
   text-align: right;
   margin-bottom: 0;
   font-weight: bold;
+  span {
+    display: block;
+    @media (min-width: $medium-screen) {
+      display: inline;
+    }
+  }
 }
 
 .link--nav-next {
