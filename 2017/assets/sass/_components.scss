@@ -625,6 +625,18 @@ aside {
   }
 }
 
+html.-ms- .screenshot--framed svg { 
+  display: none;
+}
+
+html.-ms- .screenshot--framed img { 
+  border: 4px solid #333;
+}
+
+html.-ms- .section--inverted .screenshot--framed img { 
+  border: 4px solid #fff;
+}
+
 .external-story {
   text-align: center;
   max-width: 23em;
