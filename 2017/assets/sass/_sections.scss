@@ -159,6 +159,19 @@
 
 .section--robots {
   border-top: 1px solid $colour_light_grey;
+  .column-one-third {
+    position: relative;
+    text-align: center;
+  }
+}
+
+.fms-robot {
+  max-height: 400px;
+  @media (min-width: $huge-screen) {
+    position: absolute;
+    top: -120px;
+    left: 0;
+  }
 }
 
 .section--wdtkpro {
