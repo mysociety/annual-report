@@ -156,25 +156,40 @@ $prefixes: ("-webkit-","-moz-", "-o-", "-ms-", "");
 }
 
 @mixin section--flush-edged-two-thirds {
-  display: grid;
-  grid-template-rows: 1;
-  grid-template-columns: repeat(3, 1fr);
-  @media (min-width: $large-screen) {
-    grid-template-rows: 2;
-  }
-
-  .flush-column-one {
-    grid-area: 1 / 1 / 1 / 4;
+  @include clearfix();
+  @supports (display: grid) {
+    display: grid;
+    grid-template-rows: 1;
+    grid-template-columns: repeat(3, 1fr);
     @media (min-width: $large-screen) {
-      grid-area: 1 / 1 / 1 / 2;
-      min-height: none;
+      grid-template-rows: 2;
     }
   }
 
+
+  .flush-column-one {
+    width: 30%;
+    float: left;
+    @supports (display: grid) {
+      width: auto;
+      grid-area: 1 / 1 / 1 / 4;
+      @media (min-width: $large-screen) {
+        grid-area: 1 / 1 / 1 / 2;
+        min-height: none;
+      }
+    }
+
+  }
+
   .flush-column-two {
-    grid-area: 2 / 1 / 3 / 4;
-    @media (min-width: $large-screen) {
-      grid-area: 1 / 2 / 1 / 4;
+    width: 70%;
+    float: left;
+    @supports (display: grid) {
+      width: auto;
+      grid-area: 2 / 1 / 3 / 4;
+      @media (min-width: $large-screen) {
+        grid-area: 1 / 2 / 1 / 4;
+      }
     }
   }
 }
