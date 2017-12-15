@@ -353,6 +353,12 @@ aside {
   }
 }
 
+// Twitter API sets padding:0 in Firefox, but not Chrome, for some reason,
+// so we look out for rendered tweets and zero the padding ourselves.
+.twitter-tweet-rendered {
+  padding: 0;
+}
+
 .twitter-tweet__author {
   display: block;
   padding-left: 45px;
