@@ -289,7 +289,9 @@
   @include background-section();
   background-position: center right;
   .blockquote {
-    font-size: 1.7em;
+    @media (min-width: $large-screen) {
+      font-size: 1.7em;
+    }
   }
 }
 
@@ -300,7 +302,6 @@
 
 .wikidata-logo {
   display: block;
-  max-width: 250px;
   margin: 0 auto;
 }
 
