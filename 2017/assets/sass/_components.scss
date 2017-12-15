@@ -625,6 +625,10 @@ aside {
   }
 }
 
+html.-ms- .screenshot--framed {
+  height: 1px;
+}
+
 html.-ms- .screenshot--framed svg { 
   display: none;
 }
