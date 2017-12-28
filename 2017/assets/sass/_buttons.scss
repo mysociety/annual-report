@@ -9,55 +9,6 @@
   text-decoration: none !important;
 }
 
-.button--primary {
-  @extend .button;
-  background-color: $colour_green;
-  color: #fff;
-
-  &:hover,
-  &:active,
-  &:focus {
-    background-color: darken($colour_green, 10%);
-  }
-}
-
-.button--secondary {
-  @extend .button;
-  background-color: $colour_blue;
-  color: #fff;
-
-  &:hover,
-  &:active,
-  &:focus {
-    background-color: darken($colour_blue, 10%);
-  }
-}
-
-.button--tertiary {
-  @extend .button;
-  color: $colour_black;
-  background-color: $colour_light_grey;
-
-  &:hover,
-  &:active,
-  &:focus {
-    background-color: darken($colour_light_grey, 5%);
-  }
-}
-
-.button--link {
-  @extend .button;
-  color: $colour_blue;
-  background-color: transparent;
-  text-decoration: underline !important;
-
-  &:hover,
-  &:active,
-  &:focus {
-    text-decoration: none !important;
-  }
-}
-
 .button--twitter {
   color: #fff !important;
   background-color: $colour_twitter !important;
