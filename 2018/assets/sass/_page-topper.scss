@@ -1,0 +1,145 @@
+
+.title-panel  {
+  color: $colour_black;
+  @media (min-width: $large-screen) {
+    padding-top: 130px;
+  }
+  &.title-panel--tilty {
+    color: #fff;
+  }
+}
+
+.title-panel--has-background {
+  padding-top: 100px;
+  @media (min-width: $large-screen) {
+    padding-top: 360px;
+  }
+  .page-topper {
+    border-bottom: 0;
+    padding-bottom: 2em;
+    color: #fff;
+    text-shadow: 0 5px 20px rgba(#000, 0.4);
+    @media (min-width: $large-screen) {
+      text-shadow: none;
+    }
+  }
+}
+
+.title-panel--welcome {
+  background-image: url('../img/welcome-team-photo2.jpg');
+  background-repeat: no-repeat;
+  background-color: $colour_green;
+  background-size: cover;
+  background-position: center;
+}
+
+.page-topper {
+  position: relative;
+  padding-top: 2em;
+  @extend %content-panel;
+  padding-bottom: 0.5em;
+  .title-panel--tilty & {
+    padding-bottom: 2em;
+    @media (min-width: $large-screen) {
+      padding-bottom: 0;
+    }
+  }
+}
+
+.page-topper__title {
+  position: relative;
+  z-index: 1;
+  margin-bottom: 0;
+  padding-bottom: 0.5em;
+  border-bottom: 10px solid $colour_black;
+  @media (min-width: $large-screen) {
+    font-size: 5.2em;
+  }
+  .page--bottom-line & {
+    border: 0;
+    padding-bottom: 0;
+  }
+  .title-panel--tilty & {
+    border: 0;
+    padding: 0;
+    color: #fff;
+    margin-bottom: 0.25em;
+    font-size: 1.125em;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    background-color: $colour_black;
+    color: #fff;
+    display: inline-block;
+    padding: 1em 1.5em;
+    @media (min-width: $large_screen ) {
+      font-size: 1.35em;
+      letter-spacing: 5px;
+      @supports (transform: rotate(-90deg)) {
+        transform: rotate(-90deg);
+        transform-origin: 0 0;
+        left: 0;
+        position: absolute;
+        top: 350px;
+        z-index: 1;
+      }
+    }
+  }
+}
+
+.page-topper__intro {
+  font-weight: bold;
+  line-height: 1em;
+  position: relative;
+  z-index: 1;
+  //We want the size of the title to scale with the window, up to a max
+  font-size: 3em; //older browsers
+  font-size: calc(1.2em + 5vw); //set minimum
+  position: relative;
+  z-index: 1;
+  margin-bottom: 0.5em;
+  @media (min-width: 62.9em ) {
+    font-size: 5.2em;
+  }
+}
+
+//extended intro that is in the topper of some pages
+.page-intro__subs {
+  margin-bottom: 1.5em;
+  position: relative;
+  z-index: 1;
+  font-weight: $body_typeface_bold;
+}
+
+.page-topper__statements {
+  position: relative;
+  z-index: 2;
+  font-size: 1.35em;
+  p {
+    margin-bottom: 0.5em;
+  }
+}
+
+.page-topper__background {
+  position: absolute;
+  top: -150px;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 0;
+  background-color: $colour_blue;
+  .title-panel--tilty & {
+    transform: skewY(-9deg);
+    transform-origin: top left;
+    bottom: -30px;
+    @media (min-width: $large_screen ) {
+      bottom: -150px;
+    }
+    @media (min-width: $huge_screen ) {
+      bottom: -250px;
+    }
+  }
+}
+
+
+
+

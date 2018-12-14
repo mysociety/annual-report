@@ -1,0 +1,420 @@
+%content-panel {
+  padding-left: 27px;
+  padding-right: 27px;
+  @media (min-width: $large-screen) {
+    padding-left: 5em;
+    padding-right: 5em;
+  }
+  @media (min-width: $full-width) {
+    padding-left: 10em;
+    padding-right: 10em;
+  }
+}
+
+%content-panel--wide {
+  padding-left: 27px;
+  padding-right: 27px;
+  @media (min-width: $large-screen) {
+    padding-left: 80px;
+    padding-right: 80px;
+   }
+}
+
+%content-panel--narrow {
+  @media (min-width: $full-width) {
+    padding-left: 15em;
+    padding-right: 15em;
+  }
+}
+
+.section {
+  width: 100%;
+  clear: both;
+  padding-top: 2.5em;
+  padding-bottom: 2.5em;
+  @media (min-width: $huge-screen) {
+    padding-top: 4em;
+    padding-bottom: 4em;
+  }
+
+  &:first-child {
+    padding-top: 0;
+  }
+
+  &:last-child {
+    padding-bottom: 5em;
+  }
+
+  a {
+    text-decoration: underline;
+    font-weight: $body_typeface_bold;
+
+    &:hover,
+    &:focus {
+      color: $colour_black;
+    }
+  }
+
+  & > .row {
+    width: auto;
+  }
+}
+
+.section--text {
+  @extend %content-panel;
+}
+
+.section--narrow {
+  @extend %content-panel--narrow;
+}
+
+.section--wide {
+  @extend %content-panel--wide;
+}
+
+.section--no-v-padding {
+  padding-top: 0;
+  padding-bottom: 0;
+}
+
+.section--no-top-padding {
+  padding-top: 0;
+}
+
+.section--centred {
+  text-align: center;
+  & > * {
+    width: auto;
+  }
+}
+
+.section--inverted {
+  color: #fff; 
+  background-color: #333;
+  a {
+    color: rgba(255,255,255,0.7);
+    &:hover,
+    &:active,
+    &:focus {
+      color: #fff;
+    }
+  }
+}
+
+.section--border {
+  border-top: 1px solid $colour_light_grey;
+  border-bottom: 1px solid $colour_light_grey;
+  & + .section--border {
+    border-top: 0;
+  }
+}
+
+.section--border-top {
+  border-top: 1px solid $colour_light_grey;
+}
+
+.section--border-bottom {
+  border-bottom: 1px solid $colour_light_grey;
+}
+
+.section--background--blue {
+  background-color: $colour_blue;
+}
+
+
+
+.section--wdtkpro {
+  background-image: linear-gradient(-46deg, #4C888F 0%, #4C888F 9%, #365B74 63%);
+}
+
+.section--stories-from-wdtk {
+  > h3, h2, p {
+    max-width: 49rem;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+  }
+  h3 {
+    margin-bottom: 2em;
+  }
+  h2 {
+    margin-bottom: 1.5em;
+  }
+}
+
+.section--qa {
+  background-color: $colour_off_white;
+  background-image: url('../img/chatlike-bg.svg');
+  @include section--flush-edged-two-thirds();
+  background-size: 225px;
+  padding: 0;
+  .chat-like {
+    padding: 1.5em;
+    @media (min-width: $large-screen) {
+      padding: 3em;
+    }
+  }
+}
+
+.qa__photo {
+  background-color: $colour_green;
+  background-image: url('../img/qa-photo-1.jpg');
+  @include background-section();
+  min-height: 30em;
+}
+
+.qa__photo--one {
+  background-image: url('../img/qa-photo-1.jpg');
+  @media ($high-dpi-screen) {
+    background-image: url('../img/qa-photo-1@2.jpg');
+  }
+}
+
+.qa__photo--two {
+  background-image: url('../img/qa-photo-2.jpg');
+  @media ($high-dpi-screen) {
+    background-image: url('../img/qa-photo-2@2.jpg');
+  }
+}
+
+.qa__photo--three {
+  background-image: url('../img/qa-photo-3.jpg');
+  @media ($high-dpi-screen) {
+    background-image: url('../img/qa-photo-3@2.jpg');
+  }
+}
+
+.funders-list {
+  margin-bottom: 2em;
+}
+
+.section--share {
+  .button + .button {
+    margin-left: 1em;
+  }
+}
+
+.section--big-love {
+  background-color: $colour_red;
+  background-image: url('../img/heart-stack.png');
+  background-size: 461px 431px;
+  background-position: center;
+  background-repeat: no-repeat;
+  color: #fff;
+}
+
+.big-message-of-love {
+  text-align: center;
+  margin: 0.5em 0 1em;
+  font-size: 2em;
+}
+
+
+.button--donate {
+  color: #fff;
+  background-color: $colour_red;
+  font-size: 1em;
+  box-shadow: 0 2px 2px rgba(0,0,0,0.5);
+  border-top: 1px solid rgba(255,255,255,0.1);
+  &:hover,
+  &:active,
+  &:focus {
+    color: #fff !important;
+    background-color: $colour_blue;
+  }
+}
+
+.button--mini {
+  background-color: $colour_blue;
+  color: #fff;
+  font-size: 0.875em;
+  padding: 0.66em;
+  position: relative;
+  top: -1px;
+  &:hover,
+  &:active,
+  &:focus {
+    background-color: $colour_light_grey;
+  }
+}
+
+.section--donate {
+  text-align: center;
+  background-image: url('../img/donate-b.jpg');
+  background-size: cover;
+  background-position: center;
+}
+
+.section--donate__desc {
+  background-color: $colour_black;
+  color: #fff;
+  width: 20em;
+  margin: 0 auto;
+  padding: 2em;
+  border-radius: 6px;
+}
+
+.section--2018 {
+  background-color: $colour_blue;
+  background-image: url('../img/rocket.png');
+  background-image: url('../img/rocket.svg'), linear-gradient(-180deg, #4FADED 22%, #3083BA 100%);
+
+  background-position: right bottom;
+  background-repeat: no-repeat;
+  color: #fff;
+  .limit-text {
+    margin-left: 0;
+    padding-bottom: 2em;
+  }
+}
+
+
+.section--impact {
+  p {
+    max-width: 38.75em;
+  }
+}
+
+
+.section--who-we-met {
+  h2 {
+    text-align: center;
+    @media (min-width: $large-screen) {
+      font-size: 4.8em;
+    }
+  }
+}
+
+.foi-party {
+  h2 {
+    @media (min-width: $large-screen) {
+      font-size: 3em;
+      margin-bottom: 0.2em;
+      line-height: 1em;
+    }
+  }
+}
+
+.section--alaveteli {
+  position: relative;
+  padding-bottom: 260px;
+  background-image: linear-gradient(-180deg, transparent 80%, $colour_off_white 100%);
+  border-bottom: 3px;
+}
+
+.alaveteli__screenshots {
+  background-image: url('../img/alaveteli-installs.png');
+  @media ($high-dpi-screen) {
+    background-image: url('../img/alaveteli-installs@2.png');
+  }
+  background-size: 1192px 346px;
+  height: 346px;
+  width: 1192px;
+  background-repeat: no-repeat;
+  background-position: left bottom;
+  position: absolute;
+  margin-bottom: 2em;
+  bottom: -100px;
+  right: 80px;
+  @media (min-width: $huge-screen) {
+    background-position: right bottom;
+  }
+}
+
+.alaveteli__content {
+  max-width: 30em;
+  @media (min-width: $large-screen) {
+  width: 60%;
+  }
+  h2 {
+    @media (min-width: $medium-screen) {
+      font-size: 4em;
+      margin-bottom: 0.2em;
+    }
+  }
+}
+
+.home-header {
+  background-image: url('../img/2018-header.jpg');
+  height: 280px;
+  width: 100%;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  @media (min-width: $medium-screen) {
+    height: 388px;
+  }
+  @media (min-width: $large-screen) {
+    height: 588px;
+  }
+  @media (min-width: $huge-screen) {
+    height: 788px;
+  }
+}
+
+.two-thousand-eighteen {
+  position: relative;
+  top: -100px;
+  margin-bottom: -90px;
+  @media (min-width: $large-screen) {
+    top: -250px;
+    margin-bottom: -210px;
+  }
+  @media (min-width: $huge-screen) {
+    top: -450px;
+    margin-bottom: -410px;
+  }
+}
+
+.transparency-top {
+  margin-top: -100px;
+}
+
+.section--how-you-help {
+  background-image: url('../img/confetti.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  text-align: center;
+  text-shadow: 0 1px 4px rgba(0,0,0,0.5);
+  padding-top: 3em !important;
+}
+
+.massive-thank-you {
+  font-size: 4em;
+  @media (min-width: $large-screen) {
+    font-size: 6em;
+  }
+  margin-bottom: 0;
+}
+
+.donate-call {
+  background-color: $colour_off_white;
+  padding: 1em;
+  border-radius: 5px;
+  text-align: center;
+
+  .button {
+    margin-left: 1em;
+    margin-top: 1em;
+    display: block;
+    @media (min-width: $small-screen) {
+      display: inline;
+      margin-top: 0;
+    }
+  }
+}
+
+.donate-call--inverted {
+  background-color: darken($colour_dark_grey, 15%);
+  margin-left: auto;
+  margin-right: auto;
+  .button {
+    color: #fff;
+    &:hover,
+    &:active,
+    &:focus {
+      background-color: $colour_red;
+    }
+  }
+}

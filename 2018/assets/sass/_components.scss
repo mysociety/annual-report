@@ -1,0 +1,681 @@
+.unstyled-list {
+  margin-left: 0;
+  padding-left: 0;
+  list-style: none outside none;
+}
+
+.inline-list {
+  margin-left: -0.5em;
+  margin-bottom: 0;
+  li {
+    display: inline-block;
+    margin-left: 0.5em;
+  }
+}
+
+.stat-container {
+  @include flexbox();
+  @include flex-wrap(wrap);
+  width: auto !important; // override default 50% width for section elements
+  margin: -1em;
+
+  .stat {
+    width: 100%;
+    padding: 1em;
+    @media (min-width: $medium-screen) {
+      width: 50%;
+    }
+    &:last-of-type {
+      margin-right: 0;
+    }
+  }
+
+  & + .stat {
+    margin-top: 2em;
+  }
+
+  .stat--no-borders {
+    //use for stats on a row the middle of other stats
+    padding: 0.5em 1em;
+    .stat__main {
+      border: 0;
+      padding: 0;
+      margin: 0;
+    }
+  }
+
+  .stat--no-top-border {
+    padding: 0.5em 1em;
+    .stat__main {
+      border-top: 0;
+      margin-top: 0;
+    }
+  }
+
+  .stat--no-bottom-border {
+    padding: 0.5em 1em;
+    .stat__main {
+      border-bottom: 0;
+      padding-top: 0;
+      margin-top: 0;
+    }
+  }
+
+}
+
+.stat-container--alt {
+  @media (min-width: $huge-screen) {
+    margin-left: 33.3%;
+    margin-left: calc(33.3% - 1em);
+  }
+}
+
+.stat-container--single {
+  .stat {
+    width: 100%;
+  }
+}
+
+.stat-container--stacked {
+  margin-top: 0;
+  .stat {
+    width: 100%;
+    padding-right: 0;
+  }
+}
+
+.stat-container--triple {
+  .stat {
+    @media (min-width: $huge-screen) {
+      width: 33.333%;
+    }
+    &:first-child {
+      @media (min-width: $medium-screen) and (max-width: $huge-screen) {
+        width: 100%;
+      }
+    }
+  }
+}
+
+.stat-container--quadruple {
+  .stat {
+    @media (min-width: $medium-screen) {
+      width: 50%;
+    }
+    @media (min-width: $huge-screen) {
+      width: 25%;
+    }
+  }
+}
+
+.stat__main {
+  padding: 0.75em 0 0.2em;
+  border-top: 4px solid $colour_black;
+  border-bottom: 4px solid $colour_black;
+  margin-bottom: 0.5em;
+}
+
+.stat__number {
+  font-size: 6em;
+  line-height: 0.85em;
+  font-weight: bold;
+  font-family: $condensed_typeface;
+  small {
+    font-size: 0.25em;
+    position: relative;
+    left: -0.35em;
+    line-height: 1.5em;
+  }
+  &.stat__number--noflow {
+    //add to a large number and be a little bit smaller to prevent overflow at smaller sizes
+    @media (max-width: $large-screen) {
+      font-size: 4em;
+    }
+  }
+}
+
+.stat__number--large {
+  font-size: 9.6em;
+  position: relative;
+  small {
+    font-size: 0.15em;
+    display: block;
+    left: 0;
+  }
+  &.stat__number--noflow {
+    //add to a large number and be a little bit smaller to prevent overflow at smaller sizes
+    @media (max-width: $large-screen) {
+      font-size: 6em;
+    }
+  }
+  &.stat__number--noflow--aggressive {
+    //add to a large number and be a little bit smaller to prevent overflow at smaller sizes
+    @media (max-width: $large-screen) {
+      font-size: 4em;
+    }
+  }
+}
+
+.stat__number--small {
+  font-size: 3.2em;
+}
+
+.stat__number--noflow {
+  //add to a large number and be a little bit smaller to prevent overflow at smaller sizes
+  @media (max-width: $medium-screen) {
+    font-size: 6em;
+  }
+}
+
+.stat__name {
+  font-size: 1.05em;
+  line-height: 1.1em;
+  display: block;
+  text-transform: uppercase;
+  font-weight: $body_typeface_bold;
+  position: relative;
+  z-index: 1;
+}
+
+.stat__comment {
+  font-size: .8em !important; // override `.section p`
+  margin-bottom: 0;
+
+  // Can nest p's inside .stat__comment
+  p {
+    font-size: 1em !important; // override `.section p`
+    margin-bottom: 0.5em;
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+
+  h4 {
+    font-size: 0.9em;
+    margin-bottom: 0.5em;
+    opacity: 0.8; // Emulate the `a` shade, without all the colour scheme logic
+  }
+}
+
+.stat--huge {
+  .stat__name {
+    font-size: 1.4em;
+  }
+  .stat__comment {
+    font-size: 1.05em !important;
+  }
+}
+
+.inline-stat__number {
+  font-weight: bold;
+}
+
+.nowrap {
+  white-space: nowrap;
+}
+
+.stat__name--small {
+  font-size: 0.875em;
+}
+
+.hr--stat {
+  border-top: 4px solid $colour_black;
+  width: 100%;
+  margin: 0 1em;
+}
+
+// https://dev.twitter.com/web/embedded-tweets/css
+// overloaded selector to trump default link and paragraph styles
+.twitter-tweet {
+  display: inline-block;
+  text-align: left;
+  font-family: "Helvetica Neue", Roboto, "Segoe UI", Calibri, sans-serif;
+  font-size: 12px;
+  font-weight: bold;
+  line-height: 16px;
+  background-color: #fff;
+  color: #1C2022;
+  border-radius: 5px;
+  box-shadow: 0 1px 1px rgba(0, 0, 0, 0.2);
+  margin: 1em auto;
+  max-width: 468px;
+  width: 100%;
+  padding: 1em;
+  p {
+    font-size: 16px;
+    font-weight: normal;
+    line-height: 1.4em;
+    margin: 0 0 1em 0;
+  }
+
+  a {
+    color: #2B7BB9;
+    font-weight: normal;
+    text-decoration: none;
+    outline: 0 none;
+
+    &:hover,
+    &:focus {
+      color: #3b94d9;
+      text-decoration: underline;
+    }
+  }
+}
+
+// Twitter API sets padding:0 in Firefox, but not Chrome, for some reason,
+// so we look out for rendered tweets and zero the padding ourselves.
+.twitter-tweet-rendered {
+  padding: 0;
+}
+
+.twitter-tweet__author {
+  display: block;
+  padding-left: 45px;
+  position: relative;
+  margin-bottom: 0.85em;
+
+  &,
+  &:hover,
+  &:focus {
+    text-decoration: none !important;
+  }
+}
+
+.twitter-tweet__profile-image {
+  position: absolute;
+  top: 0;
+  left: 0;
+  border-radius: 4px;
+  width: 36px;
+  height: 36px;
+}
+
+.twitter-tweet__name {
+  color: #1C2022;
+  font-weight: bold !important;
+  line-height: 1.2em !important;
+
+  a:hover &,
+  a:focus & {
+    color: #3b94d9;
+  }
+}
+
+.twitter-tweet__screen-name {
+  color: #697882;
+  font-size: 14px !important;
+}
+
+.twitter-tweet__created-at {
+  color: #697882 !important;
+  font-size: 14px !important;
+  line-height: 1.4em;
+  margin-top: 4px;
+  display: inline-block;
+}
+
+.twitter-tweet__verified {
+  display: inline-block;
+  vertical-align: -0.25em;
+  height: 1.25em;
+  width: 1.11111em;
+  background: transparent url(../img/twitter-verified.svg) no-repeat 0 0;
+  background-size: contain;
+}
+
+.sixteen-nine-video-ratio {
+  position: relative;
+  height: 0;
+  padding-bottom: (100% * ( 9 / 16 ));
+
+  iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+  }
+}
+
+.screenshot {
+  margin-bottom: 2em;
+}
+
+.external-story {
+  text-align: center;
+  max-width: 23em;
+  margin-left: auto;
+  margin-right: auto;
+  position: relative;
+  padding-bottom: 0.66em;
+  margin-bottom: 3em;
+  &:after {
+    content: " ";
+    display: block;
+    width: 50px;
+    height: 4px;
+    background-color: #333;
+    position: absolute;
+    bottom: -1em;
+    left: 50%;
+    margin-left: -25px;
+  }
+  a {
+    &:link,
+    &:visited {
+      display: block;
+      text-decoration: none;
+      color: $colour_black;
+      &:hover,
+      &:active,
+      &:focus {
+        .external-story__credit {
+          text-decoration: underline;
+        }
+      }
+    }
+  }
+}
+
+.external-story__title {
+  font-size: 1.15em;
+  margin-bottom: 0;
+}
+
+.external-story__icon {
+  max-width: 50px;
+  max-height: 55px;
+  margin-bottom: 10px;
+}
+
+.external-story__credit {
+  font-size: 0.875em;
+  margin-top: 0.75em;
+  margin-bottom: 0;
+}
+
+
+.contents {
+  @media (min-width: $small-screen) {
+    display: grid;
+    grid-gap: 1px;
+    grid-template-rows: repeat(2, 1fr);
+    grid-template-columns: repeat(2, 1fr);
+  }
+  @media (min-width: $large-screen) {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+.contents__figures {
+  @media (min-width: $small-screen) {
+    grid-area: 1 / 1 / 2 / 3;
+  }
+}
+
+.contents__item {
+  height: 12em;
+  position: relative;
+  a {
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    color: #fff;
+    text-decoration: none;
+    background-color: $colour_black;  
+    @include background-section();
+    transition: all 0.3s ease;
+    &:hover,
+    &:active,
+    &:focus {
+      color: #fff !important;
+      font-size: 1.2em;
+      transition: all 0.3s ease;
+    }
+    &:after {
+      content: "";
+      display: block;
+      height: 90px;
+      width: 100%;
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      background-image: linear-gradient(-180deg, rgba(0,0,0,0.00) 0%, rgba(0,0,0,0.8) 100%);
+      z-index: 1;
+    }
+  }
+}
+
+.contents__title {
+  position: absolute;
+  bottom: 0;
+  left: 1em;
+  z-index: 5;
+}
+
+.contents__democracy a {
+  background-image: url('../img/contents-demo.jpg');
+}
+
+.contents__foi a {
+  background-image: url('../img/contents-foi.jpg');
+}
+
+.contents__help a {
+  background-image: url('../img/contents-heart.jpg');
+}
+
+.contents__cities a {
+  background-image: url('../img/contents-cities.jpg');
+}
+
+.contents__figures a {
+  background-image: url('../img/tictec-header.jpg');
+}
+
+.chat-like {
+
+}
+
+.chat-like__item {
+  width: 100%;
+  @include clearfix();
+  &:nth-child(1) {
+    .chat-like__name {
+      color: $colour_orange;
+    }
+  }
+  &:nth-child(2) {
+    .chat-like__name {
+      color: $colour_orange;
+    }
+  }
+  &:nth-child(3) {
+    .chat-like__name {
+      color: $colour_red;
+    }
+  }
+  &:nth-child(4) {
+    .chat-like__name {
+      color: $colour_violet;
+    }
+  }
+  &:nth-child(5) {
+    .chat-like__name {
+      color: $colour_green;
+    }
+  }
+  &:nth-child(6) {
+    .chat-like__name {
+      color: $colour_blue;
+    }
+  }
+  &:nth-child(7) {
+    .chat-like__name {
+      color: $colour_purple;
+    }
+  }
+}
+
+%chat-like__text {
+  background-color: #fff;
+  box-shadow: 0 1px 1px rgba(0,0,0,0.2);
+  padding: 0.3em 0.6em;
+  border-radius: 5px;
+  max-width: 90%;
+  display: inline-block;
+  font-size: 0.75em;
+}
+
+.chat-like__question {
+  @extend %chat-like__text;
+  background-color: #aeeca6;
+  text-align: right;
+  float: right;
+  box-shadow: 0 1px 1px rgba(0,0,0,0.4);
+}
+
+.chat-like__answer {
+  @extend %chat-like__text;  
+}
+
+.chat-like__name {
+  font-weight: $body_typeface_bold;
+  font-size: .75em;
+  display: block;
+  line-height: 1.5em;
+  
+}
+
+.two-cols {
+  @media (min-width: $large-screen) {
+    column-count: 2;
+    column-gap: 3em;
+    p {
+      page-break-inside: avoid;
+      break-inside: avoid;
+    }
+  }
+}
+
+.page-nav-next {
+  position: relative;
+  border-top: 6px solid $colour_black;
+  padding: 1.5em 2em 1.5em 1em;
+}
+
+.page-nav-next--message {
+  padding: 0;
+  text-align: right;
+  margin-bottom: 0;
+  font-weight: bold;
+  span {
+    display: block;
+    @media (min-width: $medium-screen) {
+      display: inline;
+    }
+  }
+}
+
+.link--nav-next {
+
+}
+
+.product-subsection {
+  max-width: 38.75em;
+  .lead {
+    font-size: 1.15em;
+    max-width: 24em;
+  }
+}
+
+.product-subsection--footer {
+  margin-top: 1em;
+  padding-top: 2em;
+  border-top: 1px solid $colour_light_grey;
+}
+
+.screenshot-positioned {
+  position: relative;
+  overflow: hidden;
+}
+
+.special-position-tunisia-photo {
+  
+  margin: 0 auto;
+  display: block;
+  @media (min-width: $medium-screen) {
+    max-width: 500px;
+  }
+  @media (min-width: $huge-screen) {
+    position: absolute;
+    top: 60px;
+    left: -300px;
+    width: 650px;
+    max-width: 100%;
+  }
+  @media (min-width: 1300px) {
+    left: -200px;
+  }
+}
+
+.special-position-parliament-photo {
+  
+  margin: 0 auto 1em;
+  display: block;
+  max-width: 300px;
+  @media (min-width: $medium-screen) {
+    max-width: 400px;
+    right: -120px;
+  }
+  @media (min-width: 1060px) {
+    position: absolute;
+    top: 100px;
+    right: -80px;
+  }
+  @media (min-width: 1300px) {
+    right: -20px;
+    max-width: 500px;
+  }
+}
+
+.special-position-highways-photo {
+  margin: 0 auto 1em;
+  display: block;
+  max-width: 300px;
+  @media (min-width: $medium-screen) {
+    max-width: 450px;
+  }
+  @media (min-width: 1060px) {
+    position: absolute;
+    right: -90px;
+    top: 0;
+  }
+  @media (min-width: 1300px) {
+    right: -20px;
+    max-width: 500px;
+  }
+}
+
+.thank-you-stamp {
+  height: 63px;
+  width: 77px;
+  @media (min-width: $medium-screen) {
+    
+  }
+  @media (min-width: $large-screen) {
+    left: 5px;
+    position: absolute;
+  }
+
+  @media (min-width: $full-width) {
+    height: 126px;
+    width: 154px;
+    left: 20px;
+  }
+}

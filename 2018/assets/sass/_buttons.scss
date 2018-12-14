@@ -1,0 +1,32 @@
+.button {
+  display: inline-block;
+  padding: 0.8em 1em;
+  border-radius: 0.2em;
+  font-size: 1em;
+  line-height: 1em;
+  text-align: center;
+  border: none;
+  text-decoration: none !important;
+}
+
+.button--twitter {
+  color: #fff !important;
+  background-color: $colour_twitter !important;
+
+  &:hover,
+  &:active,
+  &:focus {
+    background-color: darken($colour_twitter, 10%) !important;
+  }
+}
+
+.button--facebook {
+  color: #fff !important;
+  background-color: $colour_facebook !important;
+
+  &:hover,
+  &:active,
+  &:focus {
+    background-color: darken($colour_facebook, 10%) !important;
+  }
+}

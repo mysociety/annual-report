@@ -1,0 +1,203 @@
+%image-replacement {
+  text-indent: -1000%;
+  white-space: nowrap;
+  overflow: hidden;
+}
+
+// Apply to a :before/:after pseudo-element to give the
+// impression of an inner shadow at the bottom of the parent.
+%inner-shadow {
+  content: "";
+  display: block;
+  position: absolute; // NOTE: this requires parent element to be positioned
+  height: 2em; // override this to make the shadow taller or shorter
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background: linear-gradient(to bottom, rgba(0,0,0,0) 0%, rgba(0,0,0,0.1) 100%);
+}
+
+@mixin clearfix {
+  &:before,
+  &:after {
+    content: " ";
+    display: table;
+  }
+
+  &:after {
+    clear: both;
+  }
+}
+
+$prefixes: ("-webkit-","-moz-", "-o-", "-ms-", "");
+@mixin prefix($property, $value) {
+  @each $prefix in $prefixes {
+    #{$prefix}#{$property}: #{$value};
+  }
+}
+
+@mixin keyframes($animationName) {
+  @-webkit-keyframes #{$animationName} {
+    @content;
+  }
+  @-moz-keyframes #{$animationName} {
+    @content;
+  }
+  @-o-keyframes #{$animationName} {
+    @content;
+  }
+  @keyframes #{$animationName} {
+    @content;
+  }
+}
+
+@mixin coloured-links($colour) {
+  a {
+    color: mix($colour, #fff, 20%);
+
+    &:hover,
+    &:focus {
+      color: mix($colour, #fff, 30%);
+    }
+  }
+
+  .button {
+    color: darken($colour, 10%);
+    background-color: #fff;
+
+    &:hover,
+    &:active,
+    &:focus {
+      color: darken($colour, 20%);
+      background-color: rgba(255, 255, 255, 0.9);
+    }
+  }
+}
+
+@mixin flexbox() {
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+}
+
+@mixin flex-wrap($wrap) {
+  -moz-box-wrap: $wrap;
+  -webkit-box-wrap: $wrap;
+  -webkit-flex-wrap: $wrap;
+  -ms-flexbox-wrap: $wrap;
+  flex-wrap: $wrap;
+}
+
+@mixin flex-align-items($alignment) {
+  -webkit-box-align: $alignment;
+  -webkit-align-items: $alignment;
+  -ms-flex-align: $alignment;
+  align-items: $alignment;
+}
+
+@mixin flex-justify-content($justify) {
+  -webkit-justify-content: $justify;
+  -moz-justify-content: $justify;
+  -ms-justify-content: $justify;
+  justify-content: $justify;
+}
+
+@mixin high-dpi-image($path) {
+  background-image: url("#{$path}.png");
+
+  @media ($high-dpi-screen) {
+    background-image: url("#{$path}@2x.png");
+  }
+
+  @media all {
+    background-image: url("#{$path}.svg"), none;
+  }
+}
+
+
+@mixin background-section {
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+
+  .blockquote {
+    color: #fff;
+    text-shadow: 0 0 5px rgba(0,0,0,0.7);
+  }
+}
+
+
+@mixin featured-stat() {
+  .stat {
+    color: #fff;
+    padding-top: 0;
+    padding-bottom: 0;
+    text-shadow: 0 0 5px rgba(0,0,0,0.7);
+    .stat__main {
+      border: 0;
+    }
+  }
+
+  .stat__name {
+    @media (min-width: $large-screen) {
+      font-size: 2em;
+    }
+  }
+
+  .stat__number {
+    font-size: 7em;
+  }
+
+  .stat__comment {
+    max-width: 40em;
+  }
+}
+
+@mixin section--flush-edged-two-thirds {
+  @include clearfix();
+  @supports (display: grid) {
+    display: grid;
+    grid-template-rows: 1;
+    grid-template-columns: repeat(3, 1fr);
+    @media (min-width: $large-screen) {
+      grid-template-rows: 2;
+    }
+  }
+
+
+  .flush-column-one {
+    width: 30%;
+    float: left;
+    @supports (display: grid) {
+      width: auto;
+      grid-area: 1 / 1 / 1 / 4;
+      @media (min-width: $large-screen) {
+        grid-area: 1 / 1 / 1 / 2;
+        min-height: none;
+      }
+    }
+
+  }
+
+  .flush-column-two {
+    width: 70%;
+    float: left;
+    @supports (display: grid) {
+      width: auto;
+      grid-area: 2 / 1 / 3 / 4;
+      @media (min-width: $large-screen) {
+        grid-area: 1 / 2 / 1 / 4;
+      }
+    }
+  }
+}
+
+.pos-relative {
+  position: relative;
+}
+
+.add-top-margin {
+  margin-top: 2em;
+}

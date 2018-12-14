@@ -1,0 +1,82 @@
+.blockquote {
+  font-family: $serif-typeface;
+  font-size: 1.25em;
+  font-weight: normal;
+  position: relative;
+  margin: 0;
+  max-width: 28em;
+  line-height: 1.4em;
+  p:last-of-type {
+    margin-bottom: 10px;
+  }
+  cite {
+    display: block;
+    font-family: $body-typeface;
+    font-weight: $body_typeface_bold;
+    font-size: 0.8em; //20px
+    font-style: normal;
+    margin-top: 10px;
+    line-height: 1.8rem;
+  }
+
+  + .blockquote {
+    margin-top: 2.5em;
+  }
+}
+
+.blockquote__photo {
+  float: left;
+  width: 50px;
+  height: 50px;
+  margin-right: 14px;
+  border-radius: 100%;
+}
+
+.blockquote__name {
+  display: block;
+}
+
+.blockquote__role {
+  display: block;
+  font-size: 0.75em;
+  color: $colour_dark_grey;
+  font-weight: normal;
+  line-height: 1em;
+}
+
+.blockquote--reversed {
+  background-color: $colour_black;
+  color: #fff;
+  margin: 1em 0 1.5em;
+  padding: 1.2em 0.8em;
+}
+
+.mission-blockquote {
+  background-color: transparent;
+  color: #fff;
+  font-size: 2.5em;
+  line-height: 0.95em;
+  max-width: 10em;
+  margin: 0 auto 0.35em;
+  font-family: $body-typeface;
+  font-weight: $body_typeface_bold;
+  position: relative;
+  padding: 0;
+  text-align: center;
+  @media (min-width: $medium-screen) {
+    font-size: 5em;
+  }
+}
+
+.blockquote--smaller {
+  font-size: 1em;
+  max-width: none;
+  cite {
+    font-size: 1em;
+  }
+}
+
+.blockquote--centred {
+  margin-left: auto;
+  margin-right: auto;
+}

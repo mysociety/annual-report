@@ -1,0 +1,65 @@
+.header-panel {
+  a {
+    color: $colour_dark_grey;
+  }
+}
+
+.logo {
+  display: block;
+  text-indent: -9000px;
+  width: 6em;
+  height: 1.3em;
+  background-color: transparent;
+  background-size: 6em auto;
+  background-position: 0 0;
+  background-repeat: no-repeat;
+
+  @include high-dpi-image("../img/mysociety-logo");
+
+  & + small {
+    display: block;
+  }
+}
+
+
+.nav ul {
+  margin: 0;
+  padding: 0;
+  list-style: none outside none;
+  @media (min-width: $large_screen) {
+    text-align: right;
+  }
+
+}
+
+.nav li {
+  display: inline-block;
+  line-height: 0.6em;
+  &:last-child a {
+    &:after {
+      content: " ";
+    }
+  }
+}
+
+.nav a {
+  font-size: .7em;
+  text-transform: uppercase;
+  color: $colour_black;
+  display: inline-block;
+  padding: 0.6em 0.85em 0.6em 0.85em;
+  font-weight: $body_typeface_bold;
+  letter-spacing: 0.5px;
+}
+
+.active a {
+  color: $colour_black !important;
+  text-decoration: underline;
+}
+
+.navigation-panel {
+  .donate a {
+    font-weight: $body_typeface_bold;
+    color: $colour_red;
+  }
+}
