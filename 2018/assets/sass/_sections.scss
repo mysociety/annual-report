@@ -378,14 +378,19 @@
   text-align: center;
   text-shadow: 0 1px 4px rgba(0,0,0,0.5);
   padding-top: 3em !important;
+  p {
+    margin-bottom: 1.5em;
+  }
 }
 
 .massive-thank-you {
+  margin-top: -0.5em;
+  margin-bottom: 0 !important;
   font-size: 4em;
   @media (min-width: $large-screen) {
     font-size: 6em;
   }
-  margin-bottom: 0;
+
 }
 
 .donate-call {

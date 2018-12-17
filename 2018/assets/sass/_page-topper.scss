@@ -33,6 +33,10 @@
   background-position: center;
 }
 
+.title-panel--and-finally {
+  display: none;
+}
+
 .page-topper {
   position: relative;
   padding-top: 2em;
@@ -127,6 +131,12 @@
   bottom: 0;
   z-index: 0;
   background-color: $colour_blue;
+  .green-page & {
+    background-color: $colour_green;
+  }
+  .red-page & {
+    background-color: $colour_red;
+  }
   .title-panel--tilty & {
     transform: skewY(-9deg);
     transform-origin: top left;

@@ -236,7 +236,8 @@ textarea,
 
 .page {
   padding-top: 3em;
-  .page--welcome & {
+  .page--welcome &,
+  .page--and-finally &, {
     padding-top: 0;
   }
 }
