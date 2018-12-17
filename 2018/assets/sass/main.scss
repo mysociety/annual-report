@@ -191,6 +191,7 @@ textarea,
   padding: 1em 27px;
   position: relative;
   z-index: 10;
+
   @media (min-width: $large-screen) {
     position: absolute;
     left: 0;
@@ -199,6 +200,9 @@ textarea,
     position: fixed;
     top: 0;
     box-shadow: rgba(0,0,0, 0.1) 0 3px 20px;
+
+    @include flexbox();
+    @include flex-align-items(center);
   }
 }
 
@@ -218,14 +222,16 @@ textarea,
   @media (min-width: $large-screen) {
    width: 80%;
    float: left;
-   margin-top: 0.2em;
+   margin-top: 0;
   }
 }
 
 .nav {
-  margin-left: -0.6em;
+  margin: 0 -0.6em; // match horizontal padding on nav links
+  line-height: 0; // don't want inline-block list items to take up space
+
   @media (min-width: $large-screen) {
-    margin-left: 0;
+    margin: 0;
   }
 }
 
