@@ -104,6 +104,16 @@ $prefixes: ("-webkit-","-moz-", "-o-", "-ms-", "");
   justify-content: $justify;
 }
 
+@mixin flex($values, $values2009: 0) {
+  -webkit-box-flex: $values2009;
+  -moz-box-flex: $values2009;
+  -webkit-box-flex: $values;
+  -moz-box-flex: $values;
+  -webkit-flex: $values;
+  -ms-flex: $values;
+  flex: $values;
+}
+
 @mixin high-dpi-image($path) {
   background-image: url("#{$path}.png");
 

@@ -27,20 +27,23 @@
   margin: 0;
   padding: 0;
   list-style: none outside none;
+
+  // Flex layout to make whitespace between list items disappear.
+  @include flexbox();
+  @include flex-wrap(wrap);
+
   @media (min-width: $large_screen) {
     text-align: right;
+    @include flex-justify-content(flex-end);
   }
-
 }
 
 .nav li {
   display: inline-block;
   line-height: 0.6em;
-  &:last-child a {
-    &:after {
-      content: " ";
-    }
-  }
+
+  // Do not attempt to grow or shrink.
+  @include flex(0 0 auto);
 }
 
 .nav a {
