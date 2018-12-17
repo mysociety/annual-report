@@ -188,14 +188,14 @@ textarea,
   @include clearfix();
   background-color: #fff;
   width: 100%;
-  padding: 27px;
+  padding: 1em 27px;
   position: relative;
   z-index: 10;
   @media (min-width: $large-screen) {
     position: absolute;
     left: 0;
     right: 0;
-    padding: 0.5em 80px;
+    padding: 1em 80px;
     position: fixed;
     top: 0;
     box-shadow: rgba(0,0,0, 0.1) 0 3px 20px;
@@ -213,10 +213,12 @@ textarea,
 
 .navigation-panel {
   width: 100%;
+  margin-top: 0.5em;
+
   @media (min-width: $large-screen) {
    width: 80%;
    float: left;
-   margin-top: 0.5em;
+   margin-top: 0.2em;
   }
 }
 
