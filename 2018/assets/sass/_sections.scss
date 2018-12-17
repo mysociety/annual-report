@@ -91,6 +91,9 @@
 .section--inverted {
   color: #fff; 
   background-color: #333;
+  strong {
+    font-weight: $body_typeface_bold;
+  }
   a {
     color: rgba(255,255,255,0.7);
     &:hover,
@@ -377,7 +380,10 @@
   background-position: center;
   text-align: center;
   text-shadow: 0 1px 4px rgba(0,0,0,0.5);
-  padding-top: 3em !important;
+  padding-top: 5em !important;
+  @media (min-width: $large-screen) {
+    padding-top: 7em !important;
+  }
   p {
     margin-bottom: 1.5em;
   }
