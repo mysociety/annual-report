@@ -9,6 +9,23 @@ tool to compile the CSS, and then Jekyll to generate the static site.
 
 ### To run locally
 
+This repo includes submodules, so you’ll either want to start with a recursive
+clone:
+
+```
+git clone --recursive git@github.com:mysociety/annual-report.git
+```
+
+Or, if you’ve already cloned the project, you’ll want to update the submodules:
+
+```
+cd annual-report
+git submodule update --init --recursive
+```
+
+Once you’ve got the code and the submodules downloaded, it’s time to get Jekyll
+and Sass working.
+
 You’ll ideally want [Bundler](http://bundler.io/) installed. Then:
 
 ```

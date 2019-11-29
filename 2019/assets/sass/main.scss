@@ -1,3 +1,41 @@
+@import "../../_bootstrap/scss/functions";
+@import "../../_bootstrap/scss/variables";
+@import "../../_bootstrap/scss/mixins";
+@import "../../_bootstrap/scss/root";
+@import "../../_bootstrap/scss/reboot";
+@import "../../_bootstrap/scss/type";
+@import "../../_bootstrap/scss/images";
+@import "../../_bootstrap/scss/code";
+@import "../../_bootstrap/scss/grid";
+// @import "../../_bootstrap/scss/tables";
+// @import "../../_bootstrap/scss/forms";
+// @import "../../_bootstrap/scss/buttons";
+// @import "../../_bootstrap/scss/transitions";
+// @import "../../_bootstrap/scss/dropdown";
+// @import "../../_bootstrap/scss/button-group";
+// @import "../../_bootstrap/scss/input-group";
+// @import "../../_bootstrap/scss/custom-forms";
+// @import "../../_bootstrap/scss/nav";
+// @import "../../_bootstrap/scss/navbar";
+// @import "../../_bootstrap/scss/card";
+// @import "../../_bootstrap/scss/breadcrumb";
+// @import "../../_bootstrap/scss/pagination";
+// @import "../../_bootstrap/scss/badge";
+// @import "../../_bootstrap/scss/jumbotron";
+// @import "../../_bootstrap/scss/alert";
+// @import "../../_bootstrap/scss/progress";
+// @import "../../_bootstrap/scss/media";
+// @import "../../_bootstrap/scss/list-group";
+// @import "../../_bootstrap/scss/close";
+// @import "../../_bootstrap/scss/toasts";
+// @import "../../_bootstrap/scss/modal";
+// @import "../../_bootstrap/scss/tooltip";
+// @import "../../_bootstrap/scss/popover";
+// @import "../../_bootstrap/scss/carousel";
+// @import "../../_bootstrap/scss/spinners";
+@import "../../_bootstrap/scss/utilities";
+@import "../../_bootstrap/scss/print";
+
 body {
     color: blue;
 }
