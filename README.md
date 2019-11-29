@@ -1,35 +1,25 @@
 # mySociety Annual Report
 
-mySociety in numbers, for 2014–2016.
+mySociety in numbers, for 2014–2019.
 
 ### How it works
 
 There’s a separate directory for each year. They all use the Sass command line
 tool to compile the CSS, and then Jekyll to generate the static site.
 
-We create pretty URLs using the `permalink:` feature in the YAML frontmatter of
-each page.
-
-Each page represents a chapter of the report, and contains a handful of
-“sections” stacked vertically in the browser.
-
-The height of these “sections”, and the width and height of the nav bar
-elements, is dependent on the height and width of the browser window.
-
 ### To run locally
 
-Initial set-up (assuming you have [Bundler](http://bundler.io/) installed):
+You’ll ideally want [Bundler](http://bundler.io/) installed. Then:
 
 ```
+cd annual-report
 bundle install --path vendor/bundle --binstubs vendor/bin
+make 2019
 ```
 
-Then `cd` into the year you want to serve, and:
-
-```
-../vendor/bin/sass --watch assets/sass:assets/css
-../vendor/bin/jekyll serve --baseurl ''
-```
+The `Makefile` handles concurrently generating the Jekyll site and CSS files
+for the given year. Output from both commands will be written to the terminal.
+You can stop it by pressing `ctrl-C`.
 
 The site will be available at http://0.0.0.0:4000
 
