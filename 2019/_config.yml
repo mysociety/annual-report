@@ -1,0 +1,11 @@
+name: annualreport2019
+baseurl:
+host: 0.0.0.0
+gems: ['jekyll/minibundle']
+title: >
+  mySociety Year in Review 2019
+description: >
+  mySociety provides technology, research and data to help people be active citizens, in more than 40 countries around the world.
+
+# TODO: Google Analytics tracking ID
+google_analytics:
