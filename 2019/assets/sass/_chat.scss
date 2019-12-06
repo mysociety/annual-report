@@ -1,0 +1,23 @@
+.chat {
+    padding: 0.8em 1em;
+    border-radius: 1em 1em 1em 0;
+    background-color: rgba(#fff, 0.2);
+    margin-right: 5%;
+    margin-bottom: 0;
+
+    strong {
+        display: block;
+        font-size: 0.8em;
+    }
+
+    & + & {
+        margin-top: 1em;
+    }
+
+    &:nth-child(2n+1) {
+        border-radius: 1em 1em 0 1em;
+        background-color: rgba(#fff, 0.4);
+        margin-left: 5%;
+        margin-right: 0;
+    }
+}

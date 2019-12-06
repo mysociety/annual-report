@@ -1,3 +1,5 @@
+@import "settings";
+
 @import "../../_bootstrap/scss/functions";
 @import "../../_bootstrap/scss/variables";
 @import "../../_bootstrap/scss/mixins";
@@ -36,6 +38,21 @@
 @import "../../_bootstrap/scss/utilities";
 @import "../../_bootstrap/scss/print";
 
-body {
-    color: blue;
+@import "underlines";
+@import "fills";
+@import "stats";
+@import "chat";
+
+@import "tictec";
+@import "intro";
+
+.section-slope {
+    width: 100%;
+    height: 3em;
+    margin: -1px 0; // prevent ghost lines when rounding to less than a full pixel height
+}
+
+img {
+    max-width: 100%;
+    height: auto;
 }
