@@ -1,0 +1,11 @@
+{% if include.loading == "lazy" %}<noscript class="loading-lazy">{% endif -%}
+<img
+  {%- if include.src %} src="{{ include.src | relative_url}}" {%- endif -%}
+  {%- if include.srcset %} srcset="{{ include.srcset }}" {%- endif -%}
+  {%- if include.width %} width="{{ include.width }}" {%- endif -%}
+  {%- if include.height %} height="{{ include.height }}" {%- endif -%}
+  {%- if include.class %} class="{{ include.class }}" {%- endif -%}
+  {%- if include.alt %} class="{{ include.class }}" {%- endif -%}
+  {%- if include.loading %} loading="{{ include.loading }}" {%- endif -%}
+>
+{%- if include.loading == "lazy" %}</noscript>{% endif %}
