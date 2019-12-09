@@ -31,7 +31,7 @@ permalink: /
         <h1 class="text-center mt-0">So what’s new?</h1>
         <div class="row mt-5 mt-sm-6 mt-md-7">
             <div class="col-sm-5">
-                <h2><span class="underline">New<br>trustees</span></h2>
+                <h2 class="mb-3"><span class="underline">New<br>trustees</span></h2>
             </div>
             <div class="col-sm-7">
                 <p>With the world in the state it is, it’s a good thing we’ve taken on some kickass new board members to help us out. We celebrated five new appointments who bring a wealth of experience working with business, parliaments, governments big and small.</p>
@@ -58,7 +58,7 @@ permalink: /
         </div>
         <div class="row mt-5 mt-sm-6 mt-md-7">
             <div class="col-sm-5">
-                <h2><span class="underline">New team members</span></h2>
+                <h2 class="mb-3"><span class="underline">New team members</span></h2>
             </div>
             <div class="col-sm-7">
                 <p>We welcomed <strong>Nyasha</strong> as a vital staff support to the WhatDoTheyKnow volunteer team. She’s helping keep that user support inbox down to manageable proportions, and aiding the team with daily maintenance tasks.</p>
@@ -67,7 +67,7 @@ permalink: /
         </div>
         <div class="row mt-5 mt-sm-6 mt-md-7">
             <div class="col-sm-5">
-                <h2><span class="underline">New experiences</span></h2>
+                <h2 class="mb-3"><span class="underline">New experiences</span></h2>
             </div>
             <div class="col-sm-7">
                 <p class="chat"><strong>Sam</strong> For our work on the Climate Assembly, we’ve started looking at video streaming tech, which is all new to us.</p>
@@ -91,20 +91,28 @@ permalink: /
 
 {% include section-slope.html topleft="white" bottomright="mysoc-brighter-violet" %}
 
-<div class="bg-mysoc-brighter-violet pb-7" id="tictec">
+<div class="bg-mysoc-brighter-violet pb-5 pb-sm-6 pb-md-7" id="tictec">
     <div class="container">
         <h1 class="tictec-logo">TICTeC</h1>
         <p class="text-center mx-auto" style="max-width: 16em">The world’s only conference exploring the impacts of Civic Technology</p>
 
-        <hr style="border-top: 0.3em solid #fff;" class="mt-6 mb-5">
+        <hr style="border-top: 0.3em solid #fff;" class="mt-5 mt-sm-6 mb-4 mb-sm-5">
 
         <h2>First, at the OECD in Paris</h2>
-        <p class="lead">TICTeC 2019 • Château de la Muette, Paris • 19th–20th March</p>
+        <p class="lead">TICTeC 2019 <span class="mx-2">·</span> Château de la Muette, Paris <span class="mx-2">·</span> 19th–20th March</p>
         <p>The Civic Tech community came together in Paris… in the springtime. Someone should write a song about that.</p>
 
-        <img src="http://placehold.it/1600x600" class="my-3">
+        {% include image.html src="/assets/img/tictec-group.jpg" width="1280" height="400" alt="TICTeC attendees outside the venue" loading="lazy" class="my-3 rounded-sm" %}
 
-        <div class="row text-white my-3"">
+        <div class="row text-white my-3">
+            <div class="col-sm-6 col-md-3">
+                <div class="stat">
+                    <p class="stat__main">
+                        <span class="stat__number stat__number--large">2</span>
+                        <span class="stat__name">days</span>
+                    </p>
+                </div>
+            </div>
             <div class="col-sm-6 col-md-3">
                 <div class="stat">
                     <p class="stat__main">
@@ -126,14 +134,6 @@ permalink: /
                     <p class="stat__main">
                         <span class="stat__number stat__number--large">76</span>
                         <span class="stat__name">speakers</span>
-                    </p>
-                </div>
-            </div>
-            <div class="col-sm-6 col-md-3">
-                <div class="stat">
-                    <p class="stat__main">
-                        <span class="stat__number stat__number--large">???</span>
-                        <span class="stat__name">hours of video</span>
                     </p>
                 </div>
             </div>
@@ -174,7 +174,7 @@ permalink: /
 
         <p>We heard the French perspective from Deputy Mayor of Paris <strong>Pauline Véron</strong>, MP <strong>Paula Forteza</strong> and <strong>Tatiana de Feraudy</strong> from Decider ensemble, demonstrating how Civic Tech in the shape of the Grand Débat National offered a response to the big social challenge raised by the gilets jaunes.</p>
 
-        <hr style="border-top: 0.3em solid #fff;" class="mt-6 mb-5">
+        <hr style="border-top: 0.3em solid #fff;" class="mt-5 mt-sm-6 mb-4 mb-sm-5">
 
         <h2>And then, at City Hall in London</h2>
         <p class="lead">TICTeC Local 2019 • City Hall, London • 1st November</p>
@@ -182,7 +182,7 @@ permalink: /
 
         <img src="http://placehold.it/1600x600" class="mt-2 mb-4">
 
-        <p>We talked communities and local government, with the climate crisis top of everyone’s minds. Are <strong>Citizens’ Assemblies</strong> an adequate response? What can they achieve… and what are the potential pitfalls?</p>
+        <p>We talked <strong>communities and local government</strong>, with the climate crisis top of everyone’s minds. Are <strong>Citizens’ Assemblies</strong> an adequate response? What can they achieve… and what are the potential pitfalls?</p>
 
         <p>There were uplifting stories of the power of civic tech to <strong>empower residents</strong>, make <strong>food banks more effective</strong>, turn <strong>impoverished communities</strong> around, and <strong>help the homeless</strong>.</p>
 
@@ -203,12 +203,13 @@ permalink: /
 
         <div class="row mt-7">
             <div class="col-sm-5">
-                <h2><span class="underline">What was your memorable TICTeC moment?</span></h2>
+                <h2 class="mb-3"><span class="underline">What was your memorable TICTeC moment?</span></h2>
             </div>
             <div class="col-sm-7">
-                <p class="chat"><strong>Bec</strong> Trying to get 200 of the loveliest, most talented and compelling people in the world to stand still for one minute to get a group photo #facepalm</p>
                 <p class="chat"><strong>Gemma</strong> It was amazing to be hosted by Paula Forteza MP and Mounir Mahjoubi (Secretary of State for Digital Affairs) at the French National Assembly building  — and to hear and feel their support for the civic tech movement.</p>
                 <p class="chat"><strong>Myf</strong> Seeing a young woman holding the whole room captivated by her message. Brava, Alessandra Orofino.</p>
+                <p class="chat"><strong>Asha</strong> Alessandra Orofino brought into sharp focus the powerful potential of combining online tools with offline organising to mobilise citizens and communities to challenge oppressive structures and create new centres of power.</p>
+                <p class="chat"><strong>Bec</strong> Trying to get 200 of the loveliest, most talented and compelling people in the world to stand still for one minute to get a group photo #facepalm</p>
             </div>
         </div>
     </div>
@@ -218,41 +219,46 @@ permalink: /
 
 <div class="bg-mysoc-blue py-5 py-sm-6 py-md-7" id="transparency">
     <div class="container">
-        <h1 class="text-center mb-5">Transparency</h1>
-        <p>We focused on: supporting the <strong>users of WhatDoTheyKnowPro</strong>; fostering the community of people who use and run <strong>FOI sites around the world</strong>; working with <strong>people in authorities</strong> who deal with FOI requests; reporting the <strong>amazing things people have done</strong> with their right to information; and <strong>researching FOI</strong> from a variety of angles.</p>
+        <p class="text-center lead mb-0">Because mySociety believes in</p>
+        <h1 class="text-center mb-3">Transparency</h1>
+        <p class="text-center lead mb-6 mx-auto" style="max-width: 30em">we’re supporting journalists, campaigners, and citizens to uncover facts using their right to information — and we’re helping authorities to process those requests more&nbsp;smoothly.</p>
 
         <h2 class="text-center mt-6 mb-5">What we made</h2>
-        <div class="row">
-            <div class="col-sm-6">
-                <img src="https://placehold.it/1000x600">
-                <p>We put out a <a href="https://www.mysociety.org/2019/07/03/alaveteli-releases-0-33-and-0-34/">new release</a> for all those <strong>running FOI sites</strong> on the Alaveteli platform. It includes a number of UX improvements, aimed at making it easier for new users to send effective requests to the right authorities.</p>
+        <div class="card-deck">
+            <div class="card shadow">
+                <img src="https://placehold.it/1000x600" class="card-img-top">
+                <div class="card-body">
+                    <p class="card-text">We put out <a href="https://github.com/mysociety/alaveteli/releases">several new releases</a> for all those <strong>running FOI sites</strong> on the <strong>Alaveteli platform</strong>, bringing a number of improvements that make it easier for new users to send effective requests to the right authorities.</p>
+                </div>
             </div>
-            <div class="col-sm-6">
-                <img src="https://placehold.it/1000x600">
-                <p>Thanks to funding from Adessium Foundation, we’re <strong>working with partners across Europe</strong> to install <a href="https://www.mysociety.org/2019/05/29/alaveteli-pro-a-chance-to-increase-transparency-across-europe/">Alaveteli Pro</a> on their Alaveteli sites, allowing for more investigative journalism projects using FOI as a tool.</p>
+            <div class="card shadow">
+                <img src="https://placehold.it/1000x600" class="card-img-top">
+                <div class="card-body">
+                    <p class="card-text">Thanks to funding from Adessium Foundation, we’re <strong>working with partners across Europe</strong> to install <a href="https://www.mysociety.org/2019/05/29/alaveteli-pro-a-chance-to-increase-transparency-across-europe/">Alaveteli Pro</a> on their Alaveteli sites, allowing for more investigative journalism projects using FOI as a tool.</p>
+                </div>
             </div>
         </div>
 
-        <h2 class="text-center mt-6 mb-5">What people did with it</h2>
+        <h2 class="text-center mt-6 mb-5">What people did with&nbsp;it</h2>
         <div class="row">
             <div class="col-sm-5">
-                <h3><span class="underline">In the UK…</span></h3>
+                <h3 class="mb-3"><span class="underline">In the UK…</span></h3>
             </div>
             <div class="col-sm-7">
                 <p>xxx people used WhatDoTheyKnow to make 26,000 requests this year, while more than 6.5 million visited the site to browse the information released in responses.</p>
                 <p>We covered some of the exceptional stories that came from FOI requests made through the site:</p>
                 <ul>
-                    <li>How schoolchildren’s data was used to support the “hostile environment”</li>
-                    <li>Uncovering a report on the implications of an Irish border</li>
-                    <li>A UK-wide audit of the public buildings and land sold by councils under the pressures of austerity</li>
-                    <li>Release of research supplied to the pro-Brexit group ERG</li>
-                    <li>Tracing the shortcomings of the support system for those caught up in modern slavery</li>
+                    <li><a href="https://www.mysociety.org/2019/01/23/using-whatdotheyknow-to-uncover-how-schoolchildrens-data-was-used-to-support-the-hostile-environment/">How schoolchildren’s data was used to support the “hostile environment”</a></li>
+                    <li><a href="https://www.mysociety.org/2019/09/02/foi-and-the-irish-border-issue/">Uncovering a report on the implications of an Irish border</a></li>
+                    <li><a href="https://www.mysociety.org/2019/03/08/whatdotheyknow-pro-helps-bij-get-the-whole-picture-on-council-sales/">A UK-wide audit of the public buildings and land sold by councils under the pressures of austerity</a></li>
+                    <li><a href="https://www.mysociety.org/2019/07/05/whatdotheyknow-pro-helps-journalists-further-transparency-accountability-and-public-trust/">Release of research supplied to the pro-Brexit group ERG</a></li>
+                    <li><a href="https://www.mysociety.org/2019/07/26/after-exploitation-using-foi-to-understand-what-happens-to-victims-of-modern-slavery/">Tracing the shortcomings of the support system for those caught up in modern slavery</a></li>
                 </ul>
             </div>
         </div>
-        <div class="row">
+        <div class="row mt-6">
             <div class="col-sm-5">
-                <h3><span class="underline">…and around the world</span></h3>
+                <h3 class="mb-3"><span class="underline">…and around the&nbsp;world</span></h3>
             </div>
             <div class="col-sm-7">
                 <p>Ma Dada brought simple FOI requesting to France, on the Alaveteli platform…</p>
@@ -280,11 +286,12 @@ permalink: /
 
         <div class="row mt-7">
             <div class="col-sm-5">
-                <h2><span class="underline">What’s been the most fun about Transparency this year?</span></h2>
+                <h2 class="mb-3"><span class="underline">What’s been the most fun about Transparency this year?</span></h2>
             </div>
             <div class="col-sm-7">
                 <p class="chat"><strong>Myf</strong> I loved hearing everyone's tales of how they've used FOI for good at AlaveteliCon, and especially enjoyed <a href="https://www.mysociety.org/tag/alavetelicon/">writing them up for the mySociety blog</a>.</p>
                 <p class="chat"><strong>Bec</strong> Seeing first-hand how access to legal information online is acting as a catalyst for social and economic empowerment, and breaking down barriers to learning and employment for previously disadvantaged groups. </p>
+                <p class="chat"><strong>Louise</strong> I really enjoyed contributing to our Local Digital work, supporting councils to collaborate on tools for handling FOI requests. This involved models of tool adoption, and costs and benefits of open source approaches - the kind of thing that help councils, and mySociety, make an informed decision about technology development.</p>
             </div>
         </div>
 
@@ -295,47 +302,56 @@ permalink: /
 
 <div class="bg-mysoc-green py-5 py-sm-6 py-md-7" id="democracy">
     <div class="container">
-        <h1 class="text-center">Democracy</h1>
-        <p>We focused on: How tech could support the increasingly favoured civic phenomenon of <strong>Citizens’ Assemblies</strong>; refining <strong>TheyWorkForYou</strong> and making sure it survives into the next year; working closely with councils to get <strong>more people engaged in democracy</strong> at a local level.</p>
+        <p class="text-center lead mb-0">Because mySociety values</p>
+        <h1 class="text-center mb-3">Democracy</h1>
+        <p class="text-center lead mb-6 mx-auto" style="max-width: 34em">we’re still making it easy to follow Parliament and talk to your representatives, plus we’re working with national and local government on citizen engagement.</p>
 
-        <h2>How you helped</h2>
+        <h2 class="text-center mt-6 mb-5">How you helped</h2>
         <p>The TheyWorkForYou crowdfunder has a week to run. There’s still time to donate and help us keep the site going as we work to get everything in order post-election — and, we hope, add some new features to help people understand Parliament even more clearly.</p>
         <p>Want to be a part of that?</p>
         <p>Of course you do!</p>
         <p>Here’s the link.</p>
 
-        <h2>What we discovered</h2>
+        <h2 class="text-center mt-6 mb-5">What we discovered</h2>
         <ul>
             <li>We delved deep into what should be considered when creating a website for a Citizens’ Assembly…</li>
             <li>…part of wider research into whether digital tools should be used when running them, and if so, which ones, and how?</li>
             <li>And we published a series of posts looking at how our own WriteToThem site is used.</li>
         </ul>
 
-        <h2>What we made</h2>
-        <div class="row">
-            <div class="col-sm-6">
-                <img src="https://placehold.it/1000x600">
-                <p>We built the website for Parliament’s forthcoming Climate Assembly, supporting the work of Involve and Sortition Foundation.</p>
+        <h2 class="text-center mt-6 mb-5">What we made</h2>
+        <div class="card-deck mb-4">
+            <div class="card shadow">
+                <img src="https://placehold.it/1000x600" class="card-img-top">
+                <div class="card-body">
+                    <p class="card-text">We built the website for Parliament’s forthcoming Climate Assembly, supporting the work of Involve and Sortition Foundation.</p>
+                </div>
             </div>
-            <div class="col-sm-6">
-                <img src="https://placehold.it/1000x600">
-                <p>Through Public Square we and the Democratic Society supported the work of three councils – Frome, Glasgow and Calderdale – to explore participatory methods of Democracy.</p>
+            <div class="card shadow">
+                <img src="https://placehold.it/1000x600" class="card-img-top">
+                <div class="card-body">
+                    <p class="card-text">Through Public Square we and the Democratic Society supported the work of three councils – Frome, Glasgow and Calderdale – to explore participatory methods of Democracy.</p>
+                </div>
             </div>
         </div>
-        <div class="row">
-            <div class="col-sm-6">
-                <img src="https://placehold.it/1000x600">
-                <p>We added graphics to TheyWorkForYou to make votes easier to understand at a glance.</p>
+        <div class="card-deck mb-4">
+            <div class="card shadow">
+                <img src="https://placehold.it/1000x600" class="card-img-top">
+                <div class="card-body">
+                    <p class="card-text">We added graphics to TheyWorkForYou to make votes easier to understand at a glance.</p>
+                </div>
             </div>
-            <div class="col-sm-6">
-                <img src="https://placehold.it/1000x600">
-                <p>And now, as well as the UK, Scottish and Northern Ireland parliaments, you can also follow the London Assembly on TheyWorkForYou!</p>
+            <div class="card shadow">
+                <img src="https://placehold.it/1000x600" class="card-img-top">
+                <div class="card-body">
+                    <p class="card-text">And now, as well as the UK, Scottish and Northern Ireland parliaments, you can also follow the London Assembly on TheyWorkForYou!</p>
+                </div>
             </div>
         </div>
 
-        <h2>What people did with it</h2>
-        <p>More than 3.5 million people used TheyWorkForYou to check out who their MP was, see how they voted and browse parliamentary debates.</p>
-        <p>More than half a million folk used WritetoThem to send an email to their councillors, MPs, Assembly Members or MEPs.</p>
+        <h2 class="text-center mt-6 mb-5">What people did with it</h2>
+        <p>More than <strong>3.5 million</strong> people used TheyWorkForYou to check out who their MP was, see how they voted and browse parliamentary debates.</p>
+        <p>And over <strong>half a million</strong> folk used WritetoThem to send an email to their councillors, MPs, Assembly Members or MEPs.</p>
 
         <p>TheyWorkForYou and MapIt’s data helps others to create visualisations and conduct research, like this:</p>
         <div class="row">
@@ -376,17 +392,17 @@ permalink: /
 
         <p>Many organisations used WriteToThem to help with campaigns, including: Extinction Rebellion, End Deportations, League Against Cruel Sports, Humanity and Inclusion, Where’s Your Head At, and both pro- and anti-Brexit campaigns.</p>
 
-        <h2>Birthday!</h2>
+        <h2 class="text-center mt-6 mb-5">Birthday!</h2>
         <p>TheyWorkForYou turned 15 (that said, it displays the Hansard archive as far back as 1919).</p>
 
-        <h2>Who we worked with</h2>
-        <p>We joined Westminster Foundation for Democracy in a visit to Uzbekistan’s Parliament in Tashkent, helping to analyse their current digital work, and making recommendations on how to open up their parliamentary processes digitally to increase citizen awareness and engagement.</p>
-        <p>We successfully handed parliamentary monitoring sites the People's Assembly (South Africa) over to full local control and are ready to do the same with Mzalendo (Kenya), a great testament to the advanced capability of the civic tech sector in sub-Saharan Africa.</p>
+        <h2 class="text-center mt-6 mb-5">Who we worked with</h2>
+        <p>We joined Westminster Foundation for Democracy in a visit to <strong>Uzbekistan’s Parliament</strong> in Tashkent, helping to analyse their current digital work, and making recommendations on how to open up their parliamentary processes digitally to increase citizen awareness and engagement.</p>
+        <p>We successfully handed parliamentary monitoring sites <strong>the People's Assembly</strong> (South Africa) over to full local control and are ready to do the same with <strong>Mzalendo</strong> (Kenya), a great testament to the advanced capability of the civic tech sector in sub-Saharan Africa.</p>
 
-        <h2>Where we said goodbye</h2>
+        <h2 class="text-center mt-6 mb-5">Where we said goodbye</h2>
         <p><a href="https://www.mysociety.org/2019/06/26/placing-everypolitician-on-hold/">Our active work on EveryPolitician comes to an end</a>, as our ability to continue the project without sufficient dedicated funding has diminished – we’ve lots to learn and share for other organisations about what we might do differently in the future.</p>
 
-        <h2>Outcomes</h2>
+        <h2 class="text-center mt-6 mb-5">Outcomes</h2>
 
         https://twitter.com/FutureAdvocacy/status/1181490188217995264
         https://twitter.com/theo_bass/status/1144569702884229121
@@ -400,9 +416,17 @@ permalink: /
         </ul>
         <p>Thanks, everyone.</p>
 
-        <h2>What’s been the most fun about Democracy this year?</h2>
-        <p><strong>Cloudwater Brewery</strong> in Manchester namechecked TheyWorkForYou on its new IPA  — that was a surprise!</p>
-        <p>By some strange alignment of the stars, we were to be in Manchester for our team meeting, so we made a visit to take a sample… and now can confirm, democracy beer is delicious!</p>
+        <div class="row mt-7">
+            <div class="col-sm-5">
+                <h2 class="mb-3"><span class="underline">What’s been the most fun about Democracy this year?</span></h2>
+            </div>
+            <div class="col-sm-7">
+                <p class="chat"><a href="https://shop.cloudwaterbrew.co/products/whats-said-and-done">Cloudwater Brew Co</a> in Manchester namechecked TheyWorkForYou on its new IPA — that was a surprise!</p>
+                <img src="http://placehold.it/1000x600" class="chat">
+                <p class="chat">By some strange alignment of the stars, we were to be in Manchester for our team meeting, so we made a visit to take a sample… and now can confirm, <strong>democracy beer</strong> is delicious!</p>
+                <img src="http://placehold.it/1000x600" class="chat">
+            </div>
+        </div>
 
     </div>
 </div>
@@ -411,10 +435,11 @@ permalink: /
 
 <div class="bg-mysoc-orange py-5 py-sm-6 py-md-7" id="community">
     <div class="container">
-        <h1 class="text-center">Community</h1>
-        <p>We worked on: <strong>rolling out new features</strong> for FixMyStreet Pro client councils; refining online mapping of <strong>community spaces and places</strong>; setting out a way forward for open data in the government’s <strong>planning register</strong>; prototyping a service to empower people who live in <strong>tower blocks</strong>.</p>
+        <p class="text-center lead mb-0">Because mySociety supports</p>
+        <h1 class="text-center mb-3">Community</h1>
+        <p class="text-center lead mb-6 mx-auto" style="max-width: 34em">we made FixMyStreet a whole lot easier for both citizens and councils to use, and&nbsp;we worked around planning, community assets, and tower&nbsp;blocks.</p>
 
-        <h2>What we discovered</h2>
+        <h2 class="text-center mt-6 mb-5">What we discovered</h2>
         <ul>
             <li>We made recommendations around planning applications — specifically towards sharing open data.</li>
             <li>We worked with Tower Blocks UK to discover and prototype digital tools that would help to empower high rise residents.</li>
@@ -422,19 +447,23 @@ permalink: /
             <li>And they also did a lot of work around FixMyStreet and the different demographics that use it.</li>
         </ul>
 
-        <h2>What we made</h2>
-        <div class="row">
-            <div class="col-sm-6">
-                <img src="https://placehold.it/1000x600">
-                <p>Keep It In The Community, our site that maps Assets of Community Value and other places significant to communities gained gorgeous new features.</p>
+        <h2 class="text-center mt-6 mb-5">What we made</h2>
+        <div class="card-deck mb-4">
+            <div class="card shadow">
+                <img src="https://placehold.it/1000x600" class="card-img-top">
+                <div class="card-body">
+                    <p class="card-text">Keep It In The Community, our site that maps Assets of Community Value and other places significant to communities <a href="https://www.mysociety.org/2019/02/27/progress-on-keep-it-in-the-community/">gained gorgeous new features</a>.</p>
+                </div>
             </div>
-            <div class="col-sm-6">
-                <img src="https://placehold.it/1000x600">
-                <p>[…]</p>
+            <div class="card shadow">
+                <img src="https://placehold.it/1000x600" class="card-img-top">
+                <div class="card-body">
+                    <p class="card-text">[…]</p>
+                </div>
             </div>
         </div>
 
-        <h2>What people did with it</h2>
+        <h2 class="text-center mt-6 mb-5">What people did with it</h2>
         <p>You made more than 387,000 FixMyStreet reports this year, either on FixMyStreet.com, via the app, or on one of the 22 council sites that use FixMyStreet Pro as their main reporting interface.</p>
 
         <h3>Saving money</h3>
@@ -446,7 +475,9 @@ permalink: /
         <h3>Fixing Grenada</h3>
         <p>A new site based on the FixMyStreet platform, for the “Island of Spice”.</p>
 
-        <h2>Who we worked with</h2>
+        <h2 class="text-center mt-6 mb-5">Who we worked with</h2>
+
+        <h3>London just got more joined up</h3>
         <p>Thanks to our new partnership with TfL, there’s a whole new layer of connectivity on FixMyStreet for Greater London.</p>
         <p>Reports on the relevant bus stops, traffic lights, bus shelters, underground and overground stations are now routed direct to TFL to get them fixed.</p>
 
@@ -468,11 +499,12 @@ permalink: /
 
         <div class="row mt-7">
             <div class="col-sm-5">
-                <h2><span class="underline">What’s been the most fun about Community this year?</span></h2>
+                <h2 class="mb-3"><span class="underline">What’s been the most fun about Community this year?</span></h2>
             </div>
             <div class="col-sm-7">
                 <p class="chat"><strong>Struan</strong> We had a code-off to decide which library to use for building form in the FixMyStreet admin.</p>
                 <p class="chat"><strong>Zarino</strong> It’s exciting to speak to a wide range of people, understand what works and doesn’t work about their current services, and come up with new solutions that hopefully make the world a better place.</p>
+                <p class="chat"><strong>Chris</strong> After nearly six years working on mySociety’s democracy projects it was refreshing to (re)join the FixMyStreet team and get to work helping councils get set up with FixMyStreet Pro!</p>
             </div>
         </div>
     </div>
@@ -480,19 +512,35 @@ permalink: /
 
 {% include section-slope.html topleft="mysoc-orange" bottomright="mysoc-red" %}
 
-<div class="bg-mysoc-red py-5 py-sm-6 py-md-7" id="community">
+<div class="bg-mysoc-red py-5 py-sm-6 py-md-7" id="thanks">
     <div class="container">
-        <p class="text-center">We’ve just sped you through everything we did this year — and it was a lot. But it’s only possible because of the contributions from funders, volunteers and donors.</p>
+        <p class="text-center mx-auto" style="max-width: 25.5em">We’ve just sped you through everything we did this year&nbsp;—&nbsp;and it was a lot. But it’s only possible because of the contributions from funders, volunteers and&nbsp;donors.</p>
 
-        <p class="text-center lead mt-4 mt-sm-5 mt-md-6 mb-0">We want to take this opportunity to say a massive</p>
+        <p class="text-center lead mt-3 mt-sm-4 mt-md-5 mb-0">We want to take this opportunity to say a&nbsp;massive</p>
         <h1 class="text-center">Thank you</h1>
 
         <div class="row mt-7">
             <div class="col-sm-5">
-                <h2><span class="underline">To our funders</span></h2>
+                <h2 class="mb-3"><span class="underline">To our funders</span></h2>
             </div>
             <div class="col-sm-7">
                 <p>Grants from these far-sighted organisations make all our development possible, fund our research and allow us to employ people who really know what they’re doing. Without this support, we quite literally couldn’t continue.</p>
+
+                <ul>
+                    <li><a href="#">Hewlett Foundation</a></li>
+                    <li><a href="#">Esmée Fairbairn Foundation</a></li>
+                    <li><a href="#">Adessium Foundation</a></li>
+                    <li><a href="#">Legal Education Foundation</a></li>
+                    <li><a href="#">Power to Change</a></li>
+                    <li><a href="#">Indigo Trust</a></li>
+                    <li><a href="#">Open Society Foundation - London</a></li>
+                    <li><a href="#">David Family Foundation</a></li>
+                    <li><a href="#">Paragon Trust</a></li>
+                    <li><a href="#">Luminate</a> (via The Democratic Society)</li>
+                    <li><a href="#">Department for Digital, Culture, Media & Sport</a> (via Involve)</li>
+                    <li><a href="#">The House of Commons</a> (via Involve)</li>
+                    <li><a href="#">European Climate Foundation</a> (via Involve)</li>
+                </ul>
 
                 <h3>Funding opportunities</h3>
                 <p>Would you like to sponsor the next TICTeC? <a href="">Let us know!</a></p>
@@ -501,7 +549,7 @@ permalink: /
 
         <div class="row mt-7">
             <div class="col-sm-5">
-                <h2><span class="underline">To our volunteers</span></h2>
+                <h2 class="mb-3"><span class="underline">To our volunteers</span></h2>
             </div>
             <div class="col-sm-7">
                 <ul>
@@ -522,17 +570,18 @@ permalink: /
 
         <div class="row mt-7">
             <div class="col-sm-5">
-                <h2><span class="underline">To our outgoing team members</span></h2>
+                <h2 class="mb-3"><span class="underline">To our outgoing team members</span></h2>
             </div>
             <div class="col-sm-7">
-                <p>Thank you so much to our outgoing board members, for your years of service.</p>
+                <p>Thank you so much to our outgoing board members, James and Owen, for your years of service.</p>
+                <p>Thanks to Gavin, Kieran and Michael for your work on WhatDoTheyKnow.</p>
                 <p>And thank you to our former colleagues Nick, Liz, Tony and Emily who all left us this year.</p>
             </div>
         </div>
 
         <div class="row mt-7">
             <div class="col-sm-5">
-                <h2><span class="underline">To our donors</span></h2>
+                <h2 class="mb-3"><span class="underline">To our donors</span></h2>
             </div>
             <div class="col-sm-7">
                 <p>Individual donations, both large and small, show that you understand the difference we’re making, and support us in all that we do.</p>
@@ -543,7 +592,7 @@ permalink: /
 
         <div class="row mt-7">
             <div class="col-sm-5">
-                <h2><span class="underline">To our users</span></h2>
+                <h2 class="mb-3"><span class="underline">To our users</span></h2>
             </div>
             <div class="col-sm-7">
                 <p>You help, simply by being enthusiastic users of our sites. You contact your representatives, check and share voting records, tell your council about that pothole that needs filling or that streetlight that needs fixing, or make a request for information that puts the response in the public domain. It’s all good!</p>
@@ -551,26 +600,26 @@ permalink: /
             </div>
         </div>
 
-        <h2>The money stuff</h2>
+        <h2 class="text-center mt-6 mb-5">The money stuff</h2>
 
         <p>Since we advocate for transparency, it’s only right that we practice it ourselves.</p>
         <p>So here’s where you can find, for 2018-19:</p>
         <ul>
-            <li>Our Charity Commission accounts, including income and spending.</li>
-            <li>Our accounts on Companies House for UK Citizens Online Democracy, the charity and limited company through which we run mySociety.</li>
-            <li>Our mySociety Ltd accounts on Companies House. mySociety Ltd is the private limited company, wholly-owned by UKCOD, through which we carry out our commercial work.</li>
+            <li>Our <a href="http://apps.charitycommission.gov.uk/Showcharity/RegisterOfCharities/CharityWithPartB.aspx?RegisteredCharityNumber=1076346&SubsidiaryNumber=0">Charity Commission accounts</a>, including income and spending.</li>
+            <li>Our <a href="https://beta.companieshouse.gov.uk/company/03277032">accounts on Companies House</a> for UK Citizens Online Democracy, the charity and limited company through which we run mySociety.</li>
+            <li>Our <a href="https://beta.companieshouse.gov.uk/company/05798215">mySociety Ltd accounts on Companies House</a>. mySociety Ltd is the private limited company, wholly-owned by UKCOD, through which we carry out our commercial work.</li>
             <li>In 2018 we employed on average xx permanent staff and x staff on fixed term contracts, each of whom were paid in excess of the living wage.</li>
             <li>Salary costs are split across our Charity and Commercial companies, based on what projects staff spend their time on.</li>
             <li>Our Trustees and Non-Executive Directors all give their very valuable time for free and receive no other compensation — for which we’re very grateful.</li>
         </ul>
 
-        <h1>What’s on the horizon?</h1>
+        <h2 class="text-center mt-6 mb-5">What’s on the horizon?</h2>
         <p>We’re actively and enthusiastically working towards <strong>cutting our carbon emissions</strong>, looking at how we can cut down or mitigate our travel, use the most responsible suppliers, and help those who attend our events to keep their impact on the environment low low low. More on all of that soon.</p>
         <p>2020 will be <strong>the year of the climate crisis</strong> and like all organisations and individuals in our position we’ll be turning our focus towards what we can do to help mitigate the worst. Expect to see us adapt our existing transparency and democracy work towards this goal, with the creation of a new initiative or two directly targeting the main contributors to the crisis.</p>
 
         <div class="row mt-7">
             <div class="col-sm-5">
-                <h2><span class="underline">What are you looking forward to in 2020?</span></h2>
+                <h2 class="mb-3"><span class="underline">What are you looking forward to in 2020?</span></h2>
             </div>
             <div class="col-sm-7">
                 <p class="chat"><strong>Gemma</strong> I’m really looking forward to TICTeC 2020 – it’s the most exciting time of the year for me as we are lucky enough to bring together 200 people from around the world who, like us, work on civic tech and care about its development.</p>
