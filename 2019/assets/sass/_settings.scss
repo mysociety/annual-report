@@ -21,6 +21,8 @@ $color-mysoc-black: #333333;
 $black: #000;
 $white: #fff;
 
+$primary: $color-mysoc-blue;
+
 $theme-colors: (
     'mysoc-blue': $color-mysoc-blue,
     'mysoc-green': $color-mysoc-green,
@@ -54,6 +56,8 @@ $spacers: (
 );
 
 $body-color: $black;
+
+$link-color: darken($color-mysoc-blue, 10%);
 
 $font-family-base: $mysoc-font-stack;
 
