@@ -11,7 +11,7 @@
 @import "../../_bootstrap/scss/grid";
 // @import "../../_bootstrap/scss/tables";
 // @import "../../_bootstrap/scss/forms";
-// @import "../../_bootstrap/scss/buttons";
+@import "../../_bootstrap/scss/buttons";
 // @import "../../_bootstrap/scss/transitions";
 // @import "../../_bootstrap/scss/dropdown";
 // @import "../../_bootstrap/scss/button-group";
@@ -58,4 +58,34 @@
 img {
     max-width: 100%;
     height: auto;
+}
+
+.twfy-crowdfunder {
+    display: block;
+    padding: map-get($spacers, 3);
+    border-radius: $border-radius;
+    color: inherit;
+    padding-top: 54%;
+    background: #fff url(../img/twfy-crowdfunder-small.jpg) 50% 0 no-repeat;
+    background-size: 100%;
+
+    @include media-breakpoint-up('sm') {
+        padding: map-get($spacers, 4);
+        background: #fff url(../img/twfy-crowdfunder.jpg) 50% 50% no-repeat;
+        background-size: cover;
+    }
+
+    @include media-breakpoint-up('lg') {
+        padding: map-get($spacers, 5);
+    }
+
+    &:hover {
+        color: inherit;
+        text-decoration: none;
+    }
+}
+
+.overline {
+    border-top: 0.3em solid #fff;
+    padding-top: 0.7em;
 }
