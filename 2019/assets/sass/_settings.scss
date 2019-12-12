@@ -14,6 +14,9 @@ $color-mysoc-light-grey: #e2dfd9;
 $color-mysoc-dark-grey: #6c6b68;
 $color-mysoc-black: #333333;
 
+$color-facebook-blue: #3b5998;
+$color-twitter-blue: #1da1f2;
+
 
 // Bootstrap overrides from here on, in roughly the same order
 // they appear in bootstrap/scss/_variables.scss
@@ -75,5 +78,9 @@ $rfs-base-font-size: 1rem; // about 16px, down from default 1.25rem/20px
 
 $headings-font-weight: bold;
 $headings-line-height: 1; // down from 1.2
+
+$btn-padding-x: 1rem;
+$btn-padding-x-sm: 0.75rem;
+$btn-padding-x-lg: 1.5rem;
 
 $card-border-width: 0;
