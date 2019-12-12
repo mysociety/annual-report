@@ -17,6 +17,13 @@ $color-mysoc-black: #333333;
 $color-facebook-blue: #3b5998;
 $color-twitter-blue: #1da1f2;
 
+$mysoc-footer-background-color: $color-mysoc-black;
+$mysoc-footer-text-color: #acacac;
+$mysoc-footer-link-text-color: #fff;
+$mysoc-footer-link-hover-text-color: #fff;
+$mysoc-footer-divider-color: #4b4b4b;
+$mysoc-footer-legal-text-color: #9a9a9a;
+
 
 // Bootstrap overrides from here on, in roughly the same order
 // they appear in bootstrap/scss/_variables.scss
