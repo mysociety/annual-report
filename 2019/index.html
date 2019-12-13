@@ -1104,3 +1104,23 @@ permalink: /
         </div>
     </div>
 </div>
+
+
+<script type="text/javascript">
+if ( "IntersectionObserver" in window ) {
+    function callback (entries) {
+        if (entries[0].intersectionRatio > 0) {
+            window.history.replaceState({}, document.title, '#' + entries[0].target.id);
+        }
+    }
+    var sections = document.querySelectorAll('[id]');
+    for (var i=0; i<sections.length; i++) {
+        if ( sections[i].id === 'intro' ) { continue; } // no hash change for top section
+        var io = new IntersectionObserver(callback, {
+            rootMargin: "-15% 0px -40% 0px",
+            thresholds: [0, 0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7, 0.8, 0.9, 1]
+        });
+        io.observe(sections[i]);
+    }
+}
+</script>
