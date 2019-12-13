@@ -69,11 +69,13 @@ img {
     padding: map-get($spacers, 3);
     border-radius: $border-radius;
     color: inherit;
-    padding-top: 69%;
+    padding-top: 54%;
+    background: #fff url(../img/twfy-crowdfunder-small.jpg) 50% 0 no-repeat;
     background-size: 100%;
     @include media-breakpoint-up('sm') {
         padding: map-get($spacers, 4);
         background-size: cover;
+        background: #fff url(../img/twfy-crowdfunder.jpg) 50% 50% no-repeat;
     }
 
     @include media-breakpoint-up('lg') {
@@ -87,17 +89,16 @@ img {
 }
 
 .splash--twfy {
-    background: #fff url(../img/twfy-crowdfunder-small.jpg) 50% 0 no-repeat;
+    background-image: url(../img/twfy-crowdfunder-small.jpg);
     @include media-breakpoint-up('sm') {
-        background: #fff url(../img/twfy-crowdfunder.jpg) 50% 50% no-repeat;
+        background-image: url(../img/twfy-crowdfunder.jpg);
     }
 }
 
 .splash--tfl {
-    
-    background: #fff url(../img/tfl-splash-small.jpg) 50% 0 no-repeat;
+    background-image: url(../img/tfl-splash-small.jpg);
     @include media-breakpoint-up('sm') {
-        background: #fff url(../img/tfl-splash.jpg) 50% 50% no-repeat;
+        background-image: url(../img/tfl-splash.jpg);
         color: #fff;
         &:hover,
         &:active,
@@ -105,11 +106,9 @@ img {
             color: #fff;
         }
     }
-    
 }
 
 .dark-overlay {
-    
     @include media-breakpoint-up('sm') {
         background-color: rgba(0,0,0,0.7);
         padding: 18px;
@@ -120,4 +119,21 @@ img {
 .overline {
     border-top: 0.3em solid #fff;
     padding-top: 0.7em;
+}
+
+.card-body {
+    line-height: 1.35em;
+}
+
+h3, h4, h5,
+.h3, .h4, .h5 {
+    line-height: 1.2;
+}
+
+.fat-blockquote {
+    font-weight: bold;
+    font-size: 2.5em;
+    line-height: 1;
+    letter-spacing: -0.2px;
+    color: #fff;
 }
