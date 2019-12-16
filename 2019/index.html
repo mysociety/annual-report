@@ -530,11 +530,21 @@ permalink: /
         <p class="text-center lead mb-6 mx-auto" style="max-width: 34em">we’re still making it easy to follow Parliament and talk to your representatives, plus we’re working with national and local government on citizen engagement.</p>
 
         <h2 class="text-center mt-5 mt-md-6 mb-4 mb-md-5">How you’re helping</h2>
-        <a href="https://crowdfunder.co.uk/theyworkforyou" class="splash splash--twfy shadow js-lazyload">
+        <a href="https://crowdfunder.co.uk/theyworkforyou" class="splash splash--twfy shadow js-lazyload js-show-during-crowdfunder">
             <div class="row">
                 <div class="col-sm-7 offset-sm-5 col-lg-6 offset-lg-6">
-                    <p>The TheyWorkForYou crowdfunder has a week to run. There’s still time to donate and help us keep the site going as we work to get everything in order post-election — and, we hope, add some new features to help people understand Parliament even more clearly.</p>
+                    <p>The TheyWorkForYou crowdfunder has <strong>only <span class="js-crowdfunder-time-left">a few hours</span></strong> left to run. There’s still time to donate and help us keep the site going as we work to get everything in order post-election — and, we hope, add some new features to help people understand Parliament even more clearly.</p>
                     <p>Want to be a part of that? Of course you&nbsp;do!</p>
+                    <span class="btn btn-mysoc-red">Donate now</span>
+                </div>
+            </div>
+        </a>
+        <a href="https://www.mysociety.org/donate" class="splash splash--twfy shadow js-lazyload js-show-after-crowdfunder" style="display:none">
+            <div class="row">
+                <div class="col-sm-7 offset-sm-5 col-lg-6 offset-lg-6">
+                    <p>Hundreds of you backed our first ever crowdfunder, enabling TheyWorkForYou to keep providing the services that help you to hold parliament to account.</p>
+                    <p><strong>Many thanks to every single one of you.</strong> We’ll be using the money to help us make post-election updates, and to add some long-desired improvements to the site.</p>
+                    <p><strong>Missed the boat?</strong> You can still support our work by donating to mySociety.</p>
                     <span class="btn btn-mysoc-red">Donate now</span>
                 </div>
             </div>
@@ -1123,4 +1133,49 @@ if ( "IntersectionObserver" in window ) {
         io.observe(sections[i]);
     }
 }
+
+function foreach(selector, callback) {
+    var nodelist = document.querySelectorAll(selector);
+    return [].map.call(nodelist, callback);
+}
+
+function crowdfunder(now) {
+    var now_utc = (typeof now === 'undefined') ? new Date() : new Date(now);
+    var crowdfunder_end_utc = new Date(Date.UTC(2019, 11, 20, 12, 0, 0));
+    var hours_until_crowdfunder_end = (crowdfunder_end_utc - now_utc) / 3600000;
+    var crowdfunder_has_ended = 0;
+    var time_left_string = '' + Math.ceil(hours_until_crowdfunder_end / 24) + ' days';
+
+    if (hours_until_crowdfunder_end < 0) {
+        crowdfunder_has_ended = 1;
+    } else if (hours_until_crowdfunder_end < 2) {
+        time_left_string = 'an hour';
+    } else if (hours_until_crowdfunder_end < 12) {
+        time_left_string = 'a few hours';
+    } else if (hours_until_crowdfunder_end < 36) {
+        time_left_string = '1 day';
+    }
+
+    foreach('.js-crowdfunder-time-left', function(el){
+        el.innerHTML = time_left_string;
+    });
+
+    foreach('.js-show-during-crowdfunder', function(el){
+        if (crowdfunder_has_ended) {
+            el.style.display = 'none'; // hide
+        } else {
+            el.style.display = null; // show
+        }
+    });
+
+    foreach('.js-show-after-crowdfunder', function(el){
+        if (crowdfunder_has_ended) {
+            el.style.display = null; // show
+        } else {
+            el.style.display = 'none'; // hide
+        }
+    });
+}
+
+crowdfunder();
 </script>
