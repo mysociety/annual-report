@@ -1,0 +1,28 @@
+.sticker {
+    position: relative;
+
+    &:before {
+        content: "";
+        display: none;
+        position: absolute;
+        top: -1rem;
+        right: 1rem;
+        width: 128px;
+        height: 128px;
+        background: transparent url(../img/sticker-paris.svg) 0 0 no-repeat;
+        background-size: 128px;
+
+        @include media-breakpoint-up('lg') {
+            display: block;
+        }
+    }
+}
+
+.sticker--london {
+    &:before {
+        height: 188px;
+        background-image: url(../img/sticker-london.svg);
+        background-size: 128px 188px;
+        top: -5rem;
+    }
+}

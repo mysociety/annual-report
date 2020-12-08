@@ -45,3 +45,11 @@
 	vendor/bin/jekyll serve --source 2019 --destination 2019/_site --baseurl ''
 2019-sass:
 	vendor/bin/sass --watch 2019/assets/sass:2019/assets/css
+
+.PHONY: 2020 2020-jekyll 2020-sass
+2020:
+	make -j 2 2020-jekyll 2020-sass
+2020-jekyll:
+	vendor/bin/jekyll serve --source 2020 --destination 2020/_site --baseurl ''
+2020-sass:
+	vendor/bin/sass --watch 2020/assets/sass:2020/assets/css

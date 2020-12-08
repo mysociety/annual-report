@@ -1,0 +1,13 @@
+.tictec-logo {
+    display: block;
+    position: relative;
+    top: -1.2em;
+    margin: 0 auto -1em auto;
+    width: 2.4em;
+    padding-top: 3em;
+    overflow: hidden;
+    height: 0;
+    background: transparent url(../img/tictec-logo.png) 0 0 no-repeat;
+    background-image: url(../img/tictec-logo.svg), none;
+    background-size: contain;
+}
