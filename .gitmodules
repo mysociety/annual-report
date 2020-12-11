@@ -1,3 +1,6 @@
+[submodule "2019/_bootstrap"]
+	path = 2019/_bootstrap
+	url = https://github.com/twbs/bootstrap.git
 [submodule "2020/_bootstrap"]
 	path = 2020/_bootstrap
 	url = https://github.com/twbs/bootstrap.git
