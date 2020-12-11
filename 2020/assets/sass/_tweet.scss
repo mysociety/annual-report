@@ -30,6 +30,20 @@
         strong {
             display: block;
             line-height: 1;
+
+            &.verified {
+                &:after {
+                    display: inline-block;
+                    content: "";
+                    width: 18px;
+                    height: 18px;
+                    background: transparent url(../img/verified.png) 0 0 no-repeat;
+                    background-image: url(../img/verified.svg), none;
+                    background-size: 18px 18px;
+                    margin-left: 0.25em;
+                    vertical-align: -0.15em;
+                }
+            }
         }
 
         small {
@@ -56,6 +70,13 @@
                 text-decoration: none;
             }
         }
+    }
+
+    p.replying {
+        line-height: 1;
+        color: $color-mysoc-dark-grey;
+        font-size: 80%;
+        margin-bottom: 0.8rem;
     }
 
     img {
