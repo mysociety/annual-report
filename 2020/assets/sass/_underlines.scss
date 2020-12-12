@@ -9,3 +9,9 @@
         background-position: 50% 80%;
     }
 }
+
+@each $color, $value in $theme-colors {
+    .underline-#{$color} {
+        background-image: linear-gradient($value 0%, $value 100%);
+    }
+}
