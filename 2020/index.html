@@ -691,8 +691,9 @@ permalink: /
         <p class="text-center lead mb-6 mx-auto" style="max-width: 34em">...we worked hard to empower people within their own neighbourhoods</p>
         <h2 class="text-center mt-6 mb-5">What we did in 2020</h2>
 
-        <p><strong>Empowering tenants.</strong> We created.. <a href="https://www.mysociety.org/2020/08/25/fixmyblock-a-toolkit-for-social-housing-tenants-in-tower-blocks">FixMyBlock</a>, working alongside information and advocacy group Tower Blocks UK. Born from the desire for action after the Grenfell disaster, the site provides tools for activism around fire safety and disrepair — initially for social housing tenants, but with plans to roll out wider content in the new year.</p>
-        <p>/*[VIDEO] PLACEHOLDER*/</p>
+        <p><strong>Empowering tenants.</strong> We created <a href="https://www.mysociety.org/2020/08/25/fixmyblock-a-toolkit-for-social-housing-tenants-in-tower-blocks/" class="white-link">FixMyBlock</a>, working alongside information and advocacy group Tower Blocks UK. Born from the desire for action after the Grenfell disaster, the site provides tools for activism around fire safety and disrepair — initially for social housing tenants, but with plans to roll out wider content in the new year.</p>
+
+        {% include youtube-embed.html classes="my-5 rounded shadow-lg" video_id="ksiYUh7U81E" alt="YouTube – Fix My Block" %}
 
         <div class="card-deck">
             <div class="card shadow">
@@ -805,7 +806,8 @@ permalink: /
                 <p><strong>Dock the bikes.</strong> TfL’s Streetcare added <a href="https://www.societyworks.org/2020/02/27/get-bikes-back-to-their-docks/" class="white-link">bikes</a> to the things you can report.</p>
             </div>
         </div>
-        <p>/*[[new FMS Pro promotional video]]*/</p>
+
+        {% include youtube-embed.html classes="my-5 rounded shadow-lg" video_id="I_6UL_6fvUI" alt="YouTube – FixMyStreet Pro: saving you money from day one" %}
 
         <h2 class="text-center mt-5 mt-md-6 mb-3 mb-md-4">Who we worked with…</h2>
         <div class="row mt-5 mt-sm-6 mt-md-7">
@@ -1564,4 +1566,34 @@ permalink: /
             io.observe(sections[i]);
         }
     }
+
+    function forEachElement(selector, callback) {
+        var elements = document.querySelectorAll(selector);
+        for (var i = 0; i < elements.length; i++) {
+            callback(elements[i], i);
+        }
+    }
+
+    forEachElement('.js-youtube-placeholder', function(el) {
+        el.addEventListener('click', function(e){
+            e.preventDefault();
+            var placeholder = this;
+            var img = placeholder.querySelector('img');
+
+            var responsiveEmbed = document.createElement('div');
+            responsiveEmbed.className = 'embed-responsive embed-responsive-16by9';
+
+            var iframe = document.createElement('iframe');
+            iframe.className = 'embed-responsive-item';
+            iframe.setAttribute('src', placeholder.dataset.iframeSrc);
+            iframe.setAttribute('width', img.width);
+            iframe.setAttribute('height', img.height);
+            iframe.setAttribute('allow', 'accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture');
+            iframe.setAttribute('allowfullscreen', true);
+
+            responsiveEmbed.appendChild(iframe);
+            placeholder.insertAdjacentElement('afterend', responsiveEmbed);
+            placeholder.remove();
+        });
+    });
 </script>
