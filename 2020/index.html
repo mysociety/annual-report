@@ -5,6 +5,26 @@ permalink: /
 
 <h1 class="text-center mb-0 py-6 py-sm-7 header" id="intro">mySociety in&nbsp;2020</h1>
 
+<button class="btn menu-toggle js-toggle-menu d-flex align-items-center">
+    Jump to section
+    {% include menu.svg classes="text-mysoc-dark-grey" %}
+</button>
+<nav class="menu">
+    <a href="#intro" class="bg-mysoc-black">Introduction</a>
+    <a href="#new" class="bg-mysoc-blue">What’s new?</a>
+    <a href="#transparency" class="bg-mysoc-brighter-violet">Transparency</a>
+    <a href="#democracy" class="bg-mysoc-green">Democracy</a>
+    <a href="#societyworks" class="bg-mysoc-orange">SocietyWorks</a>
+    <a href="#community" class="bg-mysoc-blue">Community</a>
+    <a href="#climate" class="bg-mysoc-green">Climate</a>
+    <a href="#tictec" class="bg-mysoc-brighter-violet">TICTeC</a>
+    <a href="#tictec" class="bg-mysoc-red">Thank you</a>
+    <button class="bg-mysoc-black js-toggle-menu">
+        Close menu
+        {% include close.svg classes="ml-3" %}
+    </button>
+</nav>
+
 <div class="bg-mysoc-off-white py-4 py-sm-6 py-md-7">
     <div class="container">
         <div class="row justify-content-center">
@@ -1623,6 +1643,9 @@ permalink: /
     </div>
 </div>
 
+<script type="text/javascript" src="{% ministamp /assets/js/lazyload.js /assets/js/lazyload.js %}"></script>
+<script type="text/javascript" src="{% ministamp /assets/js/loading-attribute-polyfill.min.js /assets/js/loading-attribute-polyfill.min.js %}"></script>
+<script type="text/javascript" src="{% ministamp /assets/js/classlist-polyfill.min.js /assets/js/classlist-polyfill.min.js %}"></script>
 
 <script type="text/javascript">
     if ("IntersectionObserver" in window) {
@@ -1656,10 +1679,10 @@ permalink: /
             var img = placeholder.querySelector('img');
 
             var responsiveEmbed = document.createElement('div');
-            responsiveEmbed.className = 'embed-responsive embed-responsive-16by9';
+            responsiveEmbed.classList.add('embed-responsive', 'embed-responsive-16by9');
 
             var iframe = document.createElement('iframe');
-            iframe.className = 'embed-responsive-item';
+            iframe.classList.add('embed-responsive-item');
             iframe.setAttribute('src', placeholder.dataset.iframeSrc);
             iframe.setAttribute('width', img.width);
             iframe.setAttribute('height', img.height);
@@ -1669,6 +1692,19 @@ permalink: /
             responsiveEmbed.appendChild(iframe);
             placeholder.insertAdjacentElement('afterend', responsiveEmbed);
             placeholder.remove();
+        });
+    });
+
+    forEachElement('.js-toggle-menu', function(el){
+        el.addEventListener('click', function(e){
+            e.preventDefault();
+            document.querySelector('.menu').classList.toggle('is-active');
+        });
+    });
+
+    forEachElement('.menu a', function(el){
+        el.addEventListener('click', function(){
+            document.querySelector('.menu').classList.remove('is-active');
         });
     });
 </script>
