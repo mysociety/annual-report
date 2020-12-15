@@ -1,12 +1,13 @@
 .name-grid {
-    display: flex;
-    flex-wrap: wrap;
-    margin: 0 -0.5rem;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 1rem;
 
     & > * {
-        flex: 1 0 auto;
-        width: 40%;
-        margin: 0.5rem;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin: 0;
         padding: 1rem;
         color: #fff;
         border: 2px solid rgba(#fff, 0.3);
@@ -28,7 +29,7 @@
     .primary {
         font-size: 1em;
         font-weight: bold;
-        width: 90%;
+        grid-column: 1 / 3;
     }
 
     small {
