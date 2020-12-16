@@ -6,72 +6,6 @@
     border-radius: $border-radius;
     font-size: 0.8em;
 
-    header {
-        display: flex;
-        align-items: center;
-        margin-bottom: map-get($spacers, 3);
-        margin-left: -0.5rem;
-
-        a {
-            display: inline-block;
-            color: inherit;
-            margin-left: 0.5rem;
-
-            &:hover {
-                color: $link-hover-color;
-                text-decoration: none;
-            }
-        }
-
-        img {
-            border-radius: 100%;
-        }
-
-        strong {
-            display: block;
-            line-height: 1;
-
-            &.verified {
-                &:after {
-                    display: inline-block;
-                    content: "";
-                    width: 18px;
-                    height: 18px;
-                    background: transparent url(../img/verified.png) 0 0 no-repeat;
-                    background-image: url(../img/verified.svg), none;
-                    background-size: 18px 18px;
-                    margin-left: 0.25em;
-                    vertical-align: -0.15em;
-                }
-            }
-        }
-
-        small {
-            display: block;
-            line-height: 1;
-            color: $color-mysoc-dark-grey;
-            font-size: 80%;
-        }
-
-        .icon {
-            margin-left: auto;
-        }
-    }
-
-    footer {
-        margin-top: map-get($spacers, 3);
-        font-size: 80%;
-
-        a {
-            color: $color-mysoc-dark-grey;
-
-            &:hover {
-                color: $link-hover-color;
-                text-decoration: none;
-            }
-        }
-    }
-
     p.replying {
         line-height: 1;
         color: $color-mysoc-dark-grey;
@@ -124,3 +58,68 @@
     }
 }
 
+.tweet__header {
+    display: flex;
+    align-items: center;
+    margin-bottom: map-get($spacers, 3);
+    margin-left: -0.5rem;
+
+    a {
+        display: inline-block;
+        color: inherit;
+        margin-left: 0.5rem;
+
+        &:hover {
+            color: $link-hover-color;
+            text-decoration: none;
+        }
+    }
+
+    img {
+        border-radius: 100%;
+    }
+
+    strong {
+        display: block;
+        line-height: 1;
+
+        &.verified {
+            &:after {
+                display: inline-block;
+                content: "";
+                width: 18px;
+                height: 18px;
+                background: transparent url(../img/verified.png) 0 0 no-repeat;
+                background-image: url(../img/verified.svg), none;
+                background-size: 18px 18px;
+                margin-left: 0.25em;
+                vertical-align: -0.15em;
+            }
+        }
+    }
+
+    small {
+        display: block;
+        line-height: 1;
+        color: $color-mysoc-dark-grey;
+        font-size: 80%;
+    }
+
+    .icon {
+        margin-left: auto;
+    }
+}
+
+.tweet_footer {
+    margin-top: map-get($spacers, 3);
+    font-size: 80%;
+
+    a {
+        color: $color-mysoc-dark-grey;
+
+        &:hover {
+            color: $link-hover-color;
+            text-decoration: none;
+        }
+    }
+}
