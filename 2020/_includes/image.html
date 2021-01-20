@@ -1,4 +1,8 @@
+{% if include.webp %}<picture>{% endif %}
 {% if include.loading == "lazy" %}<noscript class="loading-lazy">{% endif -%}
+{% if include.webp %}
+<source type="image/webp" srcset="{{ include.webp }}">
+{% endif %}
 <img
   {%- if include.src %} src="{{ include.src | relative_url }}" {%- endif -%}
   {%- if include.srcset %} srcset="{{ include.srcset }}" {%- endif -%}
@@ -9,3 +13,4 @@
   {%- if include.loading %} loading="{{ include.loading }}" {%- endif -%}
 >
 {%- if include.loading == "lazy" %}</noscript>{% endif %}
+{% if include.webp %}</picture>{% endif %}
