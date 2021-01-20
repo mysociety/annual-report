@@ -35,10 +35,18 @@
     background: #00444E url(../img/northern-lights.jpg) 50% 55% no-repeat;
     background-size: cover;
     text-shadow: 0 0rem 2rem rgba(#000, 0.2);
+
+    .webp & {
+        background-image: url(../img/northern-lights.webp);
+    }
 }
 
 .tictec-event-header--autumn {
     background: #242119 url(../img/hong-kong-street.jpg) 50% 80% no-repeat;
     background-size: cover;
     text-shadow: 0 0rem 2rem rgba(#000, 0.5);
+
+    .webp & {
+        background-image: url(../img/hong-kong-street.webp);
+    }
 }
