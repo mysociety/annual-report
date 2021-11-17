@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="initial-scale=1, viewport-fit=cover">
+    <title>{{ page.title | default: site.title | escape }}</title>
+
+    <link rel="icon" href="https://www.mysociety.org/favicon.ico">
+    <!-- <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Pragati+Narrow:700|Source+Sans+Pro:400,700,900|Source+Serif+Pro:400,700" data-noprefix> -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Pragati+Narrow:wght@700&family=Source+Sans+Pro:ital,wght@0,400;0,700;0,900;1,300&family=Source+Serif+Pro:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="{% ministamp /assets/css/main.css /assets/css/main.css %}" data-noprefix>
+
+    <meta name="description" content="{{ page.description | default: site.description | escape }}">
+
+    <meta property="og:title" content="{{ page.title | default: site.title | escape }}">
+    <meta property="og:site_name" content="mySociety">
+    <meta property="og:type" content="website">
+    <meta property="og:description" content="{{ page.description | default: site.description | escape }}">
+    <meta property="og:image" content="{{ site.production_url }}/assets/img/social-image-facebook.png">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta property="og:url" content="{{ site.production_url }}">
+
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:site" content="@mysociety">
+    <meta name="twitter:creator" content="@mysociety">
+    <meta name="twitter:image" content="{{ site.production_url }}/assets/img/social-image-twitter.png">
+    <meta name="twitter:image:width" content="500">
+    <meta name="twitter:image:height" content="500">
+
+    <script>
+        (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+        (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+        m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+        })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+        ga('create', 'UA-660910-48', {'storage': 'none'});
+        ga('set', 'anonymizeIp', true);
+        ga('send', 'pageview');
+    </script>
+
+</head>
+<body>
+
+    <script>document.body.className += ' js-enabled'; if ('IntersectionObserver' in window) { document.body.className += ' lazyload'; }</script>
+
+    {{ content }}
+
+</body>
+</html>
