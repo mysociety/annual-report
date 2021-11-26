@@ -105,7 +105,7 @@ p.subtitle {
     font-size: 50px;
     margin-top: 50px;
     margin-bottom: 50px;
-    background-color: red;
+    background-color: red !important;
     padding: 10px;
 }
 
@@ -115,6 +115,30 @@ p.subtitle {
 
 .transparent-card {
     background-color: #ffffff47;
-    padding: 10px;
-    border-radius: 5px;
+    padding: 15px;
+    border-radius: $border-radius;
+
+}
+
+.border-bottom-card {
+    // Ideal for list with images
+    padding: 15px;
+    border-bottom: 1.5px solid #1c1e1c4f;
+}
+
+.card-image {
+    a {
+        img {
+            border-bottom-left-radius: 0;
+            border-bottom-right-radius: 0;
+            border-top-left-radius: $border-radius;
+            border-top-right-radius: $border-radius;
+        }
+    }
+    p {
+        background: white;
+        padding: 10px;
+        border-bottom-left-radius: $border-radius;
+        border-bottom-right-radius: $border-radius;
+    }
 }
