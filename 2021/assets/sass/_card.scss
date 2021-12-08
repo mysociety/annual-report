@@ -1,3 +1,4 @@
+// _card-file moved here because there was an error "File not found"
 .card {
   position: relative;
   display: flex;
@@ -152,7 +153,7 @@
     margin-bottom: $card-deck-margin;
   }
 
-  @include media-breakpoint-up(sm) {
+  @include media-breakpoint-up(md) {
     display: flex;
     flex-flow: row wrap;
     margin-right: -$card-deck-margin;
