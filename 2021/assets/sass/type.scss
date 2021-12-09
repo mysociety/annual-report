@@ -8,11 +8,20 @@ h6, .h6 {
     font-weight: 400;
 }
 
-p.subtitle {
-    max-width: 40em; 
-    font-style: italic; 
-    padding: 15px;
-    border-radius: 5px;
+.section-intro {
+    max-width: 30em;
+    margin: 0 auto;
+    text-align: center;
+    font-size: 1.875rem;
+
+    &:after {
+        display: block;
+        background: #fff;
+        height: 0.75rem;
+        width: 5em;
+        content: "";
+        margin: 3.5rem auto;
+    }
 }
 
 .text-red {
