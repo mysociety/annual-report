@@ -9,15 +9,12 @@
         justify-content: center;
         margin: 0;
         padding: 1rem;
-        // color: #fff;
-        color: $color-mysoc-red;
+        color: #fff;
         border: 2px solid rgba(#fff, 0.3);
         border-radius: $border-radius;
         text-align: center;
         line-height: 1.2;
         font-size: 0.8em;
-        // added 2021
-        background: linear-gradient(90deg, #ffffff, #ffffffed, #ffffffd1);
     }
 
     & > a {

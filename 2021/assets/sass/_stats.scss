@@ -12,12 +12,17 @@
     font-weight: bold;
 }
 
+.stat__number.stat__number--medium {
+    font-size: 4em;
+}
+
 .stat__name {
     font-size: 1em;
-    line-height: 1.1em;
+    line-height: 1.2em;
     display: block;
     text-transform: uppercase;
     font-weight: bold;
     position: relative;
     z-index: 1;
+    max-width: 380px;
 }
