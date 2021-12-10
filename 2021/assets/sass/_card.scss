@@ -291,33 +291,63 @@
   }
 }
 
-.card-deck{
-  .card {
-    img {
-      object-fit: cover;
-      height: 300px;
-    }
-  }
-}
 
-.card-deck.three-col-card {
-  .card {
-    p.card-text {
-      font-size: 20px;
-      line-height: 150%;
-    }
-    img {
-      object-fit: cover;
-      height: 200px;
-    }
-  }
-}
 
 // card with no body and transparent background
 
 .fause-card {
   img  {
-    height: 250px;
+    height: 300px;
     object-fit: cover;
+  }
+}
+
+$margin-flex-card: 15px;
+.flex-card {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+    margin-right: calc(#{$margin-flex-card} * -1);
+    margin-left: calc(#{$margin-flex-card} * -1);
+  .card-item {
+    margin-right: $margin-flex-card;
+    margin-left: $margin-flex-card;
+    display: flex;
+    flex-direction: column;
+    border-radius: $border-radius;
+    margin-top: 35px;
+    flex-basis: calc(50% - #{$margin-flex-card} * 2);
+    @media only screen and (max-width: 750px) {
+      flex-basis: 100%;
+    }
+    .card-body {
+      background-color: $white;
+      border-bottom-left-radius: $border-radius;
+      border-bottom-right-radius: $border-radius;
+    }
+    a, picture, img {
+      border-top-left-radius: $border-radius;
+      border-top-right-radius: $border-radius;
+
+    }
+    img {
+      object-fit: cover;
+      height: 300px;
+    }
+  }
+
+}
+
+.flex-card.three-col-card {
+  .card-item {
+    flex-basis: calc(32% - #{$margin-flex-card} * 2);
+    img {
+      object-fit: cover;
+      height: 200px;
+      width: 100%;
+    }
+    @media only screen and (max-width: 900px) {
+      flex-basis: 100%;
+    }
   }
 }

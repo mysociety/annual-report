@@ -29,7 +29,7 @@ permalink: /
     <div class="container">
         <div class="row justify-content-center">
             <div class="d-flex d-sm-block align-items-center col-sm-3 text-center mb-3 mb-sm-0 pr-sm-4 pr-md-5">
-                {% include image.html src="/assets/img/mark.jpg" loading="lazy" width="200" height="200" class="intro-mark-photo rounded-circle mr-3 mr-sm-0" alt="Mark Cridge" %}
+                {% include image.html src="/assets/img/mark-cridge.jpg" loading="lazy" width="200" height="200" class="intro-mark-photo rounded-circle mr-3 mr-sm-0" alt="Mark Cridge" %}
                 <small class="d-block text-mysoc-dark-grey mt-sm-3">Mark Cridge, Chief&nbsp;Executive</small>
             </div>
             <div class="col-sm-9 col-md-8 col-lg-7">
@@ -166,8 +166,8 @@ permalink: /
         <p class="section-intro mb-6">As it has become a priority for the world, climate has also become a priority for mySociety. Not to say that our Climate programme replaces our work on Transparency, Community and Democracy – it’s more that we’re leveraging climate opportunities within each of those streams. </p>
 
         <h2 class="mt-5 mt-md-6 mb-4 text-center">What we did in 2021</h2>
-        <div class="card-deck mt-5">
-            <div class="card shadow">
+        <div class="flex-card mt-5">
+            <div class="card-item shadow">
                 <a href="https://www.mysociety.org/2021/03/01/connecting-parliaments-the-opportunities-risks-and-barriers-of-digital-transformation/" class="card-img-top">
                     {% include image.html src="/assets/img/cape-data.jpg" webp="/assets/img/cape-data.webp" width="540" height="250" alt="" loading="lazy" %}
                 </a>
@@ -177,7 +177,7 @@ permalink: /
                             searchable</a> database – and we’re continuing to develop new useful features that’ll help you engage with your local authority over their plans for Net Zero.</p>
                 </div>
             </div>
-            <div class="card shadow">
+            <div class="card-item shadow">
                 <a href="https://www.mysociety.org/2021/02/23/participation-vs-representation-councillor-attitudes-towards-citizen-engagement/" class="card-img-top">
                     {% include image.html src="/assets/img/cape-hero.jpg" webp="/assets/img/cape-hero.webp" width="540" height="250" alt="" loading="lazy" %}
                 </a>
@@ -195,12 +195,15 @@ permalink: /
             </div>
         </div>
 
-        <div class="row mt-5 mt-sm-6 mt-md-7">
-            <div class="col-sm-5">
-                <h2 class="mb-3"><span class="underline">CAPE features and research</span></h2>
-                <p>There’s loads more to come, but for now here are the features we’ve steadily been adding to the basic database.</p>
+        <hr style="border-top: 0.3em solid #fff; opacity:0.3;" class="mt-5 mt-sm-6 mb-4 mb-sm-5">
+        <div class="row">
+            <div class="col-sm-6">
+                <h2 class="mb-5"><span class="underline">CAPE features and research</span></h2>
             </div>
-            <div class="col-sm-7">
+        </div>
+        <div class="row">
+            <div class="col-sm-6">
+                <p>There’s loads more to come, but for now here are the features we’ve steadily been adding to the basic database.</p>
                 <div class="border-bottom-card mt-3 mt-md-4">
                     <p>We’ve published every Climate Action Plan we could find.</p>
                 </div>
@@ -214,12 +217,15 @@ permalink: /
                 <div class="border-bottom-card mt-3 mt-md-4">
                     <p>We’ve pulled in emissions data from the Department of Business, Energy and Skills.</p>
                 </div>
-                <div class="border-bottom-card mt-3 mt-md-4">
+
+            </div>
+            <div class="col-sm-6">
+                <div class="border-bottom-card" style="border-top: none;">
                     <p>We’ve added infoboxes so everyone can understand which councils are responsible for what sort of climate action</p>
                     {% include image.html src="/assets/img/cape-pledges-standalone.jpg" webp="/assets/img/cape-pledges-standalone.webp" width="540" height="350" alt="" loading="lazy" %}
-                    <span>text-red</span>
+                    <span class="text-red">update screenshot</span>
                 </div>
-                <div class="border-bottom-card mt-3 mt-md-4">
+                <div class="border-bottom-card">
                     <p>We’ve added <a href="https://register-of-charities.charitycommission.gov.uk/charity-search/-/charity-details/3078648"
                         class="white-link">a basic API</a> so developers can use the 
                             action plans data in their own sites and apps (we’ll be making this more sophisticated next year).</p>
@@ -233,9 +239,9 @@ permalink: /
                         class="white-link">which have similar emissions profiles</a>.</p>
                 </div>
             </div>
-            <p class="text-center mx-auto mt-4" style="max-width: 24em; background-color: rgba(255, 255, 255, 0.158); padding:10px">Watch this space for new additions to CAPE in 2022 – 
+            <p class="text-center mx-auto mt-4" style="max-width: 24em; background-color: white; padding:25px 15px; border-radius: 4px;">Watch this space for new additions to CAPE in 2022 – 
                 <a href="https://mysociety.us9.list-manage.com/subscribe?u=53d0d2026dea615ed488a8834&id=8f5998fecf"
-                class="white-link">sign up to our newsletter</a> and we’ll keep you informed
+                >sign up to our newsletter</a> and we’ll keep you informed
             </p>
         </div>
 
@@ -283,8 +289,8 @@ permalink: /
             <div class="col-4">
                 <div class="stat">
                     <p class="text-white">
-                        <span class="stat__number stat__number--large">3.6</span>
-                        <span class="stat__name">million words in our database of plans</span>
+                        <span class="stat__number stat__number--large">3.6MM</span>
+                        <span class="stat__name">words in our database of plans</span>
                     </p>
                 </div>
             </div>
@@ -355,15 +361,17 @@ permalink: /
 
         <div class="row mt-5 mt-sm-6 mt-md-7">
             <div class="col-sm-5">
-                <h3 class="mb-3"><span class="underline">Look to yourself</span></h3>
-            </div>
-            <div class="col-sm-7">
+                <h3 class="mb-4"><span class="underline">Look to yourself</span></h3>
                 <p style="max-width: 36em">mySociety’s internal Climate Action Group has been busy too, 
                     creating <a href="https://www.mysociety.org/2021/03/18/a-guide-to-working-from-home-sustainably/" class="white-link">a guide to working from home sustainably</a>, 
                     changing policies around the 
                     frequency of new computer equipment for staff, and <a class="white-link" href="https://www.mysociety.org/2021/12/06/we-know-its-not-perfect-but-were-carbon-offsetting-heres-why/">deciding to carbon offset</a> where cutting 
                     carbon altogether wasn’t possible.
                 </p>
+            </div>
+            <div class="col-sm-7">
+                {% include image.html src="/assets/img/look-to-yourself.jpg" webp="/assets/img/look-to-yourself.webp" width="540" height="350" alt="" loading="lazy" %}
+
             </div>
         </div>
 
@@ -415,8 +423,8 @@ permalink: /
         </p>
 
         <h2 class="text-center mt-5 mt-md-6 mb-4 mb-md-5">What we did in 2021</h2>
-        <div class="card-deck three-col-card">
-            <div class="card shadow">
+        <div class="flex-card three-col-card">
+            <div class="card-item shadow">
                 <a href="https://www.mysociety.org/2021/06/25/a-tool-to-help-challenge-foi-refusals-now-on-whatdotheyknow/" class="card-img-top">
                     {% include image.html src="/assets/img/so-what-now.jpg" width="540" height="350" alt="" loading="lazy" %}
                 </a>
@@ -433,7 +441,7 @@ permalink: /
                    </p> -->
                 </div>
             </div>
-            <div class="card shadow">
+            <div class="card-item shadow">
                 <a href="https://www.mysociety.org/2020/07/24/whatdotheyknow-projects/" class="card-img-top">
                     {% include image.html src="/assets/img/alaveteli-stamp.svg" width="540" height="350" alt="" loading="lazy" %}
                 </a>
@@ -448,7 +456,7 @@ permalink: /
                     </p>
                 </div>
             </div>
-            <div class="card shadow mx-auto" style="max-width: 540px;">
+            <div class="card-item shadow">
                 <a
                     href="https://www.mysociety.org/2021/04/28/new-policy-paper-reforming-freedom-of-information/" class="card-img-top">
                     {% include image.html src="/assets/img/reforming-freedom.jpg" width="540" height="350" alt="" loading="lazy" %}
@@ -480,26 +488,27 @@ permalink: /
         <hr style="border-top: 0.3em solid #fff; opacity:0.3;;" class="mt-5 mt-sm-6 mb-4 mb-sm-5">
 
         <div class="row mt-5 mt-sm-6">
-            <div class="col-sm-5">
-                <h3 class="mb-3"><span class="underline">Adding our voice</span></h3>
-            </div>
-            <div class="col-sm-7">
+            <div class="col-sm-6">
+                <h3 class="mb-4"><span class="underline">Adding our voice</span></h3>
                 <p><strong>Transparency watch</strong> We’ve kept an eye on the UK’s performance when it comes to 
                     openness, noting problems with the new research agency  <a href="https://www.mysociety.org/2021/02/19/new-research-agency-exempt-from-scrutiny/" class="white-link">ARIA</a>, 
                     showing concern when the UK was added to the <a href="https://www.mysociety.org/2021/03/11/uk-government-on-ogp-watch-list-for-lack-of-transparency/" class="white-link">OGP’s watchlist</a>, adding our name to 
                     concerns surfaced by Lucas Amin’s <a href="https://www.mysociety.org/2021/02/09/were-joining-the-call-for-urgent-action-on-foi/" class="white-link">Art of Darkness report</a>, and highlighting issues with new 
                     FOI Commissioner <a href="https://www.mysociety.org/2021/09/10/to-defend-foi-rights-we-need-a-separate-foi-commissioner/" class="white-link">John Edwards</a>.</p>
             </div>
+            <div class="col-sm-6">
+                {% include image.html src="/assets/img/art-of-darkness.jpg" webp="/assets/img/art-of-darkness.webp" width="540" height="350" alt="" loading="lazy" %}
+            </div>
         </div>
 
         <hr style="border-top: 0.3em solid #fff; opacity:0.3;" class="mt-5 mt-sm-6 mb-4 mb-sm-5">
 
-        <div class="row">
+        <!-- <div class="row">
             <div class="col-lg-6">
                 <h3 class="mb-5"><span class="underline">Facts and figures</span></h3>
 
             </div>
-            <div class="col-lg-6">
+            <div class="col-lg-12">
                 <div class="stat">
                     <p class="text-white stat__main">
                         <span class="stat__number stat__number--large">100,000+</span>
@@ -531,7 +540,61 @@ permalink: /
                     </p>
                 </div>             
             </div>
+        </div> -->
+
+        
+        <div class="row">
+            <div class="col-lg-5">
+                <h2 class="text-left"><span class="underline">Facts and<br> figures</span></h2>
+            </div>
+            <div class="col-lg-7">
+                <div class="stat">
+                    <p class="text-white stat__main">
+                        <span class="stat__number stat__number--large">100,000+</span>
+                        <span class="stat__name mt-1">Overall number of requests made in WhatDoTheyKnow in 2021</span>
+                    </p>
+                </div>
+                <div class="row">
+                    <div class="col-sm-6">
+                        <div class="stat mt-md-5">
+                            <p class="text-white">
+                                <span class="stat__number stat__number--medium">35,482</span>
+                                <span class="stat__name">were successful</span>
+                            </p>
+                        </div>
+                    </div>
+                    <div class="col-sm-6">
+                        <div class="stat mt-md-5">
+                            <p class="text-white">
+                                <span class="stat__number stat__number--medium">10,063</span>
+                                <span class="stat__name">were partially successful</span>
+                            </p>
+                        </div>
+                    </div>
+        
+                </div>
+                <div class="row">
+                    <div class="col-sm-6">
+                        <div class="stat mt-md-5">
+                            <p class="text-white">
+                                <span class="stat__number stat__number--medium">1,991</span>
+                                <span class="stat__name">went on to request an internal review</span>
+                            </p>
+                        </div>  
+                    </div>
+                    <div class="col-sm-6">
+        
+                        <div class="stat mt-md-5">
+                            <p class="text-white">
+                                <span class="stat__number stat__number--medium">7,563</span>
+                                <span class="stat__name">received a reply to say the authority does not hold the information requested</span>
+                            </p>
+                        </div>    
+                    </div>
+                </div>
+            </div>
         </div>
+
 
         <hr style="border-top: 0.3em solid #fff; opacity:0.3;" class="mt-5 mt-sm-6 mb-4 mb-sm-5">
         <h2 class="text-center mt-5 mt-md-6 mb-4 mb-md-5">FOI around the world</h2>
@@ -581,8 +644,8 @@ permalink: /
 
         <hr style="border-top: 0.3em solid #fff; opacity:0.3;" class="mt-5 mt-sm-6 mb-4 mb-sm-5">
         <h2 class="text-center mt-5 mt-md-6 mb-4 mb-md-5">What you’ve done with our stuff</h2>
-        <div class="card-deck">
-            <div class="card shadow">
+        <div class="flex-card">
+            <div class="card-item shadow">
                 <a href="https://www.mysociety.org/2021/01/05/a-change-in-the-law-for-school-starters-in-scotland-through-foi/" class="card-img-top">
                     {% include image.html src="/assets/img/give-them-time.jpg" webp="/assets/img/give-them-time.webp" width="540" height="350" alt="" loading="lazy" %}
                 </a>
@@ -592,7 +655,7 @@ permalink: /
                     </p>
                 </div>
             </div>
-            <div class="card shadow">
+            <div class="card-item shadow">
                 <a href="https://www.mysociety.org/2021/02/10/a-million-moments-for-democracy-using-foi-to-campaign-against-corruption/" class="card-img-top">
                     {% include image.html src="/assets/img/million-moments-for-democracy.jpg" webp="/assets/img/million-moments-for-democracy.webp" width="540" height="350" alt="" loading="lazy" %}
                 </a>
@@ -603,8 +666,8 @@ permalink: /
                 </div>
             </div>
         </div>
-        <div class="card-deck mt-5">
-            <div class="card shadow">
+        <div class="flex-card mt-5">
+            <div class="card-item shadow">
                 <a
                     href="https://www.mysociety.org/2021/08/02/freedom-of-information-as-a-tool-for-making-cycle-routes-more-accessible" class="card-img-top">
                     {% include image.html src="/assets/img/heavy-metal-cyclist.jpg" webp="/assets/img/heavy-metal-cyclist.webp" width="540" height="350" alt="" loading="lazy" %}
@@ -615,7 +678,7 @@ permalink: /
                         that block disabled people’s use.</p>
                 </div>
             </div>
-            <div class="card shadow">
+            <div class="card-item shadow">
                 <a
                     href="https://www.mysociety.org/2021/07/07/lost-in-europe-a-cross-border-investigation-into-missing-children/" class="card-img-top">
                     {% include image.html src="/assets/img/lost-in-europe.jpg" webp="/assets/img/lost-in-europe.webp" width="540" height="350" alt="" loading="lazy" %}
@@ -689,8 +752,8 @@ permalink: /
         <hr style="border-top: 0.3em solid #fff; opacity:0.3;" class="mt-5 mt-sm-6 mb-4 mb-sm-5">
 
         <h2 class="text-center mt-5 mt-md-6 mb-4 mb-md-5">New services</h2>
-        <div class="card-deck">
-            <div class="card shadow">
+        <div class="flex-card">
+            <div class="card-item shadow">
                 <a href="https://www.societyworks.org/2021/01/19/safe-and-sound-noise-reporting-for-hackney-council/" class="card-img-top">
                     {% include image.html src="/assets/img/noiseworks.jpg" webp="/assets/img/noiseworks.webp" width="540" height="350" alt="" loading="lazy" %}
                 </a>
@@ -699,7 +762,7 @@ permalink: /
                          collaboration with Hackney council, is a better way for councils to manage antisocial noise reports.</p>
                 </div>
             </div>
-            <div class="card shadow">
+            <div class="card-item shadow">
                 <a href="https://www.societyworks.org/2021/04/26/introducing-wasteworks-digital-waste-service-for-councils/" class="card-img-top">
                     {% include image.html src="/assets/img/wasteworks.jpg" webp="/assets/img/wasteworks.webp" width="540" height="350" alt="" loading="lazy" %}
                 </a>
@@ -710,8 +773,8 @@ permalink: /
                 </div>
             </div>
         </div>
-        <span class="text-red">Youtube: Fail to load resource</span>
-        <div class="row">
+
+        <div class="row mt-5">
             <div class="col-12 col-md-6">
                 {% include youtube-embed.html classes="my-5 rounded shadow-lg" video_id="ksiYUh7U81E" alt="YouTube – Fix My Block" %}
             </div>
@@ -754,39 +817,25 @@ permalink: /
 
         <hr style="border-top: 0.3em solid #fff; opacity:0.3;" class="mt-5 mt-sm-6 mb-4 mb-sm-5">
 
-        <div class="row mt-4 mt-sm-5 mt-lg-6">
-            <div class="col-12 col-md-6">
-                <p class=""><strong>Back in the real world</strong> With face to face events a possibility again, we took SocietyWorks on the road, checking in at Highways UK,  District Councils’ Network Annual Conference, RWM,</p>
-                {% include image.html src="/assets/img/zoom-societyworks.jpg" webp="/assets/img/zoom-societyworks.webp" width="600" height="300" loading="lazy" alt="" %}
+        <div class="row fause-card">
+            <div class="col-sm-6 mt-3 mt-sm-4 mt-lg-5">
+                {% include image.html src="/assets/img/zoom-societyworks.jpg" webp="/assets/img/zoom-societyworks.webp" width="600" height="300" loading="lazy" alt="" %}                
+                <p class="mt-3"><strong>Back in the real world</strong> With face to face events a possibility again, we took SocietyWorks on the road, checking in at Highways UK,  District Councils’ Network Annual Conference, RWM,</p>
             </div>
-            <div class="col-12 col-md-6">
-                <p><strong>Zooming around</strong> Online events are still happening as well, of course, and we made virtual appearances at Service Design in Government and the LGA Annual Conference</p>
+            <div class="col-sm-6 mt-3 mt-sm-4 mt-lg-5">
+                <a href="https://www.societyworks.org/2020/03/31/easy-tree-reporting-thanks-to-integration-with-ezytreev/">
+                    {% include image.html src="/assets/img/lga-conference.jpg" webp="/assets/img/lga-conference.webp" width="600" height="300" loading="lazy" alt="" %}
+                </a>
+                <p class="mt-3"><strong>Zooming around</strong> Online events are still happening as well, of course, and we made virtual appearances at Service Design in Government and the LGA Annual Conference</p>
             </div>
         </div>
+
 
         <hr style="border-top: 0.3em solid #fff; opacity:0.3;" class="mt-5 mt-sm-6 mb-4 mb-sm-5">
-
-        <div class="row mt-4 mt-sm-5 mt-lg-6">
-            <div class="col-12 col-md-6">
-                <h3 class="mb-3"><span class="underline">No limits</span></h3>
-            </div>
-        </div>
-        <div class="row">
-            <div class="col-12 col-md-6">
-                <p><strong>Zooming around</strong> Online events are still happening as well, of course, and we made virtual appearances at Service Design in Government and the LGA Annual Conference</p>
-            </div>
-            <div class="col-12 col-md-6">
-                <p class=""><strong>Back in the real world</strong> With face to face events a possibility again, we took SocietyWorks on the road, checking in at Highways UK,  District Councils’ Network Annual Conference, RWM,</p>
-                {% include image.html src="/assets/img/zoom-societyworks.jpg" webp="/assets/img/zoom-societyworks.webp" width="600" height="300" loading="lazy" alt="" %}
-            </div>
-        </div>
-
-        <hr style="border-top: 0.3em solid #fff; opacity:0.3;" class="mt-5 mt-sm-6 mb-4 mb-sm-5">
-
         <h2 class="text-center mt-6 mb-5">What did you do with our stuff?</h2>
 
-        <div class="card-deck mt-5 three-col-card">
-            <div class="card shadow">
+        <div class="flex-card mt-5 three-col-card">
+            <div class="card-item shadow">
                 <a href="https://www.mysociety.org/2021/03/12/how-to-use-fixmystreet-to-make-roads-safer-for-blind-people/" class="card-img-top">
                     {% include image.html src="/assets/img/poppy-verge.jpg" webp="/assets/img/poppy-verge.webp" width="600" height="300" loading="lazy" alt="" %}
                 </a>
@@ -797,7 +846,7 @@ permalink: /
                     </p>
                 </div>
             </div>
-            <div class="card shadow">
+            <div class="card-item shadow">
                 <a href="https://www.mysociety.org/2021/07/05/rewild-road-verges-with-fixmystreet/" class="card-img-top">
                     {% include image.html src="/assets/img/pedestrian-crossing.jpg" webp="/assets/img/pedestrian-crossing.webp" width="600" height="300" loading="lazy" alt="" %}
                 </a>
@@ -806,12 +855,12 @@ permalink: /
                         incentivise sustainable holiday travel.</p>
                 </div>
             </div>
-            <div class="card shadow">
+            <div class="card-item shadow">
                 <a href="https://www.mysociety.org/2021/11/09/now-croatians-can-pop-a-report-on-popravi/" class="card-img-top">
                     {% include image.html src="/assets/img/zagreb.jpg" webp="/assets/img/zagreb.webp" width="600" height="300" loading="lazy" alt="" %}
                 </a>
                 <div class="card-body">
-                    <p class="card-text"><strong>Fixing streets abroad</strong>Now Croatians can                         
+                    <p class="card-text"><strong>Fixing streets abroad</strong> Now Croatians can                         
                         <a href="https://www.mysociety.org/2021/11/09/now-croatians-can-pop-a-report-on-popravi/">pop a report onto their own FixMyStreet site, Popravi.to</a>.</p>
                 </div>
             </div>
@@ -949,33 +998,18 @@ permalink: /
         <h1 class="mb-3 text-center">Community</h1>
         <p class="section-intro mb-6" style="max-width: 28em;">Community begins with empowering people and neighbourhoods to make change in their own areas – and we believe digital tools can complement on-the-ground action.</p>
 
-        <div class="row mt-5 mt-sm-6">
-            <div class="col-sm-5">
-                <h2 class="mb-3"><span class="underline">What we did in <br> 2021</span></h2>
-            </div>
-            <div class="col-sm-7">
-                <p><strong>Thistle help</strong> continued our collaboration with Tower Blocks UK, expanding the guidance site 
-                    <a href="https://fixmyblock.org/" class="white-link">we had a chat about their progress</a>  to include information for Scottish tenants.
-                </p>
-                <p><strong>Tell me more</strong> There’s also now added advice on a range of
-                     fire safety and disrepair issues for highrise tenants everywhere (and, in fact, social tenants in general –
-                      because much of the content on FixMyBlock is relevant to all).
-                </p>
-            </div>
-        </div>
-
         <h2 class="mt-5 mt-md-6 mb-4 text-center">What we did in 2021</h2>
-        <div class="card-deck mt-5">
-            <div class="card shadow">
+        <div class="flex-card mt-5">
+            <div class="card-item shadow">
                 <a href="https://www.mysociety.org/2021/03/01/connecting-parliaments-the-opportunities-risks-and-barriers-of-digital-transformation/" class="card-img-top">
-                    {% include image.html src="/assets/img/fixmyblock-card.jpg" webp="/assets/img/fixmyblock-card.webp" width="540" height="250" alt="" loading="lazy" %}
+                    {% include image.html src="/assets/img/fixmyblock-3.jpg" webp="/assets/img/fixmyblock-3.webp" width="540" height="250" alt="" loading="lazy" %}
                 </a>
                 <div class="card-body">
                     <p class="card-text"><strong>Thistle help</strong> continued our collaboration with Tower Blocks UK, expanding the guidance site 
                         <a href="https://fixmyblock.org/">FixMyBlock</a>  to include information for Scottish tenants.</p>
                 </div>
             </div>
-            <div class="card shadow">
+            <div class="card-item shadow">
                 <a href="https://www.mysociety.org/2021/02/23/participation-vs-representation-councillor-attitudes-towards-citizen-engagement/" class="card-img-top">
                     {% include image.html src="/assets/img/fixmyblock-fire.jpg" webp="/assets/img/fixmyblock-fire.webp" width="540" height="250" alt="" loading="lazy" %}
                 </a>
@@ -1011,14 +1045,38 @@ permalink: /
             </div>
             <p class="text-right" style="margin-top: -15px;">&mdash; Rainbow Collective</p>
         </div>
-        <div class="mx-auto mt-4" style="max-width: 540px;">
-            <p class="text-red">add more tweets</p>
-            {% include tweet-start.html id="1468236622642782223" username="ageuklondon" displayname="Age UK London" image="/assets/img/tweets/ageuklondon.jpg" class="mt-3 mt-md-4" %}
+        <div class="row mt-4 mt-lg-5">
+            <div class="col-md-6">
+                {% include tweet-start.html id="1468236622642782223" username="ageuklondon" displayname="Age UK London" image="/assets/img/tweets/ageuklondon.jpg" class="mt-3 mt-md-4" %}
                 <p>Some great resources here for housing campaigners.</p>
                 <a href="https://twitter.com/FixMyBlock/status/1468233935406698508">
                     {% include image.html src="/assets/img/tweets/community-tweet.jpg" class="mb-3" width="568" height="320" loading="lazy" alt="" %}
                 </a>  
-            {% include tweet-end.html id="1468236622642782223" username="ageuklondon" timestamp="03:11 PM – Dec 7, 2021" %}
+                {% include tweet-end.html id="1468236622642782223" username="ageuklondon" timestamp="03:11 PM – Dec 7, 2021" %}
+
+
+                {% include tweet-start.html id="1443221322717351939" username="HRRBFireSafety" displayname="Joel Allen" image="/assets/img/tweets/HRRBFireSafety.jpg" class="mt-3 mt-md-4" %}
+                <p>Keen to find out more about your local councils #ClimateEmergency or perhaps 
+                    you’d just like to see if they’ve declared one? Check out this handy new website 
+                    complete with postcode finder <a href="http://data.climateemergency.uk">data.climateemergency.uk</a>
+                    <a href="https://twitter.com/hashtag/Wereallinthistogether?src=hashtag_click">#Wereallinthistogether</a></p> 
+                {% include tweet-end.html id="1443221322717351939" username="HRRBFireSafety" timestamp="11:19 AM – Nov , 2020" %}
+            </div>
+            <div class="col-md-6">
+                {% include tweet-start.html id="1454848660504825860" username="pauldegregorio" displayname="Paul de Gregorio" image="/assets/img/tweets/paul-de-gregorio.jpg" class="mt-3 mt-md-4" %}
+                <p>This good. See your local (UK) climate plan. Then use the data to persuade your local politicians to do more.
+                    <a href="https://twitter.com/hashtag/COP26Glasgow?src=hashtag_click">#COP26Glasgow</a>
+                    <br><br>Tracking the UK’s journey towards carbon zero – Climate Action Plan Explorer
+                </p>
+                {% include tweet-end.html id="1454848660504825860" username="pauldegregorio" timestamp="4:32 PM – Oct 31, 2021" %}
+
+                {% include tweet-start.html id="1451119114752233472" username="ODILeeds" displayname="Open Innovations (formerly ODI Leeds)." image="/assets/img/tweets/open-innovations.jpg" class="mt-3 mt-md-4" %}
+                <p><a href="https://twitter.com/hashtag/PlanetData4?src=hashtag_click">#PlanetData4</a>
+                    Local authority #climate action plans can be hidden across distant corners of the internet. 
+                    <a href="https://twitter.com/mySociety">@mySociety</a> has collected, summarised, and rated them here: <a href="http://data.climateemergency.uk">data.climateemergency.uk</a>
+                </p> 
+                {% include tweet-end.html id="1451119114752233472" username="ODILeeds" timestamp="10:32 AM – Oct , 2021" %}
+            </div>
         </div>
 
 
@@ -1092,42 +1150,54 @@ permalink: /
         </div> -->
 
         <hr style="border-top: 0.3em solid #fff; opacity:0.3;" class="mt-5 mt-sm-6 mb-4 mb-sm-5">
-        <h3 class="mb-5 text-center"><span class="underline">Facts and figures</span></h3>
+        
+        <!-- <div class="row">
+            <div class="col-sm-5">
+                <h2 class="text-left"><span class="underline">Facts and<br> figures</span></h2>
+            </div>
+        </div> -->
         <div class="row">
-            <div class="col-lg-6">
-                <div class="text-white">
-                    <div class="stat">
-                        <p class="">
-                            <span class="stat__number stat__number--large">28</span>
-                            <span class="stat__name"><a class="white-link" href="https://fixmyblock.org/category/guides/">guides</a> and <a class="white-link" href="https://fixmyblock.org/category/tools/">tools</a></span>
-                        </p>
+            <div class="col-sm-5">
+                <h2 class="text-left"><span class="underline">Facts and<br> figures</span></h2>
+            </div>
+            <div class="col-lg-7 offset-lg-1 text-white ml-auto">
+                <div class="row mt-3">
+                    <div class="col-sm-4">
+                        <div class="stat">
+                            <p class="text-white">
+                                <span class="stat__number stat__number--large">28</span>
+                                <span class="stat__name"><a class="white-link" href="https://fixmyblock.org/category/guides/">guides</a> and <a class="white-link" href="https://fixmyblock.org/category/tools/">tools</a></span>
+                            </p>
+                        </div>
                     </div>
-                    <div class="stat mt-md-5">
-                        <p class="">
-                            <span class="stat__number stat__number--large">20</span>
-                            <span class="stat__name"><a class="white-link" href="https://fixmyblock.org/category/letters/">template letters</a> you can use</span>
-                        </p>
+                    <div class="col-sm-4">
+                        <div class="stat">
+                            <p class="text-white">
+                                <span class="stat__number stat__number--large">20</span>
+                                <span class="stat__name"><a class="white-link" href="https://fixmyblock.org/category/letters/">template letters</a> you can use</span>
+                            </p>
+                        </div>
                     </div>
-                    <div class="stat mt-md-5">
-                        <p class="">
+                    <div class="col-sm-4">
+                        <p class="text-white">
                             <span class="stat__number stat__number--large">52</span>
                             <span class="stat__name"><a class="white-link" href="https://fixmyblock.org/glossary/">Glossary</a> dismistified</span>
                         </p>
                     </div>
                 </div>
-            </div>
-            <div class="col-lg-5 offset-lg-1 text-white mt-lg-n3">
-                <div class="stat">
-                    <div class="">
-                        <span class="stat__number stat__number--large">24,000+</span>
-                        <span class="stat__name mb-3">visits to the site this year</span>
-                        <span style="font-style: italic;">Most visited pages:</span>
-                        <div class="pl-3 mt-2" style="font-size: 18px;">
-                            <p>Making a complaint about <a class="white-link" href="https://fixmyblock.org/making-a-complaint-about-pests-or-vermin-in-your-flat-including-mice-rats-cockroaches-fleas-bedbugs/">pests or vermin</a> in your flat</p>
-                            <p>Making a complaint about condensation, <a class="white-link" href="https://fixmyblock.org/making-a-complaint-about-conditions-in-your-flat-or-block-including-condensation-mould-damp/">mould or damp</a></p> 
-                            <p>Informing your landlord about <a class="white-link" href="https://fixmyblock.org/informing-your-landlord-about-leaks-failed-pipes-or-pipes-that-are-about-to-fail/">failed pipes</a></p> 
-                            <p>Problems with <a class="white-link" href="https://fixmyblock.org/ive-got-problems-with-my-tower-blocks-heating-or-hot-water/">heating or hot water</a> in your flat</p> 
-                            <p>I’m worried that my block is constructed with the <a class="white-link" href="https://fixmyblock.org/im-worried-my-block-is-large-panel-system/">Large Panel System</a></p> 
+                <div class="row mt-4">
+                    <div class="col-12">
+                        <div class="stat">
+                            <span class="stat__number stat__number--large">24,000+</span>
+                            <span class="stat__name mb-3">visits to the site this year</span>
+                            <h4 class="mt-5">Most visited pages:</h4>
+                            <div class="mt-2 randon-box" style="font-size: 18px;">
+                                <p class="mb-2">Making a complaint about <a class="white-link" href="https://fixmyblock.org/making-a-complaint-about-pests-or-vermin-in-your-flat-including-mice-rats-cockroaches-fleas-bedbugs/">pests or vermin</a> in your flat</p>
+                                <p class="mb-2">Making a complaint about condensation, <a class="white-link" href="https://fixmyblock.org/making-a-complaint-about-conditions-in-your-flat-or-block-including-condensation-mould-damp/">mould or damp</a></p> 
+                                <p class="mb-2">Informing your landlord about <a class="white-link" href="https://fixmyblock.org/informing-your-landlord-about-leaks-failed-pipes-or-pipes-that-are-about-to-fail/">failed pipes</a></p> 
+                                <p class="mb-2">Problems with <a class="white-link" href="https://fixmyblock.org/ive-got-problems-with-my-tower-blocks-heating-or-hot-water/">heating or hot water</a> in your flat</p> 
+                                <p class="mb-2">I’m worried that my block is constructed with the <a class="white-link" href="https://fixmyblock.org/im-worried-my-block-is-large-panel-system/">Large Panel System</a></p> 
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -1178,8 +1248,8 @@ permalink: /
         <p class="section-intro mb-6">With so much going on in the world, it still remains true that engaging with the democratic process is a direct route to making change – so we’re still providing the tools to help everyone do just that.</p>
 
         <h2 class="text-center mt-5 mt-md-6 mb-4 mb-md-5">What we did in 2021</h2>
-        <div class="card-deck card-deck three-col-card">
-            <div class="card shadow">
+        <div class="flex-card flex-card three-col-card">
+            <div class="card-item shadow">
                 <a href="https://www.mysociety.org/2021/10/25/changes-to-party-comparisons-on-theyworkforyou/" class="card-img-top">
                     {% include image.html src="/assets/img/parliament-party.jpg" webp="/assets/img/parliament-party.webp" width="540" height="350" alt="" loading="lazy" %}
                 </a>
@@ -1189,7 +1259,7 @@ permalink: /
                     </p>
                 </div>
             </div>
-            <div class="card shadow">
+            <div class="card-item shadow">
                 <a href="https://www.mysociety.org/2021/10/25/cosmetic-improvements-to-theyworkforyou/" class="card-img-top">
                     {% include image.html src="/assets/img/paint.jpg" webp="/assets/img/paint.webp" width="540" height="350" alt="" loading="lazy" %}
                 </a>
@@ -1199,7 +1269,7 @@ permalink: /
                     also updating the design of the TheyWorkForYou API and switching email alerts to a swankier HTML</p>
                 </div>
             </div>
-            <div class="card shadow">
+            <div class="card-item shadow">
                 <a
                     href="https://www.mysociety.org/2021/10/25/what-do-people-find-useful-about-theyworkforyou-alerts/" class="card-img-top">
                     {% include image.html src="/assets/img/microphone.jpg" webp="/assets/img/microphone.webp" width="540" height="350" alt="" loading="lazy" %}
@@ -1215,8 +1285,8 @@ permalink: /
         <hr style="border-top: 0.3em solid #fff; opacity:0.3;" class="mt-5 mt-sm-6 mb-4 mb-sm-5">
 
         <h2 class="text-center mt-5 mt-md-6 mb-4 mb-md-5">What we found out</h2>
-        <div class="card-deck three-col-card">
-            <div class="card shadow">
+        <div class="flex-card three-col-card">
+            <div class="card-item shadow">
                 <a href="https://www.mysociety.org/2021/03/01/connecting-parliaments-the-opportunities-risks-and-barriers-of-digital-transformation/" class="card-img-top">
                     {% include image.html src="/assets/img/switched-on.jpg" webp="/assets/img/switched-on.webp" width="540" height="250" alt="" loading="lazy" %}
                 </a>
@@ -1226,19 +1296,19 @@ permalink: /
                     </p>
                 </div>
             </div>
-            <div class="card shadow">
+            <div class="card-item shadow">
                 <a href="https://www.mysociety.org/2021/02/23/participation-vs-representation-councillor-attitudes-towards-citizen-engagement/" class="card-img-top">
-                    {% include image.html src="/assets/img/rurality.svg" webp="/assets/img/people-power.webp" width="540" height="250" alt="" loading="lazy" %}
+                    {% include image.html src="/assets/img/people-power.svg" webp="/assets/img/people-power.webp" width="540" height="250" alt="" loading="lazy" %}
                 </a>
                 <div class="card-body">
                     <p class="card-text"><strong>People power</strong> Devolved parliaments have made for devolved data in some places, which is fine until you need to compare the UK as a whole.  
                     <a href="https://www.mysociety.org/2021/02/23/participation-vs-representation-councillor-attitudes-towards-citizen-engagement/">councillor attitudes towards citizen engagement</a> examined these questions, and more.</p>
                 </div>
             </div>
-            <div class="card shadow mx-auto" style="max-width: 540px;">
+            <div class="card-item shadow">
                 <a
                     href="https://www.mysociety.org/2021/04/22/unified-uk-measures-of-rurality-and-deprivation/" class="card-img-top">
-                    {% include image.html src="/assets/img/people-power.jpg" webp="/assets/img/rurality.webp" width="540" height="250" alt="" loading="lazy" %}
+                    {% include image.html src="/assets/img/rurality.jpg" webp="/assets/img/rurality.webp" width="540" height="250" alt="" loading="lazy" %}
                 </a>
                 <div class="card-body">
                     <p class="card-text"><strong>Rurality and deprivation</strong> And before making any changes to the alerts, we spent some time 
@@ -1251,12 +1321,13 @@ permalink: /
         <hr style="border-top: 0.3em solid #fff; opacity:0.3;" class="mt-5 mt-sm-6 mb-4 mb-sm-5">
 
         <div class="row my-4 my-sm-5">
-            <div class="col-sm-5">
-                <h2 class="mb-3"><span class="underline">Adding our voice</span></h2>
-            </div>
-            <div class="col-sm-7">
+            <div class="col-sm-6">
+                <h2 class="mb-4"><span class="underline">Adding our voice</span></h2>
                 <p><strong>Protest is vital </strong> We <a href="https://www.mysociety.org/2021/03/17/we-believe-in-the-right-to-protest/" class="white-link">United Nations Development Programme</a> about the Police, Crime and Sentencing and Courts Bill, signing Liberty’s 
                     <a href="https://policebillalliance.org/home-secretary-and-secretary-of-state-for-justice/" class="white-link"> open letter</a>. The Bill threatens to quash the right to protest, a vital component of citizen engagement in democracy.</p>
+            </div>
+            <div class="col-sm-6">
+                {% include image.html src="/assets/img/human-right-democracy.jpg" webp="/assets/img/human-right-democracy.webp" width="540" height="250" alt="" loading="lazy" %}
             </div>
         </div>
 
@@ -1362,32 +1433,43 @@ permalink: /
         <hr style="border-top: 0.3em solid #fff; opacity:0.3;" class="mt-5 mt-sm-6 mb-4 mb-sm-5">
 
         <h2 class="text-center mb-4 mb-md-5">The facts and figures</h2>
-        <span class="text-red">Needs update</span>
         <div class="row">
             <div class="col-lg-6">
-                <p>We switched off personally identifiable tracking on our sites in March, so we can’t say for certain how many individuals visited them.</p>
-                <p>But we can see how many visits there were overall: on TheyWorkForYou, almost <strong> 8 million</strong>.</p>
-                <p>Around <strong>230,000</strong> of those visits were on the day after <a href="https://www.theyworkforyou.com/divisions/pw-2020-10-21-154-commons" class="white-link">the Commons vote on free school meals</a>, an issue highlighted by footballer Marcus Rashford.</p>
-                <p>We sent more than 5 million alerts to let subscribers know <a href="https://www.mysociety.org/2014/07/23/want-to-know-what-your-mp-is-saying-subscribe-to-a-theyworkforyou-alert/" class="white-link">when their MP spoke/voted</a>, or <a href="https://www.mysociety.org/2014/09/01/well-send-you-an-email-every-time-your-chosen-word-is-mentioned-in-parliament/" class="white-link">when their chosen keywords were mentioned</a> in Parliament.</p>
-                <p>In June, as people took to the streets to protest the murder of George Floyd, we saw <strong>23 times the usual visitors to WriteToThem</strong>. By the end of this year, more than <strong>300,000 messages</strong> will have been sent through the service.</p></p>
+                <p>Our UK parliament monitoring site TheyWorkForYou saw almost 8 million visits in 2021, 
+                    with peaks reflecting the biggest news of the year: the murder of David Amess MP
+                    on 15th October, the debate and vote on the Third Report of the Committee on Standards
+                     (including Owen Paterson MP’s conduct) on 4th November, and <a href="https://www.theyworkforyou.com/debates/?id=2021-11-03c.938.0#g938.1" class="white-link">debates and votes</a> on both 
+                     the <a href="https://www.theyworkforyou.com/lords/?id=2021-03-15b.74.1#g74.2" class="white-link">Domestic Abuse Bill</a> and the <a href="https://www.theyworkforyou.com/debates/?id=2021-03-15b.59.1#g59.3" class="white-link">Police, Crime, Sentencing and Courts Bill</a> on 16th March.</p>
+                <p class="mt-4"><a href="https://www.theyworkforyou.com/mp/10009/david_amess/southend_west/votes" class="white-link">David Amess' voting record</a> was, sadly, the most visited page on 
+                    the site this year, while this written answer on <a href="https://www.theyworkforyou.com/wrans/?id=2020-06-02.53281.h" class="white-link">MoD pay grades</a> and 
+                    this vote about <a href="https://www.theyworkforyou.com/divisions/pw-2020-10-21-154-commons" class="white-link">free school meals during holidays</a>, both from 2020, 
+                    were high up the rankings.</p>
+                <p class="mt-4">WriteToThem served over <strong>2,737,684</strong> visits, and sent over <strong>188,000</strong> emails. 
+                        While we don't look at the content of emails sent through WriteToThem 
+                        (except very rarely, under specific circumstances as recorded in our <a href="https://www.writetothem.com/about-privacy" class="white-link">Privacy Policy</a>),
+                         the highest daily numbers of visits do coincide with big events in the news: 
+                         The end of COP26 and the taxi explosion outside Liverpool Women’s hospital 
+                         (15th November), the start of COP26, where Boris Johnson sat next to Sir David 
+                         Attenborough and didn't wear a face mask (3rd November), and the dissent
+                          over policing at the vigil for Sarah Everard (15th March).</p>
             </div>
             <div class="col-lg-5 offset-lg-1 text-white mt-lg-n3">
                 <div class="stat">
                     <p class="stat__main">
-                        <span class="stat__number stat__number--large">8 million</span>
+                        <span class="stat__number stat__number--large">7.8 million</span>
                         <span class="stat__name">visits to TheyWorkForYou</span>
                     </p>
                 </div>
                 <div class="stat mt-md-5">
                     <p class="stat__main">
-                        <span class="stat__number stat__number--large">5 million</span>
-                        <span class="stat__name">TheyWorkForYou email alerts</span>
+                        <span class="stat__number stat__number--large">5+ million</span>
+                        <span class="stat__name">email alerts sent on MP activity</span>
                     </p>
                 </div>
                 <div class="stat mt-md-5">
                     <p class="stat__main">
-                        <span class="stat__number stat__number--large">300,000+</span>
-                        <span class="stat__name">WriteToThem messages</span>
+                        <span class="stat__number stat__number--large">2.7 million</span>
+                        <span class="stat__name">visits to WriteToThem</span>
                     </p>
                 </div>
             </div>
@@ -1444,8 +1526,8 @@ permalink: /
             </div>
             <div class="col-sm-7">
                     <p class="transparent-card"><strong>Scrutiny, oversight & the data that makes it possible</strong> From civic tech shutting down illicit pharmacies in Pakistan, to procurement within a pandemic.<br><a href="https://www.youtube.com/watch?v=ImW4ro6gJmc" class="white-link">Watch this session again</a></p>
-                    <p class="transparent-card"><strong>Hearing every voice: lessons learned from online deliberation projects</strong> Citizen input to government decision-making is all the rage; what can we learn from those who’ve been testing out new methods on the ground? <br> <a href="https://www.youtube.com/watch?v=ImW4ro6gJmc" class="white-link">Watch this session again</a></p>
-                    <p class="transparent-card"><strong>Empowering communities using geospatial technology</strong> Digital mapping data is being used in extraordinary ways around the world: we heard from Kathmandu, Tanzania, Taiwan and Ukraine as well as the UK. <br> <a href="https://www.youtube.com/watch?v=ImW4ro6gJmc" class="white-link">Watch this session again</a></p>
+                    <p class="transparent-card"><strong>Hearing every voice: lessons learned from online deliberation projects</strong> Citizen input to government decision-making is all the rage; what can we learn from those who’ve been testing out new methods on the ground? <br> <a href="https://youtu.be/3hQiDiRmqUc" class="white-link">Watch this session again</a></p>
+                    <p class="transparent-card"><strong>Empowering communities using geospatial technology</strong> Digital mapping data is being used in extraordinary ways around the world: we heard from Kathmandu, Tanzania, Taiwan and Ukraine as well as the UK. <br> <a href="https://www.youtube.com/watch?v=3Ji__Lb5Lr8" class="white-link">Watch this session again</a></p>
             </div>
         </div>
 
@@ -1530,8 +1612,8 @@ permalink: /
 <section class="bg-mysoc-red py-5 py-sm-6 py-md-7" id="thanks" aria-label="Thank you">
     <div class="container">
         <h1 class="mb-3 text-center">Thank you</h1>
+        <p class="mx-auto" style="max-width: 25em;">We always end our annual report with a big old ‘thank you’ – and in case you didn’t realise, we’re talking to you.</p>
         <div class="section-intro mb-6" style="max-width: 25em;">
-            <p>We always end our annual report with a big old ‘thank you’ – and in case you didn’t realise, we’re talking to you.</p>
             <p>Thank you for reading this report.</p>
             <p>For using our websites, APIs, and data.</p>
             <p>For answering our surveys.</p>
@@ -1548,36 +1630,25 @@ permalink: /
         <div class="row mt-5 mt-sm-6 mt-md-7">
             <div class="col-sm-5">
                 <h2 class="mb-3"><span class="underline">To our funders</span></h2>
+                <p>Thank you for believing in our plans, and for providing the grants that make them possible. </p>
             </div>
             <div class="col-sm-7">
-                <p>Grants from these far-sighted organisations make all our development possible, fund our research and
-                    allow us to employ people who really know what they’re doing. Without this support, we quite
-                    literally couldn’t continue.</p>
-
-                <div class="name-grid my-5">
-                    <span class="text-red">Does it needs update?</span>
-                    <a href="https://hewlett.org" class="primary">William and Flora Hewlett Foundation</a>
-                    <a href="https://esmeefairbairn.org.uk" class="primary">Esmée Fairbairn Foundation</a>
+                <div class="name-grid my-4">
+                    <a href="https://quadrature.ai/foundation" class="primary">Quadrature Climate Foundation</a>
+                    <a href="https://postkodstiftelsen.se/en/" class="primary">Swedish Postcode Foundation</a>
                     <a href="https://www.adessium.org" class="primary">Adessium Foundation</a>
-                    <a href="https://www.thelegaleducationfoundation.org" class="primary">Legal Education Foundation</a>
-                    <a href="https://www.powertochange.org.uk">Power to Change</a>
-                    <a href="https://www.nesta.org.uk/">Nesta</a>
-                    <a href="https://postkodstiftelsen.se/en/">Swedish Postcode Foundation</a>
-                    <a href="https://www.jrct.org.uk/">Joseph Rowntree Charitable Trust</a>
-                    <a href="https://www.wfd.org/">Westminster Foundation for Democracy</a>
-                    <a href="https://www.ipu.org/">Inter-Parliamentary Union</a>
-                    <a href="https://www.undp.org/">UNDP</a>
-                    <a href="https://www.opengovpartnership.org/">Open Government Partnership</a>
+                    <a href="https://www.tnlcommunityfund.org.uk/" class="primary">National Lottery Community Fund</a>
+                    <a href="https://www.ned.org/" class="primary">National Endowment for Democracy</a>
+                    <a href="https://www.gov.uk/government/organisations/department-for-business-energy-and-industrial-strategy" class="primary">Department for Business, Energy and Industrial Strategy</a>
+                    <a href="https://thelegaleducationfoundation.org/" class="primary">Legal Education Foundation</a>
+                </div>
+                <div class="px-3 py-4 p-md-4 p-lg-5 mt-4 rounded-lg shadow text-center funding">
+                    <h3 class="h4 mb-3">Funding opportunities</h3>
+                    <p class="mx-auto" style="max-width: 30em;">Get in touch to find out how your organisation could support mySociety's innovative work. </p>
                 </div>
             </div>
         </div>
 
-        <div class="px-3 py-4 p-md-4 p-lg-5 mt-4 rounded-lg shadow text-center funding">
-            <h3 class="h4 mb-3">Funding opportunities</h3>
-            <span class="text-red">Needs update</span>
-            <p class="mx-auto" style="max-width: 30em;">Could you support our work to help local councils deliver on their climate commitments? <a href="https://www.mysociety.org/2020/11/06/making-it-easier-to-explore-council-climate-action-plans/">Read about our ongoing work here</a>.</p>
-            <p class="mx-auto mb-0" style="max-width: 30em;">And, no-one knows whether conferences will be possible next year or not. But whatever the situation, whether we have to meet on screen or can enjoy seeing one another face to face, we’ll be keeping those invaluable TICTeC events going – <a href="https://tictec.mysociety.org/sponsorship">and we’ll need sponsors</a>.</p>
-        </div>
 
         <div class="row mt-5 mt-sm-6 mt-md-7">
             <div class="col-sm-5">
@@ -1588,6 +1659,7 @@ permalink: /
                     <p>Richard Taylor</p>
                     <p>Martyn Dewar</p>
                     <p>Matt Knight</p>
+                    <p>Matt Lewin</p>
                     <p>Andrew Ying</p>
                     <p>Doug Paulley</p>
                     <p>Alex Skene</p>
@@ -1595,6 +1667,28 @@ permalink: /
                     <p>Alona Kiryak</p>
                     <p>Joanna Booth</p>
                     <p>William Fitzpatrick</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="row mt-5 mt-sm-6 mt-md-7">
+            <div class="col-sm-5">
+                <h2 class="mb-3"><span class="underline">To our trustees</span></h2>
+                <p style="max-width: 300px;">Who have given us their time and expertise</p>
+            </div>
+            <div class="col-sm-7">
+                <div class="name-grid">
+                    <span class="text-red">Needs update</span>
+                    <p>Ade Adewunmi</p>
+                    <p>Catherine Brown</p>
+                    <p>Jonathan Flowers</p>
+                    <p>Tim Hunt</p>
+                    <p>Julian Keutgen </p>
+                    <p>Mandy Merron</p>
+                    <p>Rachel Rank</p>
+                    <p>Ganesh Sittampalam</p>
+                    <p>Cam Ross</p>
+                    <p>Steve Skelton</p>
                 </div>
             </div>
         </div>
@@ -1610,7 +1704,7 @@ permalink: /
             </div>
         </div>
 
-        <div class="px-3 py-4 p-md-4 p-lg-5 mt-5 mt-md-6 mt-lg-7 shadow"
+        <div class="px-3 py-4 p-md-4 p-lg-5 mt-5 mt-md-6 mt-card-item shadow"
             style="border: 0.3em solid rgba(255, 255, 255, 0.253); background: linear-gradient(9deg, rgba(255,255,255,0) 0%, rgba(255,255,255,0.1));">
             <h2 class="text-center mt-0 mb-3">Governance facts and figures</h2>
             <p class="text-center mx-auto mb-md-5" style="max-width: 30em; font-style:italic; font-weight: 200;">Since we advocate for transparency, it’s only right that we
@@ -1623,13 +1717,32 @@ permalink: /
                         class="white-link">accounts on Companies House</a> along with our Annual Report from our Trustees.</li>
                 <li class="mb-2">Our <a href="https://find-and-update.company-information.service.gov.uk/company/05798215"
                         class="white-link">SocietyWorks accounts on Companies House</a>.</li>
-                <li class="mb-2">In 2021 we employed on average xx staff, each of whom were paid in excess of the real 
+                <li class="mb-2">In 2021 we employed on average 30 staff, each of whom were paid in excess of the real 
                     living wage. Salary costs are split across our Charity and Commercial companies, based on what projects staff spend their time on.</li>
                 <li class="mb-2">Our <a href="https://www.mysociety.org/about/board/"
                     class="white-link">Trustees</a> and <a href="https://www.societyworks.org/board/"
                     class="white-link">Non-Executive Directors</a> all give their very valuable 
                     time for free and receive no other compensation – for which we’re very grateful.</li>
             </ul>
+        </div>
+
+        <h2 class="text-center mt-5 mt-md-6 mt-lg-7 mb-4 mb-md-5">What's coming next?</h2>
+        <div class="row justify-content-center">
+            <div class="d-flex d-sm-block align-items-center col-sm-3 text-center mb-3 mb-sm-0 pr-sm-4 pr-md-5">
+                {% include image.html src="/assets/img/mark-cridge.jpg" loading="lazy" width="200" height="200" class="intro-mark-photo rounded-circle mr-3 mr-sm-0" alt="Mark Cridge" %}
+                <small class="d-block text-white mt-sm-3">Mark Cridge, Chief&nbsp;Executive</small>
+            </div>
+            <div class="col-sm-9 col-md-8 col-lg-7">
+                <p>2022 will all be about exploring how we Repower Democracy. We recently set out three 
+                    shifts we think we need to make as an organisation; designing for the needs of society,
+                     putting more power in more people’s hands, and 
+                     prising open institutions to better support meaningful 
+                     participation – <a class="white-link" href="https://www.mysociety.org/2021/11/24/three-shifts-well-make-to-repower-democracy/">you can read more about these shifts in this blog post</a> .
+                </p>
+                <p>We’ll continue to expand our work to help local councils better tackle the climate emergency, actively seek to campaign for the protection and expansion of FOI rights, and welcome lots of new collaborators and participants to our series of TICTeC Labs through the year.</p>
+                <p>Expect to see lots of new partnership activity, a lot of effort to create new meaningful opportunities to volunteer and get involved with our wider work, and we’ve got a lot to learn about how we might create community everywhere.</p>
+                <p>I’m excited about the challenges ahead, and scared for what might happen if we can’t better come together as a society to face them together. I hope you’ll get involved wherever you can.</p>
+            </div>
         </div>
 
         <div class="row mt-5 mt-sm-6 mt-md-7">

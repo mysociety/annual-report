@@ -76,6 +76,7 @@ body.lazyload .js-lazyload {
 img {
     max-width: 100%;
     height: auto;
+    border-radius: $border-radius;
 }
 
 .card-body {
@@ -103,9 +104,9 @@ img {
 }
 
 .border-bottom-card {
-    // Ideal for list with images
-    padding: 15px;
-    border-bottom: 1.5px solid transparentize($color: $white, $amount: 0.7);
+    border-top: 1.5px solid transparentize($color: $white, $amount: 0.7);
+    padding:10px 0;
+    margin-right: 50px;
 }
 
 .client-list {
