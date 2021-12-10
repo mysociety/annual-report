@@ -328,6 +328,8 @@ $margin-flex-card: 15px;
     a, picture, img {
       border-top-left-radius: $border-radius;
       border-top-right-radius: $border-radius;
+      border-bottom-left-radius: 0;
+      border-bottom-right-radius: 0;
 
     }
     img {
@@ -339,8 +341,13 @@ $margin-flex-card: 15px;
 }
 
 .flex-card.three-col-card {
+  justify-content: space-between;
+  @media only screen and (max-width: 900px) {
+    justify-content: center;
+  }
   .card-item {
-    flex-basis: calc(32% - #{$margin-flex-card} * 2);
+    flex-basis: 33%;
+    max-width: 350px;
     img {
       object-fit: cover;
       height: 200px;
