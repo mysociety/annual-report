@@ -107,3 +107,35 @@ img {
     padding: 15px;
     border-bottom: 1.5px solid transparentize($color: $white, $amount: 0.7);
 }
+
+.client-list {
+    margin: 0 ( $grid-gutter-width / -2 );
+    text-align: center;
+    // Start off with a 2 or 3 column grid on narrow screens
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+
+    li {
+        margin: map-get($spacers, 3) ($grid-gutter-width / 2);
+        min-height: 88px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    // Swap the grid for flex on wider screens, for a more natural layout
+    @include media-breakpoint-up(sm) {
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: center;
+    }
+
+    @include media-breakpoint-up(lg) {
+        // More spacious flex gutters on very wide screens
+        li {
+            margin-left: 20px;
+            margin-right: 20px;
+        }
+    }
+}
