@@ -281,3 +281,43 @@
     }
   }
 }
+
+.two-col-card-wrapper {
+  .card-body {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    justify-content: center;
+  }
+}
+
+.card-deck{
+  .card {
+    img {
+      object-fit: cover;
+      height: 300px;
+    }
+  }
+}
+
+.card-deck.three-col-card {
+  .card {
+    p.card-text {
+      font-size: 20px;
+      line-height: 150%;
+    }
+    img {
+      object-fit: cover;
+      height: 200px;
+    }
+  }
+}
+
+// card with no body and transparent background
+
+.fause-card {
+  img  {
+    height: 250px;
+    object-fit: cover;
+  }
+}
