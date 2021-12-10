@@ -14,7 +14,8 @@
     font-size: 4em;
 }
 
-.stat__name {
+.stat__name,
+.most-visited__title {
     font-size: 1em;
     line-height: 1.2em;
     display: block;
@@ -23,4 +24,16 @@
     position: relative;
     z-index: 1;
     // max-width: 380px;
+}
+
+.most-visited {
+    li {
+        padding-top: 0.5em;
+        margin-top: 0.5em;
+        border-top: 1px solid rgba(#fff, 0.5);
+    }
+
+    a {
+        color: #fff;
+    }
 }
