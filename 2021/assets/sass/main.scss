@@ -104,9 +104,11 @@ img {
 }
 
 .border-bottom-card {
-    border-top: 1.5px solid transparentize($color: $white, $amount: 0.7);
-    padding:10px 0;
+    // border-top: 1.5px solid transparentize($color: $white, $amount: 0.7);
+    padding:10px;
     margin-right: 50px;
+    background: transparentize($color: $white, $amount: 0.7);
+    border-radius: 2px;
 }
 
 .client-list {
