@@ -1,52 +1,65 @@
-/*generic styles for container*/
+// generic styles for container
 .recipe-wrapper{
-    background:$white;
-    padding:50px 25px;
-     color:$black;
-     transform: rotate(0.8deg);
-  /*required for positioning of pseudo elements below*/
-    position:relative;
+    background: $white;
+    padding: 1.5rem;
+    color: $black;
+    transform: rotate(0.8deg);
+    // required for positioning of pseudo elements below
+    position: relative;
     box-shadow: 0 5px 10px rgba(0,0,0,0.2);
     border-radius: $border-radius;
     max-width: 750px;
+
+    @include media-breakpoint-up('md') {
+        padding: 2rem;
+    }
+
+    @include media-breakpoint-up('lg') {
+        padding: 3rem;
+    }
+
     ul {
         li { 
             margin-bottom: 25px;
             font-size: 20px;
         }
+
         img {
-            // margin-top: 20px;
             border: 1px solid transparentize($color: $black, $amount: 0.9)
         }
     }
 }
-  /* css shape white corner positioned to top right*/
-.recipe-wrapper:after{content:"";
+
+// css shape white corner positioned to top right
+.recipe-wrapper:after{
+    content: "";
     width: 0; 
     height: 0; 
     border-top: 3rem solid transparent; 
     border-left: 3rem solid transparent;
-    position:absolute;
-    right:0;
-    top:0;
+    position: absolute;
+    right: 0;
+    top: 0;
 }
-  /* css shape light blue corner positioned to top right*/
-  .recipe-wrapper:before{content:"";
+
+// css shape light blue corner positioned to top right
+.recipe-wrapper:before{
+    content: "";
     width: 0; 
     height: 0; 
     border-bottom: 5rem solid #e3e3e3; 
     border-right: 5rem solid transparent;
-    position:absolute;
-    right:0;
-    top:0;
+    position: absolute;
+    right: 0;
+    top: 0;
     box-shadow: -5px 6px 10px rgba(129, 127, 127, 0.644);
-    
 }
 
 .recipe-card-wrapper {
     display: flex;
     flex-direction: row;
     justify-content: center;
+
     .recipe-card {
         display: flex;
         flex-direction: column;
@@ -65,10 +78,12 @@
             border-top-right-radius: 0;
             border-bottom-right-radius: 0;
         }
+
         &:nth-child(2) {
             border-top-left-radius: 0;
             border-bottom-left-radius: 0;
         }
+
         .recipe-card-heading {
             text-transform: uppercase;
             color: $green;
@@ -76,6 +91,7 @@
             letter-spacing: 0.05em;
             font-size: 17px;
         }
+
         .recipe-card-info {
             font-size: 20px;
         }

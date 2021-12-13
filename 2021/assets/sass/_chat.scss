@@ -22,34 +22,6 @@ p.chat, div.chat {
     padding: 0.8em 1em;
 }
 
-div.chat {
-    display: flex;
-    flex-direction: row;
-    img {
-        max-width: 75px;
-        max-height: 75px;
-        @media only screen and (max-width: 900px) {
-            max-width: 55px;
-            max-height: 55px;
-        }
-    }
-}
-
-.d-flex {
-    $margin-right-chat: 25px;
-    div.chat {
-        flex-basis: calc(50% - #{$margin-right-chat});
-        margin-right: 0;
-        @media only screen and (max-width: 600px) {
-            flex-basis: 100%;
-        }
-    }
-    .chat:nth-child(2n+1) {
-        margin-left: 0;
-        margin-right: 25px;
-    }
-}
-
 img.chat {
     max-width: 95%;
 }
