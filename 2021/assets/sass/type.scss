@@ -36,3 +36,8 @@ ul {
     padding-inline-start: 0;
     list-style: none;
 }
+
+ul.is--with-bullet {
+    list-style:disc;
+    padding-inline-start: 40px;
+}
