@@ -340,7 +340,7 @@ $margin-flex-card: 15px;
 
 }
 
-.flex-card.three-col-card {
+.flex-card.is--three {
   justify-content: space-between;
   @media only screen and (max-width: 900px) {
     justify-content: center;
