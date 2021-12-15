@@ -24,6 +24,8 @@ $mysoc-footer-link-hover-text-color: #fff;
 $mysoc-footer-divider-color: #4b4b4b;
 $mysoc-footer-legal-text-color: #9a9a9a;
 
+$grid-gutter-width: 30px; // define here, so we can use it immediately in our custom $spacers hash
+
 
 // Bootstrap overrides from here on, in roughly the same order
 // they appear in bootstrap/scss/_variables.scss
@@ -63,6 +65,7 @@ $spacers: (
     8: ($spacer * 7.5),
     9: ($spacer * 9),
     10: ($spacer * 12),
+    gutter: $grid-gutter-width,
 );
 
 $body-color: $black;
