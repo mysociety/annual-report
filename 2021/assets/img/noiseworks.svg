@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="600px" height="315px" viewBox="0 0 600 315" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>noiseworks</title>
+    <g id="noiseworks" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <rect fill="#E3E7FB" x="0" y="0" width="600" height="315"></rect>
+        <g id="noiseworks-logo-full-colour-dark" transform="translate(59.000000, 101.000000)" fill-rule="nonzero">
+            <path d="M94.12,72.93 L94.07,72.7 L94.07,53.7 L94.16,53.61 L94.07,53.53 L94.12,53.48 L84.75,9.48 L40.25,0 L0,39.51 L0,58.9 L0,58.9 L0,58.9 L0,59 L9.37,103 L53.86,112.5 L94.16,73.06 L94.07,73 L94.12,72.93 Z M32.12,60.06 L44.59,47.82 L62.11,51.57 L62.39,52.9 L50,65.14 L32.43,61.39 L32.12,60.06 Z" id="Shape" fill="#8976B4"></path>
+            <path d="M44.59,28.4 L28.74,44 L28.74,44 L28.74,44 L32.43,61.36 L50,65.14 L65.8,49.55 L65.8,49.55 L65.8,49.55 L62.11,32.15 L44.59,28.4 Z M40.25,0 L84.75,9.5 L94.12,53.5 L94.07,53.55 L94.16,53.63 L53.9,93.16 L9.41,83.66 L0,39.65 L0,39.65 L0,39.51 L40.25,0 Z" id="Shape" fill="#3B3F44"></path>
+            <text id="Noise" fill="#3B3F44" font-family="Lato-Black, Lato" font-size="68.45" font-weight="800">
+                <tspan x="111.98" y="70.68">Noise</tspan>
+            </text>
+            <g id="Group" transform="translate(291.810000, 2.680000)" fill="#8976B4" font-family="Lato-Regular, Lato" font-size="68.45" font-weight="normal">
+                <text id="W">
+                    <tspan x="0" y="68">W</tspan>
+                </text>
+                <text id="ork">
+                    <tspan x="62.91" y="68">ork</tspan>
+                </text>
+                <text id="s">
+                    <tspan x="160.31" y="68">s</tspan>
+                </text>
+            </g>
+        </g>
+    </g>
+</svg>

@@ -98,29 +98,6 @@
     }
 }
 
-.list-flex {
-    display:flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    span.list-flex-item {
-        flex-basis: 55%;
-    }
-    div.list-flex-item {
-        flex-basis: 40%;
-    }
-
-    @media only screen and (max-width: 600px) {
-        span.list-flex-item {
-            flex-basis: 100%;
-        }
-        div.list-flex-item {
-            flex-basis: 100%;
-            margin-top: 20px;
-        }
-    }
-}
-
 $clip-height: 60px;
 $clip-width: 15px;
 
