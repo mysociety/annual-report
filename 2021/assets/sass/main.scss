@@ -59,11 +59,23 @@
 @import "client-list";
 @import "mysoc-standard-footer";
 
-body.lazyload .js-lazyload {
+html.lazyload .js-lazyload {
     background: none !important;
     &:before {
         background: none !important;
     }
+}
+
+// hide anything with this class if js is working
+html.js .hidden-js {
+    display: none;
+    visibility: hidden;
+}
+
+// hide anything with this class if js is NOT working
+html.no-js .hidden-nojs {
+    display: none !important;
+    visibility: hidden;
 }
 
 .section-slope {
