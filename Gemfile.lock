@@ -57,6 +57,3 @@ DEPENDENCIES
   jekyll-minibundle
   sass
   therubyracer
-
-BUNDLED WITH
-   1.16.0
