@@ -1,0 +1,11 @@
+.card-img,
+.card-img-top {
+    img {
+        @include border-top-radius($card-inner-border-radius);
+    }
+}
+
+.card-body {
+    line-height: 1.35em;
+    padding: 1.05rem $card-spacer-x;
+}

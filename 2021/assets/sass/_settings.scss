@@ -1,0 +1,96 @@
+$mysoc-font-stack: 'Source Sans Pro', Helvetica, Arial, sans-serif;
+$condensed-font-stack: 'Pragati Narrow', Oswald, Impact, sans-serif;
+
+$color-mysoc-blue: #4faded;            // 8.53:1 contrast with #000
+$color-mysoc-green: #62b356;           // 8.1:1 contrast with #000
+$color-mysoc-yellow: #ffd836;          // 15.12:1 contrast with #000
+$color-mysoc-orange: #f4a140;          // 10.01:1 contrast with #000
+$color-mysoc-red: #e04b4b;             // 5.27:1 contrast with #000
+$color-mysoc-violet: #a94ca6;          // 4.27:1 contrast with #000
+$color-mysoc-brighter-violet: #b559b2; // 5.03:1 contrast with #000
+$color-mysoc-purple: #5c377f;          // 2.3:1 contrast with #000
+$color-mysoc-off-white: #f3f1eb;
+$color-mysoc-light-grey: #e2dfd9;
+$color-mysoc-dark-grey: #6c6b68;
+$color-mysoc-black: #333333;
+
+$color-facebook-blue: #3b5998;
+$color-twitter-blue: #1da1f2;
+
+$mysoc-footer-background-color: $color-mysoc-black;
+$mysoc-footer-text-color: #acacac;
+$mysoc-footer-link-text-color: #fff;
+$mysoc-footer-link-hover-text-color: #fff;
+$mysoc-footer-divider-color: #4b4b4b;
+$mysoc-footer-legal-text-color: #9a9a9a;
+
+$grid-gutter-width: 30px; // define here, so we can use it immediately in our custom $spacers hash
+
+
+// Bootstrap overrides from here on, in roughly the same order
+// they appear in bootstrap/scss/_variables.scss
+
+$black: rgb(8, 8, 8);
+$white: #fff;
+
+$primary: $color-mysoc-blue;
+
+$theme-colors: (
+    'mysoc-blue': $color-mysoc-blue,
+    'mysoc-green': $color-mysoc-green,
+    'mysoc-yellow': $color-mysoc-yellow,
+    'mysoc-orange': $color-mysoc-orange,
+    'mysoc-red': $color-mysoc-red,
+    'mysoc-violet': $color-mysoc-violet,
+    'mysoc-brighter-violet': $color-mysoc-brighter-violet,
+    'mysoc-purple': $color-mysoc-purple,
+    'mysoc-off-white': $color-mysoc-off-white,
+    'mysoc-light-grey': $color-mysoc-light-grey,
+    'mysoc-dark-grey': $color-mysoc-dark-grey,
+    'mysoc-black': $color-mysoc-black,
+    'white': $white,
+    'black': $black,
+);
+
+$spacer: 1rem; // have to define this, so we can use it in this file.
+$spacers: (
+    0: 0,
+    1: ($spacer * .25),
+    2: ($spacer * .5),
+    3: $spacer,
+    4: ($spacer * 1.5),
+    5: ($spacer * 3),
+    6: ($spacer * 4.5),
+    7: ($spacer * 6),
+    8: ($spacer * 7.5),
+    9: ($spacer * 9),
+    10: ($spacer * 12),
+    gutter: $grid-gutter-width,
+);
+
+$body-color: $black;
+
+$link-color: darken($color-mysoc-blue, 10%);
+
+$font-family-base: $mysoc-font-stack;
+
+// We want nice big text on large screens, and smaller text on small screens.
+// So we set the base font size to something big (and the headings to something
+// frankly huge) and then use Bootstrap's Responsive Font Size system to scale
+// those font sizes down to something more normal on the narrowest screens.
+$enable-responsive-font-sizes: true;
+$font-size-base: 1.5rem; // about 24px
+$h1-font-size: 7.5rem; // about 120px
+$h2-font-size: 4rem; // about 64px
+$h3-font-size: 3rem; // about 48px
+$h4-font-size: 2rem; // about 32px
+$rfs-base-font-size: 1rem; // about 16px, down from default 1.25rem/20px
+
+$headings-font-weight: bold;
+$headings-line-height: 1.1; // down from 1.2
+
+$btn-padding-x: 1rem;
+$btn-padding-x-sm: 0.75rem;
+$btn-padding-x-lg: 1.5rem;
+
+$card-border-width: 0;
