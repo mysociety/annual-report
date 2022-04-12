@@ -1,7 +1,7 @@
 name: annualreport2018
 baseurl:
 host: 0.0.0.0
-gems: ['jekyll/minibundle']
+plugins: ['jekyll/minibundle']
 title: >
   mySociety Year in Review 2018
 description: >
