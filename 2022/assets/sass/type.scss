@@ -1,0 +1,42 @@
+h3, h4, h5,
+.h3, .h4, .h5 {
+    line-height: 1.2;
+}
+
+h6, .h6 {
+    letter-spacing: 0.05em;
+    font-weight: 400;
+}
+
+.section-intro {
+    max-width: 30em;
+    opacity: 0.8;
+
+    &:after {
+        display: block;
+        background: transparentize(#fff, 0.8);
+        height: 0.75rem;
+        width: 50%;
+        content: "";
+        margin: 3.5rem 0;
+    }
+}
+
+.text-red {
+    color: white;
+    font-size: 50px;
+    margin-top: 50px;
+    margin-bottom: 50px;
+    background-color: red !important;
+    padding: 10px;
+}
+
+ul {
+    padding-inline-start: 0;
+    list-style: none;
+}
+
+ul.is--with-bullet {
+    list-style:disc;
+    padding-inline-start: 40px;
+}
