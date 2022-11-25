@@ -16,24 +16,29 @@
         margin-left: 5%;
         margin-right: 0;
     }
+
+    & + p {
+        font-weight: 700;
+        opacity: 0.8;
+    }
 }
 
 p.chat, div.chat {
     padding: 0.8em 1em;
 }
 
-div.chat {
-    display: flex;
-    flex-direction: row;
-    img {
-        max-width: 75px;
-        max-height: 75px;
-        @media only screen and (max-width: 900px) {
-            max-width: 55px;
-            max-height: 55px;
-        }
-    }
-}
+// div.chat {
+//     display: flex;
+//     flex-direction: row;
+//     img {
+//         max-width: 75px;
+//         max-height: 75px;
+//         @media only screen and (max-width: 900px) {
+//             max-width: 55px;
+//             max-height: 55px;
+//         }
+//     }
+// }
 
 .d-flex {
     $margin-right-chat: 25px;
