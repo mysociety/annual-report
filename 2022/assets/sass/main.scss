@@ -80,6 +80,13 @@ img {
     border-radius: $border-radius;
 }
 
+.card {
+    overflow: hidden;
+    img {
+        border-radius: 0;
+    }
+}
+
 .card-body {
     line-height: 1.35em;
 }
