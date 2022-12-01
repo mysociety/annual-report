@@ -1,5 +1,6 @@
 a {
     text-underline-offset: $link-underline-offset;
+    text-decoration-thickness: 0.1em !important;
 
     &:hover {
         text-decoration: underline;
@@ -18,6 +19,7 @@ a {
 .white-link {
     color: $white;
     text-decoration: underline;
+    text-decoration-color:transparentize($color: $white, $amount: 0.3);
 
     &:hover {
         color: $white;
@@ -28,6 +30,7 @@ a {
 .black-link {
     color: $black;
     text-decoration: underline;
+    text-decoration-color:transparentize($color: $black, $amount: 0.3);
 
     &:hover {
         color: $black;
