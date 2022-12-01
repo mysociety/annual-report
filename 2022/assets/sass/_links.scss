@@ -1,27 +1,57 @@
-.white-link {
-    color: #fff;
-    background-image: linear-gradient(rgba(#fff, 0.6) 0%, rgba(#fff, 0.6) 100%);
-    background-size: 100% 1px;
-    background-position: 50% 90%;
-    background-repeat: no-repeat;
+a {
+    text-underline-offset: $link-underline-offset;
 
     &:hover {
-        color: #fff;
+        text-decoration: underline;
+    }
+
+    &:focus {
+        background-color: $color-mysoc-yellow;
+        color: $black;
+        img {
+            background-color: $black;
+            outline: 3px solid yellow;
+        }
+    }
+}
+
+.white-link {
+    color: $white;
+    text-decoration: underline;
+
+    &:hover {
+        color: $white;
         text-decoration: none;
-        background-image: linear-gradient(#fff 0%, #fff 100%);
     }
 }
 
 .black-link {
-    color: #000;
-    background-image: linear-gradient(rgba(#000, 0.6) 0%, rgba(#000, 0.6) 100%);
-    background-size: 100% 1px;
-    background-position: 50% 90%;
+    color: $black;
+    text-decoration: underline;
+
+    &:hover {
+        color: $black;
+        text-decoration: none;
+    }
+}
+
+.is-with-icon {
+    text-decoration: none;
+    padding-left: 30px;
+    background-image: url('../img/icons/link-black.svg');
+    background-size: contain;
+    background-position: left 0 center;
     background-repeat: no-repeat;
 
     &:hover {
-        color: #000;
-        text-decoration: none;
-        background-image: linear-gradient(#000 0%, #000 100%);
+        background-image: url('../img/icons/link-black.svg');
+        -webkit-filter: invert(100%);
+        filter: invert(100%);
+    }
+
+    &:focus {
+        background-image: url('../img/icons/link-black.svg');
+        background-color: $color-mysoc-yellow;
+        color: $black;
     }
 }
