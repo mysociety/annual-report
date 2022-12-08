@@ -11,6 +11,24 @@
   border: $card-border-width solid $card-border-color;
   @include border-radius($card-border-radius);
 
+
+  a.col-4 {
+    overflow: hidden;
+
+    img {
+      -webkit-transition: transform 300ms ease;
+      -moz-transition: transform 300ms ease;
+      -ms-transition: transform 300ms ease;
+      -o-transition: transform 300ms ease;
+      transition: transform 300ms ease;
+    }
+    &:hover, &:focus {
+      img {
+        transform: scale(1.1);
+      }
+    }
+  }
+
   > hr {
     margin-right: 0;
     margin-left: 0;
@@ -310,6 +328,7 @@ $margin-flex-card: 15px;
     margin-right: calc(#{$margin-flex-card} * -1);
     margin-left: calc(#{$margin-flex-card} * -1);
   .card-item {
+    overflow: hidden;
     margin-right: $margin-flex-card;
     margin-left: $margin-flex-card;
     display: flex;
@@ -317,6 +336,12 @@ $margin-flex-card: 15px;
     border-radius: $border-radius;
     margin-top: 35px;
     flex-basis: calc(50% - #{$margin-flex-card} * 2);
+
+    -webkit-transition: transform 300ms ease;
+    -moz-transition: transform 300ms ease;
+    -ms-transition: transform 300ms ease;
+    -o-transition: transform 300ms ease;
+    transition: transform 300ms ease;
     @media only screen and (max-width: 750px) {
       flex-basis: 100%;
     }
@@ -335,6 +360,18 @@ $margin-flex-card: 15px;
     img {
       object-fit: cover;
       height: 300px;
+    }
+
+    a.card-img-top {
+      -webkit-transition: transform 300ms ease;
+      -moz-transition: transform 300ms ease;
+      -ms-transition: transform 300ms ease;
+      -o-transition: transform 300ms ease;
+      transition: transform 300ms ease;
+
+      &:hover, &:focus{
+        transform: scale(1.1);
+      }
     }
   }
 
