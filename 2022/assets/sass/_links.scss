@@ -6,12 +6,17 @@ a {
         text-decoration: underline;
     }
 
-    &:focus {
-        background-color: $color-mysoc-yellow;
-        color: $black;
+    img {
+        -webkit-transition: transform 300ms ease;
+        -moz-transition: transform 300ms ease;
+        -ms-transition: transform 300ms ease;
+        -o-transition: transform 300ms ease;
+        transition: transform 300ms ease;
+    }
+
+    &:hover, &:focus {
         img {
-            background-color: $black;
-            outline: 3px solid yellow;
+          transform: scale(1.05);
         }
     }
 }
