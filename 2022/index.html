@@ -2,11 +2,9 @@
 layout: default
 permalink: /
 ---
-<!-- TODO check contrast for links -->
-<!-- TODO Rearrange navbar -->
-<!-- TODO Change hover effect for links -->
+
 <!-- TODO curly quotex -->
-<h1 class="text-center mb-0 py-6 py-sm-8 header" id="intro">mySociety in&nbsp;2022</h1>
+<h1 class="text-center mb-0 py-6 py-sm-9 header" id="intro"><p class="h3" style="opacity:0.9">Repowering democracy</p>mySociety in&nbsp;2022</h1>
 
 <button class="btn menu-toggle js-toggle-menu d-flex align-items-center">
     Jump to section
@@ -17,17 +15,16 @@ permalink: /
     <a href="#new" class="bg-mysoc-blue">What’s new?</a>
     <a href="#climate" class="bg-mysoc-green">Climate</a>
     <a href="#transparency" class="bg-mysoc-brighter-violet">Transparency</a>
-    <a href="#societyworks" class="bg-mysoc-orange">SocietyWorks</a>
-    <a href="#community" class="bg-mysoc-blue">Community</a>
     <a href="#democracy" class="bg-mysoc-green">Democracy</a>
+    <a href="#societyworks" class="bg-mysoc-orange">SocietyWorks</a>
     <a href="#tictec" class="bg-mysoc-brighter-violet">TICTeC</a>
-    <a href="#thanks" class="bg-mysoc-red">Thank you</a>
+    <a href="#thanks" class="bg-mysoc-blue">Thank you</a>
     <button class="bg-mysoc-black js-toggle-menu">
         Close menu
         {% include close.svg classes="ml-3" %}
     </button>
 </nav>
-’
+
 <section class="bg-mysoc-off-white py-4 py-sm-6 py-md-7" aria-label="Introduction">
     <div class="container">
         <div class="row justify-content-center">
@@ -47,127 +44,132 @@ permalink: /
     </div>
 </section>
 
+{% include section-slope.html topleft="mysoc-off-white" bottomright="mysoc-purple" %}
+
+<section class="bg-mysoc-purple pt-4 pt-sm-6 pt-md-7 pb-5 pb-md-9" id="donation-cta" aria-label="donation">
+    <div class="container text-white">
+        <div class="row">
+            <div class="col-sm-6 mx-auto">
+                <h2 class="mt-0"> <span class="underline">Can you support our work?</span></h2>
+            </div>
+            <div class="col-sm-6 mx-auto">
+                <p>In the current climate, it's more important than ever that we hold our representatives to account, push for better transparency from our public authorities, and empower citizens to play an active part in our democracy.</p>
+                <p><big>If you're able to do so, please make a donation.We know that the cost of living is a concern for many, and we don't take your contributions lightly. Now, more than ever, we will put every penny to the most effective use we can.</big></p>
+                <a href="https://www.mysociety.org/donate/" class="btn btn-light">Donate</a>
+            </div>
+        </div>
+    </div>
+</section>
+
+{% include section-slope.html topleft="mysoc-purple" bottomright="mysoc-off-white" %}
 {% include section-slope.html topleft="mysoc-off-white" bottomright="mysoc-blue" %}
 
 <section class="bg-mysoc-blue pt-4 pt-sm-6 pt-md-7 pb-7 pb-md-9" id="new" aria-label="What’s new?">
     <div class="container">
-        <h1 class="text-center mt-0">So what’s new?</h1>
+        <h2 class="mt-0 h1 text-center">What’s new?</h2>
 
+        <h3 class="mb-3 h2 text-center mt-5 mt-sm-6 mt-md-7"><span class="underline">Warm welcomes…</span></h3>
         <div class="row mt-5 mt-sm-6 mt-md-7">
-            <div class="col-md-5">
-                <h2 class="mb-3"><span class="underline">Warm welcomes…</span></h2>
+            <div class="col-sm-6 col-md-4">
+                <div class="my-4 d-flex flex-column align-items-center">
+                    {% include image.html src="/assets/img/alexander-griffen.jpg" webp="/assets/img/alexander-griffen.webp" loading="lazy" width="150" height="150" class="rounded-circle mx-auto border border-light" alt="Alexander Griffen" %}
+                    <p class="mt-3 h6">Alexander Griffen</p>
+                    <small>Developer</small>
+                </div>
             </div>
-            <div class="col-md-7">
-                <p>2021 saw a bevy of new faces join the team, including:</p>
-
-                <div class="d-flex align-items-center my-4">
-                    {% include image.html src="/assets/img/alona.jpg" loading="lazy" width="80" height="80" class="rounded-circle mr-3" alt="Alona Kiriak" %}
-                    <p class="mb-0">Volunteer <strong>Alona</strong>, informing the WhatDoTheyKnow team with updates on the ICO.</p>
+            <div class="col-sm-6 col-md-4">
+                <div class="my-4 d-flex flex-column align-items-center">
+                    {% include image.html src="/assets/img/amelia-nicholas.jpg" webp="/assets/img/amelia-nicholas.webp" loading="lazy" width="150" height="150" class="rounded-circle mx-auto border border-light" alt="Amelia Nicholas" %}
+                    <p class="mt-3 h6">Amelia Nicholas</p>
+                    <small>Head of Client Partnerships</small>
                 </div>
-
-                <div class="d-flex align-items-center my-4">
-                    {% include image.html src="/assets/img/angela.jpg" loading="lazy" width="80" height="80" class="rounded-circle mr-3" alt="Angela Dixon" %}
-                    <p class="mb-0"><strong>Angela</strong>, keeping a firm hand on the organisation’s purse strings.</p>
+            </div>
+            <div class="col-sm-6 col-md-4">
+                <div class="my-4 d-flex flex-column align-items-center">
+                    {% include image.html src="/assets/img/jill-aquarone.jpg" webp="/assets/img/jill-aquarone.webp" loading="lazy" width="150" height="150" class="rounded-circle mx-auto border border-light" alt="Jill Aquarone" %}
+                    <p class="mt-3 h6">Jill Aquarone</p>
+                    <small>Finance and Admin Manager</small>
                 </div>
-
-                <div class="d-flex align-items-center my-4">
-                    {% include image.html src="/assets/img/bekki.jpg" loading="lazy" width="80" height="80" class="rounded-circle mr-3" alt="Bekki Leaver" %}
-                    <p class="mb-0"><strong>Bekki</strong>, baking user-centricity into all our commercial services.</p>
+            </div>
+            <div class="col-sm-6 col-md-4">
+                <div class="my-4 d-flex flex-column align-items-center">
+                    {% include image.html src="/assets/img/nicolle-whitehead.jpg" webp="/assets/img/nicolle-whitehead.webp" loading="lazy" width="150" height="150" class="rounded-circle mx-auto border border-light" alt="Nicolle Whitehead" %}
+                    <p class="mt-3 h6">Nicolle Whitehead</p>
+                    <small>Account Manager</small>
                 </div>
-
-                <div class="d-flex align-items-center my-4">
-                    {% include image.html src="/assets/img/emily.jpg" loading="lazy" width="80" height="80" class="rounded-circle mr-3" alt="Emily Kippax" %}
-                    <p class="mb-0"><strong>Emily</strong>, delivering our Climate programme, mainly through the medium of spreadsheets.</p>
+            </div>
+            <div class="col-sm-6 col-md-4">
+                <div class="my-4 d-flex flex-column align-items-center">
+                    {% include image.html src="/assets/img/nik-gupta.jpg" webp="/assets/img/nik-gupta.webp" loading="lazy" width="150" height="150" class="rounded-circle mx-auto border border-light" alt="Nik Gupta" %}
+                    <p class="mt-3 h6">Nik Gupta</p>
+                    <small>Developer</small>
                 </div>
-
-                <div class="d-flex align-items-center my-4">
-                    {% include image.html src="/assets/img/joanna.jpg" loading="lazy" width="80" height="80" class="rounded-circle mr-3" alt="Joanna Booth" %}
-                    <p class="mb-0">Volunteer <strong>Joanna</strong>, xxxxxxxxxxxxx description incoming xxxxxxxxxxxxx xxxxxxxxxxxxx.</p>
+            </div>
+            <div class="col-sm-6 col-md-4">
+                <div class="my-4 d-flex flex-column align-items-center">
+                    {% include image.html src="/assets/img/pauline-castres.jpg" webp="/assets/img/pauline-castres.webp" loading="lazy" width="150" height="150" class="rounded-circle mx-auto border border-light" alt="Pauline Castres" %}
+                    <p class="mt-3 h6">Pauline Castres</p>
+                    <small>Policy and Advocacy Manager</small>
                 </div>
-
-                <div class="d-flex align-items-center my-4">
-                    {% include image.html src="/assets/img/lizetta.jpg" loading="lazy" width="80" height="80" class="rounded-circle mr-3" alt="Lizetta Lyster" %}
-                    <p class="mb-0"><strong>Lizetta</strong>, spinning multiple plates, aka project managing the SocietyWorks team.</p>
+            </div>
+            <div class="col-sm-6 col-md-4">
+                <div class="my-4 d-flex flex-column align-items-center">
+                    {% include image.html src="/assets/img/rachel-shirley.jpg" webp="/assets/img/rachel-shirley.webp" loading="lazy" width="150" height="150" class="rounded-circle mx-auto border border-light" alt="Rachel Shirley" %}
+                    <p class="mt-3 h6">Rachel Shirley</p>
+                    <small>Events and Engagement Manager</small>
                 </div>
-
-                <div class="d-flex align-items-center my-4">
-                    {% include image.html src="/assets/img/lucas.jpg" loading="lazy" width="80" height="80" class="rounded-circle mr-3" alt="Lucas Cumsille" %}
-                    <p class="mb-0"><strong>Lucas</strong>, making everything we do look good, as part of the Design team.</p>
+            </div>
+            <div class="col-sm-6 col-md-4">
+                <div class="my-4 d-flex flex-column align-items-center">
+                    {% include image.html src="/assets/img/victoria-mihell.jpg" webp="/assets/img/victoria-mihell.webp" loading="lazy" width="150" height="150" class="rounded-circle mx-auto border border-light" alt="Victoria Mihell-Hale" %}
+                    <p class="mt-3 h6">Victoria Mihell-Hale</p>
+                    <small>Developer</small>
                 </div>
-
-                <div class="d-flex align-items-center my-4">
-                    {% include image.html src="/assets/img/ludo.jpg" loading="lazy" width="80" height="80" class="rounded-circle mr-3" alt="Ludo Tolhurst-Cleaver" %}
-                    <p class="mb-0"><strong>Ludo</strong>, creating our SocietyWorks services with plenty of Perl and a dash of inspiration.</p>
-                </div>
-
-                <div class="d-flex align-items-center my-4">
-                    {% include image.html src="/assets/img/moray.jpg" loading="lazy" width="80" height="80" class="rounded-circle mr-3" alt="Moray Jones" %}
-                    <p class="mb-0"><strong>Moray</strong>, also coding for SocietyWorks, also forging the code that makes it all tick.</p>
-                </div>
-
-                <div class="d-flex align-items-center my-4">
-                    {% include image.html src="/assets/img/sallyr.jpg" loading="lazy" width="80" height="80" class="rounded-circle mr-3" alt="Sally Reader" %}
-                    <p class="mb-0"><strong>Sally</strong>, building bridges and finessing services, by overseeing relationships with WhatDoTheyKnow’s users.</p>
-                </div>
-                
-                <div class="d-flex align-items-center my-4">
-                    {% include image.html src="/assets/img/sion.jpg" loading="lazy" width="80" height="80" class="rounded-circle mr-3" alt="Siôn Williams" %}
-                    <p class="mb-0"><strong>Siôn</strong>, chatting to multiple people every day, to create a community for our Climate programme.</p>
-                </div>
-                
-                <div class="d-flex align-items-center mt-4">
-                    {% include image.html src="/assets/img/william.png" loading="lazy" width="80" height="80" class="rounded-circle mr-3" alt="William Fitzpatrick" %}
-                    <p class="mb-0">Volunteer <strong>William</strong>, xxxxxxxxxxxxx description incoming xxxxxxxxxxxxx xxxxxxxxxxxxx.</p>
+            </div>
+            <div class="col-sm-6 col-md-4">
+                <div class="my-4 d-flex flex-column align-items-center">
+                    {% include image.html src="/assets/img/yolanda-gomes.jpg" webp="/assets/img/yolanda-gomes.webp" loading="lazy" width="150" height="150" class="rounded-circle mx-auto border border-light" alt="Yolanda Gomes" %}
+                    <p class="mt-3 h6">Yolanda Gomes</p>
+                    <small>Head of HR & Support Services</small>
                 </div>
             </div>
         </div>
 
         <div class="row mt-5 mt-sm-6 mt-md-7">
-            <div class="col-md-5">
-                <h2 class="mb-3"><span class="underline">…and fond farewells</span></h2>
-            </div>
-            <div class="col-md-7">
-                <p>Designers <strong>Martin</strong> and <strong>Clive</strong> are off to ‘make it pop’ somewhere else. Missing you guys already.</p>
-                <p><strong>Abi</strong> has been overseeing mySociety’s HR and office management with hard stares and common sense since 2010. We wish her a future where timesheets are taken more seriously.</p>
-                <p><strong>Bec</strong> moves on after seven years as our Head of Research. Her commitment to assessing both the state of democracy and the quality of the wine in countries around the world have been equally admirable.</p>
-                <p>Goodbye to <strong>Manar Hussain</strong> who stepped down at the end of last year after an amazing 17 years involvement with mySociety! <strong>Kate Jones</strong> also stepped down from the board, and our indomitable Chair of SocietyWorks and Trustee of mySociety, <strong>Jonathan Flowers</strong>, ended his term of office after six amazing years of support, guidance and advice. Thank you Manar, Kate and Jonathan for your service.</p>
-
+            <div class="col-12">
+                <h3 class="h2 mb-4 text-center"><span class="underline">Still missing you</span></h2>
+                <p class="text-center"> <big>Mark, David, Louise and Ludo.</big> </p>
             </div>
         </div>
 
         <hr style="border-top: 0.3em solid #fff; opacity:0.3;" class="mt-5 mt-sm-6 mb-4 mb-sm-5">
 
         <div class="row mt-5 mt-sm-6 mt-md-7">
-            <div class="col-sm-5">
-                <h2 class="h3 mb-3"><span class="underline">Words from mySociety’s Chair</span></h2>
-                <div class="d-flex flex-column">
-                    {% include image.html src="/assets/img/catherine.jpg" loading="lazy" width="100" height="100" class="mt-5 rounded-circle d-inline-block mr-3 mr-sm-0" alt="Catherine Brown" %}
-                    <small class="d-inline text-white mt-sm-3">Catherine Brown,<br> Chair of the board</small>
-                </div>
+            <div class="col-12">
+                <h3 class="h2 mb-3"><span class="underline">About our trustees</span></h3>
             </div>
-            <div class="col-sm-7">
-                <p>What a year &mdash; for the world and for mySociety.</p>
-                <p>It has been a busy year for mySociety and the first thing I want to say is a huge “thank you” to the team.  As you can see from the contents of this review, they have done an amazing job – continuing to support and develop the services that so many people rely on, while also forging a new strategy to make sure we can make an even bigger impact in the future.</p>
-                <p>I can’t choose just one favourite highlight for the year – there are just too many great things going on. The work to help people follow through on WhatDoTheyKnow queries, and stop organisations using the exemptions wrongly to brush off Freedom of Information requests, is certainly one favourite. And the work with our partner Climate Emergency UK to make local authorities’ Climate Action Plans accessible to citizens and enable councils to learn from each other is another. And then there are the 7.8 million visits to TheyWorkForYou – helping thousands of people every week understand and use the levers to influence politicians…</p>
-                <p>One of the themes of our new strategy is collaboration – the problems facing our democracy and the world are much too big and complex for any organisation to tackle on its own. Over the next year we will be working hard to combine our knowledge and skills with those of others to make a bigger difference. Our resources are stretched very thinly and it will be a priority to address that and make sure that we look after our people and focus our work where, working with others, we can make the biggest difference.</p>
-                <p>Thanks for reading our Review. If you can see ways we could work together to help reboot democracy and save the planet, please get in touch.</p>
+        </div>
+        <div class="row mt-5 mt-sm-6 mt-md-7">
+            <div class="col-sm-6">
+                <h3 class="h4">Incoming</h3>
+                <p> <big>Three new trustees: Devin, Onyeka and Jen</big> </p>
+            </div>
+            <div class="col-sm-6">
+                <h3 class="h4">Outgoing</h3>
+                <p><big> Thank you and goodbye to trustee Julia</big></p>
             </div>
         </div>
 
         <hr style="border-top: 0.3em solid #fff; opacity:0.3;" class="mt-5 mt-sm-6 mb-4 mb-sm-5">
 
         <div class="row mt-5 mt-sm-6 mt-md-7">
-            <div class="col-sm-5">
-                <p>The team answers…</p>
-                <h2 class="h3 mb-3"><span class="underline">What did you find most rewarding this year?</span></h2>
+            <div class="col-sm-6 d-flex flex-column justify-content-center">
+                <h3 class="h2 mb-4"><span class="underline">Volunteers</span></h2>
+                <p> <big>Four new additions to the volunteer team, Helen, John, Luis and Alison</big> </p>
             </div>
-            <div class="col-sm-7">
-                <p class="chat">We’re working on the climate, and that is good for helping with the everyday existential panic and feeling like we’re doing something practical.</p>
-                <p class="chat">Working on projects with a great and positive impact on society with a supportive, caring, professional team.</p>
-                <p class="chat">It’s been so rewarding to see our Climate Actions Plan Explorer quickly become a central hub for data on climate action in the UK.</p>
-                <p class="chat">Working with Bromley & Peterborough councils to co-create and launch a brand new domestic waste service.</p>
-                <p class="chat">Being able to develop our work at the intersection of democracy and climate response – the biggest challenge we’re facing.</p>
-                <p class="chat">Being part of a forward-thinking responsible organisation… that also like pets</p>
+
+            <div class="col-sm-6" style="opacity:0.3">
+                {% include image.html src="/assets/img/volunteer-icon.jpg" webp="/assets/img/volunteer-icon.webp" loading="lazy" width="300" height="300" class="rounded-circle" alt="Hand with a heart" %}
             </div>
         </div>
     </div>
@@ -178,16 +180,16 @@ permalink: /
 
 <section class="bg-mysoc-green py-5 py-sm-6 py-md-7" id="climate" aria-label="Climate">
     <div class="container">
-        <h1 class="mb-3">Through our Climate programme</h1>
+        <h2 class="h1 mb-3">Through our Climate programme</h2>
         <p class="section-intro mb-6">We are helping councils, community organisations, campaign groups and individual citizens to take faster, more informed and effective action to cut emissions at the local level.</p>
 
-        <h2 class="mt-5 mt-md-6 mb-4">We've packed a lot into 2022</h2>
+        <h3 class="h2 mt-5 mt-md-6 mb-4">We've packed a lot into 2022</h2>
         <div class="row mt-5 mt-sm-6 mt-md-7">
             <div class="col-sm-5">
-                <h3 class="mb-4"><span class="underline">We went off the beaten track and explored new ways of working</span></h3>
+                <h4 class="h3 mb-4"><span class="underline">We went off the beaten track and explored new ways of working</span></h4>
             </div>
             <div class="col-sm-7">
-                <p>Through six rapid <a href="https://www.mysociety.org/climate/climate-prototyping/" class="white-link">prototyping weeks</a>, we convened groups of experts to help us imagine how we could solve big problems like…</p>
+                <p>Through six rapid <a href="https://www.mysociety.org/climate/climate-prototyping/" class="black-link">prototyping weeks</a>, we convened groups of experts to help us imagine how we could solve big problems like…</p>
             </div>
         </div>
         <div class="flex-card is--three">
@@ -223,12 +225,12 @@ permalink: /
             </div>
         </div>
 
-        <div class="row mt-5 mt-sm-6 mt-md-7">
+        <div class="row mt-5 mt-sm-8 mt-md-9">
             <div class="col-sm-5">
-                <h3 class="mb-4"><span class="underline">We supported Climate Emergency UK on the technical side of things</span></h3>
+                <h4 class="h3 mb-4"><span class="underline">We supported Climate Emergency UK on the technical side of things</span></h3>
             </div>
             <div class="col-sm-7">
-                <p>Design and development are what we do best, so that's what we contributed to our partner CE UK's <a href="https://councilclimatescorecards.uk/" class="white-link">Council Climate Plan Scorecards</a>. Mostly we just stood back and watched in admiration while they took on the task of training up a massive cohort of expert volunteers to mark every council's Climate Action Plan across 73 crucial areas.</p>
+                <p>Design and development are what we do best, so that's what we contributed to our partner CE UK's <a href="https://councilclimatescorecards.uk/" class="black-link">Council Climate Plan Scorecards</a>. Mostly we just stood back and watched in admiration while they took on the task of training up a massive cohort of expert volunteers to mark every council's Climate Action Plan across 73 crucial areas.</p>
                 <p>And the Scorecards have had a tangible impact, informing and aiding many small campaigns and organisations in their work to tackle the climate crisis.</p>
             </div>
         </div>
@@ -268,22 +270,22 @@ permalink: /
             </div>
         </div>
 
-        <div class="row mt-5 mt-sm-6 mt-md-7">
+        <div class="row mt-5 mt-sm-8 mt-md-9">
             <div class="col-sm-5">
-                <h3 class="mb-4"><span class="underline">We shared research that helps inform those working around climate, data and local government.</span></h3>
+                <h4 class="h3 mb-4"><span class="underline">We shared research that helps inform those working around climate, data and local government.</span></h3>
             </div>
             <div class="col-sm-7">
-                <p><a href="https://research.mysociety.org/publications/joining-up" class="white-link">Research from Tom Sasse</a> assessed the public understanding of local government and its role in combating climate change.</p>
-                <p><a href="https://research.mysociety.org/publications/scoping-energy-renters" class="white-link">Energy efficiency in the private rented sector</a> explored the incentives for landlords to improve energy efficiency in their property.</p>
+                <p><a href="https://research.mysociety.org/publications/joining-up" class="black-link">Research from Tom Sasse</a> assessed the public understanding of local government and its role in combating climate change.</p>
+                <p><a href="https://research.mysociety.org/publications/scoping-energy-renters" class="black-link">Energy efficiency in the private rented sector</a> explored the incentives for landlords to improve energy efficiency in their property.</p>
             </div>
         </div>
 
-        <div class="row mt-5 mt-sm-6 mt-md-7">
+        <div class="row mt-5 mt-sm-8 mt-md-9">
             <div class="col-sm-5">
-                <h3 class="mb-4"><span class="underline">CAPE just kept getting bigger and better</span></h3>
+                <h4 class="h3 mb-4"><span class="underline">CAPE just kept getting bigger and better</span></h3>
             </div>
             <div class="col-sm-7">
-                <p><a href="https://data.climateemergency.uk/" class="white-link">The Climate Action Plan Explorer</a> has grown, with the steady addition of new features and information sources. It's a one stop shop to find out what your local council is doing around climate, and explore the data that puts their plans in context.</p>
+                <p><a href="https://data.climateemergency.uk/" class="black-link">The Climate Action Plan Explorer</a> has grown, with the steady addition of new features and information sources. It's a one stop shop to find out what your local council is doing around climate, and explore the data that puts their plans in context.</p>
             </div>
         </div>
         <div class="flex-card is--three">
@@ -292,7 +294,7 @@ permalink: /
                     {% include image.html src="/assets/img/cape-scorecards.jpg" webp="/assets/img/cape-scorecards.webp" width="540" height="250" alt="CAPE features: scorecards" loading="lazy" class="border-bottom" %}
                 </div>
                 <div class="card-body">
-                    <h4 class="card-text h5">We brought the Scorecards scores in</h4>
+                    <h5 class="card-text">We brought the Scorecards scores in</h4>
                     <p>Now you can see how each council performed, directly on their CAPE page.</p>
                 </div>
             </div>
@@ -301,7 +303,7 @@ permalink: /
                     {% include image.html src="/assets/img/cape-browse-features.jpg" webp="/assets/img/cape-browse-features.webp" width="540" height="250" alt="CAPE features: Browse by features" loading="lazy" class="border-bottom" %}
                 </div>
                 <div class="card-body">
-                    <h4 class="card-text h5">There's a whole new way to dive into the data </h4>
+                    <h5 class="card-text">There's a whole new way to dive into the data </h4>
                     <p> The <a href="https://data.climateemergency.uk/features/">Features page</a> means you can easily find councils doing well in specific areas.</p>
                 </div>
             </div>
@@ -310,7 +312,7 @@ permalink: /
                     {% include image.html src="/assets/img/cape-documents.jpg" webp="/assets/img/cape-documents.webp" width="540" height="250" alt="Cape feature: Search through a council's documents" loading="lazy" class="border-bottom" %}
                 </div>
                 <div class="card-body">
-                    <h4 class="card-text h5">Save search time & effort</h4>
+                    <h5 class="card-text">Save search time & effort</h4>
                     <p>A single search field returns results from all of a council's documents.</p>
                 </div>
             </div>
@@ -321,7 +323,7 @@ permalink: /
                     {% include image.html src="/assets/img/cape-projects.jpg" webp="/assets/img/cape-projects.webp" width="540" height="250" alt="Cape feature: Check scottish reduce emission projects" loading="lazy" class="border-bottom" %}
                 </div>
                 <div class="card-body">
-                    <h4 class="card-text h5">Projects from north of the border</h4>
+                    <h5 class="card-text">Projects from north of the border</h4>
                     <p> We've gathered <a href="https://data.climateemergency.uk/projects/">Scottish emissions reduction projects</a> into one place.</p>
                 </div>
             </div>
@@ -330,7 +332,7 @@ permalink: /
                     {% include image.html src="/assets/img/cape-emissions.jpg" webp="/assets/img/cape-emissions.webp" width="540" height="250" alt="Cape feature: See where emissions come from" loading="lazy" class="border-bottom" %}
                 </div>
                 <div class="card-body">
-                    <h4 class="card-text h5">Where do each council's emissions come from? </h4>
+                    <h5 class="card-text">Where do each council's emissions come from? </h4>
                     <p>Colourful charts based on BEIS data make it easy to see the sources.</p>
                 </div>
             </div>
@@ -339,17 +341,15 @@ permalink: /
                     {% include image.html src="/assets/img/cape-similar-councils.jpg" webp="/assets/img/cape-similar-councils.webp" width="540" height="250" alt="Cape feature: Improved similar council section" loading="lazy" class="border-bottom" %}
                 </div>
                 <div class="card-body">
-                    <h4 class="card-text h5">Similar councils - now even better</h4>
+                    <h5 class="card-text">Similar councils - now even better</h4>
                     <p>We made it easier to filter councils by the ones they resemble in terms of rurality, deprivation etc.</p>
                 </div>
             </div>
         </div>
 
-
-
-        <div class="row mt-5 mt-sm-6 mt-md-7">
+        <div class="row mt-5 mt-sm-8 mt-md-9">
             <div class="col-sm-5">
-                <h3 class="mb-4"><span class="underline">We're funding real life projects that help climate at the local level</span></h3>
+                <h4 class="h3 mb-4"><span class="underline">We're funding real life projects that help climate at the local level</span></h3>
             </div>
             <div class="col-sm-7">
                 <p>Our Innovations in Climate Tech grants were designed to let organisations and councils explore possibilities, improve our climate resilience and accelerate carbon reduction.</p>
@@ -361,7 +361,7 @@ permalink: /
                     {% include image.html src="/assets/img/better-futures.jpg" webp="/assets/img/better-futures.webp" width="540" height="250" alt="Better futures logo" loading="lazy" class="border-bottom" %}
                 </a>
                 <div class="card-body">
-                    <h4 class="card-text h5">Better Futures</h4>
+                    <h5 class="card-text">Better Futures</h4>
                     <p>With Sandwell and Dudley Council, West Midlands Combined Authority will be creating a UK-wide dashboard of best practice case studies showing how councils are approaching climate adaptation.</p>
                 </div>
             </div>
@@ -370,7 +370,7 @@ permalink: /
                     {% include image.html src="/assets/img/lynsted-logo.jpg" webp="/assets/img/lynsted-logo.webp" width="540" height="250" alt="Lynsted Community Kitchen Garden" loading="lazy" class="border-bottom" %}
                 </a>
                 <div class="card-body">
-                    <h4 class="card-text h5">Lynsted Community Kitchen Garden</h4>
+                    <h5 class="card-text">Lynsted Community Kitchen Garden</h4>
                     <p>With Swale Council will be exploring data and education around water management, through their drought resistant garden project. </p>
                 </div>
             </div>
@@ -379,7 +379,7 @@ permalink: /
                     {% include image.html src="/assets/img/possible-logo.jpg" webp="/assets/img/possible-logo.webp" width="540" height="250" alt="Possible logo" loading="lazy" class="border-bottom" %}
                 </a>
                 <div class="card-body">
-                    <h4 class="card-text h5">Possible</h4>
+                    <h5 class="card-text">Possible</h4>
                     <p>With Camden Council will be testing how 'difficult' homes like tower blocks can switch from gas boilers to a ground source heat pump ‘shared loop’ system — and sharing what they find.</p>
                 </div>
             </div>
@@ -387,33 +387,33 @@ permalink: /
 
         <hr style="border-top: 0.3em solid #fff; opacity:0.3;" class="mt-5 mt-sm-6 mb-4 mb-sm-5">
 
-        <div class="row mt-5 mt-sm-6 mt-md-7">
-            <div class="col-sm-7">
-                <h2 class="h2 mb-4"><span class="underline">Facts and figures</span></h2>
+        <div class="row mt-5 mt-sm-8 mt-md-9">
+            <div class="col-md-7">
+                <h3 class="h2 mb-4 text-center text-md-left"><span class="underline">Facts and figures</span></h3>
             </div>
         </div>
         <div class="row mt-2 mt-sm-3 mt-md-5">
             <div class="col-12 col-md-4">
                 <div class="stat">
-                    <p class="stat__main mt-0 pt-0">
+                    <p class="stat__main mt-0 pt-0 text-center text-md-left">
                         <span class="stat__number stat__number--large">318</span>
-                        <span class="stat__name" style="max-width: 13em; opacity: 0.85">councils with climate action plans</span>
+                        <span class="stat__name mx-auto ml-md-0" style="max-width: 13em; opacity: 0.85">councils with climate action plans</span>
                     </p>
                 </div>
             </div>
             <div class="col-12 col-md-4">
                 <div class="stat">
-                    <p class="stat__main mt-0 pt-0">
+                    <p class="stat__main mt-0 pt-0 text-center text-md-left">
                         <span class="stat__number stat__number--large">+100</span>
-                        <span class="stat__name" style="max-width: 13em; opacity: 0.85">people joined us across the six weeks of prototyping sessions</span>
+                        <span class="stat__name mx-auto ml-md-0" style="max-width: 13em; opacity: 0.85">people joined us across the six weeks of prototyping sessions</span>
                     </p>
                 </div>
             </div>
             <div class="col-12 col-md-4">
                 <div class="stat">
-                    <p class="stat__main mt-0 pt-0">
+                    <p class="stat__main mt-0 pt-0 text-center text-md-left">
                         <span class="stat__number stat__number--large">+120</span>
-                        <span class="stat__name" style="max-width: 17em; opacity: 0.85">people were trained up by CE UK to score Climate Action Plans</span>
+                        <span class="stat__name mx-auto ml-md-0" style="max-width: 17em; opacity: 0.85">people were trained up by CE UK to score Climate Action Plans</span>
                     </p>
                 </div>
             </div>
@@ -421,25 +421,25 @@ permalink: /
         <div class="row mt-2 mt-sm-3 mt-md-4">
             <div class="col-12 col-md-4">
                 <div class="stat">
-                    <p class="stat__main mt-0 pt-0">
+                    <p class="stat__main mt-0 pt-0 text-center text-md-left">
                         <span class="stat__number stat__number--large">120</span>
-                        <span class="stat__name" style="max-width: 17em; opacity: 0.85">regional and local news outlets featured the Scorecards launch</span>
+                        <span class="stat__name mx-auto ml-md-0" style="max-width: 17em; opacity: 0.85">regional and local news outlets featured the Scorecards launch</span>
                     </p>
                 </div>
             </div>
             <div class="col-12 col-md-4">
                 <div class="stat">
-                    <p class="stat__main mt-0 pt-0">
+                    <p class="stat__main mt-0 pt-0 text-center text-md-left">
                         <span class="stat__number stat__number--large"> 4th</span>
-                        <span class="stat__name" style="max-width: 17em; opacity: 0.85">The Scorecards was the 4th story on the Guardian homepage on launch day</span>
+                        <span class="stat__name mx-auto ml-md-0" style="max-width: 17em; opacity: 0.85">The Scorecards was the 4th story on the Guardian homepage on launch day</span>
                     </p>
                 </div>
             </div>
             <div class="col-12 col-md-4">
                 <div class="stat">
-                    <p class="stat__main mt-0 pt-0">
+                    <p class="stat__main mt-0 pt-0 text-center text-md-left">
                         <span class="stat__number stat__number--large">£15,000</span>
-                        <span class="stat__name" style="max-width: 17em; opacity: 0.85">granted to innovative local climate tech projects</span>
+                        <span class="stat__name mx-auto ml-md-0" style="max-width: 17em; opacity: 0.85">granted to innovative local climate tech projects</span>
                     </p>
                 </div>
             </div>
@@ -447,18 +447,18 @@ permalink: /
 </section>
 
 {% include section-slope.html topleft="mysoc-green" bottomright="mysoc-off-white" %}
-
 {% include section-slope.html topleft="mysoc-off-white" bottomright="mysoc-brighter-violet" %}
+
 <section class="bg-mysoc-brighter-violet py-5 py-sm-6 py-md-7" id="transparency" aria-label="Transparency">
     <div class="container">
-        <h1 class="mb-3">Through our Transparency programme</h1>
+        <h2 class="h1 mb-3">Through our Transparency programme</h2>
         <p class="section-intro mb-6">we are supporting the work of journalists and campaigners, and conducting research to build the evidence base for how transparency and access to information laws can help citizens become more active and engaged.</p>
 
-        <h2 class="mt-5 mt-md-6 mb-4 mb-md-5">Here's how that looked in 2022</h2>
+        <h3 class="h2 mt-5 mt-md-6 mb-4 mb-md-5">Here's how that looked in 2022</h3>
         <div class="row mt-5 mt-sm-6">
             <div class="col-sm-6">
-                <h2 class="h3 mb-4"><span class="underline">We dug into the state of Freedom of Information in the UK</span></h2>
-                <p>With research on <a href="https://research.mysociety.org/publications/improving-oversight" class="white-link">improving oversight of Access to Information</a>, and evidence for the parliamentary inquiry into <a href="https://research.mysociety.org/publications/clearing-house" class="white-link">the Cabinet Office Freedom of Information Clearing House</a>.</p>
+                <h4 class="h3 mb-4"><span class="underline">We dug into the state of Freedom of Information in the UK</span></h4>
+                <p>With research on <a href="https://research.mysociety.org/publications/improving-oversight" class="black-link">improving oversight of Access to Information</a>, and evidence for the parliamentary inquiry into <a href="https://research.mysociety.org/publications/clearing-house" class="black-link">the Cabinet Office Freedom of Information Clearing House</a>.</p>
             </div>
             <div class="col-sm-6">
                 <a href="https://research.mysociety.org/publications/improving-oversight">
@@ -468,11 +468,11 @@ permalink: /
         </div>
         <div class="row mt-5 mt-sm-6">
             <div class="col-sm-6">
-                <h2 class="h3 mb-4"><span class="underline">We continued to improve WhatDoTheyKnow and WhatDoTheyKnow Pro</span></h2>
+                <h4 class="h3 mb-4"><span class="underline">We continued to improve WhatDoTheyKnow and WhatDoTheyKnow Pro</span></h4>
                 <ul>
                     <li class="mb-3">You'll see richer information on authorities' pages and on specific requests, made possible by a bit of development that allows the team to quickly add notes to multiple areas at once.</li>
-                    <li class="mb-3">Pro users can send batch requests to <a class="white-link" href="https://www.mysociety.org/2022/07/27/faster-and-better-targeting-of-requests-to-multiple-bodies-on-whatdotheyknow-pro/">all authorities within a category</a>, lessening the burden of picking them all out, and making it more likely that requests go to appropriate recipients.</li>
-                    <li>Now there's <a class="white-link" href="https://www.whatdotheyknow.com/help/glossary">a glossary</a>, helping to make the FOI process easier for everyone to understand</li>
+                    <li class="mb-3">Pro users can send batch requests to <a class="black-link" href="https://www.mysociety.org/2022/07/27/faster-and-better-targeting-of-requests-to-multiple-bodies-on-whatdotheyknow-pro/">all authorities within a category</a>, lessening the burden of picking them all out, and making it more likely that requests go to appropriate recipients.</li>
+                    <li>Now there's <a class="black-link" href="https://www.whatdotheyknow.com/help/glossary">a glossary</a>, helping to make the FOI process easier for everyone to understand</li>
                 </ul>
             </div>
             <div class="col-sm-6">
@@ -483,8 +483,8 @@ permalink: /
         </div>
         <div class="row mt-5 mt-sm-6">
             <div class="col-sm-6">
-                <h2 class="h3 mb-4"><span class="underline">We pushed back against secrecy… </span></h2>
-                <p>We probably wouldn't have realised that Northern Trains had accidentally disclosed senior level salaries, <a href="https://www.mysociety.org/2022/06/22/publicly-owned-northern-trains-limited-wanted-to-keep-its-managing-directors-245-250k-salary-a-secret/" class="white-link">if they hadn't asked us to retract them</a>.</p>
+                <h4 class="h3 mb-4"><span class="underline">We pushed back against secrecy… </span></h4>
+                <p>We probably wouldn't have realised that Northern Trains had accidentally disclosed senior level salaries, <a href="https://www.mysociety.org/2022/06/22/publicly-owned-northern-trains-limited-wanted-to-keep-its-managing-directors-245-250k-salary-a-secret/" class="black-link">if they hadn't asked us to retract them</a>.</p>
             </div>
             <div class="col-sm-6">
                 <a href="https://www.mysociety.org/2022/06/22/publicly-owned-northern-trains-limited-wanted-to-keep-its-managing-directors-245-250k-salary-a-secret/">
@@ -494,8 +494,8 @@ permalink: /
         </div>
         <div class="row mt-5 mt-sm-6">
             <div class="col-sm-6">
-                <h2 class="h3 mb-4"><span class="underline">…and against illegal behaviour from authorities</span></h2>
-                <p>When we blogged about <a href="https://www.mysociety.org/2022/08/01/public-bodies-refusing-emailed-foi-requests/" class="white-link">authorities who refuse FOI requests via email</a>the ICO wrote to them to confirm that this practice is against the law.</p>
+                <h4 class="h3 mb-4"><span class="underline">…and against illegal behaviour from authorities</span></h4>
+                <p>When we blogged about <a href="https://www.mysociety.org/2022/08/01/public-bodies-refusing-emailed-foi-requests/" class="black-link">authorities who refuse FOI requests via email</a>the ICO wrote to them to confirm that this practice is against the law.</p>
             </div>
             <div class="col-sm-6">
                 <a href="https://www.mysociety.org/2022/08/01/public-bodies-refusing-emailed-foi-requests/">
@@ -505,9 +505,9 @@ permalink: /
         </div>
         <div class="row mt-5 mt-sm-6">
             <div class="col-sm-6">
-                <h2 class="h3 mb-4"><span class="underline">Our dedicated admin team continued to keep everything ticking over</span></h2>
+                <h4 class="h3 mb-4"><span class="underline">Our dedicated admin team continued to keep everything ticking over</span></h4>
                 <!-- TODO Add link -->
-                <p>If you'd like to see what that involves, hop over to the <a href="" class="white-link">Transparency Report</a>.</p>
+                <p>If you'd like to see what that involves, hop over to the <a href="" class="black-link">Transparency Report</a>.</p>
             </div>
             <div class="col-sm-6">
                 <!-- TODO Image -->
@@ -519,7 +519,7 @@ permalink: /
         </div>
         <div class="row mt-5 mt-sm-6">
             <div class="col-sm-6">
-                <h2 class="h3 mb-4"><span class="underline">We had a three-year plan to improve Access To Information in Europe</span></h2>
+                <h4 class="h3 mb-4"><span class="underline">We had a three-year plan to improve Access To Information in Europe</span></h4>
                 <p>and now we've come to the end of it we can look back and see the fruits of our labour:</p>
                 <ul>
                     <li class="mb-3">New Alaveteli-based sites were launched in the Netherlands, France, Greece, Romania and Georgia and installations of Pro were completed in Sweden, the Netherlands, Hungary, Greece, France, the Czech Republic, Croatia, Belgium and the UK.</li>
@@ -536,7 +536,7 @@ permalink: /
 
         <div class="row mt-5 mt-sm-6">
             <div class="col-sm-6">
-                <h2 class="h3 mb-3"><span class="underline">Not stopping there</span></h2>
+                <h4 class="h3 mb-3"><span class="underline">Not stopping there</span></h4>
             </div>
             <div class="col-sm-6">
                 <ul>
@@ -549,32 +549,32 @@ permalink: /
         <hr style="border-top: 0.3em solid #fff; opacity:0.3;" class="mt-5 mt-sm-6 mb-4 mb-sm-5">
 
         <div class="row mt-5 mt-sm-6 mt-md-7">
-            <div class="col-sm-7">
-                <h2 class="h2 mb-4"><span class="underline">Facts and figures</span></h2>
+            <div class="col-md-7">
+                <h3 class="h2 mb-4 text-center text-md-left"><span class="underline">Facts and figures</span></h3>
             </div>
         </div>
         <div class="row mt-2 mt-sm-3 mt-md-5">
             <div class="col-12 col-md-4">
                 <div class="stat">
-                    <p class="stat__main mt-0 pt-0">
+                    <p class="stat__main mt-0 pt-0 text-center text-md-left">
                         <span class="stat__number stat__number--large">830</span>
-                        <span class="stat__name" style="max-width: 13em; opacity: 0.85">FOI requests indicated as having contributed to news stories and research papers this year.</span>
+                        <span class="stat__name mx-auto ml-md-0" style="max-width: 13em; opacity: 0.85">FOI requests indicated as having contributed to news stories and research papers this year.</span>
                     </p>
                 </div>
             </div>
             <div class="col-12 col-md-4">
                 <div class="stat">
-                    <p class="stat__main mt-0 pt-0">
+                    <p class="stat__main mt-0 pt-0 text-center text-md-left">
                         <span class="stat__number stat__number--large">+1M</span>
-                        <span class="stat__name" style="max-width: 13em; opacity: 0.85">over a <a class="black-link" href="https://www.mysociety.org/2022/08/31/more-than-a-million-public-foi-requests-have-been-made-through-alaveteli-sites/" >million public requests</a> made through Alaveteli sites across the world.</span>
+                        <span class="stat__name mx-auto ml-md-0" style="max-width: 13em; opacity: 0.85">over a <a class="black-link" href="https://www.mysociety.org/2022/08/31/more-than-a-million-public-foi-requests-have-been-made-through-alaveteli-sites/" >million public requests</a> made through Alaveteli sites across the world.</span>
                     </p>
                 </div>
             </div>
             <div class="col-12 col-md-4">
                 <div class="stat">
-                    <p class="stat__main mt-0 pt-0">
+                    <p class="stat__main mt-0 pt-0 text-center text-md-left">
                         <span class="stat__number stat__number--large">109,653</span>
-                        <span class="stat__name" style="max-width: 17em; opacity: 0.85">requests made on WhatDoTheyKnow this year.</span>
+                        <span class="stat__name mx-auto ml-md-0" style="max-width: 17em; opacity: 0.85">requests made on WhatDoTheyKnow this year.</span>
                     </p>
                 </div>
             </div>
@@ -582,25 +582,25 @@ permalink: /
         <div class="row mt-2 mt-sm-3 mt-md-4">
             <div class="col-12 col-md-4">
                 <div class="stat">
-                    <p class="stat__main mt-0 pt-0">
+                    <p class="stat__main mt-0 pt-0 text-center text-md-left">
                         <span class="stat__number stat__number--large">8,912</span>
-                        <span class="stat__name" style="max-width: 17em; opacity: 0.85">email threads dealt with in the WhatDoTheyKnow user support inbox</span>
+                        <span class="stat__name mx-auto ml-md-0" style="max-width: 17em; opacity: 0.85">email threads dealt with in the WhatDoTheyKnow user support inbox</span>
                     </p>
                 </div>
             </div>
             <div class="col-12 col-md-4">
                 <div class="stat">
-                    <p class="stat__main mt-0 pt-0">
+                    <p class="stat__main mt-0 pt-0 text-center text-md-left">
                         <span class="stat__number stat__number--large">+80%</span>
-                        <span class="stat__name" style="max-width: 17em; opacity: 0.85">of the UK's parish councils now on WhatDoTheyKnow, thanks to volunteers working to add thousands of them.</span>
+                        <span class="stat__name mx-auto ml-md-0" style="max-width: 17em; opacity: 0.85">of the UK's parish councils now on WhatDoTheyKnow, thanks to volunteers working to add thousands of them.</span>
                     </p>
                 </div>
             </div>
             <div class="col-12 col-md-4">
                 <div class="stat">
-                    <p class="stat__main mt-0 pt-0">
+                    <p class="stat__main mt-0 pt-0 text-center text-md-left">
                         <span class="stat__number stat__number--large">+16M</span>
-                        <span class="stat__name" style="max-width: 17em; opacity: 0.85">visits to WhatDoTheyKnow this year.</span>
+                        <span class="stat__name mx-auto ml-md-0" style="max-width: 17em; opacity: 0.85">visits to WhatDoTheyKnow this year.</span>
                     </p>
                 </div>
             </div>
@@ -641,7 +641,7 @@ permalink: /
         <hr style="border-top: 0.3em solid #fff; opacity:0.3;" class="mt-5 mt-sm-6">
         <div class="row mt-5 mt-sm-5 mt-md-6">
             <div class="col-12">
-                <h3 class="mb-4 text-center"><span class="underline">To our volunteer team</span></h3>
+                <h3 class="h2 mb-4 mb-sm-5 text-center">To our volunteer team</h3>
                 <p class="text-center rounded p-3 bg-white"><big><strong>Grateful recognition is due to our tireless volunteer team, who have answered emails, made decisions, maintained the site, added authorities, classified requests, and SO MUCH MORE. Thanks so much to all of you.</strong></big></p>
             </div>
         </div>
@@ -649,17 +649,17 @@ permalink: /
 </section>
 
 {% include section-slope.html topleft="mysoc-brighter-violet" bottomright="mysoc-off-white" %}
-
 {% include section-slope.html topleft="mysoc-off-white" bottomright="mysoc-green" %}
+
 <section class="bg-mysoc-green py-5 py-sm-6 py-md-7" id="democracy" aria-label="Democracy">
     <div class="container">
-        <h1 class="mb-3">Through our Democracy programme</h1>
+        <h2 class="h1 mb-3">Through our Democracy programme</h2>
         <p class="section-intro mb-6">We are supporting meaningful participation in democracy and access to political information, improving the ability of citizens to make their voices heard and to hold governments to account.</p>
 
-        <h2 class="mt-5 mt-md-6 mb-4">In 2022 our Democracy services have been operating without dedicated funding</h2>
+        <h3 class="h2 mt-5 mt-md-6 mb-4">In 2022 our Democracy services have been operating without dedicated funding</h3>
         <div class="row mt-5 mt-sm-6 mt-md-7">
             <div class="col-sm-5">
-                <h3 class="mb-4"><span class="underline">We hope to change that very soon, but in the meantime:</span></h3>
+                <h4 class="h3 mb-4"><span class="underline">We hope to change that very soon, but in the meantime:</span></h4>
             </div>
             <div class="col-sm-7">
                 <p>We learned more about how people use TheyWorkForYou's alerts, and discovered <a href="https://www.mysociety.org/2022/07/28/theyworkforyou-quietly-provides-essential-services-for-civil-society-and-beyond/" class="black-link">just how many small organisations and businesses depend on them</a>.</p>
@@ -667,7 +667,7 @@ permalink: /
         </div>
         <div class="row mt-5 mt-sm-6 mt-md-7">
             <div class="col-sm-5">
-                <h3 class="mb-4"><span class="underline">How TheyWorkForYou keeps prisoners informed</span></h3>
+                <h4 class="h3 mb-4"><span class="underline">How TheyWorkForYou keeps prisoners informed</span></h4>
             </div>
             <div class="col-sm-7">
                 <p>We heard from the Editor of Inside Time, the national newspaper for prisoners and detainees, how email alerts help them find the news that matters to their readership.</p>
@@ -675,7 +675,7 @@ permalink: /
         </div>
         <div class="row mt-5 mt-sm-6 mt-md-7">
             <div class="col-sm-5">
-                <h3 class="mb-4"><span class="underline">We noticed that uses of WriteToThem shot up when partygate hit the news.</span></h3>
+                <h4 class="h3 mb-4"><span class="underline">We noticed that uses of WriteToThem shot up when partygate hit the news.</span></h4>
             </div>
             <div class="col-sm-7">
                 {% include tweet-start.html id="1514224164357423109" username="mySociety" displayname="mySociety" image="/assets/img/tweets/mysociety-twitter.png" class="mt-3 mt-md-4" %}
@@ -689,7 +689,7 @@ permalink: /
         <hr style="border-top: 0.3em solid #fff; opacity:0.3;" class="mt-5 mt-sm-6 mb-4 mb-sm-5">
         <div class="row">
             <div class="col-md-7">
-                <h2 class="mt-5 mt-md-6 mb-4 mb-md-5">What did you do with our stuff?</h2>
+                <h3 class="h2 mt-5 mt-md-6 mb-4 mb-md-5">What did you do with our stuff?</h3>
                 <div style="max-width: 30em;">
                     <p>Some of the campaigns that sent the most people towards WriteToThem this year:</p>
                 </div>
@@ -798,7 +798,7 @@ permalink: /
 
         <div class="row">
             <div class="col-lg-6">
-                <h2 class="h3 mb-3"><span class="underline">Facts and figures</span></h2>
+                <h3 class="mb-3"><span class="underline">Facts and figures</span></h3>
                 <p>Peaks in traffic in 2022 reflected the democratic rollercoaster we've all been on: the <strong>resignation of Boris Johnson</strong>; the announcements of the contenders for <strong>Conservative party leadership</strong>; Kwasi Kwarteng's <strong>'mini budget'</strong>; <strong>Liz Truss' resignation</strong>; and the <strong>appointment of Rishi Sunak</strong>.</p>
                 <p>While we don’t look at the content of emails sent through WriteToThem (except very rarely, under specific circumstances as recorded in our Privacy Policy), the highest daily numbers of visits do coincide with big events in the news. These included: the announcement of the <strong>end of the BBC licence fee</Strong> (17 January); <strong>Liz Truss flying by private jet</strong> to Australia (27 January); Keir Starmer and 'beergate' (9 May)  — and the 17 March when any one of several stories might have been on correspondents' minds: the return of <strong>Nazanin Zaghari-Ratcliffe</strong> to the UK, the <strong>bombing of civilians in Mariupol</strong>; Dominic Cummings acccusing Boris Johnson of lying over <strong>Evgeny Lebedev</strong>; and the scrapping of plans to cap <strong>MPs’ earnings from second jobs.</strong></p>
             </div>
@@ -806,19 +806,19 @@ permalink: /
                 <div class="stat">
                     <p class="stat__main">
                         <span class="stat__number stat__number--large">2.3M</span>
-                        <span class="stat__name">visits to WriteToThem</span>
+                        <span class="stat__name mx-auto ml-md-0">visits to WriteToThem</span>
                     </p>
                 </div>
                 <div class="stat mt-md-5">
                     <p class="stat__main">
                         <span class="stat__number stat__number--large">7.5M</span>
-                        <span class="stat__name">visits to TheyWorkForYou</span>
+                        <span class="stat__name mx-auto ml-md-0">visits to TheyWorkForYou</span>
                     </p>
                 </div>
                 <div class="stat mt-md-5">
                     <p class="stat__main">
                         <span class="stat__number stat__number--large">4.5M</span>
-                        <span class="stat__name">emails sent to subscribers</span>
+                        <span class="stat__name mx-auto ml-md-0">emails sent to subscribers</span>
                     </p>
                 </div>
                 <div class="most-visited mt-4 mt-md-5">
@@ -833,19 +833,20 @@ permalink: /
         </div>
     </div>
 </section>
-{% include section-slope.html topleft="mysoc-green" bottomright="mysoc-off-white" %}
 
+{% include section-slope.html topleft="mysoc-green" bottomright="mysoc-off-white" %}
 {% include section-slope.html topleft="mysoc-off-white" bottomright="mysoc-orange" %}
+
 <section class="bg-mysoc-orange py-5 py-sm-6 py-md-7" id="societyworks" aria-label="SocietyWorks">
     <div class="container">
-        <h1 class="mb-3">Through SocietyWorks</h1>
+        <h2 class="h1 mb-3">Through SocietyWorks</h2>
         <p class="section-intro mb-6">We provide citizen-centred digital services for local government and the public sector</p>
 
         <p class="mt-5 mt-md-6">We are helping our public sector clients better serve citizens through effective digital solutions.</p>
-        <h2 class="mb-4 mb-md-5">Take a look at some of the impact we made in 2022…</h2>
+        <h3 class="h2 mb-4 mb-md-5">Take a look at some of the impact we made in 2022…</h3>
         <div class="row mt-5 mt-sm-6">
             <div class="col-sm-6">
-                <h2 class="h3 mb-4"><span class="underline">We reduced avoidable customer contacts about waste services by 40% for Bromley Council</span></h2>
+                <h3 class="mb-4"><span class="underline">We reduced avoidable customer contacts about waste services by 40% for Bromley Council</span></h3>
                 <p>All within just two months of introducing the council’s dedicated version of our <a class="black-link" href="https://www.societyworks.org/services/waste/">WasteWorks</a> service, which was <a class="black-link" href="https://www.societyworks.org/2022/03/17/societyworks-has-been-shortlisted-for-a-lgc-award/">shortlisted for the Public/Private Partnership award at the LGC Awards</a>, in collaboration with Bromley.</p>
             </div>
             <div class="col-sm-6">
@@ -856,7 +857,7 @@ permalink: /
         </div>
         <div class="row mt-5 mt-sm-6">
             <div class="col-sm-6">
-                <h2 class="h3 mb-4"><span class="underline">We helped Buckinghamshire Council unify the fault reporting process for residents across its 171 parish and town councils</span></h2>
+                <h3 class="mb-4"><span class="underline">We helped Buckinghamshire Council unify the fault reporting process for residents across its 171 parish and town councils</span></h3>
                 <p><a class="black-link" href="https://www.societyworks.org/services/highways/">FixMyStreet Pro’s</a> functionality enables automatic triaging of reports and gives councils or other bodies without integration the ability to update reports via email, closing the feedback loop for residents and, <a class="black-link" href="https://www.societyworks.org/2022/10/31/automatically-triage-reports-to-parish-and-town-councils-with-fixmystreet-pro/">for Buckinghamshire</a>, creating an anticipated £50,000 in savings for grass and hedge cutting reports alone.</p>
             </div>
             <div class="col-sm-6">
@@ -898,61 +899,20 @@ permalink: /
                 <a href="" class="btn btn-dark mx-auto">Go to annual review</a>
             </div>
         </div>
-
-        <!-- <div class="row mt-5">
-            <div class="col-12 col-md-6">
-                {% include youtube-embed.html classes="my-5 rounded shadow-lg" video_id="ksiYUh7U81E" alt="YouTube – Fix My Block" %}
-            </div>
-            <div class="col-12 col-md-6">
-                {% include youtube-embed.html classes="my-5 rounded shadow-lg" video_id="CgU7TDKSDNY" alt="YouTube – Fix My Block: Collective Action" %}
-            </div>
-        </div> -->
-
-        <!-- <h2 class="text-center mt-5 mt-md-6 mb-3 mb-md-4">Who we worked with…</h2>
-
-        <ul class="client-list">
-            <li>{% include image.html src="/assets/img/logo-banes.png" alt="Bath &amp; North East Somerset Council" width="140" height="53" loading="lazy" %}</li>
-            <li>{% include image.html src="/assets/img/logo-bexley-000-ffd96e.png" alt="London Borough of Bexley" width="160" height="46" loading="lazy" %}</li>
-            <li>{% include image.html src="/assets/img/logo-bristol.png" alt="Bristol City Council" width="85" height="85" loading="lazy" %}</li>
-            <li>{% include image.html src="/assets/img/logo-bromley.png" alt="Bromley Council" width="110" height="70" loading="lazy" %}</li>
-            <li>{% include image.html src="/assets/img/logo-bucks.png" alt="Buckinghamshire Council" width="88" height="88" loading="lazy" %}</li>
-            <li>{% include image.html src="/assets/img/logo-central-beds.png" alt="Central Bedfordshire Council" width="88" height="88" loading="lazy" %}</li>
-            <li>{% include image.html src="/assets/img/logo-cheshireeast.png" alt="Cheshire East Council" width="120" height="55" loading="lazy" %}</li>
-            <li>{% include image.html src="/assets/img/logo-eastherts.png" alt="East Herts Council" width="90" height="85" loading="lazy" %}</li>
-            <li>{% include image.html src="/assets/img/logo-east-sussex.png" alt="East Sussex County Council" width="100" height="73" loading="lazy" %}</li>
-            <li>{% include image.html src="/assets/img/logo-greenwich.png" alt="Royal Borough of Greenwich" width="115" height="60" loading="lazy" %}</li>
-            <li>{% include image.html src="/assets/img/logo-hackney.png" alt="Hackney Council" width="150" height="30" loading="lazy" %}</li>
-            <li>{% include image.html src="/assets/img/logo-hampshire.png" alt="Hampshire County Council" width="165" height="44" loading="lazy" %}</li>
-            <li>{% include image.html src="/assets/img/logo-hart.png" alt="Hart District Council" width="86" height="92" loading="lazy" %}</li>
-            <li>{% include image.html src="/assets/img/logo-hounslow.png" alt="London Borough of Hounslow" width="170" height="40" loading="lazy" %}</li>
-            <li>{% include image.html src="/assets/img/logo-lincs.png" alt="Lincolnshire County Council" width="180" height="44" loading="lazy" %}</li>
-            <li>{% include image.html src="/assets/img/logo-merton.png" alt="Merton Council" width="119" height="70" loading="lazy" %}</li>
-            <li>{% include image.html src="/assets/img/logo-national-highways.png" alt="National Highways" width="162" height="47" loading="lazy" %}</li>
-            <li>{% include image.html src="/assets/img/logo-n-northamptonshire.png" alt="North Northamptonshire Council" width="154" height="36" loading="lazy" %}</li>
-            <li>{% include image.html src="/assets/img/logo-oxfordshire.png" alt="Oxfordshire County Council" width="180" height="39" loading="lazy" %}</li>
-            <li>{% include image.html src="/assets/img/logo-peterborough.png" alt="Peterborough City Council" width="152" height="46" loading="lazy" %}</li>
-            <li>{% include image.html src="/assets/img/logo-rutland.png" alt="Rutland County Council" width="115" height="61" loading="lazy" %}</li>
-            <li>{% include image.html src="/assets/img/logo-shropshire.png" alt="Shropshire Council" width="175" height="44" loading="lazy" %}</li>
-            <li>{% include image.html src="/assets/img/logo-tfl.png" alt="Transport for London" width="175" height="54" loading="lazy" %}</li>
-            <li>{% include image.html src="/assets/img/logo-w-northamptonshire.png" alt="West Northamptonshire Council" width="154" height="52" loading="lazy" %}</li>
-            <li>{% include image.html src="/assets/img/logo-westminster.png" alt="City of Westminster" width="235" height="32" loading="lazy" %}</li>
-            <li>{% include image.html src="/assets/img/logo-wight.png" alt="Isle of Wight" width="160" height="48" loading="lazy" %}</li>
-            <li>{% include image.html src="/assets/img/logo-zurich.png" alt="City of Zurich" width="180" height="37" loading="lazy" %}</li>
-       </ul> -->
     </div>
 </section>
-{% include section-slope.html topleft="mysoc-orange" bottomright="mysoc-off-white" %}
 
+{% include section-slope.html topleft="mysoc-orange" bottomright="mysoc-off-white" %}
 {% include section-slope.html topleft="mysoc-off-white" bottomright="mysoc-brighter-violet" %}
 
 <section class="bg-mysoc-brighter-violet py-5 py-sm-6 py-md-7" id="tictec" aria-label="TICTeC">
     <div class="container">
-        <h1 class="mb-3">Through the TICTeC programme</h1>
+        <h2 class="h1 mb-3">Through the TICTeC programme</h2>
         <p class="section-intro mb-6">We debate, network, and share research and knowledge in the civic tech field, all in the interests of increasing our collective impact</p>
 
         <div class="row">
             <div class="col-md-6">
-                <h2 class="mb-4 mb-md-5">A pipeline from discussion to solutions</h2>
+                <h3 class="h2 mb-4 mb-md-5">A pipeline from discussion to solutions</h3>
                 <div style="max-width: 30em;">
                     <p>This year saw the completion of our Civic Tech Surgeries part of the TICTeC Labs programme, seeking to bring improvements to our own sector. Each Lab began with a live Surgery, turning over the issues and potential solutions. Next, a working group was convened, who together decided what they could best commission to address one or more of the problems raised. Finally, a contractor was chosen to deliver the final output.</p>
                 </div>
@@ -960,7 +920,7 @@ permalink: /
         </div>
         <div class="row mt-4 mt-md-5 mx-1 mx-md-0 px-md-3 py-4 rounded bg-white">
             <div class="col-md-6 mb-4 mb-md-0">
-                <h3 class="mb-4">Public-private collaborations: how can civic tech work effectively with public and private institutions?</h3>
+                <h4 class="h5 mb-4 mb-sm-5">Public-private collaborations: how can civic tech work effectively with public and private institutions?</h4>
                 <p class="mb-1 h6">Action Lab Output</p>
                 <a class="btn btn-sm btn-primary mt-2" href="https://www.mysociety.org/2022/10/25/how-can-civic-tech-work-effectively-with-public-and-private-institutions/">Case studies from People Powered </a>
             </div>
@@ -972,7 +932,7 @@ permalink: /
 
         <div class="row mt-4 mt-md-5 mx-1 mx-md-0 px-md-3 py-4 rounded bg-white">
             <div class="col-md-6 mb-4 mb-md-0">
-                <h3 class="mb-4">Ensuring civic tech is accessible: how can we lead and popularise best practice?</h3>
+                <h4 class="h5 mb-4 mb-sm-5">Ensuring civic tech is accessible: how can we lead and popularise best practice?</h4>
                 <p class="mb-1 h6">Action Lab Output</p>
                 <p class="mb-0"><small>From Technoloxia Tunisia</small></p>
                 <a class="btn btn-sm btn-primary mt-2" href="https://www.mysociety.org/2022/11/08/accessibility-abcs-a-practical-toolkit-for-the-global-civic-tech-community/">Accessibility guide</a>
@@ -985,7 +945,7 @@ permalink: /
 
         <div class="row mt-4 mt-md-5 mx-1 mx-md-0 px-md-3 py-4 rounded bg-white">
             <div class="col-md-6 mb-4 mb-md-0">
-                <h3 class="mb-4">Accessing quality information for civic tech success: how can we overcome barriers to accessing good data and documentation?</h3>
+                <h4 class="h5 mb-4 mb-sm-5">Accessing quality information for civic tech success: how can we overcome barriers to accessing good data and documentation?</h4>
                 <p class="mb-1 h6">Action Lab Output</p>
                 <a class="btn btn-sm btn-primary mt-2" href="https://tictec.mysociety.org/action-lab-3/">Case studies from People Powered </a>
             </div>
@@ -997,9 +957,9 @@ permalink: /
 
         <div class="row mt-4 mt-md-5 mx-1 mx-md-0 px-md-3 py-4 rounded bg-white">
             <div class="col-md-6 mb-4 mb-md-0">
-                <h3 class="mb-4">Storytelling and reach: how can we amplify our successes beyond the civic tech community to evidence our impact through mainstream channels?</h3>
+                <h4 class="h5 mb-4 mb-sm-5">Storytelling and reach: how can we amplify our successes beyond the civic tech community to evidence our impact through mainstream channels?</h4>
                 <p class="mb-1 h6">Action Lab Output</p>
-                <a class="btn btn-sm btn-primary mt-2" href="https://www.mysociety.org/2022/10/25/how-can-civic-tech-work-effectively-with-public-and-private-institutions/">Training on getting stories into the mainstream</a>
+                <a class="btn btn-sm btn-primary mt-2" href="https://tictec.mysociety.org/action-lab-4/">Training on getting stories into the mainstream</a>
             </div>
             <div class="col-md-6">
                 {% include youtube-embed.html classes="mb-3 rounded shadow-lg" video_id="hfW8H88ONTo" alt="TICTeC Civic tech surgery - Storytelling and reach: how can we amplify our successes beyond the civic tech community to evidence our impact through mainstream channels?" %}
@@ -1009,10 +969,10 @@ permalink: /
 
         <div class="row mt-4 mt-md-5 mx-1 mx-md-0 px-md-3 py-4 rounded bg-white">
             <div class="col-md-6 mb-4 mb-md-0">
-                <h3 class="mb-4">Learning from climate action – how can civic tech drive impactful societal change?</h3>
+                <h4 class="h5 mb-4 mb-sm-5">Learning from climate action – how can civic tech drive impactful societal change?</h4>
                 <p class="mb-1 h6">Action Lab Output</p>
                 <p class="mb-0"><small>An open source water monitoring project</small></p>
-                <a class="btn btn-sm btn-primary mt-2" href="https://www.mysociety.org/2022/10/25/how-can-civic-tech-work-effectively-with-public-and-private-institutions/">Read about Maai Makwa</a>
+                <a class="btn btn-sm btn-primary mt-2" href="https://maaimakwa.demographyproject.org/">Read about Maai Makwa</a>
             </div>
             <div class="col-md-6">
                 {% include youtube-embed.html classes="mb-3 rounded shadow-lg" video_id="mKooJ1pAIoA" alt="TICTeC Civic tech surgery - Learning from climate action – how can civic tech drive impactful societal change?" %}
@@ -1022,9 +982,9 @@ permalink: /
 
         <div class="row mt-4 mt-md-5 mx-1 mx-md-0 px-md-3 py-4 rounded bg-white">
             <div class="col-md-6 mb-4 mb-md-0">
-                <h3 class="mb-4">Civic tech in hostile environments – how can we thrive in challenging contexts?</h3>
+                <h4 class="h5 mb-4 mb-sm-5">Civic tech in hostile environments – how can we thrive in challenging contexts?</h4>
                 <p class="mb-1 h6">Action Lab Output</p>
-                <a class="btn btn-sm btn-primary mt-2" href="https://www.mysociety.org/2022/10/25/how-can-civic-tech-work-effectively-with-public-and-private-institutions/">watch this space</a>
+                <a class="btn btn-sm btn-primary mt-2" href="https://tictec.mysociety.org/action-lab-6/">watch this space</a>
             </div>
             <div class="col-md-6">
                 {% include youtube-embed.html classes="mb-3 rounded shadow-lg" video_id="EVn3gWsaK28" alt="TICTeC Civic tech surgery - Civic tech in hostile environments – how can we thrive in challenging contexts?" %}
@@ -1035,52 +995,52 @@ permalink: /
         <hr style="border-top: 0.3em solid #fff; opacity:0.3;" class="mt-5 mt-sm-6 mb-4 mb-sm-5">
 
         <div class="row mt-5 mt-sm-6 mt-md-7">
-            <div class="col-sm-8">
-                <h2 class="mb-3 h1"><span class="underline">Facts and figures</span></h2>
+            <div class="col-md-8">
+                <h3 class="mb-3 h2 text-center text-md-left"><span class="underline">Facts and figures</span></h3>
             </div>
         </div>
         <div class="row">
-            <div class="col-sm-6">
-                <div class="stat mt-3 mt-sm-5">
+            <div class="col-md-6">
+                <div class="stat mt-3 mt-md-5 text-center text-md-left">
                     <p class="stat__main">
                         <span class="stat__number stat__number--medium">15 <small>Events</small></span>
-                        <span class="stat__name">mySociety events this year</span>
+                        <span class="stat__name mx-auto ml-md-0">mySociety events this year</span>
                     </p>
                 </div>
 
-                <div class="stat mt-3 mt-sm-5">
+                <div class="stat mt-3 mt-md-5 text-center text-md-left">
                     <p class="stat__main">
                         <span class="stat__number stat__number--medium">24 <small>speakers</small></span>
-                        <span class="stat__name">From 15 countries</span>
+                        <span class="stat__name mx-auto ml-md-0">From 15 countries</span>
                     </p>
                 </div>
 
-                <div class="stat mt-3 mt-sm-5">
+                <div class="stat mt-3 mt-md-5 text-center text-md-left">
                     <p class="stat__main">
                         <span class="stat__number stat__number--medium">282 <small>attendees</small></span>
-                        <span class="stat__name">were part of TICTeC events this year</span>
+                        <span class="stat__name mx-auto ml-md-0">were part of TICTeC events this year</span>
                     </p>
                 </div>
             </div>
             <div class="col-sm-6">
-                <div class="stat mt-3 mt-sm-5">
+                <div class="stat mt-3 mt-md-5 text-center text-md-left">
                     <p class="stat__main">
                         <span class="stat__number stat__number--medium">31 <small>people</small> </span>
-                        <span class="stat__name">took part in the Action Lab working groups</span>
+                        <span class="stat__name mx-auto ml-md-0">took part in the Action Lab working groups</span>
                     </p>
                 </div>
 
-                <div class="stat mt-3 mt-sm-5">
+                <div class="stat mt-3 mt-md-5 text-center text-md-left">
                     <p class="stat__main">
                         <span class="stat__number stat__number--medium">6 <small>subgrants</small></span>
-                        <span class="stat__name"> were given to support projects through TICTeC Labs</span>
+                        <span class="stat__name mx-auto ml-md-0"> were given to support projects through TICTeC Labs</span>
                     </p>
                 </div>
 
-                <div class="stat mt-3 mt-sm-5">
+                <div class="stat mt-3 mt-md-5 text-center text-md-left">
                     <p class="stat__main">
-                        <span class="stat__number stat__number--medium">6 <small>other people's</small></span>
-                        <span class="stat__name">events we presented at</span>
+                        <span class="stat__number stat__number--medium">9 <small>other people's</small></span>
+                        <span class="stat__name mx-auto ml-md-0">events we presented at</span>
                     </p>
                 </div>
             </div>
@@ -1090,18 +1050,7 @@ permalink: /
 
         <div class="row mt-5 mt-sm-6 mt-md-7">
             <div class="col-sm-5">
-                <h3 class="mb-4 h2"><span class="underline">Matters of note</span></h3>
-                <p>We've committed to making all our events available both offline and on</p>
-                <a href="https://www.mysociety.org/2022/03/24/were-keeping-events-hybrid-will-you-do-the-same/" class="btn btn-sm btn-primary">Here is why</a>
-
-            </div>
-        </div>
-
-        <hr style="border-top: 0.3em solid #fff; opacity:0.3;" class="mt-5 mt-sm-6 mb-4 mb-sm-5">
-
-        <div class="row mt-5 mt-sm-6 mt-md-7">
-            <div class="col-sm-5">
-                <h2 class="mb-3"><span class="underline">TICTeC participants said</span></h2>
+                <h3 class="h2 mb-4 mb-sm-6"><span class="underline">TICTeC participants said</span></h3>
             </div>
             <div class="col-sm-7">
                 <p class="chat">“The programme was really useful as it followed a participatory methodology to identify core problems, design solutions and implement them in partnership with expert civil society organisations.”</p>
@@ -1110,444 +1059,120 @@ permalink: /
                 <p class="chat">“I really liked the opportunity and format to engage with other practitioners to address these important civic tech issues”.</p>
             </div>
         </div>
+    </div>
 </section>
+{% include section-slope.html topleft="mysoc-brighter-violet" bottomright="mysoc-purple" %}
 
-{% include section-slope.html topleft="mysoc-brighter-violet" bottomright="mysoc-off-white" %}
-
-
-{% include section-slope.html topleft="mysoc-off-white" bottomright="mysoc-blue" %}
-<section class="bg-mysoc-blue py-5 py-sm-6 py-md-7" id="community" aria-label="Community">
+<aside class="bg-mysoc-purple py-5 py-sm-6 py-md-7" aria-label="TICTeC events">
     <div class="container">
-        <h1 class="mb-3 text-center">Community</h1>
-        <p class="section-intro mb-6" style="max-width: 28em;">Community begins with empowering people and neighbourhoods to make change in their own areas – and we believe digital tools can complement on-the-ground action.</p>
-
-        <h2 class="mt-5 mt-md-6 mb-4 text-center">What we did in 2021</h2>
-        <div class="flex-card mt-5">
-            <div class="card-item shadow">
-                <a href="https://fixmyblock.org/" class="card-img-top">
-                    {% include image.html src="/assets/img/fixmyblock-3.jpg" webp="/assets/img/fixmyblock-3.webp" width="540" height="250" alt="Scottish content on FixMyBlock" loading="lazy" %}
-                </a>
-                <div class="card-body">
-                    <p class="card-text"><strong>Thistle help</strong> In 2021 we continued our collaboration with Tower Blocks UK, expanding the guidance site 
-                        <a href="https://fixmyblock.org/">FixMyBlock</a>  to include a wealth of new information for Scottish tenants.</p>
-                </div>
+        <div class="text-white row">
+            <div class="col-sm-6">
+                <h3 class="mb-4 h2"><span class="underline">On and Off</span></h3>
             </div>
-            <div class="card-item shadow">
-                <a href="https://fixmyblock.org/" class="card-img-top">
-                    {% include image.html src="/assets/img/fixmyblock-fire.jpg" webp="/assets/img/fixmyblock-fire.webp" width="540" height="250" alt="FixMyBlock guides" loading="lazy" %}
-                </a>
-                <div class="card-body">
-                    <p class="card-text"><strong>Tell me more</strong> There’s also now added advice on a range of
-                        fire safety and disrepair issues for highrise tenants everywhere (and, in fact, social tenants in general –
-                         because much of the content on FixMyBlock is relevant to all).
-                    </p>
-                </div>
+            <div class="col-sm-6">
+                <p><big>We've committed to making all our events available both offline and on</big></p>
+                <a href="https://www.mysociety.org/2022/03/24/were-keeping-events-hybrid-will-you-do-the-same/" class="btn btn-light">Here is why</a>
             </div>
         </div>
+    </div>
+</aside>
+
+{% include section-slope.html topleft="mysoc-purple" bottomright="mysoc-off-white" %}
+{% include section-slope.html topleft="mysoc-off-white" bottomright="mysoc-blue" %}
+
+<section class="bg-mysoc-blue py-5 py-sm-6 py-md-7" id="thank-you" aria-label="thank-you">
+    <div class="container">
+        <h2 class="mb-3">What keeps us going</h2>
+        <p class="section-intro mb-6">We always end our annual report with a big old ‘thank you’ – and in case you didn’t realise, we’re talking to you.</p>
 
         <div class="row mt-5 mt-sm-6">
             <div class="col-sm-5">
-                <h2 class="h3 mb-3"><span class="underline">Kissing KIITC goodbye</span></h2>
+                <h3 class="mb-3"><span class="underline">Financially</span></h3>
+                <p><big>Thank you so much to everyone who made a donation — large or small, they all really help.</big></p>
             </div>
-            <div class="col-sm-7">
-                <p><a href="https://www.mysociety.org/2021/06/30/a-new-home-for-keepitinthecommunity/" class="white-link">We handed off</a>  the Assets of Community Value site, 
-                    KeepItInTheCommunity, to its natural home at the Plunkett Foundation, who’ve been involved in its development from the start.
-                </p>
-            </div>
-        </div>
-
-        <hr style="border-top: 0.3em solid #fff; opacity:0.3;" class="mt-5 mt-sm-6 mb-4 mb-sm-5">
-
-        <h2 class="text-center mt-5 mt-md-6 mb-4 mb-md-5">What did you do with our stuff?</h2>
-        <div class="text-center mx-auto" style="max-width: 30em;">
-            <div class="chat">
-                <span>SW London Law Centres Network <br>“The resources are going to be vital as we develop group claims, as tenants have to take certain steps before a legal case can be launched.  FixMyBlock is so helpful for this.”</span>
-            </div>
-            <p class="text-right" style="margin-top: -15px;">&mdash; SW London Law Centres Network</p>
-            <div class="chat mt-3 mt-lg-5">
-                <span>“The stories are very useful and we’ve shared them with young people who are renting and we’ve also shared the template letters and encouraged people to use the site if they are having difficulty with their landlord, when it comes to things like repairs.”</span>
-            </div>
-            <p class="text-right" style="margin-top: -15px;">&mdash; Rainbow Collective</p>
-        </div>
-        <div class="row mt-4 mt-lg-5">
-            <div class="col-md-6">
-                {% include tweet-start.html id="1468236622642782223" username="ageuklondon" displayname="Age UK London" image="/assets/img/tweets/ageuklondon.jpg" class="mt-3 mt-md-4" %}
-                <p>Some great resources here for housing campaigners.</p>
-                <a href="https://twitter.com/FixMyBlock/status/1468233935406698508">
-                    {% include image.html src="/assets/img/tweets/community-tweet.jpg" class="mb-3" width="568" height="320" loading="lazy" alt="Quoted tweet" %}
-                </a>  
-                {% include tweet-end.html id="1468236622642782223" username="ageuklondon" timestamp="03:11 PM – Dec 7, 2021" %}
-
-                {% include tweet-start.html id="14480239688043970632" username="HamertonAction" displayname="HamertonActionGroup💚" image="/assets/img/tweets/hamertonaction.jpg" class="mt-3 mt-md-4" %}
-                <p>FixMyBlock latest news! <a href="https://twitter.com/TowerBlocksUK">@TowerBlocksUK</a> 
-                     alongside <a href="https://twitter.com/mySociety">@mySociety launched</a> 
-                    <a href="https://twitter.com/FixMyBlock">@FixMyBlock</a> in summer 2020. Since then, we have been working on expanding the website, adding more information & advice covering new topics.
-                    <a href="https://twitter.com/hashtag/FIXMYBLOCK?src=hashtag_click">#FIXMYBLOCK</a></p> 
-                {% include tweet-end.html id="14480239688043970632" username="HamertonAction" timestamp="9:33 PM – Oct 12, 2021" %}
-
-                {% include tweet-start.html id="1417029231457062915" username="justspace7" displayname="Just Space" image="/assets/img/tweets/justspace7.jpg" class="mt-3 mt-md-4" %}
-                <p>This is a very valuable guide to organising, mainly for tenants of 
-                    social housing blocks, but of much wider value/interest. 
-                    Add it to your resource lists <a href="https://twitter.com/Planaidlondon">@PlanAidLondon</a> 
-                    <a href="https://twitter.com/EstateWatch_LDN">@EstateWatch_LDN</a> 
-                    <a href="https://twitter.com/Listen_toLocals">@Listen_toLocals</a>
-                </p>
-                {% include tweet-end.html id="1417029231457062915" username="justspace7" timestamp="8:51 AM – Jul 19, 2021" %}
-            </div>
-            <div class="col-md-6">
-
-                {% include tweet-start.html id="1443221322717351939" username="HRRBFireSafety" displayname="Phil Murphy TIFireE 💚" image="/assets/img/tweets/HRRBFireSafety.jpg" class="mt-3 mt-md-4" %}
-                <p>If you know somebody, that lives in flats, for whom English is not their first language, please point them to FixMyBlock. Good advice, available in 18 languages.
-                    cc <a href="https://twitter.com/Afzal4Gorton">@Afzal4Gorton</a>
-                </p>
-                {% include image.html src="/assets/img/tweets/community-2.jpg" width="568" height="320" loading="lazy" alt="FixMyBlock content translated" class="mb-3" %}
-                {% include tweet-end.html id="1443221322717351939" username="HRRBFireSafety" timestamp="3:29 PM – Sep 29, 2021" %}
-            </div>
-        </div>
-
-        <hr style="border-top: 0.3em solid #fff; opacity:0.3;" class="mt-5 mt-sm-6 mb-4 mb-sm-5">
-
-        <div class="row">
-            <div class="col-sm-5">
-                <h2 class="text-left"><span class="underline">Facts and<br> figures</span></h2>
-            </div>
-            <div class="col-lg-7 offset-lg-1 text-white ml-auto">
-                <div class="row mt-3">
-                    <div class="col-sm-4">
-                        <div class="stat">
-                            <p class="text-white">
-                                <span class="stat__number stat__number--large">28</span>
-                                <span class="stat__name"><a class="white-link" href="https://fixmyblock.org/category/guides/">guides</a> and <a class="white-link" href="https://fixmyblock.org/category/tools/">tools</a></span>
-                            </p>
-                        </div>
-                    </div>
-                    <div class="col-sm-4">
-                        <div class="stat">
-                            <p class="text-white">
-                                <span class="stat__number stat__number--large">20</span>
-                                <span class="stat__name"><a class="white-link" href="https://fixmyblock.org/category/letters/">template letters</a> you can use</span>
-                            </p>
-                        </div>
-                    </div>
-                    <div class="col-sm-4">
-                        <p class="text-white">
-                            <span class="stat__number stat__number--large">52</span>
-                            <span class="stat__name"><a class="white-link" href="https://fixmyblock.org/glossary/">Glossary</a> dismistified</span>
-                        </p>
-                    </div>
+            <div class="col-sm-1 p-3"></div>
+            <div class="col-sm-6 ">
+                <div class="p-3 bg-white rounded">
+                    <p class="h5">You could be on the funder list next year</p>
+                    <p>Get in touch to find out how your organisation could support mySociety’s work.</p>
+                    <a href="mailto:hello@mysociety.org" class="btn btn-primary btn-sm">Contact us</a>
                 </div>
-                <div class="row mt-4">
-                    <div class="col-12">
-                        <div class="stat">
-                            <span class="stat__number stat__number--large">24,000+</span>
-                            <span class="stat__name mb-3">visits to the site this year</span>
-                        </div>
-                    </div>
-                </div>
-                <div class="most-visited mt-4 mt-md-5">
-                    <h3 class="most-visited__title">Most visited FixMyBlock pages</h3>
-                    <ul>
-                        <li><a href="https://fixmyblock.org/making-a-complaint-about-pests-or-vermin-in-your-flat-including-mice-rats-cockroaches-fleas-bedbugs/">Making a complaint about pests or vermin in your flat</a></li>
-                        <li><a href="https://fixmyblock.org/making-a-complaint-about-conditions-in-your-flat-or-block-including-condensation-mould-damp/">Making a complaint about condensation, mould or damp</a></li>
-                        <li><a href="https://fixmyblock.org/informing-your-landlord-about-leaks-failed-pipes-or-pipes-that-are-about-to-fail/">Informing your landlord about failed pipes</a></li>
-                        <li><a href="https://fixmyblock.org/ive-got-problems-with-my-tower-blocks-heating-or-hot-water/">Problems with heating or hot water in your flat</a></li>
-                    </ul>
+
+                <div class="p-3 bg-white rounded mt-4 mt-sm-5">
+                    <p>If you value the work that we do, please do help us keep it going</p>
+                    <a href="https://www.mysociety.org/donate/" class="btn btn-success btn-sm">Donate</a>
                 </div>
             </div>
         </div>
 
         <hr style="border-top: 0.3em solid #fff; opacity:0.3;" class="mt-5 mt-sm-6 mb-4 mb-sm-5">
 
-        <div class="row mt-5 mt-sm-6 mt-md-7">
-            <div class="col-sm-5">
-                <p>The team answers…</p>
-                <h2 class="h3 mb-3"><span class="underline">What’s been most rewarding about working on Community this year?</span></h2>
-            </div>
-            <div class="col-sm-7">
-                <p class="chat">It was just amazing to read testimonies from people who said that the site had helped them solve longstanding problems with their accommodation. You can’t wish for much more than that.</p>
-                <p class="chat">Our FixMyBlock partners Tower Blocks UK added a whole host of superb case studies and multimedia content to the site, to help tower block residents demand better from their landlords.</p>
+        <div class="row mt-5 mt-sm-6">
+            <div class="col-sm-6 text-center mx-auto">
+                <h3 class="mb-3"><span class="underline">Practically</span></h3>
+                <p><big>Endless gratitude to our fantastic team of volunteers, who work long and hard to keep WhatDoTheyKnow running smoothly.</big></p>
+                <p>All due appreciation to our knowledgeable and level-headed trustees, who help us steer mySociety's course.</p>
             </div>
         </div>
 
+        <hr style="border-top: 0.3em solid #fff; opacity:0.3;" class="mt-5 mt-sm-6 mb-4 mb-sm-5">
+
+        <div class="row mt-5 mt-sm-6">
+            <div class="col-sm-6 text-center mx-auto">
+                <h3 class="mb-3"><span class="underline">Emotionally</span></h3>
+                <p><big>Many thanks to you: our supporters, service users, followers, event attendees… and friends. You've read right to the end of this report, which makes you one of our best!</big></p>
+            </div>
+        </div>
+
+        <hr style="border-top: 0.3em solid #fff; opacity:0.3;" class="mt-5 mt-sm-6 mb-4 mb-sm-5">
+
+        <div class="row mt-5 mt-sm-6">
+            <div class="col-sm-6">
+                <h3 class="h2 mb-3"><span class="underline">Governance facts and figures</span></h3>
+            </div>
+            <div class="col-sm-6">
+                <p><big>Many thanks to you: our supporters, service users, followers, event attendees… and friends. You've read right to the end of this report, which makes you one of our best!</big></p>
+                <div class="mb-3">
+                    <a href="https://register-of-charities.charitycommission.gov.uk/charity-search/-/charity-details/3078648" class="black-link is-with-icon"><strong>Charity Commission accounts</strong> including income and spending.</a>
+                </div>
+                <div class="mb-3">
+                    <a href="https://find-and-update.company-information.service.gov.uk/company/03277032" class="black-link is-with-icon"><strong>Accounts on Companies House</strong>  along with the Annual Report from our Trustees.</a>
+                </div>
+                <a href="https://find-and-update.company-information.service.gov.uk/company/05798215" class="black-link is-with-icon"><strong>SocietyWorks accounts</strong> on Companies House.</a> 
+            
+                <p class="mt-4">In 2022 we employed on average <strong>34 staff</strong>, each of whom were paid in excess of the real living wage.</p>
+                <p>Our Trustees and Non-Executive Directors all give their very valuable time for free and receive no other compensation – for which we’re very grateful.</p>
+            </div>
+        </div>
+
+        <hr style="border-top: 0.3em solid #fff; opacity:0.3;" class="mt-5 mt-sm-6 mb-4 mb-sm-5">
+
+        <div class="row mt-5 mt-sm-6">
+            <div class="col-sm-6 text-center mx-auto">
+                <h3 class="h2 mb-3"><span class="underline">What's next?</span></h3>
+                <p><big>Watch this space! 2023 is mySociety's 20th anniversary and we've got a few plans up our sleeve for how to mark this milestone.</big></p>
+            </div>
+        </div>
+
+        <hr style="border-top: 0.3em solid #fff; opacity:0.3;" class="mt-5 mt-sm-6 mb-4 mb-sm-5">
+
+        <div class="row mt-5 mt-sm-6">
+            <div class="col-sm-6 text-center mx-auto">
+                <h3 class="h2 mb-3"><span class="underline">Want more?</span></h3>
+                <p><big>This is a more concise Annual Review than usual; but don't forget you can browse <a class="black-link" href="https://www.mysociety.org/blog/">our blog</a> to see everything we did in 2022</big></p>
+                <div class="p-3 bg-white rounded mt-4 mt-sm-5">
+                    <p class="h5">Subscribe to our newsletter</p>
+                    <p>Make sure you don't miss anything from here onwards</p>
+                    <a href="https://www.mysociety.org/subscribe/" class="btn btn-primary btn-sm">Subscribe</a>
+                </div>
+            </div>
+        </div>
     </div>
 </section>
+
 
 {% include section-slope.html topleft="mysoc-blue" bottomright="mysoc-off-white" %}
-
-
-
-{% include section-slope.html topleft="mysoc-green" bottomright="mysoc-off-white" %}
-
-<aside class="bg-mysoc-off-white py-5 py-sm-6 py-md-7">
-    <div class="container">
-        <div class="row">
-            <div class="col-md-5 pb-3">
-                <p>We asked the team…</p>
-                <h2 class="h3 mb-3"><span class="underline is--hatches">Hatches, matches, dispatches</span></h2>
-                <p>Pets, partners and babies… they’re all important</p>
-            </div>
-            <div class="col-md-7 col-lg-6 offset-lg-1 mb-n3">
-                <p class="chat bg-mysoc-green text-white">Nutmeg the toy poodle will be joining the Manchester contingent at the end of November.</p>
-                <p class="chat bg-mysoc-blue text-white">Pixel the jack russell down in London has been a regular contributor to board meetings and important briefings through the year.</p>
-                <p class="chat bg-mysoc-green text-white">Our cat Saffy sadly passed away unexpectedly. We’ve adopted a little tortoiseshell kitten, Pip, who has proven to be unusually affectionate &mdash; just what we needed!</p>
-            </div>
-        </div>
-    </div>
-</aside>
-
-
-
-<aside class="bg-mysoc-off-white py-5 py-sm-6 py-md-7">
-    <div class="container">
-        <div class="row">
-            <div class="col-md-5 pb-3">
-                <p>We asked the team…</p>
-                <h2 class="h3 mb-3"><span class="underline is--discovery">What’s been your best discovery outside work this year?</span></h2>
-            </div>
-            <div class="col-md-7 col-lg-6 offset-lg-1 mb-n3">
-                <p class="chat bg-mysoc-green text-white">TICTeC Labs, our new programme bringing together the global civic tech community to discuss how to tackle some of the sector’s biggest challenges.</p>
-                <p class="chat bg-mysoc-blue text-white">Meaningfully building more input from marginalised groups into our work, with additional services for local communities who wouldn’t normally engage in ‘climate activism’.</p>
-                <p class="chat bg-mysoc-green text-white">Helping build our policy capacity based on our experience of service development.</p>
-                <p class="chat bg-mysoc-blue text-white">Anything, because I want to keep on working here. :)</p>
-            </div>
-        </div>
-    </div>
-</aside>
-
-
-{% include section-slope.html topleft="mysoc-off-white" bottomright="mysoc-orange" %}
-
-<aside class="bg-mysoc-orange py-5 py-sm-6 py-md-7">
-    <div class="container">
-        <div class="row">
-            <div class="col-md-5 pb-3">
-                <h2 class="h3 mb-3"><span class="underline">What we did together</span></h2>
-                <p>Thanks to lockdown, mySociety hadn’t been together face to face since early 2020, so it was great to enjoy an in-person bonding bakeoff, and a proper organisation-wide retreat.</p>
-            </div>
-            <div class="col-md-7 col-lg-6 offset-lg-1 mb-n3">
-                <p class="chat">Getting together for the Retreat after so long not seeing my colleagues (not to mention there being several new colleagues I’d never met in real life) made me feel a lot more connected and remember what nice people I work with.</p>
-                <p class="chat">The Great mySociety Bake Off finally proved that looks are 
-                    what matters most, with the designers’ team taking home the prize. Turns out, 
-                    if you arrange your pistachios delicately enough, nobody even remembers how the cake tasted.
-                    {% include image.html src="/assets/img/bake-off.jpg" webp="/assets/img/bake-off.webp" width="1162" height="629" alt="Lizetta and Gemma having a great time at the bake-off" loading="lazy" class="my-3" %}
-                </p>
-                <p class="chat">Watching the sun rise from the roof of the retreat venue was pretty special.</p>
-                <p class="chat">Participating in Bake Off was such a fun way to meet colleagues in real life for the first time (although who let two designers partner up?! Of course they were going to win with the best-looking cake!)
-                    {% include image.html src="/assets/img/bake-off-2.jpg" webp="/assets/img/bake-off-2.webp" width="1162" height="629" alt="Gareth and Sally showing their cake" loading="lazy" class="my-3" %}
-                </p>
-            </div>
-        </div>
-    </div>
-</aside>
-
-{% include section-slope.html topleft="mysoc-orange" bottomright="mysoc-red" %}
-
-<section class="bg-mysoc-red py-5 py-sm-6 py-md-7" id="thanks" aria-label="Thank you">
-    <div class="container">
-        <h1 class="mb-3 text-center">Thank you</h1>
-        <div class="section-intro mb-6" style="max-width: 25em;">
-            <p>We always end our annual report with a big old ‘thank you’ – and in case you didn’t realise, we’re talking to you.</p>
-            <div style="font-size: 1.275rem;">
-                <p>Thank you for reading this report.</p>
-                <p>For using our websites, APIs, and data.</p>
-                <p>For answering our surveys.</p>
-                <p>For subscribing to our newsletters.</p>
-                <p>For liking our posts and retweeting our tweets.</p>
-                <p>For volunteering your time.</p>
-                <p>For reporting our bugs.</p>
-                <p>For installing our software.</p>
-                <p>For attending our events.</p>
-                <p>For donating to our fundraisers.</p>
-                <p>And for telling your friends, family, neighbours and colleagues about everything we do.</p>
-            </div>
-        </div>
-
-        <div class="row mt-5 mt-sm-6 mt-md-7">
-            <div class="col-sm-5">
-                <h2 class="mb-3"><span class="underline">To our funders</span></h2>
-                <p>Thank you for believing in our plans, and for providing the grants that make them possible. </p>
-            </div>
-            <div class="col-sm-7">
-                <div class="name-grid my-4">
-                    <a href="https://quadrature.ai/foundation" class="primary">Quadrature Climate Foundation</a>
-                    <a href="https://postkodstiftelsen.se/en/" class="primary">Swedish Postcode Foundation</a>
-                    <a href="https://www.adessium.org" class="primary">Adessium Foundation</a>
-                    <a href="https://www.tnlcommunityfund.org.uk/" class="secondary">National Lottery Community Fund</a>
-                    <a href="https://www.ned.org/" class="secondary">National Endowment for Democracy</a>
-                    <a href="https://www.gov.uk/government/organisations/department-for-business-energy-and-industrial-strategy" class="secondary">Department for Business, Energy and Industrial Strategy</a>
-                    <a href="https://thelegaleducationfoundation.org/" class="secondary">Legal Education Foundation</a>
-                </div>
-                <div class="px-3 py-4 p-md-4 p-lg-5 mt-4 rounded-lg shadow text-center funding">
-                    <h3 class="h4 mb-3">Funding opportunities</h3>
-                    <p class="mx-auto" style="max-width: 30em;"><a href="https://www.mysociety.org/contact/">Get in touch</a> to find out how your organisation could support mySociety’s innovative work. </p>
-                </div>
-            </div>
-        </div>
-
-
-        <div class="row mt-5 mt-sm-6 mt-md-7">
-            <div class="col-sm-5">
-                <h2 class="mb-3"><span class="underline">To our volunteers</span></h2>
-            </div>
-            <div class="col-sm-7">
-                <div class="name-grid">
-                    <p>Alex Skene</p>
-                    <p>Alona Kiryak</p>
-                    <p>Andrew Ying</p>
-                    <p>Doug Paulley</p>
-                    <p>Ganesh Sittampalam</p>
-                    <p>Joanna Booth</p>
-                    <p>Martyn Dewar</p>
-                    <p>Matt Knight</p>
-                    <p>Matt Lewin</p>
-                    <p>Richard Taylor</p>
-                    <p>William Fitzpatrick</p>
-                </div>
-            </div>
-        </div>
-
-        <div class="row mt-5 mt-sm-6 mt-md-7">
-            <div class="col-sm-5">
-                <h2 class="mb-3"><span class="underline">To our trustees</span></h2>
-                <p style="max-width: 300px;">who all volunteer their time this year</p>
-            </div>
-            <div class="col-sm-7">
-                <div class="name-grid">
-                    <p>Ade Adewunmi</p>
-                    <p>Cam Ross</p>
-                    <p>Catherine Brown</p>
-                    <p>Jonathan Flowers</p>
-                    <p>Julian Keutgen </p>
-                    <p>Kate Jones</p>
-                    <p>Manar Hussain</p>
-                    <p>Mandy Merron</p>
-                    <p>Rachel Rank</p>
-                    <p>Steve Skelton</p>
-                    <p>Tim Hunt</p>
-                    <p>Tony Burton</p>
-                </div>
-            </div>
-        </div>
-
-        <div class="row mt-5 mt-sm-6 mt-md-7">
-            <div class="col-sm-5">
-                <h2 class="mb-3"><span class="underline">To everyone who’s donated money</span></h2>
-            </div>
-            <div class="col-sm-7">
-                <p class="mt-4">We’re deeply grateful for every contribution, and we promise we’ve put it to good use in the name of Democracy, Transparency, the Climate or Community. </p>
-                <p>(Not a donor? 
-                    <a href="https://www.mysociety.org/donate/" class="white-link">You can change that right now!</a>)</p>
-            </div>
-        </div>
-
-        <div class="px-3 py-4 p-md-4 p-lg-5 mt-5 mt-md-6 mt-card-item shadow"
-            style="border: 0.3em solid rgba(255, 255, 255, 0.253); background: linear-gradient(9deg, rgba(255,255,255,0) 0%, rgba(255,255,255,0.1));">
-            <h2 class="text-center mt-0 mb-3">Governance facts and figures</h2>
-            <p class="text-center mx-auto mb-md-5" style="max-width: 30em; font-style:italic; font-weight: 200;">Since we advocate for transparency, it’s only right that we
-                 practice it ourselves. So here’s where you can find, for 2020-21:</p>
-            <ul>
-                <li class="mb-2">Our <a
-                        href="https://register-of-charities.charitycommission.gov.uk/charity-search/-/charity-details/3078648"
-                        class="white-link">Charity Commission accounts</a>, including income and spending.</li>
-                <li class="mb-2">Our <a href="https://find-and-update.company-information.service.gov.uk/company/03277032"
-                        class="white-link">accounts on Companies House</a> along with our Annual Report from our Trustees.</li>
-                <li class="mb-2">Our <a href="https://find-and-update.company-information.service.gov.uk/company/05798215"
-                        class="white-link">SocietyWorks accounts on Companies House</a>.</li>
-                <li class="mb-2">In 2021 we employed on average 30 staff, each of whom were paid in excess of the real 
-                    living wage. Salary costs are split across our Charity and Commercial companies, based on what projects staff spend their time on.</li>
-                <li class="mb-2">Our <a href="https://www.mysociety.org/about/board/"
-                    class="white-link">Trustees</a> and <a href="https://www.societyworks.org/board/"
-                    class="white-link">Non-Executive Directors</a> all give their very valuable 
-                    time for free and receive no other compensation – for which we’re very grateful.</li>
-            </ul>
-        </div>
-
-        <h2 class="text-center mt-5 mt-md-6 mt-lg-7 mb-4 mb-md-5">What’s coming next?</h2>
-        <div class="row justify-content-center">
-            <div class="d-flex d-sm-block align-items-center col-sm-3 text-center mb-3 mb-sm-0 pr-sm-4 pr-md-5">
-                {% include image.html src="/assets/img/mark-cridge.jpg" loading="lazy" width="200" height="200" class="intro-mark-photo rounded-circle mr-3 mr-sm-0" alt="Mark Cridge" %}
-                <small class="d-block text-white mt-sm-3">Mark Cridge, Chief&nbsp;Executive</small>
-            </div>
-            <div class="col-sm-9 col-md-8 col-lg-7">
-                <p>2022 will all be about exploring how we Repower Democracy. We recently set out three 
-                    shifts we think we need to make as an organisation; designing for the needs of society,
-                     putting more power in more people’s hands, and 
-                     prising open institutions to better support meaningful 
-                     participation &mdash; <a class="white-link" href="https://www.mysociety.org/2021/11/24/three-shifts-well-make-to-repower-democracy/">you can read more about these shifts in this blog post</a> .
-                </p>
-                <p>We’ll continue to expand our work to help local councils better tackle the climate emergency, actively seek to campaign for the protection and expansion of FOI rights, and welcome lots of new collaborators and participants to our series of TICTeC Labs through the year.</p>
-                <p>Expect to see lots of new partnership activity, a lot of effort to create new meaningful opportunities to volunteer and get involved with our wider work, and we’ve got a lot to learn about how we might create community everywhere.</p>
-                <p>I’m excited about the challenges ahead, and scared for what might happen if we can’t better come together as a society to face them together. I hope you’ll get involved wherever you can.</p>
-            </div>
-        </div>
-        <!-- <div class="row mt-5 mt-sm-6 mt-md-7">
-            <div class="col-sm-5">
-                <p>The team answers…</p>
-                <h2 class="h3 mb-3"><span class="underline">Hatches, matches, dispatches</span></h2>
-                <p>Pets, partners and babies… they’re all important</p>
-            </div>
-            <div class="col-sm-7">
-                <p class="chat">Got married! *Logical sequel to the <a class="white-link" href="https://2020.mysociety.org/">mySociety Year in Review 2020</a> engagement news.</p>
-                <p class="chat">Welcome to the world, little Esme, delicious squidge of a second child.</p>
-                <p class="chat">Announcing the arrival of baby Morgan, a treasured addition to my family.</p>
-                <p class="chat">With my partner, we just got a Leopard Gecko; we named her Miss Pickles. She is the best.</p>
-                <p class="chat">Nutmeg the toy poodle will be joining the Manchester contingent at the end of November.</p>
-                <p class="chat">Pixel the jack russell down in London has been a regular contributor to board meetings and important briefings through the year.</p>
-                <p class="chat">Our cat Saffy sadly passed away unexpectedly. We’ve adopted a little tortoiseshell kitten, Pip, who has proven to be unusually affectionate &mdash; just what we needed!</p>
-            </div>
-        </div> -->
-
-        <!-- <div class="row mt-5 mt-sm-6 mt-md-7">
-            <div class="col-sm-5">
-                <h2 class="h3 mb-3"><span class="underline">What’s been your best discovery outside work this year?</span></h2>
-            </div>
-            <div class="col-sm-7">
-                <p class="chat">I’ve really been getting into the music of Hildegard of Bingen. Super calming.</p>
-                <p class="chat">Oddbox fruit and veg delivery &mdash; they send you things that no else wants so you get all kinds of weird and wonderful things and it makes you eat more healthily.</p>
-                <p class="chat">The castles of Aberdeenshire.</p>
-                <p class="chat">The Log Books podcast &mdash; thanks to the recommendation of a colleague. Probably the best-crafted/conceived podcast I’ve ever had the pleasure of listening to.</p>
-                <p class="chat">Uptime is an app that has helped me a lot with mindless scrolling and learning more about a diverse range of topics.</p>
-                <p class="chat">An app called ‘PictureThis’ which allows you to take a photo of any plant and identify it. It also provides loads of useful plant care info and generally interesting plant facts.</p>
-            </div>
-        </div> -->
-
-        <div class="row mt-5 mt-sm-6 mt-md-7">
-            <div class="col-sm-5">
-                <h2 class="h3 mb-3"><span class="underline">What are you looking forward to in 2022?</span></h2>
-            </div>
-            <div class="col-sm-7">
-                <p class="chat">Seeing our projects keep growing and be used for more and more partners around the world. Getting more people involved with their communities, having a greater impact on our society.</p>
-                <p class="chat">Improving the use of FOI and helping more people get access to it.</p>
-                <p class="chat">Helping the team power ahead – with the knowns and unknowns. The team is so passionate and knowledgeable it’s hard not to be inspired by them.</p>
-                <p class="chat">Seeing where we take the climate work next: it’s a very responsive programme and while we have some idea where we’re going with it, it will also depend on how things unfold in the world.</p>
-                <p class="chat">TICTeC Labs, our new programme bringing together the global civic tech community to discuss how to tackle some of the sector’s biggest challenges.</p>
-                <p class="chat">Meaningfully building more input from marginalised groups into our work, with additional services for local communities who wouldn’t normally engage in ‘climate activism’.</p>
-                <p class="chat">Helping build our policy capacity based on our experience of service development.</p>
-                <p class="chat">Anything, because I want to keep on working here. :)</p>
-            </div>
-        </div>
-
-        <div class="px-3 py-4 p-md-4 p-lg-5 mt-5 mt-md-6 mt-lg-7 rounded-lg shadow text-center" style="background-color: rgba(255, 255, 255, 0.812);">
-            <h2 class="mt-0 mb-3">And that was 2021</h2>
-            <p class="mx-auto" style="max-width: 36em; font-style:italic; font-weight:200;">Thanks for reading. If you value everything that we’ve worked on this year, then please consider sending a few pounds our way. It really does help!</p>
-            <p><a href="https://www.mysociety.org/donate" class="btn btn-mysoc-green btn-donate">Donate to mySociety</a>
-            </p>
-
-            <h3 class="h4 text-center mt-4 mt-md-5">Help us find new friends and supporters</h3>
-            <p>Please share this report with someone who doesn’t know about mySociety.
-            <p class="mx-n2">
-                <a href="https://www.facebook.com/sharer/sharer.php?u=https://2020.mysociety.org"
-                    class="btn btn-facebook mx-2">Share</a>
-                <a href="https://twitter.com/intent/tweet?text=mySociety%20year%20in%20review%202020&url=https://2020.mysociety.org&related=mysociety"
-                    class="btn btn-twitter mx-2">Tweet</a>
-            </p>
-
-            <h3 class="h4 text-center mt-4 mt-md-5">Keep in touch</h3>
-            <p>If you’d like our news more often than annually, then <a href="https://www.mysociety.org/subscribe/">subscribe to our newsletter</a>.</p>
-        </div>
-
-    </div>
-</section>
+{% include section-slope.html topleft="mysoc-off-white" bottomright="mysoc-black" %}
 
 <div class="mysoc-footer" role="contentinfo" style="font-size: 18px">
     <div class="container">
