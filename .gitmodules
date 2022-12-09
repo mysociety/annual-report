@@ -7,3 +7,6 @@
 [submodule "2021/_bootstrap"]
 	path = 2021/_bootstrap
 	url = https://github.com/twbs/bootstrap.git
+[submodule "2022/_bootstrap"]
+	path = 2022/_bootstrap
+	url = https://github.com/twbs/bootstrap.git
