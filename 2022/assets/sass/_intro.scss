@@ -1,8 +1,8 @@
 .header {
-    background: transparent url(../img/bloom.png) 50% 50% no-repeat;
+    background: $color-mysoc-off-white url(../img/bloom.png) top 50%  right 0% no-repeat;
     background-image: url(../img/bloom.svg), none;
     background-size: 45%;
-
+    background-repeat: no-repeat;
     text-shadow: 0 0 1em #fff, 0 0 1em #fff;
 
     @include media-breakpoint-up(lg) {
