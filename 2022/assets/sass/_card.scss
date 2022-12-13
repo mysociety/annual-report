@@ -301,13 +301,6 @@
 }
 
 .two-col-card-wrapper {
-  .card-body {
-    display: flex;
-    flex-direction: column;
-    height: 100%;
-    justify-content: center;
-  }
-
   img {
     height: 100%;
     width: auto;
@@ -315,10 +308,7 @@
   }
 }
 
-
-
 // card with no body and transparent background
-
 .fause-card {
   img  {
     height: 300px;
