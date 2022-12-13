@@ -1,0 +1,9 @@
+services:
+  app:
+    image: mysociety/annual-report:${TAG:-latest}
+    build:
+      context: .
+      dockerfile: Dockerfile
+    working_dir: /workspaces/annual-report      
+    volumes:
+      - ./:/workspaces/annual-report/
