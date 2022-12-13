@@ -61,6 +61,23 @@
 @import "recipe-book";
 @import "mysoc-standard-footer";
 
+.content-navbar {
+    display: none;
+    a {
+        display: block;
+        min-width: 200px;
+    }
+    @include media-breakpoint-up(xxl) {
+        display: block;
+    }
+}
+
+.menu-toggle {
+    @include media-breakpoint-up(xxl) {
+        display: none !important;
+    }
+}
+
 body.lazyload .js-lazyload {
     background: none !important;
     &:before {
