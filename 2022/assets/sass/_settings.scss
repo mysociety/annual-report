@@ -48,6 +48,7 @@ $theme-colors: (
     'mysoc-black': $color-mysoc-black,
     'white': $white,
     'black': $black,
+    'dark': $color-mysoc-black
 );
 
 $spacer: 1rem; // have to define this, so we can use it in this file.

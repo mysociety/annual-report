@@ -1,3 +1,23 @@
+.btn {
+    &:focus {
+        background-color: $color-mysoc-yellow !important;
+        color: $black;
+    }
+}
+
+.btn-primary {
+    &:hover {
+        background-color: darken($primary, 30%);
+    }
+}
+
+.btn-light {
+    &:hover {
+        background-color: $dark;
+        color: $white;
+    }
+}
+
 .btn-facebook,
 .btn-twitter,
 .btn-donate {
