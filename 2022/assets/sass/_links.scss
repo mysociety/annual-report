@@ -1,7 +1,4 @@
 a {
-    text-underline-offset: $link-underline-offset;
-    text-decoration-thickness: 0.1em !important;
-
     &:hover {
         text-decoration: underline;
     }
@@ -21,25 +18,19 @@ a {
     }
 }
 
-.white-link {
-    color: $white;
-    text-decoration: underline;
-    text-decoration-color:transparentize($color: $white, $amount: 0.3);
-
-    &:hover {
-        color: $white;
-        text-decoration: none;
-    }
-}
-
 .black-link {
     color: $black;
-    text-decoration: underline;
-    text-decoration-color:transparentize($color: $black, $amount: 0.3);
+    box-shadow: inset 0 -2px 0 0 $black;
+    -webkit-transition: box-shadow 300ms ease;
+    -moz-transition: box-shadow 300ms ease;
+    -ms-transition: box-shadow 300ms ease;
+    -o-transition: box-shadow 300ms ease;
+    transition: box-shadow 300ms ease;
 
     &:hover {
         color: $black;
         text-decoration: none;
+        box-shadow: inset 0 -4px 0 0 transparentize($black, 0.5);
     }
 }
 
@@ -50,11 +41,13 @@ a {
     background-size: contain;
     background-position: left 0 center;
     background-repeat: no-repeat;
+    box-shadow: none;
 
     &:hover {
         background-image: url('../img/icons/link-black.svg');
         -webkit-filter: invert(100%);
         filter: invert(100%);
+        box-shadow: none;
     }
 
     &:focus {
