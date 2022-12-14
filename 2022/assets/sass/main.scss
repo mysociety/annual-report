@@ -64,11 +64,24 @@
 .content-navbar {
     display: none;
     a {
+        color: $black;
         display: block;
         min-width: 200px;
+        border-left-width: 5px;
+        border-left-style: solid;
+
+        &:focus {
+            background-color: $color-mysoc-yellow;
+        }
     }
     @include media-breakpoint-up(xxl) {
         display: block;
+    }
+}
+
+@each $border-color, $value in $theme-colors {
+    .border-color-#{$border-color} {
+        border-color: $value;
     }
 }
 
