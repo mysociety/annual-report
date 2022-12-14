@@ -30,6 +30,7 @@ $mysoc-footer-legal-text-color: #9a9a9a;
 
 $black: rgb(8, 8, 8);
 $white: #fff;
+$green: $color-mysoc-green;
 
 $primary: $color-mysoc-blue;
 
@@ -48,7 +49,7 @@ $theme-colors: (
     'mysoc-black': $color-mysoc-black,
     'white': $white,
     'black': $black,
-    'dark': $color-mysoc-black
+    'dark': $color-mysoc-black,
 );
 
 $spacer: 1rem; // have to define this, so we can use it in this file.
