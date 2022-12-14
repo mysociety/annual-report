@@ -18,6 +18,13 @@
     }
 }
 
+.btn-dark {
+    &:hover {
+        background-color: transparentize($dark, 0.6);
+        color: $black;
+    }
+}
+
 .btn-facebook,
 .btn-twitter,
 .btn-donate {
