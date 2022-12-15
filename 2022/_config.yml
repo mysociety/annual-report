@@ -5,5 +5,5 @@ plugins: ['jekyll/minibundle']
 title: >
   mySociety Year in Review 2022
 description: >
-  mySociety provides technology, research and data to help people be active citizens, in more than 40 countries around the world.
+  mySociety is repowering democracy
 production_url: https://2022.mysociety.org
