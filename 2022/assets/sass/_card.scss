@@ -167,8 +167,19 @@
 // Card deck
 
 .card-deck {
+  display: grid !important;
+  gap: 1rem;
+
   .card {
     margin-bottom: $card-deck-margin;
+  }
+
+  @include media-breakpoint-up(sm) { 
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  @include media-breakpoint-up(xl) { 
+    grid-template-columns: repeat(3, 1fr);
   }
 
   @include media-breakpoint-up(md) {
