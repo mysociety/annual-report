@@ -1,0 +1,18 @@
+{
+	"name": "jkan",
+	"dockerComposeFile": "../docker-compose.yml",
+	"service": "app",
+	"initializeCommand": [
+		".devcontainer/initializeCommand"
+	],
+	"overrideCommand": true,
+	"postCreateCommand": "bundle install --path vendor/bundle --binstubs vendor/bin",
+	"workspaceFolder": "/workspaces/annual-report",
+	"extensions": [
+		"ms-vscode.test-adapter-converter",
+		"ms-python.python",
+		"ms-python.vscode-pylance",
+		"ms-azuretools.vscode-docker",
+		"valentjn.vscode-ltex"
+	]
+}

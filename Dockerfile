@@ -1,0 +1,1 @@
+FROM ghcr.io/mysociety/jekyll_image:main

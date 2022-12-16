@@ -1,0 +1,69 @@
+.btn {
+    &:focus {
+        background-color: $color-mysoc-yellow !important;
+        color: $black;
+    }
+}
+
+.btn-primary {
+    &:hover {
+        background-color: darken($primary, 30%);
+    }
+}
+
+.btn-light {
+    &:hover {
+        background-color: $dark;
+        color: $white;
+    }
+}
+
+.btn-dark {
+    &:hover {
+        background-color: transparentize($dark, 0.6);
+        color: $black;
+    }
+}
+
+.btn-facebook,
+.btn-twitter,
+.btn-donate {
+    &:before {
+        content: "";
+        display: inline-block;
+        width: 1em;
+        height: 1em;
+        background-color: transparent;
+        background-position: 0 0;
+        background-repeat: no-repeat;
+        background-size: 1em;
+        margin-right: 0.4em;
+        vertical-align: -0.15em;
+    }
+}
+
+.btn-facebook {
+    @include button-variant($color-facebook-blue, $color-facebook-blue);
+
+    &:before {
+        background-image: url(../img/facebook.svg);
+    }
+}
+
+.btn-twitter {
+    @include button-variant($color-twitter-blue, $color-twitter-blue);
+
+    &:before {
+        background-image: url(../img/twitter.svg);
+    }
+}
+
+.btn-donate {
+    &:before {
+        background-image: url(../img/love.svg);
+    }
+}
+
+.btn-success {
+    color: $black;
+}

@@ -1,0 +1,9 @@
+name: annualreport2022
+baseurl:
+host: 0.0.0.0
+plugins: ['jekyll/minibundle']
+title: >
+  mySociety Year in Review 2022
+description: >
+  mySociety is repowering democracy
+production_url: https://2022.mysociety.org

@@ -1,0 +1,76 @@
+a {
+    &:hover {
+        text-decoration: underline;
+    }
+
+    img {
+        -webkit-transition: transform 300ms ease;
+        -moz-transition: transform 300ms ease;
+        -ms-transition: transform 300ms ease;
+        -o-transition: transform 300ms ease;
+        transition: transform 300ms ease;
+    }
+
+    &:hover, &:focus {
+        img {
+          transform: scale(1.05);
+        }
+    }
+}
+
+
+@each $color, $value in $theme-colors {
+    .#{$color}-link {
+        color: $value;
+        box-shadow: inset 0 -2px 0 0 $value;
+        -webkit-transition: box-shadow 300ms ease;
+        -moz-transition: box-shadow 300ms ease;
+        -ms-transition: box-shadow 300ms ease;
+        -o-transition: box-shadow 300ms ease;
+        transition: box-shadow 300ms ease;
+
+        &:focus {
+            background-color: $color-mysoc-yellow;
+        }
+    
+        &:hover {
+            color: $value;
+            text-decoration: none;
+            box-shadow: inset 0 -4px 0 0 transparentize($value, 0.5);
+        }
+    }
+}
+
+.is-with-icon {
+    text-decoration: none;
+    padding-left: 30px;
+    background-image: url('../img/icons/link-black.svg');
+    background-size: contain;
+    background-position: left 0 center;
+    background-repeat: no-repeat;
+    box-shadow: none;
+
+    &:hover {
+        background-image: url('../img/icons/link-black.svg');
+        -webkit-filter: invert(100%);
+        filter: invert(100%);
+        box-shadow: none;
+    }
+
+    &:focus {
+        background-image: url('../img/icons/link-black.svg');
+        background-color: $color-mysoc-yellow;
+        color: $black;
+    }
+
+    &.white-link {
+        color: $black;
+        -webkit-filter: invert(100%);
+        filter: invert(100%);
+
+        &:hover {
+            -webkit-filter: invert(0);
+            filter: invert(0);
+        }
+    }
+}
