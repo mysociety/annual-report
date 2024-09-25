@@ -60,4 +60,12 @@
 2021-jekyll:
 	vendor/bin/jekyll serve --source 2021 --destination 2021/_site --baseurl ''
 2021-sass:
-	vendor/bin/sass --watch 2021/assets/sass:2021/assets/css	
+	vendor/bin/sass --watch 2021/assets/sass:2021/assets/css
+
+.PHONY: 2022 2022-jekyll 2022-sass
+2022:
+	make -j 2 2022-jekyll 2022-sass
+2022-jekyll:
+	vendor/bin/jekyll serve --source 2022 --destination 2022/_site --baseurl ''
+2022-sass:
+	vendor/bin/sass --watch 2022/assets/sass:2022/assets/css

@@ -1,0 +1,72 @@
+.menu-toggle {
+    position: fixed;
+    z-index: 10;
+    bottom: 1rem;
+    right: 1em;
+    box-shadow: $box-shadow, $box-shadow-lg;
+    @include button-variant(#fff, mix($color-mysoc-dark-grey, #fff, 50%));
+
+    @include media-breakpoint-up(md) {
+        bottom: 2rem;
+        right: 2rem;
+    }
+
+    svg {
+        width: 0.8em;
+        height: 0.8em;
+        margin-top: 0.1em;
+        margin-left: 0.5em;
+    }
+}
+
+.menu {
+    display: flex;
+    flex-direction: column;
+    position: fixed;
+    z-index: 15;
+    top: 100%;
+    right: 0;
+    // left: 0;
+    bottom: 0;
+    background: $color-mysoc-black;
+    max-width: 375px;
+    padding: 15px;
+
+    transition: top 300ms linear;
+
+    &.is-active {
+        top: 0;
+        right: 0;
+        width: 100%;
+    }
+
+    a, button {
+        display: flex;
+        flex: 1 0 auto;
+        // justify-content: center;
+        justify-content: end;
+        align-items: center;
+        color: #fff;
+        font-size: calc(3vh);
+        padding-right:16px;
+        margin-top: 10px;
+        border-radius: 5px;
+    }
+
+    a {
+        font-weight: bold;
+    }
+
+    button {
+        border: none; // reset button appearance
+
+        svg {
+            width: 0.8em;
+            height: 0.8em;
+        }
+    }
+}
+
+@mixin border-bottom ($color) {
+    border-bottom: 2px solid $color;
+}

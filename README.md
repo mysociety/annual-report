@@ -7,6 +7,12 @@ mySociety in numbers, for 2014–2019.
 There’s a separate directory for each year. They all use the Sass command line
 tool to compile the CSS, and then Jekyll to generate the static site.
 
+### Run in Codespaces
+
+1. Start a Codespace.
+2. In terminal run `make 2022` (or whichever year, if you're in the future).
+3. Ctrl+Click the 0.0.0.0:4000 link in the terminal to open the preview window.
+
 ### To run locally
 
 This repo includes submodules, so you’ll either want to start with a recursive
